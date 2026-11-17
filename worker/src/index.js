@@ -111,8 +111,58 @@ const num = (x, lo, hi) => (typeof x === "number" && isFinite(x) && x >= lo && x
 const round3 = x => Math.round(x * 1000) / 1000;
 
 // ------------------------------------------------------------------ stage 1: search
-const MEAL_Q = { breakfast: "朝食 モーニング カフェ", lunch: "ランチ レストラン", dinner: "ディナー レストラン" };
+// Candidate search strategy (measured with worker/diag on real Kyoto data):
+// a single relevance-ranked Text Search with locationBias capped at 20 results *before* any rating/radius
+// filtering and missed good places in dense areas. Now:
+//   • minRating 4.0 is applied by Google BEFORE the 20-result cap (Text Search parameter);
+//   • locationRestriction (rectangle) instead of a soft bias, so results are inside the area;
+//   • several calls per stage, merged and de-duplicated by Place ID;
+//   • stage 0 (automatic) ≤ 3 calls; «Искать ещё» stages 1–2 split the area into 4 tiles (≤ 4 calls each).
+const MAX_STAGE = 2;
 const LEVELS = ["PRICE_LEVEL_INEXPENSIVE", "PRICE_LEVEL_MODERATE", "PRICE_LEVEL_EXPENSIVE", "PRICE_LEVEL_VERY_EXPENSIVE"];
+// Place types verified against the live API (worker/diag). Google has no shabu-shabu/sukiyaki/udon/izakaya types.
+const MEAL_BASE = {
+  breakfast: [{ q: "朝食 モーニング", type: null }, { q: "カフェ", type: "cafe" }],
+  lunch: [{ q: "レストラン", type: "restaurant" }],
+  dinner: [{ q: "レストラン", type: "restaurant" }],
+};
+
+function rectAround(lat, lon, radiusM) {
+  const dLat = radiusM / 111320, dLon = radiusM / (111320 * Math.cos(lat * Math.PI / 180));
+  return { low: { latitude: lat - dLat, longitude: lon - dLon }, high: { latitude: lat + dLat, longitude: lon + dLon } };
+}
+function tiles(lat, lon, radiusM) {
+  const dLat = radiusM / 111320, dLon = radiusM / (111320 * Math.cos(lat * Math.PI / 180));
+  const out = [];
+  for (const [a, b] of [[0, 0], [0, 1], [1, 0], [1, 1]]) {
+    out.push({ low: { latitude: lat - dLat + a * dLat, longitude: lon - dLon + b * dLon },
+               high: { latitude: lat + a * dLat, longitude: lon + b * dLon } });
+  }
+  return out;
+}
+
+/** The list of Google calls for a stage — bounded and predictable (cost control). */
+export function planCalls(stage, meal, cuisine, lat, lon, radiusM) {
+  const base = MEAL_BASE[meal] || MEAL_BASE.lunch;
+  const rect = rectAround(lat, lon, radiusM);
+  const cq = cuisine && cuisine.q ? { q: cuisine.q, type: cuisine.type || null, tag: "cuisine" } : null;
+  if (stage === 0) {
+    const calls = [];
+    if (cq) {
+      calls.push({ ...cq, rect, rank: "DISTANCE", pages: 2 });
+      calls.push({ ...cq, rect, rank: "RELEVANCE", pages: 1 });
+    } else {
+      calls.push({ ...base[0], tag: "base", rect, rank: "DISTANCE", pages: 2 });
+      calls.push({ ...(base[1] || base[0]), tag: "base", rect, rank: "RELEVANCE", pages: 1 });
+    }
+    return calls; // ≤ 3 billed requests (pages count)
+  }
+  const ts = tiles(lat, lon, radiusM);
+  const q = cq || { ...base[0], tag: "base" };
+  if (stage === 1) return ts.map(r => ({ ...q, rect: r, rank: "DISTANCE", pages: 1 }));
+  if (stage === 2) return ts.map(r => ({ ...q, rect: r, rank: "RELEVANCE", pages: 1 }));
+  return [];
+}
 
 export async function search(body, env, doFetch) {
   let lat = num(body.lat, -90, 90), lon = num(body.lon, -180, 180);
@@ -133,29 +183,48 @@ export async function search(body, env, doFetch) {
   if (lat == null || lon == null) { const e = new Error("lat/lon or where required"); e.status = 400; e.code = "bad_request"; throw e; }
   lat = round3(lat); lon = round3(lon);
   const radius = Math.max(150, Math.min(50000, Math.round(+body.radiusM || 1000)));
-  const cuisineQ = typeof body.cuisineQuery === "string" && body.cuisineQuery ? body.cuisineQuery.slice(0, 60) : null;
-  const textQuery = cuisineQ || MEAL_Q[body.meal] || "レストラン";
-  const req = {
-    textQuery, languageCode: "ru", regionCode: "JP", pageSize: 20, minRating: 4.0,
-    locationBias: { circle: { center: { latitude: lat, longitude: lon }, radius } },
-    rankPreference: "RELEVANCE",
-  };
-  if (body.openNow === true) req.openNow = true;
-  if (Array.isArray(body.levels) && body.levels.length) req.priceLevels = body.levels.filter(l => l >= 1 && l <= 4).map(l => LEVELS[l - 1]);
-  const res = await gfetch(doFetch, `${PLACES}/places:searchText`, {
-    method: "POST",
-    headers: { "Content-Type": "application/json", "X-Goog-Api-Key": key, "X-Goog-FieldMask": SEARCH_FIELDS },
-    body: JSON.stringify(req),
-  });
-  const places = (res.places || []).map(normalizePlace).filter(p => p.lat != null);
-  // keep only places inside the circle (locationBias may return farther ones)
-  const inside = places.filter(p => haversineM({ lat, lon }, p) <= radius * 1.15);
+  const stage = Math.max(0, Math.min(MAX_STAGE, parseInt(body.stage || 0, 10) || 0));
+  const cuisine = typeof body.cuisineQuery === "string" && body.cuisineQuery
+    ? { q: body.cuisineQuery.slice(0, 60), type: /^[a-z_]{3,40}$/.test(body.cuisineType || "") ? body.cuisineType : null } : null;
+  const calls = planCalls(stage, body.meal, cuisine, lat, lon, radius);
+  const byId = new Map(), diag = [];
+  for (const c of calls) {
+    let pageToken = null;
+    for (let page = 0; page < c.pages; page++) {
+      const req = {
+        textQuery: c.q, languageCode: "ru", regionCode: "JP", pageSize: 20, minRating: 4.0,
+        locationRestriction: { rectangle: c.rect }, rankPreference: c.rank,
+      };
+      if (c.type) req.includedType = c.type;
+      if (body.openNow === true) req.openNow = true;
+      if (Array.isArray(body.levels) && body.levels.length) req.priceLevels = body.levels.filter(l => l >= 1 && l <= 4).map(l => LEVELS[l - 1]);
+      if (pageToken) req.pageToken = pageToken;
+      const res = await gfetch(doFetch, `${PLACES}/places:searchText`, {
+        method: "POST",
+        headers: { "Content-Type": "application/json", "X-Goog-Api-Key": key, "X-Goog-FieldMask": SEARCH_FIELDS + ",nextPageToken" },
+        body: JSON.stringify(req),
+      });
+      const got = (res.places || []).map(normalizePlace).filter(p => p.lat != null);
+      let fresh = 0;
+      for (const p of got) {
+        if (!byId.has(p.id)) { byId.set(p.id, { ...p, via: [c.tag] }); fresh++; }
+        else if (!byId.get(p.id).via.includes(c.tag)) byId.get(p.id).via.push(c.tag);
+      }
+      diag.push({ query: c.tag, type: c.type || "-", rank: c.rank, page: page + 1, returned: got.length, newUnique: fresh });
+      pageToken = res.nextPageToken || null;
+      if (!pageToken || got.length < 20) break;
+    }
+  }
+  const all = [...byId.values()];
+  const inside = all.filter(p => haversineM({ lat, lon }, p) <= radius);
   let routeTimes = {}, routesNote = null;
   if (inside.length && body.mode) {
-    try { routeTimes = await routeMatrix({ lat, lon }, inside, body.mode === "transit" ? "TRANSIT" : "WALK", key, doFetch); }
+    try { routeTimes = await routeMatrix({ lat, lon }, inside.slice(0, 100), body.mode === "transit" ? "TRANSIT" : "WALK", key, doFetch); }
     catch (e) { routesNote = "Время в пути по маршрутам Google недоступно — показаны расстояния и оценки."; }
   }
-  return { origin: { lat, lon, label: originLabel }, places: inside, routeTimes, routesNote, query: textQuery };
+  return { origin: { lat, lon, label: originLabel }, places: inside, routeTimes, routesNote, stage, maxStage: MAX_STAGE,
+           more: stage < MAX_STAGE,
+           stats: { requests: diag.length, perRequest: diag, unique: all.length, outsideRadius: all.length - inside.length } };
 }
 
 function normalizePlace(p) {

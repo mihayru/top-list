@@ -29,9 +29,10 @@ test("search: secret stays server-side, minimal field mask, minRating 4.0, no DR
   assert.strictEqual(r.status, 200);
   const s = calls.find(c => c.url.includes("searchText"));
   const sent = JSON.parse(s.init.body);
-  assert.strictEqual(sent.minRating, 4.0);
+  assert.strictEqual(sent.minRating, 4.0, "rating filter applied by Google before the 20-result cap");
   assert.strictEqual(sent.textQuery, "ラーメン");
-  assert.strictEqual(sent.locationBias.circle.center.latitude, 34.988);
+  assert.ok(sent.locationRestriction.rectangle, "hard area restriction, not a soft bias");
+  assert.ok(Math.abs((sent.locationRestriction.rectangle.low.latitude + sent.locationRestriction.rectangle.high.latitude) / 2 - 34.988) < 1e-9, "rounded origin");
   assert.ok(!/reviews/.test(s.init.headers["X-Goog-FieldMask"]), "no reviews at stage 1");
   const rm = calls.find(c => c.url.includes("computeRouteMatrix"));
   assert.strictEqual(JSON.parse(rm.init.body).travelMode, "WALK");
@@ -62,7 +63,7 @@ test("manual address: geocoded via Text Search, then searched", async () => {
   };
   const r = await (await handle(req("/search", { where: "Kyoto Station", radiusM: 900, meal: "lunch" }), ENV, { fetch })).json();
   assert.strictEqual(r.origin.label, "Станция Киото");
-  assert.strictEqual(calls.length, 2);
+  assert.ok(calls.length >= 2 && calls.length <= 4, "geocode + bounded search calls: " + calls.length);
 });
 
 test("origin restriction and not-configured state", async () => {
@@ -111,4 +112,41 @@ test("rate limiting per IP", async () => {
   assert.strictEqual((await handle(mk(), env, { fetch: f })).status, 200);
   assert.strictEqual((await handle(mk(), env, { fetch: f })).status, 200);
   assert.strictEqual((await handle(mk(), env, { fetch: f })).status, 429);
+});
+
+import { planCalls } from "../src/index.js";
+
+test("cost control: stage 0 ≤ 3 billed requests, «Искать ещё» stages ≤ 4, nothing after stage 2", () => {
+  const pages = cs => cs.reduce((a, c) => a + c.pages, 0);
+  assert.ok(pages(planCalls(0, "dinner", null, 35, 135.76, 865)) <= 3);
+  assert.ok(pages(planCalls(0, "lunch", { q: "ラーメン", type: "ramen_restaurant" }, 35, 135.76, 865)) <= 3);
+  assert.strictEqual(pages(planCalls(1, "dinner", null, 35, 135.76, 865)), 4);
+  assert.strictEqual(pages(planCalls(2, "dinner", null, 35, 135.76, 865)), 4);
+  assert.strictEqual(planCalls(3, "dinner", null, 35, 135.76, 865).length, 0);
+  // tiles cover the search square exactly
+  const t = planCalls(1, "dinner", null, 35, 135.76, 865).map(c => c.rect);
+  const minLat = Math.min(...t.map(r => r.low.latitude)), maxLat = Math.max(...t.map(r => r.high.latitude));
+  const full = planCalls(0, "dinner", null, 35, 135.76, 865)[0].rect;
+  assert.ok(Math.abs(minLat - full.low.latitude) < 1e-9 && Math.abs(maxLat - full.high.latitude) < 1e-9);
+});
+
+test("merge: several calls + pagination, de-duplicated by Place ID; stats are counts only", async () => {
+  const pageA = Array.from({ length: 20 }, (_, i) => P("p" + String(i).padStart(12, "0"), 35.0 + i * 0.0001, 135.76));
+  const pageB = Array.from({ length: 20 }, (_, i) => P("q" + String(i).padStart(12, "0"), 35.0, 135.76 + i * 0.0001));
+  let n = 0;
+  const fetch = async (url, init) => {
+    if (String(url).includes("computeRouteMatrix")) return new Response("[]");
+    const b = JSON.parse(init.body); n++;
+    if (b.rankPreference === "DISTANCE" && !b.pageToken) return new Response(JSON.stringify({ places: pageA, nextPageToken: "tok" }));
+    if (b.pageToken === "tok") return new Response(JSON.stringify({ places: pageB }));
+    return new Response(JSON.stringify({ places: [...pageA.slice(0, 5), P("kuu0000000001", 35.0005, 135.7605)] })); // duplicates + 1 new
+  };
+  const r = await (await handle(req("/search", { lat: 35.0, lon: 135.76, radiusM: 865, meal: "dinner", mode: "walk" }), ENV, { fetch })).json();
+  assert.strictEqual(n, 3);
+  assert.strictEqual(r.places.length, new Set(r.places.map(p => p.id)).size, "no duplicates");
+  assert.strictEqual(r.stats.unique, 41);
+  assert.deepStrictEqual(r.stats.perRequest.map(x => x.newUnique), [20, 20, 1]);
+  assert.ok(r.places.some(p => p.id === "kuu0000000001"));
+  assert.ok(!JSON.stringify(r.stats).includes("35.0"), "no coordinates in stats");
+  assert.strictEqual(r.more, true);
 });

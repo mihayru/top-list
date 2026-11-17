@@ -48,6 +48,25 @@ for (const meal of ["lunch", "dinner"]) for (const o of origins) {
   log(`meal=${meal} origin=${o.n}: raw=${rawIds.length} insideRadius=${res.places.length} target_in_raw=${rawRank >= 0 ? "#" + (rawRank + 1) : "NO"} target_kept=${kept}`);
 }
 
+// 2b) the NEW algorithm: stage 0 (automatic) and «Искать ещё» stages 1–2, merged by Place ID
+log("\n## New algorithm: minRating 4.0 before the cap, locationRestriction, merged calls, «Искать ещё» tiles");
+const OLD_RAW_REQUESTS = 1;
+for (const meal of ["lunch", "dinner"]) for (const o of origins) {
+  const seen = new Map(); let requests = 0, foundAt = null;
+  for (const stage of [0, 1, 2]) {
+    const res = await search({ lat: o.lat, lon: o.lon, meal, mode: null, radiusM: Math.round(15 * 75 / 1.3), stage }, { GOOGLE_MAPS_KEY: KEY }, fetch);
+    requests += res.stats.requests;
+    for (const p of res.places) seen.set(p.id, p);
+    if (foundAt == null && seen.has(target.id)) foundAt = stage;
+  }
+  log(`meal=${meal} origin=${o.n}: requests=${requests} unique_inside_≥4.0=${seen.size} target=${foundAt == null ? "NO" : "stage " + foundAt}`);
+}
+for (const meal of ["dinner"]) for (const o of origins) {
+  const res = await search({ lat: o.lat, lon: o.lon, meal, mode: null, radiusM: Math.round(15 * 75 / 1.3), stage: 0 }, { GOOGLE_MAPS_KEY: KEY }, fetch);
+  log(`stage0 detail meal=${meal} origin=${o.n}: ` + res.stats.perRequest.map(x => `${x.rank}/p${x.page}:${x.returned}(+${x.newUnique})`).join(" ") + ` inside=${res.places.length} target=${res.places.some(p => p.id === target.id)}`);
+}
+
+if (process.env.VALIDATE_TYPES !== "1") { if (process.env.GITHUB_STEP_SUMMARY) { const fs = await import("node:fs"); fs.appendFileSync(process.env.GITHUB_STEP_SUMMARY, "```\n" + out.join("\n") + "\n```\n"); } process.exit(0); }
 // 3) validate candidate place types against the live API (unsupported types → 400)
 const CANDIDATES = ["restaurant", "japanese_restaurant", "ramen_restaurant", "sushi_restaurant", "shabu_shabu_restaurant", "sukiyaki_restaurant",
   "yakiniku_restaurant", "yakitori_restaurant", "tonkatsu_restaurant", "japanese_curry_restaurant", "udon_noodle_restaurant", "soba_noodle_restaurant",
