@@ -141,23 +141,23 @@ function tiles(lat, lon, radiusM) {
   return out;
 }
 
-/** The list of Google calls for a stage — bounded and predictable (cost control). */
+/** The list of Google calls for a stage — bounded and predictable (cost control).
+ *  Measured on real Kyoto data (worker/diag): Text Search with rankPreference DISTANCE does not return the true
+ *  nearest places — it first picks a limited "relevant" set (as few as 43 for a whole 0.9 km area) and only sorts
+ *  that by distance. Splitting the area into 4 tiles finds far more places, so tiles come first. */
 export function planCalls(stage, meal, cuisine, lat, lon, radiusM) {
   const base = MEAL_BASE[meal] || MEAL_BASE.lunch;
   const rect = rectAround(lat, lon, radiusM);
   const cq = cuisine && cuisine.q ? { q: cuisine.q, type: cuisine.type || null, tag: "cuisine" } : null;
-  if (stage === 0) {
-    const calls = [];
-    // measured: a RELEVANCE call added only 0–4 new places after two DISTANCE pages, a third DISTANCE page adds up to 20
-    if (cq) calls.push({ ...cq, rect, rank: "DISTANCE", pages: 3 });
-    else if (base.length > 1) { calls.push({ ...base[0], tag: "base", rect, rank: "DISTANCE", pages: 2 }); calls.push({ ...base[1], tag: "base", rect, rank: "DISTANCE", pages: 1 }); }
-    else calls.push({ ...base[0], tag: "base", rect, rank: "DISTANCE", pages: 3 });
-    return calls; // ≤ 3 billed requests (pages count)
-  }
-  const ts = tiles(lat, lon, radiusM);
   const q = cq || { ...base[0], tag: "base" };
-  if (stage === 1) return ts.map(r => ({ ...q, rect: r, rank: "DISTANCE", pages: 1 }));
-  if (stage === 2) return ts.map(r => ({ ...q, rect: r, rank: "RELEVANCE", pages: 1 }));
+  const ts = tiles(lat, lon, radiusM);
+  if (stage === 0) {
+    const calls = ts.map(r => ({ ...q, rect: r, rank: "DISTANCE", pages: 1 }));            // 4 requests
+    if (!cq && base.length > 1) calls[3] = { ...base[1], tag: "base", rect, rank: "DISTANCE", pages: 1 }; // breakfast: one call for cafés
+    return calls;
+  }
+  if (stage === 1) return [{ ...q, rect, rank: "DISTANCE", pages: 3 }];                     // ≤ 3 requests
+  if (stage === 2) return ts.map(r => ({ ...q, rect: r, rank: "RELEVANCE", pages: 1 }));   // 4 requests
   return [];
 }
 

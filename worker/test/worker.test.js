@@ -116,17 +116,17 @@ test("rate limiting per IP", async () => {
 
 import { planCalls } from "../src/index.js";
 
-test("cost control: stage 0 ≤ 3 billed requests, «Искать ещё» stages ≤ 4, nothing after stage 2", () => {
+test("cost control: stage 0 = 4 requests, «Искать ещё» stages ≤ 4, nothing after stage 2", () => {
   const pages = cs => cs.reduce((a, c) => a + c.pages, 0);
-  assert.ok(pages(planCalls(0, "dinner", null, 35, 135.76, 865)) <= 3);
-  assert.ok(pages(planCalls(0, "lunch", { q: "ラーメン", type: "ramen_restaurant" }, 35, 135.76, 865)) <= 3);
-  assert.strictEqual(pages(planCalls(1, "dinner", null, 35, 135.76, 865)), 4);
+  assert.strictEqual(pages(planCalls(0, "dinner", null, 35, 135.76, 865)), 4);
+  assert.strictEqual(pages(planCalls(0, "lunch", { q: "ラーメン", type: "ramen_restaurant" }, 35, 135.76, 865)), 4);
+  assert.strictEqual(pages(planCalls(1, "dinner", null, 35, 135.76, 865)), 3);
   assert.strictEqual(pages(planCalls(2, "dinner", null, 35, 135.76, 865)), 4);
   assert.strictEqual(planCalls(3, "dinner", null, 35, 135.76, 865).length, 0);
   // tiles cover the search square exactly
-  const t = planCalls(1, "dinner", null, 35, 135.76, 865).map(c => c.rect);
+  const t = planCalls(0, "dinner", null, 35, 135.76, 865).map(c => c.rect);
   const minLat = Math.min(...t.map(r => r.low.latitude)), maxLat = Math.max(...t.map(r => r.high.latitude));
-  const full = planCalls(0, "dinner", null, 35, 135.76, 865)[0].rect;
+  const full = planCalls(1, "dinner", null, 35, 135.76, 865)[0].rect;
   assert.ok(Math.abs(minLat - full.low.latitude) < 1e-9 && Math.abs(maxLat - full.high.latitude) < 1e-9);
 });
 
@@ -142,7 +142,7 @@ test("merge: several calls + pagination, de-duplicated by Place ID; stats are co
     if (b.pageToken === "tok2") return new Response(JSON.stringify({ places: [...pageA.slice(0, 5), P("kuu0000000001", 35.0005, 135.7605)] })); // duplicates + 1 new
     return new Response(JSON.stringify({ places: [] }));
   };
-  const r = await (await handle(req("/search", { lat: 35.0, lon: 135.76, radiusM: 865, meal: "dinner", mode: "walk" }), ENV, { fetch })).json();
+  const r = await (await handle(req("/search", { lat: 35.0, lon: 135.76, radiusM: 865, meal: "dinner", mode: "walk", stage: 1 }), ENV, { fetch })).json();
   assert.strictEqual(n, 3);
   assert.strictEqual(r.places.length, new Set(r.places.map(p => p.id)).size, "no duplicates");
   assert.strictEqual(r.stats.unique, 41);

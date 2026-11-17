@@ -55,19 +55,36 @@
     const o = st.origin ? `${st.origin.lat},${st.origin.lon}` : `w:${st.where}`;
     return [o, st.meal, st.cuisine, st.mode, radiusNeeded(), st.levels.join("+"), st.openNow ? 1 : 0].join("|");
   }
-  async function runSearch() {
+  // A search "session" = one set of parameters; «Искать ещё» adds the next stage to it (merged by Place ID).
+  async function runSearch(more = false) {
     if (!st.origin && !st.where.trim()) return;
     const key = cacheKey();
-    if (searchCache.has(key)) { st.resp = searchCache.get(key); render(); return; }
-    st.loading = true; st.error = null; render();
+    if (!more && searchCache.has(key)) { st.resp = searchCache.get(key); render(); return; }
+    const prev = more ? st.resp : null;
+    const stage = prev ? (prev.stage ?? 0) + 1 : 0;
+    st.loading = true; st.error = null; st.moreNote = null; render();
     try {
-      const body = { meal: st.meal, mode: st.mode, radiusM: radiusNeeded(), cuisineQuery: C.CUISINES[st.cuisine]?.q || null,
-                     openNow: st.openNow, levels: st.levels };
-      if (st.origin) Object.assign(body, { lat: st.origin.lat, lon: st.origin.lon }); else body.where = st.where.trim();
+      const c = C.CUISINES[st.cuisine] || {};
+      const body = { meal: st.meal, mode: st.mode, radiusM: radiusNeeded(), cuisineQuery: c.q || null, cuisineType: c.type || null,
+                     openNow: st.openNow, levels: st.levels, stage };
+      if (prev && prev.origin) Object.assign(body, { lat: prev.origin.lat, lon: prev.origin.lon });
+      else if (st.origin) Object.assign(body, { lat: st.origin.lat, lon: st.origin.lon }); else body.where = st.where.trim();
       const resp = await api("/search", body);
-      if (resp.origin && !st.origin) { st.originLabel = resp.origin.label; }
-      searchCache.set(key, resp);
-      st.resp = resp;
+      if (resp.origin && !st.origin) { st.originLabel = resp.origin.label || st.originLabel; }
+      let merged = resp;
+      if (prev) {
+        const byId = new Map(prev.places.map(p => [p.id, p]));
+        let fresh = 0;
+        for (const p of resp.places) {
+          if (!byId.has(p.id)) { byId.set(p.id, p); fresh++; }
+          else byId.get(p.id).via = [...new Set([...(byId.get(p.id).via || []), ...(p.via || [])])];
+        }
+        merged = { ...resp, places: [...byId.values()], routeTimes: { ...prev.routeTimes, ...resp.routeTimes },
+                   statsLog: [...(prev.statsLog || [prev.stats]), resp.stats], origin: prev.origin };
+        st.moreNote = fresh ? `Добавлено новых мест: ${fresh}.` : "Новых мест с рейтингом от 4.0 не нашлось.";
+      } else merged.statsLog = [resp.stats];
+      searchCache.set(key, merged);
+      st.resp = merged;
     } catch (e) {
       st.error = e.code === "not_configured" ? "Сервис поиска ещё не подключён." :
         e.code === "rate_limited" ? "Слишком много запросов — подождите минуту." :
@@ -131,10 +148,11 @@
   function plural(n, one, few, many) { const a = n % 10, b = n % 100; return a === 1 && b !== 11 ? one : a >= 2 && a <= 4 && (b < 12 || b > 14) ? few : many; }
 
   // ---------------------------------------------------------------- render
-  const TYPE_ICON = [[/ramen/, "🍜"], [/sushi/, "🍣"], [/(coffee|cafe|tea)/, "☕"], [/(bakery|pancake|breakfast|brunch)/, "🥞"],
-    [/(yakiniku|barbecue|steak)/, "🥩"], [/(italian|pizza)/, "🍝"], [/hamburger/, "🍔"], [/(dessert|confection|ice_cream|cake)/, "🍰"],
-    [/(japanese|udon|soba|noodle)/, "🍱"]];
-  const iconFor = p => (TYPE_ICON.find(([re]) => re.test([p.primaryType, ...(p.types || [])].join(" "))) || [0, "🍽"])[1];
+  const TYPE_ICON = [[/(ramen|noodle)/, "soup"], [/(sushi|seafood)/, "fish"], [/(coffee|cafe|tea_house|breakfast|brunch|bakery)/, "coffee"],
+    [/(yakiniku|yakitori|barbecue|steak|tonkatsu|chicken|bar_and_grill)/, "beef"], [/(italian|pizza)/, "pizza"], [/(hamburger|sandwich|fast_food)/, "sandwich"],
+    [/(dessert|confection|ice_cream)/, "cake"]];
+  const I = (n, l) => (window.KoyoIcons ? window.KoyoIcons.svg(n, l) : "");
+  const iconFor = p => (TYPE_ICON.find(([re]) => re.test([p.primaryType, ...(p.types || [])].join(" "))) || [0, "utensils"])[1];
 
   function chipRow(name, items, current, label) {
     return `<div class="fchips" role="group" aria-label="${esc(label)}">${items.map(([k, v]) =>
@@ -147,14 +165,14 @@
       : (t.distM != null ? `📏 ${t.distM < 1000 ? t.distM + " м" : (t.distM / 1000).toFixed(1) + " км"}` : "");
     const openCls = { open: "ok", closing: "warn", closed: "bad", unknown: "unk" }[x.open.code];
     return `<article class="fcard" data-id="${esc(p.id)}">
-      <div class="fc-top">${st.photos && p.photo ? `<img class="fc-ph" data-photo="${esc(p.photo.name)}" alt="" width="44" height="44">` : `<span class="fc-ic" aria-hidden="true">${iconFor(p)}</span>`}
-        <h3 class="fc-nm">${esc(p.name || "Без названия")}</h3></div>
-      <div class="fc-l"><span class="fc-r">⭐ ${p.rating.toFixed(1)} <small>(${p.userRatingCount.toLocaleString("ru-RU")})</small></span>${tt ? `<span>· ${tt}</span>` : ""}</div>
-      <div class="fc-l"><span title="${x.price.kind === "level" ? "ценовой уровень Google, не точная сумма" : ""}">${esc(x.price.text)}</span>${p.typeLabel ? `<span>· ${esc(p.typeLabel)}</span>` : ""}<span class="fo ${openCls}">· ${esc(x.open.ru)}</span></div>
+      <div class="fc-top">${st.photos && p.photo ? `<img class="fc-ph" data-photo="${esc(p.photo.name)}" alt="" width="40" height="40">` : `<span class="fc-ic">${I(iconFor(p), x.label)}</span>`}
+        <h3 class="fc-nm">${esc(p.name || "Без названия")}</h3>
+        <a class="fa ic" href="${esc(C.mapsUrl(p))}" target="_blank" rel="noopener" aria-label="Открыть в Google Maps">${I("mappin")}</a></div>
+      <div class="fc-l"><span class="fc-r">★ ${p.rating.toFixed(1)} <small>(${p.userRatingCount.toLocaleString("ru-RU")})</small></span>${tt ? `<span>· ${tt}</span>` : ""}</div>
+      <div class="fc-l"><span title="${x.price.kind === "level" ? "ценовой уровень Google, не точная сумма" : ""}">${esc(x.price.text)}</span><span>· ${esc(x.label)}</span><span class="fo ${openCls}">· ${esc(x.open.ru)}</span></div>
       <div class="fc-act">
-        <a class="fa" href="${esc(C.mapsUrl(p))}" target="_blank" rel="noopener">📍 Карта</a>
-        <a class="fa" href="${esc(C.dirUrl(p, st.mode))}" target="_blank" rel="noopener">🧭 Маршрут</a>
-        <button type="button" class="fa sum" data-sum="${esc(p.id)}" aria-expanded="${isOpen}">✨ Выжимка</button>
+        <a class="fa pri" href="${esc(C.dirUrl(p, st.mode))}" target="_blank" rel="noopener">${I("navigation")} Маршрут</a>
+        <button type="button" class="fa sum" data-sum="${esc(p.id)}" aria-expanded="${isOpen}">${I("sparkles")} Выжимка</button>
       </div>
       <div class="fsum"${isOpen ? "" : " hidden"}>${isOpen ? summaryHTML(open, p) : ""}</div>
     </article>`;
@@ -167,11 +185,15 @@
     const minuteOpts = (st.mode === "walk" ? C.WALK : C.TRANSIT).map(m => [m, `до ${m} мин`]);
     let resultsHTML = "";
     if (st.resp) {
-      const { items, dropped } = C.filterAndSort(st.resp.places, { origin: st.resp.origin || st.origin, mode: st.mode, minutes: st.minutes, meal: st.meal,
+      const { items, dropped, reasons } = C.filterAndSort(st.resp.places, { origin: st.resp.origin || st.origin, mode: st.mode, minutes: st.minutes, meal: st.meal, cuisine: st.cuisine,
         budget: st.budget, levels: st.levels, includeUnknownPrice: st.includeUnknownPrice, openNow: st.openNow, sort: st.sort, routeTimes: st.resp.routeTimes });
       const hidden = dropped.lowRating + dropped.noRating;
       resultsHTML = `<div class="fsum-line">${items.length ? `Найдено: <b>${items.length}</b>` : "Ничего не найдено"} · Google ≥ 4.0${hidden ? ` · скрыто без рейтинга или ниже 4.0: ${hidden}` : ""}${st.resp.routesNote ? `<br>${esc(st.resp.routesNote)}` : ""}${st.resp.note ? `<br>${esc(st.resp.note)}` : ""}</div>
         <div class="flist">${items.map(cardHTML).join("") || `<div class="empty">Попробуйте увеличить время в пути, сменить кухню или бюджет.</div>`}</div>
+        ${st.moreNote ? `<div class="fsum-line">${esc(st.moreNote)}</div>` : ""}
+        ${st.resp.more ? `<button type="button" class="act fmore" id="fMore"${st.loading ? " disabled" : ""}>${I("search")} ${st.loading ? "Ищу…" : "Искать ещё"}</button>`
+          : `<div class="fsum-line">Больше вариантов в этом радиусе нет — увеличьте время в пути.</div>`}
+        ${debugOn() ? debugHTML(st.resp, dropped, reasons) : ""}
         <details class="fhow"><summary>Как сортируем и что значит время</summary><div class="mini">
           «Рекомендуемые» — байесовский рейтинг Google с учётом числа оценок: (v·R + ${C.BAYES_M}·${C.BAYES_C}) / (v + ${C.BAYES_M}), минус 0,12 за каждые 10 минут пути; «скоро закроется» и неизвестные часы немного понижают место. Так 4.9 с 8 оценками не обгоняет 4.6 с 1 500.
           Время в пути — по маршруту Google (пешком или поезд/метро/автобус), если сервис его вернул; иначе «≈ … (оценка)» по расстоянию или просто расстояние. Цена: диапазон в иенах — из Google; «¥¥» — ценовой уровень Google, не точная сумма. Часы и «открыто» — из Google; последний заказ Google не публикует.</div></details>`;
@@ -215,6 +237,18 @@
     if (st.photos) loadPhotos(root);
   }
 
+  function debugOn() { try { return /[?&]debug=1/.test(location.search) || localStorage.getItem("koyo.food.debug") === "1"; } catch (e) { return false; } }
+  function debugHTML(resp, dropped, reasons) {
+    const log = resp.statsLog || [resp.stats].filter(Boolean);
+    const rows = log.flatMap((s, i) => (s?.perRequest || []).map(r => `этап ${i}: ${esc(r.query)} ${esc(r.type)} ${esc(r.rank)} стр.${r.page} → ${r.returned} (+${r.newUnique})`));
+    const req = log.reduce((a, s) => a + (s?.requests || 0), 0);
+    return `<details class="fdebug" open><summary>Диагностика поиска (для разработчика)</summary><div class="mini">
+      Запросов к Google: <b>${req}</b> · уникальных мест внутри зоны: <b>${resp.places.length}</b>${log.length ? ` · вне радиуса отброшено сервером: ${log.reduce((a, s) => a + (s?.outsideRadius || 0), 0)}` : ""}<br>
+      Исключено: рейтинг ${dropped.lowRating + dropped.noRating}, расстояние ${dropped.far}, кухня ${dropped.cuisine}, цена ${dropped.budget}, часы/приём пищи ${dropped.meal + dropped.closed}<br>
+      ${rows.map(r => `<div>${r}</div>`).join("")}
+      <form id="fWhy"><input id="fWhyQ" placeholder="Почему нет? Название или Place ID"><button class="act">Проверить</button></form><div id="fWhyA"></div>
+      <p>Координаты и ключи здесь не показываются. Включение: ?debug=1 в адресе.</p></div></details>`;
+  }
   function filterSummary() {
     const parts = [st.mode === "walk" ? `🚶 ${st.minutes} мин` : `🚃 ${st.minutes} мин`];
     if (st.cuisine !== "any") parts.push(C.CUISINES[st.cuisine].label);
@@ -237,6 +271,17 @@
   }
 
   function bind(root) {
+    root.querySelector("#fMore")?.addEventListener("click", () => runSearch(true));
+    root.querySelector("#fWhy")?.addEventListener("submit", e => {
+      e.preventDefault();
+      const q = root.querySelector("#fWhyQ").value.trim().toLowerCase(); if (!q) return;
+      const { reasons } = C.filterAndSort(st.resp.places, { origin: st.resp.origin, mode: st.mode, minutes: st.minutes, meal: st.meal, cuisine: st.cuisine,
+        budget: st.budget, levels: st.levels, includeUnknownPrice: st.includeUnknownPrice, openNow: st.openNow, routeTimes: st.resp.routeTimes });
+      const hit = st.resp.places.filter(p => (p.name || "").toLowerCase().includes(q) || p.id.toLowerCase() === q);
+      root.querySelector("#fWhyA").textContent = hit.length
+        ? hit.map(p => `${p.name}: ${reasons[p.id] ? "исключено — " + reasons[p.id] : "показано в списке"}`).join("; ")
+        : "Google не вернул это место ни в одном из запросов этого поиска (рейтинг < 4.0 или за пределами зоны, либо нужен «Искать ещё»).";
+    });
     root.querySelector("#fFilters > summary")?.addEventListener("click", e => { st.filtersOpen = !e.currentTarget.parentElement.open; });
     root.querySelector("#fNear")?.addEventListener("click", () => {
       if (!apiBase()) { st.error = "Сервис поиска ещё не подключён — геолокацию не запрашиваем."; render(); return; }
