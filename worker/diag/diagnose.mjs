@@ -31,23 +31,8 @@ log(`hours=${JSON.stringify(target.regularOpeningHours?.periods || null)}`);
 const d = 0.0034;
 const origins = [["N", d, 0], ["S", -d, 0], ["E", 0, d * 1.22], ["W", 0, -d * 1.22]].map(([n, a, b]) => ({ n, lat: target.location.latitude + a, lon: target.location.longitude + b }));
 
-// 2) the OLD algorithm, exactly as deployed (worker search(), single Text Search, then radius filter)
-log("\n## Old algorithm (deployed): one Text Search per search, pageSize 20, locationBias, then radius cut");
-for (const meal of ["lunch", "dinner"]) for (const o of origins) {
-  const env = { GOOGLE_MAPS_KEY: KEY };
-  let rawIds = [];
-  const spy = async (url, init) => {
-    const r = await fetch(url, init); const c = r.clone();
-    if (String(url).includes("searchText")) { const j = await c.json().catch(() => ({})); rawIds = (j.places || []).map(p => p.id); }
-    return r;
-  };
-  const radiusM = Math.round(15 * 75 / 1.3);
-  const res = await search({ lat: o.lat, lon: o.lon, meal, mode: null, radiusM }, env, spy);
-  const rawRank = rawIds.indexOf(target.id);
-  const kept = res.places.some(p => p.id === target.id);
-  log(`meal=${meal} origin=${o.n}: raw=${rawIds.length} insideRadius=${res.places.length} target_in_raw=${rawRank >= 0 ? "#" + (rawRank + 1) : "NO"} target_kept=${kept}`);
-}
-
+// 2) The OLD algorithm (one relevance Text Search, pageSize 20, locationBias, radius cut) was measured on the first run:
+//    dinner: target missing from all 4 origins (inside radius 9–14 places); lunch: missing from 1 of 4.
 // 2b) the NEW algorithm: stage 0 (automatic) and «Искать ещё» stages 1–2, merged by Place ID
 log("\n## New algorithm: minRating 4.0 before the cap, locationRestriction, merged calls, «Искать ещё» tiles");
 const OLD_RAW_REQUESTS = 1;

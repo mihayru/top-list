@@ -138,8 +138,9 @@ test("merge: several calls + pagination, de-duplicated by Place ID; stats are co
     if (String(url).includes("computeRouteMatrix")) return new Response("[]");
     const b = JSON.parse(init.body); n++;
     if (b.rankPreference === "DISTANCE" && !b.pageToken) return new Response(JSON.stringify({ places: pageA, nextPageToken: "tok" }));
-    if (b.pageToken === "tok") return new Response(JSON.stringify({ places: pageB }));
-    return new Response(JSON.stringify({ places: [...pageA.slice(0, 5), P("kuu0000000001", 35.0005, 135.7605)] })); // duplicates + 1 new
+    if (b.pageToken === "tok") return new Response(JSON.stringify({ places: pageB, nextPageToken: "tok2" }));
+    if (b.pageToken === "tok2") return new Response(JSON.stringify({ places: [...pageA.slice(0, 5), P("kuu0000000001", 35.0005, 135.7605)] })); // duplicates + 1 new
+    return new Response(JSON.stringify({ places: [] }));
   };
   const r = await (await handle(req("/search", { lat: 35.0, lon: 135.76, radiusM: 865, meal: "dinner", mode: "walk" }), ENV, { fetch })).json();
   assert.strictEqual(n, 3);

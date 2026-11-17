@@ -18,22 +18,50 @@
   };
   // Search keywords (Japanese works best for Japanese listings). The label on the card is
   // Google's own primary-type name — we never assign a cuisine ourselves.
+  // `type` = Google place types verified against the live API (worker/diag); Google has no udon/donburi/pancake types,
+  // those cuisines rely on the text query only.
   const CUISINES = {
     any:       { label: "Любая", q: null },
-    japanese:  { label: "Японская", q: "和食" },
-    ramen:     { label: "Рамен", q: "ラーメン" },
-    sushi:     { label: "Суши", q: "寿司" },
-    katsu:     { label: "Гюкацу / тонкацу", q: "牛カツ とんかつ" },
-    yakiniku:  { label: "Якинику", q: "焼肉" },
-    noodles:   { label: "Удон / соба", q: "うどん そば" },
-    curry:     { label: "Карри", q: "カレー" },
+    japanese:  { label: "Японская", q: "和食", type: "japanese_restaurant" },
+    ramen:     { label: "Рамен", q: "ラーメン", type: "ramen_restaurant" },
+    sushi:     { label: "Суши", q: "寿司", type: "sushi_restaurant" },
+    katsu:     { label: "Гюкацу / тонкацу", q: "牛カツ とんかつ", types: ["tonkatsu_restaurant"] },
+    yakiniku:  { label: "Якинику", q: "焼肉", type: "yakiniku_restaurant" },
+    noodles:   { label: "Удон / соба", q: "うどん そば", types: ["noodle_shop"] },
+    curry:     { label: "Карри", q: "カレー", type: "japanese_curry_restaurant" },
     donburi:   { label: "Донбури", q: "丼" },
     pancakes:  { label: "Панкейки", q: "パンケーキ" },
-    coffee:    { label: "Кофе и завтрак", q: "カフェ モーニング" },
-    italian:   { label: "Итальянская", q: "イタリアン" },
-    burgers:   { label: "Бургеры", q: "ハンバーガー" },
-    desserts:  { label: "Десерты", q: "スイーツ" },
+    coffee:    { label: "Кофе и завтрак", q: "カフェ モーニング", types: ["cafe", "coffee_shop", "breakfast_restaurant", "brunch_restaurant"] },
+    italian:   { label: "Итальянская", q: "イタリアン", type: "italian_restaurant" },
+    burgers:   { label: "Бургеры", q: "ハンバーガー", type: "hamburger_restaurant" },
+    desserts:  { label: "Десерты", q: "スイーツ", types: ["dessert_shop", "dessert_restaurant", "confectionery", "ice_cream_shop"] },
   };
+  // Most specific Google type → Russian label (only real Google types; no guessing from names).
+  const TYPE_RU = {
+    ramen_restaurant: "Рамен", sushi_restaurant: "Суши", yakiniku_restaurant: "Якинику", yakitori_restaurant: "Якитори",
+    tonkatsu_restaurant: "Тонкацу", japanese_curry_restaurant: "Японское карри", noodle_shop: "Лапша",
+    japanese_restaurant: "Японская кухня", korean_restaurant: "Корейская кухня", chinese_restaurant: "Китайская кухня",
+    italian_restaurant: "Итальянская кухня", french_restaurant: "Французская кухня", pizza_restaurant: "Пицца",
+    hamburger_restaurant: "Бургеры", steak_house: "Стейк-хаус", barbecue_restaurant: "Гриль / барбекю", seafood_restaurant: "Морепродукты",
+    chicken_restaurant: "Курица", asian_restaurant: "Азиатская кухня", vegetarian_restaurant: "Вегетарианская", vegan_restaurant: "Веганская",
+    fine_dining_restaurant: "Высокая кухня", buffet_restaurant: "Буфет", fast_food_restaurant: "Фастфуд", bistro: "Бистро",
+    breakfast_restaurant: "Завтраки", brunch_restaurant: "Бранчи", cafe: "Кафе", coffee_shop: "Кофейня", bakery: "Пекарня",
+    sandwich_shop: "Сэндвичи", dessert_restaurant: "Десерты", dessert_shop: "Десерты", confectionery: "Кондитерская",
+    ice_cream_shop: "Мороженое", tea_house: "Чайная", deli: "Деликатесы", diner: "Закусочная", bar_and_grill: "Гриль-бар",
+    bar: "Бар", pub: "Паб", wine_bar: "Винный бар", food_court: "Фудкорт",
+  };
+  function cuisineLabel(p) {
+    const order = [p.primaryType, ...(p.types || [])];
+    for (const t of order) if (t && TYPE_RU[t]) return TYPE_RU[t];
+    return p.typeLabel && !/^ресторан$/i.test(p.typeLabel) ? p.typeLabel : "Ресторан";
+  }
+  /** Cuisine filter on merged candidates: Google type match, or the place came from that cuisine's own query. */
+  function cuisineMatch(p, key) {
+    const c = CUISINES[key]; if (!c || !c.q) return true;
+    const types = [c.type, ...(c.types || [])].filter(Boolean);
+    if (types.some(t => (p.types || []).includes(t) || p.primaryType === t)) return true;
+    return (p.via || []).includes("cuisine");
+  }
   const BUDGETS = {
     any: { label: "Любой бюджет", lo: 0, hi: Infinity },
     b1: { label: "до ¥1 000", lo: 0, hi: 1000 },
@@ -132,8 +160,14 @@
       if (p.openNow === false) return { code: "closed", ru: "Закрыто", known: true };
       return { code: "unknown", ru: "Часы не подтверждены", known: false };
     }
-    if (!at.open) return { code: "closed", ru: arrivalMinFromNow ? "Закрыто к приходу" : "Закрыто", known: true };
-    if (at.closesIn != null && at.closesIn < 45) return { code: "closing", ru: `Закроется через ${at.closesIn} мин`, known: true };
+    if (!at.open) {
+      const openNow = openAt(p, now.day, now.min);
+      return { code: "closed", ru: openNow && openNow.open && arrivalMinFromNow ? "Закроется до прихода" : "Закрыто", known: true };
+    }
+    if (at.closesIn != null && at.closesIn < 60) {
+      const closeAt = (m + at.closesIn) % 1440, hh = String(Math.floor(closeAt / 60)).padStart(2, "0"), mm = String(closeAt % 60).padStart(2, "0");
+      return { code: "closing", ru: `Закрывается в ${hh}:${mm} — на месте ~${at.closesIn} мин`, known: true, minutesOnSite: at.closesIn };
+    }
     return { code: "open", ru: "Открыто", known: true };
   }
   /** Does the place serve the meal (Google serves* flags if present), else open during the meal window today. */
@@ -162,10 +196,15 @@
   }
   const SORTS = {
     recommended: { label: "Рекомендуемые", cmp: (a, b) => recommendKey(b) - recommendKey(a) },
-    near:        { label: "Ближе", cmp: (a, b) => (a.travel.min ?? 1e9) - (b.travel.min ?? 1e9) || (a.travel.distM ?? 1e9) - (b.travel.distM ?? 1e9) },
+    near:        { label: "Ближе", cmp: (a, b) => nearKey(a) - nearKey(b) },
     rating:      { label: "Рейтинг", cmp: (a, b) => adjRating(b.place) - adjRating(a.place) || b.place.userRatingCount - a.place.userRatingCount },
     cheap:       { label: "Дешевле", cmp: (a, b) => priceSortKey(a.place) - priceSortKey(b.place) || adjRating(b.place) - adjRating(a.place) },
   };
+  function nearKey(x) {
+    if (x.travel.min != null) return x.travel.min;
+    if (x.travel.distM != null) return (x.travel.distM * DETOUR) / WALK_M_PER_MIN;
+    return 1e9;
+  }
   function priceSortKey(p) {
     if (p.priceRange && p.priceRange.start != null) return p.priceRange.start;
     const lv = LEVELS[p.priceLevel];
@@ -179,24 +218,26 @@
    */
   function filterAndSort(places, opts) {
     const now = opts.now || jstNow();
-    const out = [], dropped = { noRating: 0, lowRating: 0, far: 0, closed: 0, budget: 0, meal: 0 };
+    const out = [], dropped = { noRating: 0, lowRating: 0, far: 0, closed: 0, budget: 0, meal: 0, cuisine: 0 }, reasons = {};
+    const drop = (p, k, why) => { dropped[k]++; reasons[p.id] = why; };
     for (const p of places || []) {
-      if (p.rating == null || !p.userRatingCount) { dropped.noRating++; continue; }
-      if (p.rating < MIN_RATING) { dropped.lowRating++; continue; }
-      if (p.businessStatus && p.businessStatus !== "OPERATIONAL") { dropped.closed++; continue; }
+      if (p.rating == null || !p.userRatingCount) { drop(p, "noRating", "нет рейтинга Google"); continue; }
+      if (p.rating < MIN_RATING) { drop(p, "lowRating", `рейтинг ${p.rating} < ${MIN_RATING}`); continue; }
+      if (p.businessStatus && p.businessStatus !== "OPERATIONAL") { drop(p, "closed", "закрыто навсегда/временно (" + p.businessStatus + ")"); continue; }
       const t = travel(p, opts.origin, opts.mode, opts.routeTimes);
       const limit = opts.minutes;
-      if (t.min != null && t.min > limit) { dropped.far++; continue; }
-      if (t.min == null && t.distM != null && opts.mode === "walk" && t.distM > searchRadius("walk", limit) * DETOUR) { dropped.far++; continue; }
-      if (!budgetMatch(p, opts.budget, opts.levels, opts.includeUnknownPrice !== false)) { dropped.budget++; continue; }
+      if (t.min != null && t.min > limit) { drop(p, "far", `${t.min} мин ${t.source === "google" ? "по маршруту" : "(оценка)"} > ${limit}`); continue; }
+      if (t.min == null && t.distM != null && opts.mode === "walk" && t.distM > searchRadius("walk", limit)) { drop(p, "far", `${t.distM} м по прямой > радиуса`); continue; }
+      if (!cuisineMatch(p, opts.cuisine)) { drop(p, "cuisine", "тип Google не совпадает с выбранной кухней"); continue; }
+      if (!budgetMatch(p, opts.budget, opts.levels, opts.includeUnknownPrice !== false)) { drop(p, "budget", "цена вне бюджета или неизвестна"); continue; }
       const meal = mealMatch(p, opts.meal, now);
-      if (!meal.ok) { dropped.meal++; continue; }
+      if (!meal.ok) { drop(p, "meal", "по часам работы закрыто во время этого приёма пищи"); continue; }
       const open = openStatus(p, t.min || 0, now);
-      if (opts.openNow && open.code !== "open" && open.code !== "closing") { dropped.closed++; continue; }
-      out.push({ place: p, travel: t, open, price: priceText(p), meal });
+      if (opts.openNow && open.code !== "open" && open.code !== "closing") { drop(p, "closed", open.ru); continue; }
+      out.push({ place: p, travel: t, open, price: priceText(p), meal, label: cuisineLabel(p) });
     }
     out.sort((SORTS[opts.sort] || SORTS.recommended).cmp);
-    return { items: out, dropped };
+    return { items: out, dropped, reasons };
   }
 
   function mapsUrl(p) {
@@ -206,7 +247,7 @@
     return `https://www.google.com/maps/dir/?api=1&destination=${encodeURIComponent(p.name || "restaurant")}&destination_place_id=${encodeURIComponent(p.id)}&travelmode=${mode === "transit" ? "transit" : "walking"}`;
   }
 
-  return { MIN_RATING, MEALS, CUISINES, BUDGETS, LEVELS, WALK, TRANSIT, SORTS, BAYES_M, BAYES_C,
+  return { TYPE_RU, cuisineLabel, cuisineMatch, MIN_RATING, MEALS, CUISINES, BUDGETS, LEVELS, WALK, TRANSIT, SORTS, BAYES_M, BAYES_C,
            km, searchRadius, roundCoord, travel, priceText, budgetMatch, jstNow, openAt, openStatus, mealMatch,
            adjRating, filterAndSort, mapsUrl, dirUrl };
 });

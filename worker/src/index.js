@@ -148,13 +148,10 @@ export function planCalls(stage, meal, cuisine, lat, lon, radiusM) {
   const cq = cuisine && cuisine.q ? { q: cuisine.q, type: cuisine.type || null, tag: "cuisine" } : null;
   if (stage === 0) {
     const calls = [];
-    if (cq) {
-      calls.push({ ...cq, rect, rank: "DISTANCE", pages: 2 });
-      calls.push({ ...cq, rect, rank: "RELEVANCE", pages: 1 });
-    } else {
-      calls.push({ ...base[0], tag: "base", rect, rank: "DISTANCE", pages: 2 });
-      calls.push({ ...(base[1] || base[0]), tag: "base", rect, rank: "RELEVANCE", pages: 1 });
-    }
+    // measured: a RELEVANCE call added only 0–4 new places after two DISTANCE pages, a third DISTANCE page adds up to 20
+    if (cq) calls.push({ ...cq, rect, rank: "DISTANCE", pages: 3 });
+    else if (base.length > 1) { calls.push({ ...base[0], tag: "base", rect, rank: "DISTANCE", pages: 2 }); calls.push({ ...base[1], tag: "base", rect, rank: "DISTANCE", pages: 1 }); }
+    else calls.push({ ...base[0], tag: "base", rect, rank: "DISTANCE", pages: 3 });
     return calls; // ≤ 3 billed requests (pages count)
   }
   const ts = tiles(lat, lon, radiusM);
