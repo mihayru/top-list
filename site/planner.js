@@ -36,6 +36,20 @@
     TRANSIT_MIN_PER_KM: 5.2,   // bus/subway/train incl. detour & stops
     REMOTE_EXTRA_MIN: 12,      // sparse buses to/from remote valleys
     MAX_TRANSIT_MIN: 120,      // total public-transport time in one day
+    // ---- home base (start & end of every day)
+    HOME_DEPART: 8 * 60 + 15,
+    RAIL_MIN_PER_KM: 3.2,      // train/subway incl. a transfer allowance
+    HUBS: [ // stations a guest walks to from the hotel area (approximate coordinates)
+      // rail/subway from Kyoto Station: JR Sagano (Arashiyama, Kameoka), JR Nara (Tōfukuji, Inari, Uji),
+      // JR to Yamashina, Karasuma/Tōzai subway (centre, Okazaki), JR + bus for Oharano
+      { id: "kyoto_st", name: "станция Киото (Kyoto Station)", lat: 34.9858, lon: 135.7588, rail: true,
+        serves: ["arashiyama", "kameoka", "tofukuji", "fushimi_uji", "yamashina", "central", "okazaki", "oharano"] },
+      // Kintetsu from Tōji only runs north to Kyoto Station and south (Fushimi, Uji direction)
+      { id: "toji_st", name: "станция То-дзи (Kintetsu)", lat: 34.9812, lon: 135.7578, rail: true, serves: ["fushimi_uji", "south"] },
+    ],
+    // conservative "be back by" assumptions (not a timetable — always check the last service in Google Maps)
+    RETURN_BY_CITY: 22 * 60 + 30,
+    RETURN_BY_REMOTE: 21 * 60,
     // uphill access on foot (stairs / mountain paths) — extra minutes when walking *to* these places
     HILL_EXTRA_MIN: { shogunzuka: 20, jingoji: 10, kurama: 20, kozanji: 5, saimyoji: 5, otagi: 5, yoshiminedera: 10 },
     REMOTE: ["ohara", "takao", "kurama", "kameoka", "oharano", "south"],
@@ -74,6 +88,24 @@
     return { mode: "transit", km: +d.toFixed(1),
              min: Math.round(CFG.TRANSIT_BASE_MIN + d * CFG.TRANSIT_MIN_PER_KM + (remote && a.district !== b.district ? CFG.REMOTE_EXTRA_MIN : 0)) };
   }
+  /** Leg between the home base and a place: walk if close; otherwise the fastest of
+   *  (walk to Kyoto/Tōji station + train/bus) and (bus from the hotel area). */
+  function homeLeg(home, p, toHome = false) {
+    const d = km(home, p);
+    if (d <= CFG.WALK_MAX_KM) return { mode: "walk", km: +d.toFixed(1), min: Math.max(3, Math.round(d * CFG.WALK_MIN_PER_KM)) + (!toHome && CFG.HILL_EXTRA_MIN[p.id] || 0) };
+    const remote = CFG.REMOTE.includes(p.district) ? CFG.REMOTE_EXTRA_MIN : 0;
+    // long bus rides go faster after the city centre: full per-km rate for the first 6 km, rail-like after
+    const busMin = x => Math.min(x, 6) * CFG.TRANSIT_MIN_PER_KM + Math.max(0, x - 6) * CFG.RAIL_MIN_PER_KM;
+    let best = { mode: "transit", km: +d.toFixed(1), min: Math.round(CFG.TRANSIT_BASE_MIN + busMin(d) + remote), hub: null };
+    for (const h of CFG.HUBS) {
+      if (h.serves && !h.serves.includes(p.district)) continue;
+      const walk = Math.max(3, Math.round(km(home, h) * CFG.WALK_MIN_PER_KM));
+      const min = Math.round(walk + 8 + 7 + km(h, p) * (h.rail ? CFG.RAIL_MIN_PER_KM : CFG.TRANSIT_MIN_PER_KM) + remote);
+      if (min < best.min) best = { mode: "transit", km: +d.toFixed(1), min, hub: h.name, walkToHub: walk };
+    }
+    return best;
+  }
+  const homeCost = (o, home) => home && o.length ? homeLeg(home, o[0]).min + homeLeg(home, o[o.length - 1], true).min : 0;
   const travelMin = d => Math.round(d <= CFG.WALK_MAX_KM ? Math.max(3, d * CFG.WALK_MIN_PER_KM) : CFG.TRANSIT_BASE_MIN + d * CFG.TRANSIT_MIN_PER_KM);
   /** Transit feasibility of a day order: ≤1 remote district, only with districts on its line,
    *  limited number of transit legs and total transit time. */
@@ -141,10 +173,10 @@
   // ------------------------------------------------------------------ schedule
   function schedule(stops, opts = {}) {
     const dayEnd = opts.dayEnd ?? CFG.DENSITY.max.dayEnd;
-    let t = opts.start ?? CFG.START_MIN;
+    let t = opts.start ?? (opts.home ? CFG.HOME_DEPART : CFG.START_MIN);
     const items = [], issues = [];
     stops.forEach((p, i) => {
-      const L = i > 0 ? leg(stops[i - 1], p) : null;
+      const L = i > 0 ? leg(stops[i - 1], p) : (opts.home ? homeLeg(opts.home, p) : null);
       const d = L ? L.km : 0;
       const tr = L ? L.min : 0;
       t += tr;
@@ -173,7 +205,7 @@
     for (const o of perms) {
       const sc = schedule(o, opts);
       const late = o.reduce((s, p, i) => s + (p.kind === "area" ? 0 : i), 0) * 0.05;
-      const cost = (sc.ok ? 0 : 1000 + 50 * sc.issues.length) + pathMin(o) / 5 + late;
+      const cost = (sc.ok ? 0 : 1000 + 50 * sc.issues.length) + (pathMin(o) + homeCost(o, opts && opts.home)) / 5 + late;
       if (!best || cost < best.cost) best = { o, cost };
     }
     return best.o;
@@ -202,7 +234,7 @@
     for (let i = 0; i <= order.length; i++) {
       const o = order.slice(0, i).concat([p], order.slice(i));
       const sc = schedule(o, opts);
-      const cost = (sc.ok ? 0 : 1000) + pathMin(o);
+      const cost = (sc.ok ? 0 : 1000) + pathMin(o) + homeCost(o, opts && opts.home);
       if (!best || cost < best.cost) best = { o, cost, ok: sc.ok };
     }
     return best;
@@ -253,7 +285,8 @@
     const dv = opts._div || null;
     const today = opts.today || data.today;
     const dens = CFG.DENSITY[opts.density || user.settings?.density || CFG.DEFAULT_DENSITY] || CFG.DENSITY.rich;
-    const sopts = { dayEnd: dens.dayEnd };
+    const home = opts.home !== undefined ? opts.home : (user.settings?.home || null);
+    const sopts = home ? { dayEnd: dens.dayEnd, home } : { dayEnd: dens.dayEnd };
     const byId = new Map(data.places.map(p => [p.id, p]));
     const res = reservations(user.plans);
     const removed = new Set((user.removed || {})[date] || []);
@@ -316,7 +349,7 @@
     }
     function clusterValue(ch) {
       const order = bestOrder(ch.map(x => x.p), sopts);
-      const v0 = ch.reduce((s, x) => s + (x.value ?? 0), 0) - 0.6 * pathMin(order);
+      const v0 = ch.reduce((s, x) => s + (x.value ?? 0), 0) - 0.6 * (pathMin(order) + homeCost(order, home));
       return dv ? v0 + dv.cluster(order) : v0;
     }
 
@@ -374,6 +407,7 @@
     if (sc.items.some(i => !i.hoursKnown)) notes.push("У части мест часы работы не опубликованы — считаем типичные 9:00–16:00, проверьте на месте.");
 
     const plan = finishDay(data, date, today, ordered, pinnedIds, sopts);
+    if (home) plan.home = home;
     if (standaloneIds.size) plan.stops.forEach(s => { if (standaloneIds.has(s.id)) s.standalone = true; });
     Object.assign(plan, { warnings, notes, excluded, created: new Date().toISOString(), dataGenerated: data.generated_at,
                           density: opts.density || user.settings?.density || CFG.DEFAULT_DENSITY, feasible: sc.ok });
@@ -408,8 +442,10 @@
     const byId = new Map(data.places.map(p => [p.id, p]));
     const dens = CFG.DENSITY[plan.density || CFG.DEFAULT_DENSITY] || CFG.DENSITY.rich;
     const pts = plan.stops.map(s => byId.get(s.id)).filter(p => p && p.lat != null);
-    const sc = schedule(pts, { dayEnd: dens.dayEnd });
+    const home = opts.home !== undefined ? opts.home : plan.home;
+    const sc = schedule(pts, home ? { dayEnd: dens.dayEnd, home } : { dayEnd: dens.dayEnd });
     sc.items.forEach(it => { const s = plan.stops.find(x => x.id === it.id); if (s) Object.assign(s, { arrive: it.arrive, leave: it.leave, travel: it.travel, km: it.km, mode: it.mode }); });
+    if (home) plan.home = home;
     plan.feasible = sc.ok; plan.dayEnd = pts.length ? sc.end : null;
     return sc;
   }
@@ -420,7 +456,8 @@
     const radius = opts.radius || CFG.REPLACE_RADIUS_KM;
     const byId = new Map(data.places.map(p => [p.id, p]));
     const dens = CFG.DENSITY[plan.density || CFG.DEFAULT_DENSITY] || CFG.DENSITY.rich;
-    const sopts = { dayEnd: dens.dayEnd };
+    const home = plan.home || user.settings?.home || null;
+    const sopts = home ? { dayEnd: dens.dayEnd, home } : { dayEnd: dens.dayEnd };
     const res = reservations(user.plans);
     const removed = new Set((user.removed || {})[date] || []);
     const idx = plan.stops.findIndex(s => s.id === stopId);
@@ -517,7 +554,7 @@
       // re-order only if necessary
       const byId = new Map(data.places.map(p => [p.id, p]));
       const dens = CFG.DENSITY[plan.density || CFG.DEFAULT_DENSITY] || CFG.DENSITY.rich;
-      const o = bestOrder(plan.stops.map(x => byId.get(x.id)).filter(Boolean), { dayEnd: dens.dayEnd });
+      const o = bestOrder(plan.stops.map(x => byId.get(x.id)).filter(Boolean), plan.home ? { dayEnd: dens.dayEnd, home: plan.home } : { dayEnd: dens.dayEnd });
       const m = new Map(plan.stops.map(x => [x.id, x]));
       plan.stops = o.map(p => m.get(p.id));
       retime(data, plan);
@@ -588,10 +625,19 @@
       const tr = L ? L.min : 0;
       let arrive = Math.max(startT + tr, w.open);
       if (arrive > w.last) { rejected.late++; continue; }
+      const home = opts.home !== undefined ? opts.home : (plan.home || user.settings?.home || null);
+      let back = null;
+      if (home) {
+        const H = homeLeg(home, luP, true);
+        back = { at: arrive + CFG.EVENING_VISIT + H.min, min: H.min, mode: H.mode };
+        const limit = CFG.REMOTE.includes(luP.district) ? CFG.RETURN_BY_REMOTE : CFG.RETURN_BY_CITY;
+        if (back.at > limit) { rejected.noReturn = (rejected.noReturn || 0) + 1; continue; }
+      }
       const leaf = luLeafScore(lu, data, date, today);
-      const value = leaf.score - CFG.KM_COST * d - (lu.reservation ? 5 : 0) - (lu.price_yen || 0) / 400;
+      let value = leaf.score - CFG.KM_COST * d - (lu.reservation ? 5 : 0) - (lu.price_yen || 0) / 400;
+      if (back) value -= 0.15 * back.min; // slight preference for light-ups on the way home
       out.push({ id: lu.id, place_id: lu.place_id, arrive, leave: arrive + CFG.EVENING_VISIT, travel: tr, km: +(+d).toFixed(1), mode: L ? L.mode : null,
-                 last: w.last, open: w.open, leafScore: leaf.score, fresh: leaf.fresh, value });
+                 last: w.last, open: w.open, leafScore: leaf.score, fresh: leaf.fresh, value, back });
     }
     out.sort((a, b) => b.value - a.value);
     return { items: out, rejected };
@@ -661,6 +707,16 @@
       t = arrive + CFG.EVENING_VISIT; from = luP;
     }
     plan.eveningFeasible = ok;
+    if (plan.home && from) {
+      const H = homeLeg(plan.home, from, true);
+      const last = evening.length ? from : null;
+      const limit = from && CFG.REMOTE.includes(from.district) ? CFG.RETURN_BY_REMOTE : CFG.RETURN_BY_CITY;
+      const dayOnlyEnd = plan.dayEnd ?? t;
+      const leaveAt = evening.length ? t : dayOnlyEnd;
+      plan.homeEnd = { ...H, from: from.id, leaveAt, backAt: leaveAt + H.min, late: leaveAt + H.min > limit };
+      const first = (plan.stops || []).map(s => byId.get(s.id)).find(p => p && p.lat != null);
+      if (first) { const S = homeLeg(plan.home, first); plan.homeStart = { ...S, to: first.id, departAt: (plan.stops[0].arrive ?? CFG.HOME_DEPART) - S.min }; }
+    } else { delete plan.homeEnd; delete plan.homeStart; }
     return ok;
   }
 
@@ -696,7 +752,8 @@
   function segments(points) {
     const segs = [];
     for (let i = 1; i < points.length; i++) {
-      const L = leg(points[i - 1], points[i]);
+      const a = points[i - 1], b = points[i];
+      const L = a.isHome ? homeLeg(a, b) : b.isHome ? homeLeg(b, a, true) : leg(a, b);
       const last = segs[segs.length - 1];
       if (L.mode === "walk" && last && last.mode === "walk") { last.points.push(points[i]); last.min += L.min; last.km += L.km; }
       else segs.push({ mode: L.mode, points: [points[i - 1], points[i]], min: L.min, km: L.km });
@@ -714,7 +771,7 @@
       (way ? `&waypoints=${encodeURIComponent(way)}` : "");
   }
 
-  return { CFG, km, leg, zoneCheck, legUrl, legUrlTo, walkChainUrl, segments, scoreOn, reservations, placeState, buildPlan, schedule, retime, fmtTime, toMin, gmapsRoute, dayOffset,
+  return { CFG, km, leg, homeLeg, zoneCheck, legUrl, legUrlTo, walkChainUrl, segments, scoreOn, reservations, placeState, buildPlan, schedule, retime, fmtTime, toMin, gmapsRoute, dayOffset,
            alternatives, applyReplacement, eveningOptions, buildEvening, eveningAlternatives, timeEvening, lightupActive,
            luWindow, luLeafScore, hoursOf, visitMin, plural };
 });

@@ -20,11 +20,24 @@
   const scoreBg = sc => sc == null ? "#9a948c" : sc >= 85 ? "#b3001f" : sc >= 70 ? "#d6331c" : sc >= 55 ? "#e0701f" : sc >= 40 ? "#c79a1c" : "#8a857e";
 
   // ---------------------------------------------------------------- store
-  function empty() { return { v: 1, visited: {}, plans: {}, removed: {}, removedEvening: {}, trip: { ...DEFAULT_TRIP }, deleted: [], settings: { density: "rich", variety: "best" } }; }
+  // Home base: start and end of every day. Coordinates are approximate (used only for travel-time estimates);
+  // Google Maps links use the name + Japanese address, so Google resolves the hotel itself.
+  const DEFAULT_HOME = { id: "home", isHome: true, name: "BON Kyoto Station", ru: "BON Kyoto Station",
+    address: "2 Nishikujo Ikenouchi-cho, Minami Ward, Kyoto 601-8416",
+    maps_q: "BON Kyoto Station 京都府京都市南区西九条池ノ内町2", lat: 34.9822, lon: 135.7560, district: "central", approx: true };
+  const HOME_ANCHORS = { // for a future base: pick the nearest landmark for travel-time estimates
+    bon: { label: "BON Kyoto Station (по умолчанию)", lat: 34.9822, lon: 135.7560 },
+    kyoto_st: { label: "Станция Киото", lat: 34.9858, lon: 135.7588 },
+    shijo: { label: "Сидзё-Карасума", lat: 35.0037, lon: 135.7597 },
+    kawaramachi: { label: "Каварамати / Гион-Сидзё", lat: 35.0037, lon: 135.7705 },
+    sanjo: { label: "Сандзё / Санджо-Кэйхан", lat: 35.0089, lon: 135.7722 },
+    nijo: { label: "Нидзё / Карасума-Ойкэ", lat: 35.0105, lon: 135.7598 },
+  };
+  function empty() { return { v: 1, visited: {}, plans: {}, removed: {}, removedEvening: {}, trip: { ...DEFAULT_TRIP }, deleted: [], settings: { density: "rich", variety: "best", home: { ...DEFAULT_HOME } } }; }
   function load() {
     try {
       const u = JSON.parse(localStorage.getItem(KEY) || "null");
-      if (u && u.v === 1) { const e = empty(); return Object.assign(e, u, { settings: Object.assign(e.settings, u.settings || {}) }); }
+      if (u && u.v === 1) { const e = empty(); const st = Object.assign(e.settings, u.settings || {}); if (!st.home) st.home = { ...DEFAULT_HOME }; return Object.assign(e, u, { settings: st }); }
     } catch (e) { /* corrupted or unavailable */ }
     return empty();
   }
@@ -50,7 +63,8 @@
   function retimeAll(date) {
     const d = data(); const plan = U.plans[date]; if (!d || !plan) return;
     plan.density = plan.density || U.settings.density;
-    P.retime(d, plan);
+    plan.home = U.settings.home || null;
+    P.retime(d, plan, { home: plan.home });
     P.timeEvening(d, plan, plan.evening || []);
   }
 
@@ -336,6 +350,14 @@
     return `<details class="mono"><summary>Однообразие: <b>${esc(txt)}</b>${mo ? ` <span class="mini">(${mo.distinct} ${P.plural(mo.distinct, "тип", "типа", "типов")} мест, ${mo.features} ${P.plural(mo.features, "черта", "черты", "черт")})</span>` : ""}</summary>
       <div class="mini">Справочный показатель, не критерий качества. Формула: 30·доля повторяющихся категорий + 25·одинаковые типы подряд + 30·сходство соседних остановок (основной тип + теги) + 15·узость набора впечатлений. Учитываются только дневные места (без переходов и подсветок).${mo ? ` Сейчас: повторы ${Math.round(mo.parts.repeat * 100)}%, подряд ${Math.round(mo.parts.runs * 100)}%, сходство ${Math.round(mo.parts.sim * 100)}%, узость ${Math.round(mo.parts.narrow * 100)}%.` : " Нужно минимум 3 места с известной категорией."}</div></details>`;
   }
+  function homeLegHTML(a, b, toHome) {
+    const home = toHome ? b : a, place = toHome ? a : b;
+    const L = P.homeLeg(home, place, toHome);
+    const url = P.legUrl(a, b, L.mode);
+    if (L.mode === "walk") return `<li class="legrow walk">🚶 Пешком ≈${L.min} мин · ${L.km} км <a class="act" href="${esc(url)}" target="_blank" rel="noopener">Как добраться</a></li>`;
+    const via = L.hub ? `пешком ~${L.walkToHub} мин до ${esc(L.hub)}, далее поезд/метро/автобус` : "автобус/метро/поезд от района отеля";
+    return `<li class="legrow transit">🚌🚇 ${via} · в плане ~${L.min} мин <span class="mini">(оценка без расписания)</span> <a class="act" href="${esc(url)}" target="_blank" rel="noopener">Как добраться</a></li>`;
+  }
   function legRowHTML(a, b) {
     const L = P.leg(a, b);
     if (L.mode === "walk") return `<li class="legrow walk">🚶 Пешком ≈${L.min} мин · ${L.km} км${L.uphill ? " · в гору/лестницы" : ""} <a class="act" href="${esc(P.legUrl(a, b, "walk"))}" target="_blank" rel="noopener">Как добраться</a></li>`;
@@ -438,6 +460,9 @@
     if (!curDate || !ds.includes(curDate)) curDate = pickDefaultDate();
     const m = byId();
     const plan = U.plans[curDate];
+    // saved plans from before the home base (or after a base change): recompute times once, keep the stops
+    if (plan && U.settings.home && ((plan.stops || []).length) &&
+        (!plan.homeStart || plan.home?.maps_q !== U.settings.home.maps_q || plan.home?.lat !== U.settings.home.lat)) { retimeAll(curDate); save(); }
     const chips = ds.map(x => {
       const pl = U.plans[x];
       const flag = pl && (pl.needsRebuild || (pl.stops || []).some(s => U.visited[s.id]) || pl.feasible === false || pl.eveningFeasible === false) ? " ⚠" : "";
@@ -460,9 +485,10 @@
       const removedN = ((U.removed[curDate] || []).length + ((U.removedEvening || {})[curDate] || []).length);
       const L = luById();
       const seq = stops.map(s => m.get(s.id)).concat(evening.map(e => m.get(L.get(e.id)?.place_id))).filter(x => x && x.lat != null);
-      const segs = P.segments(seq);
+      const home = U.settings.home;
+      const segs = P.segments(home && seq.length ? [home, ...seq, home] : seq);
       const lastPt = seq[seq.length - 1];
-      const base = U.settings.base || "京都駅";
+      const firstPt = seq[0];
       const warn = [].concat(plan.warnings || []);
       if (plan.needsRebuild || visitedIn.length) {
         const pinnedV = stops.filter(s => s.pinned && U.visited[s.id]);
@@ -480,12 +506,15 @@
           `<li>${sg.mode === "walk" ? "🚶 пешком" : "🚌🚇 транспорт"}: ${sg.points.map(x => esc(x.ru)).join(" → ")} · ${sg.mode === "walk" ? `≈${sg.min} мин` : `заложено ~${sg.min} мин`} <a class="act" href="${esc(sg.url)}" target="_blank" rel="noopener">Открыть</a></li>`).join("")}</ol>
           <p class="minor">Пешие отрезки подряд открываются одним маршрутом. Каждый переезд на транспорте — отдельной ссылкой в режиме «общественный транспорт» (Google не поддерживает промежуточные точки для транспорта). Автомобильные маршруты не используются.</p></details>` : ""}
         <h3 class="blk">ДЕНЬ · ${stops.length}</h3>
+        ${home && firstPt ? `<div class="homerow">🏠 <b>${esc(home.name)}</b> · выход ~${P.fmtTime(plan.homeStart?.departAt)}</div><ol class="stops">${homeLegHTML(home, firstPt, false)}</ol>` : ""}
         <ol class="stops">${stops.map((s, i) => stopHTML(curDate, plan, s, i, m, ds)).join("") || `<div class="empty">Дневных остановок нет.</div>`}</ol>
         <h3 class="blk">ВЕЧЕР · подсветка ${evening.length ? "· " + evening.length : ""}</h3>
         ${(plan.eveningNotes || []).map(n => `<div class="note">🌙 ${esc(n)}</div>`).join("")}
         <ol class="stops">${evening.map((e, i) => eveHTML(curDate, plan, e, i)).join("")}</ol>
-        ${lastPt ? `<div class="legrow transit">🏨 Обратно: ${esc(lastPt.ru)} → ${esc(base)} <a class="act" href="${esc(P.legUrlTo(lastPt, base, "transit"))}" target="_blank" rel="noopener">Как добраться</a>
-          ${P.CFG.REMOTE.includes(lastPt.district) ? `<div class="mini warnline">День заканчивается в удалённом районе (${esc(lastPt.district_ru)}): автобусы/поезда отсюда ходят реже — проверьте последний рейс в Google Maps заранее.</div>` : `<div class="mini">Последний рейс проверьте по кнопке «Как добраться» (Google Maps, режим транспорта).</div>`}</div>` : ""}
+        ${home && lastPt ? `<ol class="stops">${homeLegHTML(lastPt, home, true)}</ol>
+          <div class="homerow">🏠 <b>${esc(home.name)}</b> · возвращение ~${P.fmtTime(plan.homeEnd?.backAt)}</div>
+          ${plan.homeEnd?.late ? `<div class="warnbox">⚠️ Возвращение позже, чем мы считаем безопасным для последних рейсов (${P.CFG.REMOTE.includes(lastPt.district) ? "удалённый район — до ~21:00" : "город — до ~22:30"}). Замените подсветку или уберите вторую.</div>` : ""}
+          <div class="mini">${P.CFG.REMOTE.includes(lastPt.district) ? `<b class="warnline">День заканчивается в удалённом районе (${esc(lastPt.district_ru)}): транспорт отсюда ходит реже.</b> ` : ""}Расписание последних рейсов сайт не знает — проверьте по кнопке «Как добраться» (режим транспорта) до выхода на вечернюю программу.</div>` : ""}
         ${evening.length < 2 ? `<button class="act" data-a="addeve">＋ Добавить подсветку</button>` : ""}
         ${replacing && replacing.kind === "eve" && replacing.id === null ? replacePanel(curDate, plan) : ""}
         ${densCtl}${varCtl}
@@ -500,7 +529,13 @@
     }
     const tripCtl = `<details class="panel"><summary>Даты поездки: ${esc(shortDay(ds[0]))}–${esc(shortDay(ds[ds.length - 1]))}</summary>
       <div class="row" style="padding-bottom:6px"><input type="date" id="tripStart" value="${esc(U.trip.start)}"> – <input type="date" id="tripEnd" value="${esc(U.trip.end)}"></div>
-      <label class="mini" style="display:block;padding-bottom:10px">Где ночуете (для кнопки «Обратно»): <input type="text" id="baseInput" value="${esc(U.settings.base || "京都駅")}" placeholder="京都駅 или название отеля"></label></details>`;
+      <div class="homeset"><b>🏠 Домашняя база</b> (начало и конец каждого дня)
+        <label class="mini">Название <input type="text" id="homeName" value="${esc(U.settings.home?.name || "")}"></label>
+        <label class="mini">Адрес / запрос для Google Maps <input type="text" id="homeQ" value="${esc(U.settings.home?.maps_q || "")}"></label>
+        <label class="mini">Ближайший ориентир (для расчёта времени в пути) <select id="homeAnchor">${Object.entries(HOME_ANCHORS).map(([k, v]) =>
+          `<option value="${k}"${U.settings.home?.anchor === k || (!U.settings.home?.anchor && k === "bon") ? " selected" : ""}>${esc(v.label)}</option>`).join("")}</select></label>
+        <div class="btnrow"><button class="act" id="homeSave">Сохранить базу</button><button class="act" id="homeReset">Вернуть BON Kyoto Station</button></div>
+        <p class="mini">Изменение базы не трогает сохранённые планы; время переходов пересчитается, а лучший район — после «Пересобрать».</p></div></details>`;
     root.innerHTML = `<div class="chips daychips">${chips}</div>${body}${tripCtl}`;
     bindRoutes(root, plan, ds);
   }
@@ -569,7 +604,18 @@
     const ts = $("#tripStart"), te = $("#tripEnd");
     const upd = () => { if (ts.value && te.value && ts.value <= te.value) { U.trip = { start: ts.value, end: te.value }; save(); renderRoutes(); } };
     ts?.addEventListener("change", upd); te?.addEventListener("change", upd);
-    $("#baseInput")?.addEventListener("change", e => { U.settings.base = e.target.value.trim() || "京都駅"; save(); renderRoutes(); });
+    const applyHome = h => {
+      U.settings.home = h; save();
+      Object.keys(U.plans).forEach(retimeAll); save(); renderRoutes();
+      flash(`База: ${h.name}`);
+    };
+    $("#homeSave")?.addEventListener("click", () => {
+      const a = HOME_ANCHORS[$("#homeAnchor").value] || HOME_ANCHORS.bon;
+      const name = $("#homeName").value.trim() || DEFAULT_HOME.name;
+      applyHome({ ...DEFAULT_HOME, name, ru: name, maps_q: $("#homeQ").value.trim() || name, lat: a.lat, lon: a.lon, anchor: $("#homeAnchor").value,
+                  address: name === DEFAULT_HOME.name ? DEFAULT_HOME.address : "" });
+    });
+    $("#homeReset")?.addEventListener("click", () => applyHome({ ...DEFAULT_HOME }));
   }
 
   // ---------------------------------------------------------------- Light-ups list (inside the Leaf tab)
