@@ -1,0 +1,2885 @@
+{
+ "version": 1,
+ "region": "kyoto",
+ "timezone": "Asia/Tokyo",
+ "districts": {
+  "arashiyama": {
+   "ru": "Арасияма и Сагано",
+   "en": "Arashiyama & Sagano",
+   "ja": "嵐山・嵯峨野"
+  },
+  "takao": {
+   "ru": "Такао (Санби)",
+   "en": "Takao (Sanbi)",
+   "ja": "高雄・三尾"
+  },
+  "ohara": {
+   "ru": "Охара",
+   "en": "Ohara",
+   "ja": "大原"
+  },
+  "kurama": {
+   "ru": "Курама и Кибунэ",
+   "en": "Kurama & Kibune",
+   "ja": "鞍馬・貴船"
+  },
+  "ichijoji": {
+   "ru": "Итидзёдзи, Ясэ, Ивакура",
+   "en": "Ichijoji, Yase, Iwakura",
+   "ja": "一乗寺・八瀬・岩倉"
+  },
+  "okazaki": {
+   "ru": "Окадзаки и Тропа философа",
+   "en": "Okazaki & Philosopher's Path",
+   "ja": "岡崎・哲学の道"
+  },
+  "higashiyama": {
+   "ru": "Хигасияма (Киёмидзу, Гион)",
+   "en": "Higashiyama (Kiyomizu, Gion)",
+   "ja": "東山・祇園"
+  },
+  "tofukuji": {
+   "ru": "Тофуку-дзи и Сэнъю-дзи",
+   "en": "Tofukuji & Sennyuji",
+   "ja": "東福寺・泉涌寺"
+  },
+  "yamashina": {
+   "ru": "Ямасина и Дайго",
+   "en": "Yamashina & Daigo",
+   "ja": "山科・醍醐"
+  },
+  "kinkakuji": {
+   "ru": "Кинкаку-дзи, Рёан-дзи, Нинна-дзи",
+   "en": "Kinkakuji, Ryoanji, Ninnaji",
+   "ja": "金閣寺・龍安寺・仁和寺"
+  },
+  "kitayama": {
+   "ru": "Север города (Камигамо, Такагаминэ)",
+   "en": "North Kyoto (Kamigamo, Takagamine)",
+   "ja": "上賀茂・鷹峯"
+  },
+  "central": {
+   "ru": "Центр (Госё, Нидзё, вокзал)",
+   "en": "Central (Gosho, Nijo, Station)",
+   "ja": "市中・京都駅"
+  },
+  "fushimi_uji": {
+   "ru": "Фусими и Удзи",
+   "en": "Fushimi & Uji",
+   "ja": "伏見・宇治"
+  },
+  "oharano": {
+   "ru": "Охарано и Нагаокакё",
+   "en": "Oharano & Nagaokakyo",
+   "ja": "大原野・長岡京"
+  },
+  "kameoka": {
+   "ru": "Камэока и Хозу",
+   "en": "Kameoka & Hozu",
+   "ja": "亀岡"
+  },
+  "south": {
+   "ru": "Юг префектуры",
+   "en": "Southern Kyoto Pref.",
+   "ja": "京都府南部"
+  },
+  "north": {
+   "ru": "Север префектуры (далеко)",
+   "en": "Northern Kyoto Pref. (far)",
+   "ja": "京都府北部"
+  }
+ },
+ "places": [
+  {
+   "id": "sanzenin",
+   "ja": "三千院",
+   "en": "Sanzen-in",
+   "ru": "Сандзэн-ин",
+   "district": "ohara",
+   "kind": "spot",
+   "match": {
+    "souda": [
+     "sanzenin"
+    ],
+    "jr_odekake": [
+     "三千院門跡"
+    ],
+    "weathernews": [
+     "26103"
+    ],
+    "japan_explorers": [
+     "三千院"
+    ],
+    "walkerplus": [
+     "ar0726e13166"
+    ]
+   },
+   "aliases": [
+    "Sanzenin",
+    "Sanzen-in",
+    "大原三千院",
+    "三千院門跡"
+   ]
+  },
+  {
+   "id": "jakkoin",
+   "ja": "寂光院",
+   "en": "Jakko-in",
+   "ru": "Дзякко-ин",
+   "district": "ohara",
+   "kind": "spot",
+   "match": {
+    "souda": [
+     "jakkoin"
+    ],
+    "weathernews": [
+     "26196"
+    ],
+    "japan_explorers": [
+     "寂光院"
+    ],
+    "walkerplus": [
+     "ar0726e446148"
+    ]
+   },
+   "aliases": []
+  },
+  {
+   "id": "hosenin",
+   "ja": "宝泉院",
+   "en": "Hosen-in",
+   "ru": "Хосэн-ин",
+   "district": "ohara",
+   "kind": "spot",
+   "match": {
+    "souda": [
+     "housenin"
+    ],
+    "weathernews": [
+     "26135"
+    ],
+    "walkerplus": [
+     "ar0726e13168"
+    ]
+   },
+   "aliases": []
+  },
+  {
+   "id": "jikkoin",
+   "ja": "実光院",
+   "en": "Jikko-in",
+   "ru": "Дзикко-ин",
+   "district": "ohara",
+   "kind": "spot",
+   "match": {
+    "souda": [
+     "jikkoin"
+    ],
+    "weathernews": [
+     "26197"
+    ],
+    "walkerplus": [
+     "ar0726e13167"
+    ]
+   },
+   "aliases": []
+  },
+  {
+   "id": "shorinin",
+   "ja": "勝林院",
+   "en": "Shorin-in",
+   "ru": "Сёрин-ин",
+   "district": "ohara",
+   "kind": "spot",
+   "match": {
+    "souda": [
+     "shourinin"
+    ]
+   },
+   "aliases": []
+  },
+  {
+   "id": "kochidani",
+   "ja": "古知谷阿弥陀寺",
+   "en": "Kochidani Amida-ji",
+   "ru": "Котидани Амида-дзи",
+   "district": "ohara",
+   "kind": "spot",
+   "match": {
+    "japan_explorers": [
+     "古知谷阿弥陀寺"
+    ],
+    "walkerplus": [
+     "ar0726e518738"
+    ]
+   },
+   "aliases": []
+  },
+  {
+   "id": "hakuryuen",
+   "ja": "白龍園",
+   "en": "Hakuryu-en",
+   "ru": "Хакурю-эн",
+   "district": "kurama",
+   "kind": "spot",
+   "match": {
+    "souda": [
+     "hakuryuen"
+    ],
+    "walkerplus": [
+     "ar0726e392492"
+    ]
+   },
+   "aliases": []
+  },
+  {
+   "id": "kifune",
+   "ja": "貴船神社",
+   "en": "Kifune Shrine",
+   "ru": "Святилище Кибунэ",
+   "district": "kurama",
+   "kind": "spot",
+   "match": {
+    "souda": [
+     "kifunejinja"
+    ],
+    "weathernews": [
+     "26142"
+    ],
+    "japan_explorers": [
+     "貴船神社"
+    ],
+    "walkerplus": [
+     "ar0726e13175"
+    ]
+   },
+   "aliases": []
+  },
+  {
+   "id": "kibune_area",
+   "ja": "貴船周辺",
+   "en": "Kibune area",
+   "ru": "Район Кибунэ (у станции)",
+   "district": "kurama",
+   "kind": "area",
+   "match": {
+    "jr_odekake": [
+     "貴船周辺"
+    ]
+   },
+   "aliases": []
+  },
+  {
+   "id": "kurama",
+   "ja": "鞍馬寺",
+   "en": "Kurama-dera",
+   "ru": "Курама-дэра",
+   "district": "kurama",
+   "kind": "spot",
+   "match": {
+    "weathernews": [
+     "26158"
+    ],
+    "walkerplus": [
+     "ar0726e13174"
+    ]
+   },
+   "aliases": []
+  },
+  {
+   "id": "shimyoin",
+   "ja": "志明院",
+   "en": "Shimyo-in",
+   "ru": "Симё-ин",
+   "district": "kitayama",
+   "kind": "spot",
+   "match": {
+    "jr_odekake": [
+     "志明院"
+    ],
+    "japan_explorers": [
+     "志明院"
+    ],
+    "walkerplus": [
+     "ar0726e519070"
+    ]
+   },
+   "aliases": []
+  },
+  {
+   "id": "jingoji",
+   "ja": "神護寺",
+   "en": "Jingo-ji",
+   "ru": "Дзинго-дзи",
+   "district": "takao",
+   "kind": "spot",
+   "match": {
+    "souda": [
+     "jingoji"
+    ],
+    "jr_odekake": [
+     "高雄山神護寺"
+    ],
+    "weathernews": [
+     "26106"
+    ],
+    "japan_explorers": [
+     "神護寺"
+    ],
+    "walkerplus": [
+     "ar0726e12990"
+    ]
+   },
+   "aliases": [
+    "Jingoji",
+    "Jingo-ji",
+    "Jingō-ji",
+    "神護寺"
+   ]
+  },
+  {
+   "id": "saimyoji",
+   "ja": "西明寺",
+   "en": "Saimyo-ji",
+   "ru": "Саймё-дзи",
+   "district": "takao",
+   "kind": "spot",
+   "match": {
+    "souda": [
+     "saimyoji"
+    ],
+    "walkerplus": [
+     "ar0726e12993"
+    ]
+   },
+   "aliases": []
+  },
+  {
+   "id": "kozanji",
+   "ja": "高山寺",
+   "en": "Kozan-ji",
+   "ru": "Кодзан-дзи",
+   "district": "takao",
+   "kind": "spot",
+   "match": {
+    "souda": [
+     "kosanji"
+    ],
+    "japan_explorers": [
+     "高山寺"
+    ]
+   },
+   "aliases": []
+  },
+  {
+   "id": "takao_area",
+   "ja": "高雄",
+   "en": "Takao area",
+   "ru": "Район Такао",
+   "district": "takao",
+   "kind": "area",
+   "match": {
+    "weathernews": [
+     "26204"
+    ]
+   },
+   "aliases": []
+  },
+  {
+   "id": "parkway",
+   "ja": "嵐山高雄パークウエイ",
+   "en": "Arashiyama-Takao Parkway",
+   "ru": "Дорога Арасияма–Такао",
+   "district": "takao",
+   "kind": "area",
+   "match": {
+    "weathernews": [
+     "16107"
+    ]
+   },
+   "aliases": []
+  },
+  {
+   "id": "arashiyama",
+   "ja": "嵐山・渡月橋",
+   "en": "Arashiyama (Togetsukyo)",
+   "ru": "Арасияма (мост Тогэцукё)",
+   "district": "arashiyama",
+   "kind": "area",
+   "match": {
+    "souda": [
+     "arashiyama"
+    ],
+    "jr_odekake": [
+     "嵐山"
+    ],
+    "weathernews": [
+     "26101"
+    ],
+    "japan_explorers": [
+     "嵐山 渡月橋"
+    ],
+    "walkerplus": [
+     "ar0726e13147"
+    ]
+   },
+   "aliases": [
+    "Arashiyama",
+    "Togetsukyo",
+    "渡月橋",
+    "嵐山"
+   ]
+  },
+  {
+   "id": "tenryuji",
+   "ja": "天龍寺",
+   "en": "Tenryu-ji",
+   "ru": "Тэнрю-дзи",
+   "district": "arashiyama",
+   "kind": "spot",
+   "match": {
+    "souda": [
+     "tenryuji"
+    ],
+    "jr_odekake": [
+     "天龍寺"
+    ],
+    "weathernews": [
+     "26129"
+    ],
+    "japan_explorers": [
+     "天龍寺"
+    ],
+    "walkerplus": [
+     "ar0726e154674"
+    ]
+   },
+   "aliases": [
+    "Tenryuji",
+    "Tenryu-ji",
+    "Tenryū-ji"
+   ]
+  },
+  {
+   "id": "jojakkoji",
+   "ja": "常寂光寺",
+   "en": "Jojakko-ji",
+   "ru": "Дзёдзякко-дзи",
+   "district": "arashiyama",
+   "kind": "spot",
+   "match": {
+    "souda": [
+     "jojakkoji"
+    ],
+    "jr_odekake": [
+     "常寂光寺"
+    ],
+    "weathernews": [
+     "26134"
+    ],
+    "japan_explorers": [
+     "常寂光寺"
+    ],
+    "walkerplus": [
+     "ar0726e13149"
+    ]
+   },
+   "aliases": []
+  },
+  {
+   "id": "nisonin",
+   "ja": "二尊院",
+   "en": "Nison-in",
+   "ru": "Нисон-ин",
+   "district": "arashiyama",
+   "kind": "spot",
+   "match": {
+    "souda": [
+     "nisonin"
+    ],
+    "jr_odekake": [
+     "二尊院"
+    ],
+    "weathernews": [
+     "26149"
+    ],
+    "walkerplus": [
+     "ar0726e13150"
+    ]
+   },
+   "aliases": []
+  },
+  {
+   "id": "giouji",
+   "ja": "祇王寺",
+   "en": "Gio-ji",
+   "ru": "Гио-дзи",
+   "district": "arashiyama",
+   "kind": "spot",
+   "match": {
+    "souda": [
+     "giouji"
+    ],
+    "weathernews": [
+     "26133"
+    ],
+    "japan_explorers": [
+     "祇王寺"
+    ],
+    "walkerplus": [
+     "ar0726e372644"
+    ]
+   },
+   "aliases": []
+  },
+  {
+   "id": "hogonin",
+   "ja": "宝厳院",
+   "en": "Hogon-in",
+   "ru": "Хогон-ин",
+   "district": "arashiyama",
+   "kind": "spot",
+   "match": {
+    "souda": [
+     "hogonin"
+    ],
+    "weathernews": [
+     "26153"
+    ],
+    "walkerplus": [
+     "ar0726e323493"
+    ]
+   },
+   "aliases": []
+  },
+  {
+   "id": "hokyoin",
+   "ja": "宝筐院",
+   "en": "Hokyo-in",
+   "ru": "Хокё-ин",
+   "district": "arashiyama",
+   "kind": "spot",
+   "match": {
+    "souda": [
+     "houkyoin"
+    ],
+    "jr_odekake": [
+     "宝筐院"
+    ],
+    "weathernews": [
+     "26102"
+    ],
+    "japan_explorers": [
+     "宝筐院"
+    ],
+    "walkerplus": [
+     "ar0726e13151"
+    ]
+   },
+   "aliases": []
+  },
+  {
+   "id": "seiryoji",
+   "ja": "清凉寺",
+   "en": "Seiryo-ji (Saga Shakado)",
+   "ru": "Сэйрё-дзи (Сага Сяка-до)",
+   "district": "arashiyama",
+   "kind": "spot",
+   "match": {
+    "souda": [
+     "seiryoji"
+    ],
+    "weathernews": [
+     "26181"
+    ],
+    "walkerplus": [
+     "ar0726e444556"
+    ]
+   },
+   "aliases": []
+  },
+  {
+   "id": "daikakuji",
+   "ja": "大覚寺",
+   "en": "Daikaku-ji",
+   "ru": "Дайкаку-дзи",
+   "district": "arashiyama",
+   "kind": "spot",
+   "match": {
+    "souda": [
+     "daikakuji"
+    ],
+    "jr_odekake": [
+     "旧嵯峨御所 大本山大覚寺"
+    ],
+    "weathernews": [
+     "26161"
+    ],
+    "japan_explorers": [
+     "大覚寺"
+    ],
+    "walkerplus": [
+     "ar0726e154675"
+    ]
+   },
+   "aliases": []
+  },
+  {
+   "id": "rokuoin",
+   "ja": "鹿王院",
+   "en": "Rokuo-in",
+   "ru": "Рокуо-ин",
+   "district": "arashiyama",
+   "kind": "spot",
+   "match": {
+    "souda": [
+     "rokuouin"
+    ],
+    "weathernews": [
+     "26168"
+    ],
+    "walkerplus": [
+     "ar0726e13148"
+    ]
+   },
+   "aliases": []
+  },
+  {
+   "id": "okochi",
+   "ja": "大河内山荘庭園",
+   "en": "Okochi Sanso Garden",
+   "ru": "Сад Окоти-сансо",
+   "district": "arashiyama",
+   "kind": "spot",
+   "match": {
+    "weathernews": [
+     "26190"
+    ],
+    "japan_explorers": [
+     "大河内山荘庭園"
+    ],
+    "walkerplus": [
+     "ar0726e519266"
+    ]
+   },
+   "aliases": []
+  },
+  {
+   "id": "adashino",
+   "ja": "あだし野念仏寺",
+   "en": "Adashino Nenbutsu-ji",
+   "ru": "Адасино Нэмбуцу-дзи",
+   "district": "arashiyama",
+   "kind": "spot",
+   "match": {
+    "weathernews": [
+     "26191"
+    ],
+    "walkerplus": [
+     "ar0726e372650"
+    ]
+   },
+   "aliases": []
+  },
+  {
+   "id": "otagi",
+   "ja": "愛宕念仏寺",
+   "en": "Otagi Nenbutsu-ji",
+   "ru": "Отаги Нэмбуцу-дзи",
+   "district": "arashiyama",
+   "kind": "spot",
+   "match": {
+    "weathernews": [
+     "16100"
+    ],
+    "walkerplus": [
+     "ar0726e520596"
+    ]
+   },
+   "aliases": []
+  },
+  {
+   "id": "torokko",
+   "ja": "嵯峨野トロッコ列車",
+   "en": "Sagano Romantic Train",
+   "ru": "Поезд Сагано (торокко)",
+   "district": "arashiyama",
+   "kind": "area",
+   "match": {
+    "weathernews": [
+     "26147"
+    ],
+    "walkerplus": [
+     "ar0726e372783"
+    ]
+   },
+   "aliases": []
+  },
+  {
+   "id": "saihoji",
+   "ja": "西芳寺（苔寺）",
+   "en": "Saiho-ji (Moss Temple)",
+   "ru": "Сайхо-дзи (Храм мхов)",
+   "district": "arashiyama",
+   "kind": "spot",
+   "match": {
+    "japan_explorers": [
+     "西芳寺"
+    ]
+   },
+   "aliases": []
+  },
+  {
+   "id": "jizoin",
+   "ja": "地蔵院（竹の寺）",
+   "en": "Jizo-in (Bamboo Temple)",
+   "ru": "Дзидзо-ин (Бамбуковый храм)",
+   "district": "arashiyama",
+   "kind": "spot",
+   "match": {
+    "japan_explorers": [
+     "地蔵院(竹の寺)"
+    ]
+   },
+   "aliases": []
+  },
+  {
+   "id": "hozukyo",
+   "ja": "保津峡",
+   "en": "Hozu Gorge",
+   "ru": "Ущелье Ходзу",
+   "district": "kameoka",
+   "kind": "area",
+   "match": {
+    "jr_odekake": [
+     "保津渓谷"
+    ],
+    "japan_explorers": [
+     "保津峡と保津川下り"
+    ],
+    "walkerplus": [
+     "ar0726e12691"
+    ]
+   },
+   "aliases": []
+  },
+  {
+   "id": "tofukuji",
+   "ja": "東福寺",
+   "en": "Tofuku-ji",
+   "ru": "Тофуку-дзи",
+   "district": "tofukuji",
+   "kind": "spot",
+   "match": {
+    "souda": [
+     "tofukuji"
+    ],
+    "jr_odekake": [
+     "東福寺通天橋"
+    ],
+    "weathernews": [
+     "26111"
+    ],
+    "japan_explorers": [
+     "東福寺"
+    ],
+    "walkerplus": [
+     "ar0726e13141"
+    ]
+   },
+   "aliases": [
+    "Tofukuji",
+    "Tofuku-ji",
+    "Tōfuku-ji",
+    "通天橋"
+   ]
+  },
+  {
+   "id": "tofukuji_komyoin",
+   "ja": "東福寺 光明院",
+   "en": "Komyo-in (Tofuku-ji)",
+   "ru": "Комё-ин (Тофуку-дзи)",
+   "district": "tofukuji",
+   "kind": "spot",
+   "match": {
+    "souda": [
+     "tofukuji-komyoin"
+    ]
+   },
+   "aliases": []
+  },
+  {
+   "id": "sennyuji",
+   "ja": "泉涌寺",
+   "en": "Sennyu-ji",
+   "ru": "Сэнъю-дзи",
+   "district": "tofukuji",
+   "kind": "spot",
+   "match": {
+    "souda": [
+     "sennyuji"
+    ],
+    "jr_odekake": [
+     "泉涌寺"
+    ],
+    "weathernews": [
+     "26165"
+    ],
+    "japan_explorers": [
+     "泉涌寺"
+    ],
+    "walkerplus": [
+     "ar0726e323191"
+    ]
+   },
+   "aliases": []
+  },
+  {
+   "id": "imakumano",
+   "ja": "今熊野観音寺",
+   "en": "Imakumano Kannon-ji",
+   "ru": "Имакумано Каннон-дзи",
+   "district": "tofukuji",
+   "kind": "spot",
+   "match": {
+    "souda": [
+     "imakumanokannonji"
+    ],
+    "weathernews": [
+     "26182"
+    ],
+    "walkerplus": [
+     "ar0726e446504"
+    ]
+   },
+   "aliases": []
+  },
+  {
+   "id": "chishakuin",
+   "ja": "智積院",
+   "en": "Chishaku-in",
+   "ru": "Тисяку-ин",
+   "district": "tofukuji",
+   "kind": "spot",
+   "match": {
+    "souda": [
+     "chishakuin"
+    ],
+    "weathernews": [
+     "26186"
+    ],
+    "japan_explorers": [
+     "智積院"
+    ],
+    "walkerplus": [
+     "ar0726e565840"
+    ]
+   },
+   "aliases": []
+  },
+  {
+   "id": "nanzenji",
+   "ja": "南禅寺",
+   "en": "Nanzen-ji",
+   "ru": "Нандзэн-дзи",
+   "district": "okazaki",
+   "kind": "spot",
+   "match": {
+    "souda": [
+     "nanzenji"
+    ],
+    "weathernews": [
+     "26105"
+    ],
+    "japan_explorers": [
+     "南禅寺"
+    ],
+    "walkerplus": [
+     "ar0726e13142"
+    ]
+   },
+   "aliases": [
+    "Nanzenji",
+    "Nanzen-ji"
+   ]
+  },
+  {
+   "id": "tenjuan",
+   "ja": "南禅寺 天授庵",
+   "en": "Tenju-an (Nanzen-ji)",
+   "ru": "Тэндзю-ан (Нандзэн-дзи)",
+   "district": "okazaki",
+   "kind": "spot",
+   "match": {
+    "souda": [
+     "nanzenji-tenjuan"
+    ],
+    "walkerplus": [
+     "ar0726e322486"
+    ]
+   },
+   "aliases": []
+  },
+  {
+   "id": "eikando",
+   "ja": "永観堂",
+   "en": "Eikando (Zenrin-ji)",
+   "ru": "Эйкан-до (Дзэнрин-дзи)",
+   "district": "okazaki",
+   "kind": "spot",
+   "match": {
+    "souda": [
+     "eikando"
+    ],
+    "jr_odekake": [
+     "永観堂"
+    ],
+    "weathernews": [
+     "26120"
+    ],
+    "japan_explorers": [
+     "永観堂"
+    ],
+    "walkerplus": [
+     "ar0726e13137"
+    ]
+   },
+   "aliases": [
+    "Eikan-do",
+    "Zenrinji",
+    "禅林寺",
+    "永観堂禅林寺"
+   ]
+  },
+  {
+   "id": "shinnyodo",
+   "ja": "真如堂",
+   "en": "Shinnyo-do",
+   "ru": "Синнё-до",
+   "district": "okazaki",
+   "kind": "spot",
+   "match": {
+    "souda": [
+     "shinnyodo"
+    ],
+    "weathernews": [
+     "26151"
+    ],
+    "japan_explorers": [
+     "真如堂"
+    ],
+    "walkerplus": [
+     "ar0726e13138"
+    ]
+   },
+   "aliases": []
+  },
+  {
+   "id": "kurodani",
+   "ja": "金戒光明寺（くろ谷）",
+   "en": "Konkai Komyo-ji (Kurodani)",
+   "ru": "Конкай Комё-дзи (Куродани)",
+   "district": "okazaki",
+   "kind": "spot",
+   "match": {
+    "souda": [
+     "kurodani-konkaikomyoji"
+    ],
+    "japan_explorers": [
+     "金戒光明寺"
+    ],
+    "walkerplus": [
+     "ar0726e323187"
+    ]
+   },
+   "aliases": []
+  },
+  {
+   "id": "honenin",
+   "ja": "法然院",
+   "en": "Honen-in",
+   "ru": "Хонэн-ин",
+   "district": "okazaki",
+   "kind": "spot",
+   "match": {
+    "souda": [
+     "honenin"
+    ],
+    "japan_explorers": [
+     "法然院"
+    ]
+   },
+   "aliases": []
+  },
+  {
+   "id": "tetsugaku",
+   "ja": "哲学の道",
+   "en": "Philosopher's Path",
+   "ru": "Тропа философа",
+   "district": "okazaki",
+   "kind": "area",
+   "match": {
+    "souda": [
+     "tetsugakunomichi"
+    ],
+    "jr_odekake": [
+     "哲学の道"
+    ],
+    "walkerplus": [
+     "ar0726e393308"
+    ]
+   },
+   "aliases": [
+    "Philosopher's Path",
+    "Tetsugaku no Michi"
+   ]
+  },
+  {
+   "id": "murinan",
+   "ja": "無鄰菴",
+   "en": "Murin-an",
+   "ru": "Мурин-ан",
+   "district": "okazaki",
+   "kind": "spot",
+   "match": {
+    "souda": [
+     "murinan"
+    ],
+    "japan_explorers": [
+     "無鄰菴"
+    ],
+    "walkerplus": [
+     "ar0726e321275"
+    ]
+   },
+   "aliases": []
+  },
+  {
+   "id": "ginkakuji",
+   "ja": "銀閣寺（慈照寺）",
+   "en": "Ginkaku-ji (Jisho-ji)",
+   "ru": "Гинкаку-дзи (Дзисё-дзи)",
+   "district": "okazaki",
+   "kind": "spot",
+   "match": {
+    "japan_explorers": [
+     "慈照寺"
+    ],
+    "walkerplus": [
+     "ar0726e373591"
+    ]
+   },
+   "aliases": [
+    "Ginkakuji",
+    "銀閣寺",
+    "慈照寺"
+   ]
+  },
+  {
+   "id": "anrakuji",
+   "ja": "安楽寺",
+   "en": "Anraku-ji",
+   "ru": "Анраку-дзи",
+   "district": "okazaki",
+   "kind": "spot",
+   "match": {
+    "weathernews": [
+     "26189"
+    ],
+    "walkerplus": [
+     "ar0726e618082"
+    ]
+   },
+   "aliases": []
+  },
+  {
+   "id": "heian",
+   "ja": "平安神宮",
+   "en": "Heian Shrine",
+   "ru": "Святилище Хэйан",
+   "district": "okazaki",
+   "kind": "spot",
+   "match": {
+    "walkerplus": [
+     "ar0726e519261"
+    ]
+   },
+   "aliases": []
+  },
+  {
+   "id": "kiyomizu",
+   "ja": "清水寺",
+   "en": "Kiyomizu-dera",
+   "ru": "Киёмидзу-дэра",
+   "district": "higashiyama",
+   "kind": "spot",
+   "match": {
+    "souda": [
+     "kiyomizudera"
+    ],
+    "jr_odekake": [
+     "清水寺"
+    ],
+    "weathernews": [
+     "26112"
+    ],
+    "japan_explorers": [
+     "清水寺"
+    ],
+    "walkerplus": [
+     "ar0726e13139"
+    ]
+   },
+   "aliases": [
+    "Kiyomizudera",
+    "Kiyomizu"
+   ]
+  },
+  {
+   "id": "kodaiji",
+   "ja": "高台寺",
+   "en": "Kodai-ji",
+   "ru": "Кодай-дзи",
+   "district": "higashiyama",
+   "kind": "spot",
+   "match": {
+    "souda": [
+     "kodaiji"
+    ],
+    "jr_odekake": [
+     "高台寺"
+    ],
+    "weathernews": [
+     "26115"
+    ],
+    "japan_explorers": [
+     "高台寺"
+    ],
+    "walkerplus": [
+     "ar0726e13211"
+    ]
+   },
+   "aliases": []
+  },
+  {
+   "id": "entokuin",
+   "ja": "圓徳院",
+   "en": "Entoku-in",
+   "ru": "Энтоку-ин",
+   "district": "higashiyama",
+   "kind": "spot",
+   "match": {
+    "weathernews": [
+     "26117"
+    ],
+    "walkerplus": [
+     "ar0726e327189"
+    ]
+   },
+   "aliases": []
+  },
+  {
+   "id": "kenninji",
+   "ja": "建仁寺",
+   "en": "Kennin-ji",
+   "ru": "Кэннин-дзи",
+   "district": "higashiyama",
+   "kind": "spot",
+   "match": {
+    "souda": [
+     "kenninji"
+    ],
+    "weathernews": [
+     "26170"
+    ],
+    "walkerplus": [
+     "ar0726e445203"
+    ]
+   },
+   "aliases": []
+  },
+  {
+   "id": "shorenin",
+   "ja": "青蓮院",
+   "en": "Shoren-in",
+   "ru": "Сёрэн-ин",
+   "district": "higashiyama",
+   "kind": "spot",
+   "match": {
+    "souda": [
+     "shorenin"
+    ],
+    "weathernews": [
+     "26122"
+    ],
+    "japan_explorers": [
+     "青蓮院"
+    ],
+    "walkerplus": [
+     "ar0726e325237"
+    ]
+   },
+   "aliases": []
+  },
+  {
+   "id": "chionin",
+   "ja": "知恩院",
+   "en": "Chion-in",
+   "ru": "Тион-ин",
+   "district": "higashiyama",
+   "kind": "spot",
+   "match": {
+    "jr_odekake": [
+     "浄土宗 総本山知恩院"
+    ],
+    "weathernews": [
+     "26121"
+    ],
+    "walkerplus": [
+     "ar0726e154672"
+    ]
+   },
+   "aliases": []
+  },
+  {
+   "id": "maruyama",
+   "ja": "円山公園",
+   "en": "Maruyama Park",
+   "ru": "Парк Маруяма",
+   "district": "higashiyama",
+   "kind": "spot",
+   "match": {
+    "jr_odekake": [
+     "円山公園"
+    ],
+    "japan_explorers": [
+     "円山公園"
+    ]
+   },
+   "aliases": []
+  },
+  {
+   "id": "shogunzuka",
+   "ja": "将軍塚青龍殿",
+   "en": "Shogunzuka Seiryuden",
+   "ru": "Сёгундзука Сэйрю-дэн",
+   "district": "higashiyama",
+   "kind": "spot",
+   "match": {
+    "souda": [
+     "shogunzukaseiryuden"
+    ],
+    "weathernews": [
+     "26141"
+    ],
+    "walkerplus": [
+     "ar0726e325234"
+    ]
+   },
+   "aliases": []
+  },
+  {
+   "id": "rurikoin",
+   "ja": "瑠璃光院",
+   "en": "Ruriko-in",
+   "ru": "Рурико-ин",
+   "district": "ichijoji",
+   "kind": "spot",
+   "match": {
+    "souda": [
+     "rurikoin"
+    ],
+    "weathernews": [
+     "26145"
+    ],
+    "japan_explorers": [
+     "瑠璃光院"
+    ],
+    "walkerplus": [
+     "ar0726e416761"
+    ]
+   },
+   "aliases": [
+    "Rurikoin",
+    "Ruriko-in"
+   ]
+  },
+  {
+   "id": "yase",
+   "ja": "八瀬もみじの小径",
+   "en": "Yase Momiji Path",
+   "ru": "Ясэ: тропа момидзи",
+   "district": "ichijoji",
+   "kind": "area",
+   "match": {
+    "weathernews": [
+     "26164"
+    ],
+    "japan_explorers": [
+     "八瀬もみじの小径"
+    ],
+    "walkerplus": [
+     "ar0726e373500"
+    ]
+   },
+   "aliases": []
+  },
+  {
+   "id": "eiden_tunnel",
+   "ja": "叡山電車 もみじのトンネル",
+   "en": "Eiden Maple Tunnel",
+   "ru": "Тоннель момидзи (Эйдэн)",
+   "district": "ichijoji",
+   "kind": "area",
+   "match": {
+    "weathernews": [
+     "16114"
+    ],
+    "japan_explorers": [
+     "もみじのトンネル(叡山電車)"
+    ],
+    "walkerplus": [
+     "ar0726e373592"
+    ]
+   },
+   "aliases": []
+  },
+  {
+   "id": "manshuin",
+   "ja": "曼殊院",
+   "en": "Manshu-in",
+   "ru": "Мансю-ин",
+   "district": "ichijoji",
+   "kind": "spot",
+   "match": {
+    "souda": [
+     "manshuin"
+    ],
+    "weathernews": [
+     "26184"
+    ],
+    "japan_explorers": [
+     "曼殊院"
+    ],
+    "walkerplus": [
+     "ar0726e373492"
+    ]
+   },
+   "aliases": []
+  },
+  {
+   "id": "shisendo",
+   "ja": "詩仙堂",
+   "en": "Shisen-do",
+   "ru": "Сисэн-до",
+   "district": "ichijoji",
+   "kind": "spot",
+   "match": {
+    "souda": [
+     "shisendo"
+    ],
+    "weathernews": [
+     "26159"
+    ],
+    "walkerplus": [
+     "ar0726e327190"
+    ]
+   },
+   "aliases": []
+  },
+  {
+   "id": "enkoji",
+   "ja": "圓光寺",
+   "en": "Enko-ji",
+   "ru": "Энко-дзи",
+   "district": "ichijoji",
+   "kind": "spot",
+   "match": {
+    "souda": [
+     "enkouji"
+    ],
+    "jr_odekake": [
+     "圓光寺"
+    ],
+    "weathernews": [
+     "26114"
+    ],
+    "japan_explorers": [
+     "圓光寺"
+    ],
+    "walkerplus": [
+     "ar0726e13146"
+    ]
+   },
+   "aliases": [
+    "Enkoji",
+    "Enko-ji",
+    "円光寺"
+   ]
+  },
+  {
+   "id": "rengeji",
+   "ja": "蓮華寺",
+   "en": "Renge-ji",
+   "ru": "Рэнгэ-дзи",
+   "district": "ichijoji",
+   "kind": "spot",
+   "match": {
+    "souda": [
+     "rengeji"
+    ],
+    "walkerplus": [
+     "ar0726e13176"
+    ]
+   },
+   "aliases": []
+  },
+  {
+   "id": "jissoin",
+   "ja": "実相院",
+   "en": "Jisso-in",
+   "ru": "Дзиссо-ин",
+   "district": "ichijoji",
+   "kind": "spot",
+   "match": {
+    "souda": [
+     "jissoin"
+    ],
+    "jr_odekake": [
+     "岩倉実相院門跡"
+    ],
+    "weathernews": [
+     "26119"
+    ],
+    "japan_explorers": [
+     "実相院"
+    ],
+    "walkerplus": [
+     "ar0726e154665"
+    ]
+   },
+   "aliases": []
+  },
+  {
+   "id": "sekizan",
+   "ja": "赤山禅院",
+   "en": "Sekizan Zen-in",
+   "ru": "Сэкидзан Дзэн-ин",
+   "district": "ichijoji",
+   "kind": "spot",
+   "match": {
+    "souda": [
+     "sekizanzenin"
+    ],
+    "japan_explorers": [
+     "赤山禅院"
+    ],
+    "walkerplus": [
+     "ar0726e444237"
+    ]
+   },
+   "aliases": []
+  },
+  {
+   "id": "saginomori",
+   "ja": "鷺森神社",
+   "en": "Saginomori Shrine",
+   "ru": "Святилище Сагиномори",
+   "district": "ichijoji",
+   "kind": "spot",
+   "match": {
+    "souda": [
+     "saginomorijinja"
+    ],
+    "walkerplus": [
+     "ar0726e444704"
+    ]
+   },
+   "aliases": []
+  },
+  {
+   "id": "konpukuji",
+   "ja": "金福寺",
+   "en": "Konpuku-ji",
+   "ru": "Компуку-дзи",
+   "district": "ichijoji",
+   "kind": "spot",
+   "match": {
+    "souda": [
+     "konpukuji"
+    ],
+    "walkerplus": [
+     "ar0726e445349"
+    ]
+   },
+   "aliases": []
+  },
+  {
+   "id": "entsuji",
+   "ja": "圓通寺",
+   "en": "Entsu-ji",
+   "ru": "Энцу-дзи",
+   "district": "ichijoji",
+   "kind": "spot",
+   "match": {
+    "japan_explorers": [
+     "圓通寺"
+    ]
+   },
+   "aliases": []
+  },
+  {
+   "id": "bishamondo",
+   "ja": "毘沙門堂",
+   "en": "Bishamon-do",
+   "ru": "Бисямон-до",
+   "district": "yamashina",
+   "kind": "spot",
+   "match": {
+    "souda": [
+     "bishamondo"
+    ],
+    "jr_odekake": [
+     "毘沙門堂"
+    ],
+    "weathernews": [
+     "26152"
+    ],
+    "japan_explorers": [
+     "毘沙門堂"
+    ],
+    "walkerplus": [
+     "ar0726e13143"
+    ]
+   },
+   "aliases": [
+    "Bishamondo"
+   ]
+  },
+  {
+   "id": "anshoji",
+   "ja": "安祥寺",
+   "en": "Ansho-ji",
+   "ru": "Ансё-дзи",
+   "district": "yamashina",
+   "kind": "spot",
+   "match": {
+    "souda": [
+     "anshouji"
+    ],
+    "walkerplus": [
+     "ar0726e478702"
+    ]
+   },
+   "aliases": []
+  },
+  {
+   "id": "daigoji",
+   "ja": "醍醐寺",
+   "en": "Daigo-ji",
+   "ru": "Дайго-дзи",
+   "district": "yamashina",
+   "kind": "spot",
+   "match": {
+    "souda": [
+     "daigoji"
+    ],
+    "jr_odekake": [
+     "醍醐寺"
+    ],
+    "weathernews": [
+     "26146"
+    ],
+    "japan_explorers": [
+     "醍醐寺"
+    ],
+    "walkerplus": [
+     "ar0726e13144"
+    ]
+   },
+   "aliases": [
+    "Daigoji",
+    "Daigo-ji"
+   ]
+  },
+  {
+   "id": "kajuji",
+   "ja": "勧修寺",
+   "en": "Kaju-ji",
+   "ru": "Кадзю-дзи",
+   "district": "yamashina",
+   "kind": "spot",
+   "match": {
+    "souda": [
+     "kajuji"
+    ],
+    "jr_odekake": [
+     "勧修寺"
+    ],
+    "weathernews": [
+     "26178"
+    ],
+    "walkerplus": [
+     "ar0726e446329"
+    ]
+   },
+   "aliases": []
+  },
+  {
+   "id": "zuishinin",
+   "ja": "隨心院",
+   "en": "Zuishin-in",
+   "ru": "Дзуйсин-ин",
+   "district": "yamashina",
+   "kind": "spot",
+   "match": {
+    "souda": [
+     "zuishinin"
+    ],
+    "jr_odekake": [
+     "隨心院"
+    ],
+    "weathernews": [
+     "26116"
+    ],
+    "walkerplus": [
+     "ar0726e154661"
+    ]
+   },
+   "aliases": []
+  },
+  {
+   "id": "yamashina_canal",
+   "ja": "山科疏水",
+   "en": "Yamashina Canal",
+   "ru": "Канал Ямасина",
+   "district": "yamashina",
+   "kind": "area",
+   "match": {
+    "jr_odekake": [
+     "山科疏水"
+    ],
+    "japan_explorers": [
+     "山科疏水"
+    ]
+   },
+   "aliases": []
+  },
+  {
+   "id": "ryoanji",
+   "ja": "龍安寺",
+   "en": "Ryoan-ji",
+   "ru": "Рёан-дзи",
+   "district": "kinkakuji",
+   "kind": "spot",
+   "match": {
+    "souda": [
+     "ryoanji"
+    ],
+    "jr_odekake": [
+     "龍安寺"
+    ],
+    "weathernews": [
+     "26131"
+    ],
+    "japan_explorers": [
+     "龍安寺"
+    ],
+    "walkerplus": [
+     "ar0726e154659"
+    ]
+   },
+   "aliases": []
+  },
+  {
+   "id": "ninnaji",
+   "ja": "仁和寺",
+   "en": "Ninna-ji",
+   "ru": "Нинна-дзи",
+   "district": "kinkakuji",
+   "kind": "spot",
+   "match": {
+    "souda": [
+     "ninnaji"
+    ],
+    "jr_odekake": [
+     "仁和寺"
+    ],
+    "weathernews": [
+     "26130"
+    ],
+    "japan_explorers": [
+     "仁和寺"
+    ],
+    "walkerplus": [
+     "ar0726e322496"
+    ]
+   },
+   "aliases": []
+  },
+  {
+   "id": "tojiin",
+   "ja": "等持院",
+   "en": "Toji-in",
+   "ru": "Тодзи-ин",
+   "district": "kinkakuji",
+   "kind": "spot",
+   "match": {
+    "souda": [
+     "toujiin"
+    ],
+    "weathernews": [
+     "26188"
+    ],
+    "japan_explorers": [
+     "等持院"
+    ],
+    "walkerplus": [
+     "ar0726e445201"
+    ]
+   },
+   "aliases": []
+  },
+  {
+   "id": "taizoin",
+   "ja": "妙心寺 退蔵院",
+   "en": "Taizo-in (Myoshin-ji)",
+   "ru": "Тайдзо-ин (Мёсин-дзи)",
+   "district": "kinkakuji",
+   "kind": "spot",
+   "match": {
+    "souda": [
+     "myoshinji-taizoin"
+    ],
+    "jr_odekake": [
+     "妙心寺退蔵院(余香苑)"
+    ],
+    "weathernews": [
+     "26169"
+    ],
+    "walkerplus": [
+     "ar0726e154663"
+    ]
+   },
+   "aliases": []
+  },
+  {
+   "id": "daihoin",
+   "ja": "妙心寺 大法院",
+   "en": "Daiho-in (Myoshin-ji)",
+   "ru": "Дайхо-ин (Мёсин-дзи)",
+   "district": "kinkakuji",
+   "kind": "spot",
+   "match": {
+    "souda": [
+     "myoshinji-daihouin"
+    ],
+    "weathernews": [
+     "26113"
+    ],
+    "walkerplus": [
+     "ar0726e373595"
+    ]
+   },
+   "aliases": []
+  },
+  {
+   "id": "hokongoin",
+   "ja": "法金剛院",
+   "en": "Hokongo-in",
+   "ru": "Хоконго-ин",
+   "district": "kinkakuji",
+   "kind": "spot",
+   "match": {
+    "souda": [
+     "houkongouin"
+    ],
+    "walkerplus": [
+     "ar0726e478693"
+    ]
+   },
+   "aliases": []
+  },
+  {
+   "id": "kinkakuji",
+   "ja": "金閣寺（鹿苑寺）",
+   "en": "Kinkaku-ji (Rokuon-ji)",
+   "ru": "Кинкаку-дзи (Рокуон-дзи)",
+   "district": "kinkakuji",
+   "kind": "spot",
+   "match": {
+    "japan_explorers": [
+     "鹿苑寺"
+    ]
+   },
+   "aliases": [
+    "Kinkakuji",
+    "金閣寺",
+    "鹿苑寺"
+   ]
+  },
+  {
+   "id": "kitano",
+   "ja": "北野天満宮 もみじ苑",
+   "en": "Kitano Tenmangu (Momiji-en)",
+   "ru": "Китано Тэммангу (сад момидзи)",
+   "district": "kitayama",
+   "kind": "spot",
+   "match": {
+    "souda": [
+     "kitanotenmangu"
+    ],
+    "jr_odekake": [
+     "北野天満宮「史跡 御土居もみじ苑」"
+    ],
+    "weathernews": [
+     "26132"
+    ],
+    "japan_explorers": [
+     "北野天満宮"
+    ],
+    "walkerplus": [
+     "ar0726e154656"
+    ]
+   },
+   "aliases": [
+    "Kitano Tenmangu",
+    "北野天満宮"
+   ]
+  },
+  {
+   "id": "genkoan",
+   "ja": "源光庵",
+   "en": "Genko-an",
+   "ru": "Гэнко-ан",
+   "district": "kitayama",
+   "kind": "spot",
+   "match": {
+    "souda": [
+     "genkouan"
+    ],
+    "weathernews": [
+     "26150"
+    ],
+    "japan_explorers": [
+     "源光庵"
+    ],
+    "walkerplus": [
+     "ar0726e13169"
+    ]
+   },
+   "aliases": []
+  },
+  {
+   "id": "joshoji",
+   "ja": "常照寺",
+   "en": "Josho-ji",
+   "ru": "Дзёсё-дзи",
+   "district": "kitayama",
+   "kind": "spot",
+   "match": {
+    "souda": [
+     "joshoji"
+    ],
+    "weathernews": [
+     "26180"
+    ],
+    "walkerplus": [
+     "ar0726e372635"
+    ]
+   },
+   "aliases": []
+  },
+  {
+   "id": "kamigamo",
+   "ja": "上賀茂神社",
+   "en": "Kamigamo Shrine",
+   "ru": "Святилище Камигамо",
+   "district": "kitayama",
+   "kind": "spot",
+   "match": {
+    "jr_odekake": [
+     "賀茂別雷神社(上賀茂神社)"
+    ],
+    "weathernews": [
+     "26154"
+    ],
+    "walkerplus": [
+     "ar0726e393283"
+    ]
+   },
+   "aliases": []
+  },
+  {
+   "id": "daitokuji",
+   "ja": "大徳寺",
+   "en": "Daitoku-ji",
+   "ru": "Дайтоку-дзи",
+   "district": "kitayama",
+   "kind": "spot",
+   "match": {
+    "japan_explorers": [
+     "大徳寺"
+    ]
+   },
+   "aliases": []
+  },
+  {
+   "id": "shozan",
+   "ja": "しょうざん",
+   "en": "Shozan Garden",
+   "ru": "Сад Сёдзан",
+   "district": "kitayama",
+   "kind": "spot",
+   "match": {
+    "weathernews": [
+     "26193"
+    ],
+    "walkerplus": [
+     "ar0726e519074"
+    ]
+   },
+   "aliases": []
+  },
+  {
+   "id": "botanical",
+   "ja": "京都府立植物園",
+   "en": "Kyoto Botanical Garden",
+   "ru": "Ботанический сад Киото",
+   "district": "central",
+   "kind": "spot",
+   "match": {
+    "jr_odekake": [
+     "京都府立植物園"
+    ],
+    "weathernews": [
+     "26157"
+    ],
+    "walkerplus": [
+     "ar0726e154666"
+    ]
+   },
+   "aliases": []
+  },
+  {
+   "id": "shimogamo",
+   "ja": "下鴨神社（糺の森）",
+   "en": "Shimogamo Shrine (Tadasu no Mori)",
+   "ru": "Святилище Симогамо (лес Тадасу)",
+   "district": "central",
+   "kind": "spot",
+   "match": {
+    "souda": [
+     "tadasunomori"
+    ],
+    "jr_odekake": [
+     "下鴨神社"
+    ],
+    "japan_explorers": [
+     "賀茂御祖神社"
+    ],
+    "walkerplus": [
+     "ar0726e154668"
+    ]
+   },
+   "aliases": [
+    "Shimogamo",
+    "下鴨神社",
+    "糺の森",
+    "賀茂御祖神社"
+   ]
+  },
+  {
+   "id": "gyoen",
+   "ja": "京都御苑",
+   "en": "Kyoto Gyoen (Imperial Park)",
+   "ru": "Императорский парк Госё",
+   "district": "central",
+   "kind": "spot",
+   "match": {
+    "souda": [
+     "kyotogyoen"
+    ],
+    "weathernews": [
+     "26140"
+    ],
+    "japan_explorers": [
+     "京都御苑"
+    ],
+    "walkerplus": [
+     "ar0726e373495"
+    ]
+   },
+   "aliases": []
+  },
+  {
+   "id": "rozanji",
+   "ja": "廬山寺",
+   "en": "Rozan-ji",
+   "ru": "Родзан-дзи",
+   "district": "central",
+   "kind": "spot",
+   "match": {
+    "souda": [
+     "rozanji"
+    ],
+    "walkerplus": [
+     "ar0726e442800"
+    ]
+   },
+   "aliases": []
+  },
+  {
+   "id": "myokenji",
+   "ja": "妙顕寺",
+   "en": "Myoken-ji",
+   "ru": "Мёкэн-дзи",
+   "district": "central",
+   "kind": "spot",
+   "match": {
+    "souda": [
+     "myokenji"
+    ],
+    "walkerplus": [
+     "ar0726e563243"
+    ]
+   },
+   "aliases": []
+  },
+  {
+   "id": "myokakuji",
+   "ja": "妙覺寺",
+   "en": "Myokaku-ji",
+   "ru": "Мёкаку-дзи",
+   "district": "central",
+   "kind": "spot",
+   "match": {
+    "weathernews": [
+     "16104"
+    ]
+   },
+   "aliases": []
+  },
+  {
+   "id": "nijo",
+   "ja": "元離宮二条城",
+   "en": "Nijo Castle",
+   "ru": "Замок Нидзё",
+   "district": "central",
+   "kind": "spot",
+   "match": {
+    "souda": [
+     "nijojo"
+    ],
+    "jr_odekake": [
+     "元離宮二条城"
+    ],
+    "weathernews": [
+     "26175"
+    ],
+    "japan_explorers": [
+     "二条城"
+    ],
+    "walkerplus": [
+     "ar0726e369200"
+    ]
+   },
+   "aliases": []
+  },
+  {
+   "id": "toji",
+   "ja": "東寺",
+   "en": "To-ji",
+   "ru": "То-дзи",
+   "district": "central",
+   "kind": "spot",
+   "match": {
+    "souda": [
+     "toji"
+    ],
+    "weathernews": [
+     "26143"
+    ],
+    "japan_explorers": [
+     "東寺"
+    ],
+    "walkerplus": [
+     "ar0726e123782"
+    ]
+   },
+   "aliases": []
+  },
+  {
+   "id": "shoseien",
+   "ja": "渉成園",
+   "en": "Shosei-en Garden",
+   "ru": "Сад Сёсэй-эн",
+   "district": "central",
+   "kind": "spot",
+   "match": {
+    "weathernews": [
+     "16117"
+    ],
+    "japan_explorers": [
+     "渉成園"
+    ],
+    "walkerplus": [
+     "ar0726e393292"
+    ]
+   },
+   "aliases": []
+  },
+  {
+   "id": "nishihonganji",
+   "ja": "西本願寺",
+   "en": "Nishi Hongan-ji",
+   "ru": "Ниси Хонган-дзи",
+   "district": "central",
+   "kind": "spot",
+   "match": {
+    "weathernews": [
+     "16103"
+    ]
+   },
+   "aliases": []
+  },
+  {
+   "id": "higashihonganji",
+   "ja": "東本願寺",
+   "en": "Higashi Hongan-ji",
+   "ru": "Хигаси Хонган-дзи",
+   "district": "central",
+   "kind": "spot",
+   "match": {
+    "japan_explorers": [
+     "東本願寺"
+    ]
+   },
+   "aliases": []
+  },
+  {
+   "id": "umekoji",
+   "ja": "梅小路公園 朱雀の庭",
+   "en": "Umekoji Park (Suzaku Garden)",
+   "ru": "Парк Умэкодзи (сад Судзаку)",
+   "district": "central",
+   "kind": "spot",
+   "match": {
+    "jr_odekake": [
+     "梅小路公園"
+    ],
+    "weathernews": [
+     "26172"
+    ],
+    "walkerplus": [
+     "ar0726e154662"
+    ]
+   },
+   "aliases": []
+  },
+  {
+   "id": "byodoin",
+   "ja": "平等院",
+   "en": "Byodo-in",
+   "ru": "Бёдо-ин",
+   "district": "fushimi_uji",
+   "kind": "spot",
+   "match": {
+    "souda": [
+     "byodoin"
+    ],
+    "jr_odekake": [
+     "平等院"
+    ],
+    "weathernews": [
+     "26136"
+    ],
+    "japan_explorers": [
+     "平等院"
+    ],
+    "walkerplus": [
+     "ar0726e207747"
+    ]
+   },
+   "aliases": []
+  },
+  {
+   "id": "koshoji",
+   "ja": "興聖寺（宇治）",
+   "en": "Kosho-ji (Uji)",
+   "ru": "Косё-дзи (Удзи)",
+   "district": "fushimi_uji",
+   "kind": "spot",
+   "match": {
+    "souda": [
+     "koushouji"
+    ],
+    "jr_odekake": [
+     "興聖寺"
+    ],
+    "weathernews": [
+     "26155"
+    ],
+    "japan_explorers": [
+     "興聖寺(宇治)"
+    ],
+    "walkerplus": [
+     "ar0726e13009"
+    ]
+   },
+   "aliases": []
+  },
+  {
+   "id": "mimurotoji",
+   "ja": "三室戸寺",
+   "en": "Mimuroto-ji",
+   "ru": "Мимурото-дзи",
+   "district": "fushimi_uji",
+   "kind": "spot",
+   "match": {
+    "jr_odekake": [
+     "三室戸寺"
+    ],
+    "weathernews": [
+     "26163"
+    ],
+    "japan_explorers": [
+     "三室戸寺"
+    ],
+    "walkerplus": [
+     "ar0726e13152"
+    ]
+   },
+   "aliases": []
+  },
+  {
+   "id": "jonangu",
+   "ja": "城南宮",
+   "en": "Jonangu Shrine",
+   "ru": "Святилище Дзёнангу",
+   "district": "fushimi_uji",
+   "kind": "spot",
+   "match": {
+    "souda": [
+     "jonangu"
+    ],
+    "jr_odekake": [
+     "城南宮 神苑 楽水苑"
+    ],
+    "weathernews": [
+     "26176"
+    ],
+    "japan_explorers": [
+     "城南宮"
+    ],
+    "walkerplus": [
+     "ar0726e154673"
+    ]
+   },
+   "aliases": []
+  },
+  {
+   "id": "inari",
+   "ja": "伏見稲荷大社",
+   "en": "Fushimi Inari Taisha",
+   "ru": "Фусими Инари",
+   "district": "fushimi_uji",
+   "kind": "spot",
+   "match": {
+    "weathernews": [
+     "16105"
+    ],
+    "walkerplus": [
+     "ar0726e570901"
+    ]
+   },
+   "aliases": []
+  },
+  {
+   "id": "ujigawa",
+   "ja": "宇治川ライン",
+   "en": "Ujigawa Line",
+   "ru": "Долина реки Удзи",
+   "district": "fushimi_uji",
+   "kind": "area",
+   "match": {
+    "weathernews": [
+     "26173"
+    ],
+    "walkerplus": [
+     "ar0726e373605"
+    ]
+   },
+   "aliases": []
+  },
+  {
+   "id": "uji_botanical",
+   "ja": "宇治市植物公園",
+   "en": "Uji Botanical Park",
+   "ru": "Ботанический парк Удзи",
+   "district": "fushimi_uji",
+   "kind": "spot",
+   "match": {
+    "weathernews": [
+     "26198"
+    ]
+   },
+   "aliases": []
+  },
+  {
+   "id": "komyoji",
+   "ja": "光明寺（長岡京）",
+   "en": "Komyo-ji (Nagaokakyo)",
+   "ru": "Комё-дзи (Нагаокакё)",
+   "district": "oharano",
+   "kind": "spot",
+   "match": {
+    "souda": [
+     "komyoji"
+    ],
+    "jr_odekake": [
+     "光明寺"
+    ],
+    "weathernews": [
+     "26108"
+    ],
+    "japan_explorers": [
+     "光明寺"
+    ],
+    "walkerplus": [
+     "ar0726e12692"
+    ]
+   },
+   "aliases": []
+  },
+  {
+   "id": "yoshiminedera",
+   "ja": "善峯寺",
+   "en": "Yoshimine-dera",
+   "ru": "Ёсиминэ-дэра",
+   "district": "oharano",
+   "kind": "spot",
+   "match": {
+    "souda": [
+     "yoshiminedera"
+    ],
+    "jr_odekake": [
+     "善峯寺"
+    ],
+    "weathernews": [
+     "26138"
+    ],
+    "japan_explorers": [
+     "善峯寺"
+    ],
+    "walkerplus": [
+     "ar0726e13133"
+    ]
+   },
+   "aliases": []
+  },
+  {
+   "id": "jurinji",
+   "ja": "十輪寺",
+   "en": "Jurin-ji",
+   "ru": "Дзюрин-дзи",
+   "district": "oharano",
+   "kind": "spot",
+   "match": {
+    "souda": [
+     "jurinji"
+    ],
+    "walkerplus": [
+     "ar0726e444236"
+    ]
+   },
+   "aliases": []
+  },
+  {
+   "id": "otokunidera",
+   "ja": "乙訓寺",
+   "en": "Otokuni-dera",
+   "ru": "Отокуни-дэра",
+   "district": "oharano",
+   "kind": "spot",
+   "match": {
+    "souda": [
+     "otokunidera"
+    ],
+    "japan_explorers": [
+     "乙訓寺"
+    ],
+    "walkerplus": [
+     "ar0726e446719"
+    ]
+   },
+   "aliases": []
+  },
+  {
+   "id": "nagaokatenmangu",
+   "ja": "長岡天満宮",
+   "en": "Nagaoka Tenmangu",
+   "ru": "Нагаока Тэммангу",
+   "district": "oharano",
+   "kind": "spot",
+   "match": {
+    "souda": [
+     "nagaokatenmangu"
+    ],
+    "walkerplus": [
+     "ar0726e443262"
+    ]
+   },
+   "aliases": []
+  },
+  {
+   "id": "yokokuji",
+   "ja": "柳谷観音 楊谷寺",
+   "en": "Yanagidani Kannon (Yokoku-ji)",
+   "ru": "Янагидани Каннон (Ёкоку-дзи)",
+   "district": "oharano",
+   "kind": "spot",
+   "match": {
+    "souda": [
+     "youkokuji"
+    ],
+    "weathernews": [
+     "26162"
+    ],
+    "walkerplus": [
+     "ar0726e12693"
+    ]
+   },
+   "aliases": []
+  },
+  {
+   "id": "oharano_jinja",
+   "ja": "大原野神社",
+   "en": "Oharano Shrine",
+   "ru": "Святилище Охарано",
+   "district": "oharano",
+   "kind": "spot",
+   "match": {
+    "weathernews": [
+     "26137"
+    ],
+    "japan_explorers": [
+     "大原野神社"
+    ],
+    "walkerplus": [
+     "ar0726e13134"
+    ]
+   },
+   "aliases": []
+  },
+  {
+   "id": "shojiji",
+   "ja": "勝持寺（花の寺）",
+   "en": "Shoji-ji (Hana-no-tera)",
+   "ru": "Сёдзи-дзи (Хана-но тэра)",
+   "district": "oharano",
+   "kind": "spot",
+   "match": {
+    "weathernews": [
+     "26139"
+    ],
+    "walkerplus": [
+     "ar0726e13132"
+    ]
+   },
+   "aliases": []
+  },
+  {
+   "id": "muko",
+   "ja": "向日神社",
+   "en": "Muko Shrine",
+   "ru": "Святилище Муко",
+   "district": "oharano",
+   "kind": "spot",
+   "match": {
+    "jr_odekake": [
+     "向日神社"
+    ],
+    "walkerplus": [
+     "ar0726e521303"
+    ]
+   },
+   "aliases": []
+  },
+  {
+   "id": "shohoji_oharano",
+   "ja": "正法寺（大原野）",
+   "en": "Shoho-ji (Oharano)",
+   "ru": "Сёхо-дзи (Охарано)",
+   "district": "oharano",
+   "kind": "spot",
+   "match": {
+    "walkerplus": [
+     "ar0726e366296"
+    ]
+   },
+   "aliases": []
+  },
+  {
+   "id": "iwashimizu",
+   "ja": "石清水八幡宮",
+   "en": "Iwashimizu Hachimangu",
+   "ru": "Ивасимидзу Хатимангу",
+   "district": "south",
+   "kind": "spot",
+   "match": {
+    "jr_odekake": [
+     "石清水八幡宮"
+    ],
+    "weathernews": [
+     "26128"
+    ],
+    "walkerplus": [
+     "ar0726e12694"
+    ]
+   },
+   "aliases": []
+  },
+  {
+   "id": "ikkyuji",
+   "ja": "酬恩庵 一休寺",
+   "en": "Ikkyu-ji (Shuon-an)",
+   "ru": "Иккю-дзи (Сюон-ан)",
+   "district": "south",
+   "kind": "spot",
+   "match": {
+    "souda": [
+     "ikkyuji"
+    ],
+    "weathernews": [
+     "26185"
+    ],
+    "japan_explorers": [
+     "酬恩庵"
+    ],
+    "walkerplus": [
+     "ar0726e321032"
+    ]
+   },
+   "aliases": []
+  },
+  {
+   "id": "joruriji",
+   "ja": "浄瑠璃寺",
+   "en": "Joruri-ji",
+   "ru": "Дзёрури-дзи",
+   "district": "south",
+   "kind": "spot",
+   "match": {
+    "jr_odekake": [
+     "浄瑠璃寺"
+    ],
+    "weathernews": [
+     "26167"
+    ],
+    "walkerplus": [
+     "ar0726e154670"
+    ]
+   },
+   "aliases": []
+  },
+  {
+   "id": "kasagi",
+   "ja": "笠置山",
+   "en": "Mt. Kasagi",
+   "ru": "Гора Касаги",
+   "district": "south",
+   "kind": "area",
+   "match": {
+    "jr_odekake": [
+     "笠置山もみじ公園"
+    ],
+    "weathernews": [
+     "26110"
+    ],
+    "japan_explorers": [
+     "笠置山"
+    ],
+    "walkerplus": [
+     "ar0726e154669"
+    ]
+   },
+   "aliases": []
+  },
+  {
+   "id": "keihanna",
+   "ja": "けいはんな記念公園",
+   "en": "Keihanna Commemorative Park",
+   "ru": "Парк Кэйханна",
+   "district": "south",
+   "kind": "spot",
+   "match": {
+    "jr_odekake": [
+     "京都府立関西文化学術研究都市記念公園"
+    ],
+    "weathernews": [
+     "26174"
+    ],
+    "japan_explorers": [
+     "けいはんな記念公園"
+    ],
+    "walkerplus": [
+     "ar0726e154654"
+    ]
+   },
+   "aliases": []
+  },
+  {
+   "id": "shohoji_wazuka",
+   "ja": "正法寺（和束）",
+   "en": "Shoho-ji (Wazuka)",
+   "ru": "Сёхо-дзи (Вадзука)",
+   "district": "south",
+   "kind": "spot",
+   "match": {
+    "jr_odekake": [
+     "正法寺"
+    ],
+    "weathernews": [
+     "26118"
+    ]
+   },
+   "aliases": []
+  },
+  {
+   "id": "kuwayama",
+   "ja": "鍬山神社",
+   "en": "Kuwayama Shrine",
+   "ru": "Святилище Кувáяма",
+   "district": "kameoka",
+   "kind": "spot",
+   "match": {
+    "jr_odekake": [
+     "鍬山神社"
+    ],
+    "weathernews": [
+     "26160"
+    ],
+    "walkerplus": [
+     "ar0726e12690"
+    ]
+   },
+   "aliases": []
+  },
+  {
+   "id": "izumo",
+   "ja": "出雲大神宮",
+   "en": "Izumo Daijingu",
+   "ru": "Идзумо Дайдзингу",
+   "district": "kameoka",
+   "kind": "spot",
+   "match": {
+    "weathernews": [
+     "26125"
+    ],
+    "walkerplus": [
+     "ar0726e12689"
+    ]
+   },
+   "aliases": []
+  },
+  {
+   "id": "oomoto_ayabe",
+   "ja": "大本神苑（綾部）",
+   "en": "Oomoto Garden (Ayabe)",
+   "ru": "Сад Оомото (Аябэ)",
+   "district": "north",
+   "kind": "spot",
+   "match": {
+    "jr_odekake": [
+     "大本神苑"
+    ],
+    "walkerplus": [
+     "ar0726e373274"
+    ]
+   },
+   "aliases": []
+  },
+  {
+   "id": "jozokoji",
+   "ja": "常照皇寺",
+   "en": "Josho-ko-ji",
+   "ru": "Дзёсёко-дзи",
+   "district": "north",
+   "kind": "spot",
+   "match": {
+    "japan_explorers": [
+     "常照皇寺"
+    ]
+   },
+   "aliases": []
+  },
+  {
+   "id": "konoji",
+   "ja": "籠神社",
+   "en": "Kono Shrine",
+   "ru": "Святилище Коно",
+   "district": "north",
+   "kind": "spot",
+   "match": {
+    "japan_explorers": [
+     "籠神社"
+    ]
+   },
+   "aliases": []
+  },
+  {
+   "id": "rurikei",
+   "ja": "るり渓",
+   "en": "Rurikei Valley",
+   "ru": "Долина Рурикэй",
+   "district": "north",
+   "kind": "area",
+   "match": {
+    "japan_explorers": [
+     "るり渓"
+    ]
+   },
+   "aliases": []
+  },
+  {
+   "id": "oonodam",
+   "ja": "大野ダム公園",
+   "en": "Ono Dam Park",
+   "ru": "Парк плотины Оно",
+   "district": "north",
+   "kind": "area",
+   "match": {
+    "weathernews": [
+     "16113"
+    ],
+    "walkerplus": [
+     "ar0726e447039"
+    ]
+   },
+   "aliases": []
+  },
+  {
+   "id": "kongoin",
+   "ja": "金剛院（舞鶴）",
+   "en": "Kongo-in (Maizuru)",
+   "ru": "Конго-ин (Майдзуру)",
+   "district": "north",
+   "kind": "spot",
+   "match": {
+    "jr_odekake": [
+     "金剛院(舞鶴)"
+    ],
+    "weathernews": [
+     "26166"
+    ],
+    "walkerplus": [
+     "ar0726e154651"
+    ]
+   },
+   "aliases": []
+  },
+  {
+   "id": "chooanji",
+   "ja": "長安寺（福知山）",
+   "en": "Choan-ji (Fukuchiyama)",
+   "ru": "Тёан-дзи (Фукутияма)",
+   "district": "north",
+   "kind": "spot",
+   "match": {
+    "jr_odekake": [
+     "長安寺"
+    ],
+    "weathernews": [
+     "26177"
+    ],
+    "walkerplus": [
+     "ar0726e203663"
+    ]
+   },
+   "aliases": []
+  },
+  {
+   "id": "ankokuji",
+   "ja": "安国寺（綾部）",
+   "en": "Ankoku-ji (Ayabe)",
+   "ru": "Анкоку-дзи (Аябэ)",
+   "district": "north",
+   "kind": "spot",
+   "match": {
+    "jr_odekake": [
+     "安国寺"
+    ],
+    "weathernews": [
+     "26171"
+    ],
+    "walkerplus": [
+     "ar0726e203499"
+    ]
+   },
+   "aliases": []
+  },
+  {
+   "id": "nariaiji",
+   "ja": "成相寺",
+   "en": "Nariai-ji",
+   "ru": "Нариай-дзи",
+   "district": "north",
+   "kind": "spot",
+   "match": {
+    "jr_odekake": [
+     "成相寺"
+    ],
+    "weathernews": [
+     "26156"
+    ],
+    "walkerplus": [
+     "ar0726e12724"
+    ]
+   },
+   "aliases": []
+  },
+  {
+   "id": "ooeyama",
+   "ja": "大江山",
+   "en": "Mt. Oe",
+   "ru": "Гора Оэ",
+   "district": "north",
+   "kind": "area",
+   "match": {
+    "weathernews": [
+     "26109"
+    ]
+   },
+   "aliases": []
+  },
+  {
+   "id": "ryuonji",
+   "ja": "龍穏寺",
+   "en": "Ryuon-ji",
+   "ru": "Рюон-дзи",
+   "district": "north",
+   "kind": "spot",
+   "match": {
+    "weathernews": [
+     "26187"
+    ]
+   },
+   "aliases": []
+  },
+  {
+   "id": "hongan_kitayama",
+   "ja": "本願寺北山別院",
+   "en": "Hongan-ji Kitayama Betsuin",
+   "ru": "Хонган-дзи Китаяма-бэцуин",
+   "district": "kitayama",
+   "kind": "spot",
+   "match": {
+    "weathernews": [
+     "16115"
+    ]
+   },
+   "aliases": []
+  }
+ ]
+}

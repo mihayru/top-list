@@ -1,0 +1,2110 @@
+{
+ "fetched_at": "2026-11-17T11:39:22+09:00",
+ "meta": {
+  "pages": 13
+ },
+ "observations": [
+  {
+   "source": "walkerplus",
+   "source_key": "ar0726e13169",
+   "name_ja": "鷹峯(源光庵)",
+   "url": "https://koyo.walkerplus.com/detail/ar0726e13169/",
+   "status_original": "情報なし",
+   "status": "UNKNOWN",
+   "data_type": "derived",
+   "fetched_at": "2026-11-17T11:39:22+09:00",
+   "area": "京都府・京都市北区",
+   "observed_basis": "дата не публикуется; статус из системы JR",
+   "derived_from": "jr_odekake",
+   "extra": {
+    "typical": "例年の紅葉見頃:11月中旬~11月下旬"
+   }
+  },
+  {
+   "source": "walkerplus",
+   "source_key": "ar0726e372635",
+   "name_ja": "鷹峯 常照寺",
+   "url": "https://koyo.walkerplus.com/detail/ar0726e372635/",
+   "status_original": "情報なし",
+   "status": "UNKNOWN",
+   "data_type": "derived",
+   "fetched_at": "2026-11-17T11:39:22+09:00",
+   "area": "京都府・京都市北区",
+   "observed_basis": "дата не публикуется; статус из системы JR",
+   "derived_from": "jr_odekake",
+   "extra": {
+    "typical": "例年の紅葉見頃:11月上旬~12月上旬"
+   }
+  },
+  {
+   "source": "walkerplus",
+   "source_key": "ar0726e393283",
+   "name_ja": "賀茂別雷神社(上賀茂神社)",
+   "url": "https://koyo.walkerplus.com/detail/ar0726e393283/",
+   "status_original": "色づき始め",
+   "status": "STARTING",
+   "stage_lo": 1,
+   "stage_hi": 3,
+   "data_type": "derived",
+   "fetched_at": "2026-11-17T11:39:22+09:00",
+   "area": "京都府・京都市北区",
+   "observed_basis": "дата не публикуется; статус из системы JR",
+   "derived_from": "jr_odekake",
+   "extra": {
+    "typical": "例年の紅葉見頃:11月下旬~12月上旬"
+   }
+  },
+  {
+   "source": "walkerplus",
+   "source_key": "ar0726e445201",
+   "name_ja": "等持院",
+   "url": "https://koyo.walkerplus.com/detail/ar0726e445201/",
+   "status_original": "情報なし",
+   "status": "UNKNOWN",
+   "data_type": "derived",
+   "fetched_at": "2026-11-17T11:39:22+09:00",
+   "area": "京都府・京都市北区",
+   "observed_basis": "дата не публикуется; статус из системы JR",
+   "derived_from": "jr_odekake",
+   "extra": {
+    "typical": "例年の紅葉見頃:11月中旬~12月上旬"
+   }
+  },
+  {
+   "source": "walkerplus",
+   "source_key": "ar0726e519070",
+   "name_ja": "志明院",
+   "url": "https://koyo.walkerplus.com/detail/ar0726e519070/",
+   "status_original": "今見頃",
+   "status": "PEAK",
+   "stage_lo": 3,
+   "stage_hi": 4,
+   "data_type": "derived",
+   "fetched_at": "2026-11-17T11:39:22+09:00",
+   "area": "京都府・京都市北区",
+   "observed_basis": "дата не публикуется; статус из системы JR",
+   "derived_from": "jr_odekake",
+   "extra": {
+    "typical": "例年の紅葉見頃:11月中旬~12月上旬"
+   }
+  },
+  {
+   "source": "walkerplus",
+   "source_key": "ar0726e519074",
+   "name_ja": "しょうざんリゾート京都",
+   "url": "https://koyo.walkerplus.com/detail/ar0726e519074/",
+   "status_original": "情報なし",
+   "status": "UNKNOWN",
+   "data_type": "derived",
+   "fetched_at": "2026-11-17T11:39:22+09:00",
+   "area": "京都府・京都市北区",
+   "observed_basis": "дата не публикуется; статус из системы JR",
+   "derived_from": "jr_odekake",
+   "extra": {
+    "typical": "例年の紅葉見頃:11月中旬~12月上旬"
+   }
+  },
+  {
+   "source": "walkerplus",
+   "source_key": "ar0726e154656",
+   "name_ja": "北野天満宮「史跡 御土居のもみじ苑」",
+   "url": "https://koyo.walkerplus.com/detail/ar0726e154656/",
+   "status_original": "色づき始め",
+   "status": "STARTING",
+   "stage_lo": 1,
+   "stage_hi": 3,
+   "data_type": "derived",
+   "fetched_at": "2026-11-17T11:39:22+09:00",
+   "area": "京都府・京都市上京区",
+   "observed_basis": "дата не публикуется; статус из системы JR",
+   "derived_from": "jr_odekake",
+   "extra": {
+    "typical": "例年の紅葉見頃:2026年10月31日(土)~12月6日(日)"
+   }
+  },
+  {
+   "source": "walkerplus",
+   "source_key": "ar0726e373495",
+   "name_ja": "京都御苑",
+   "url": "https://koyo.walkerplus.com/detail/ar0726e373495/",
+   "status_original": "情報なし",
+   "status": "UNKNOWN",
+   "data_type": "derived",
+   "fetched_at": "2026-11-17T11:39:22+09:00",
+   "area": "京都府・京都市上京区",
+   "observed_basis": "дата не публикуется; статус из системы JR",
+   "derived_from": "jr_odekake",
+   "extra": {
+    "typical": "例年の紅葉見頃:11月中旬~12月中旬"
+   }
+  },
+  {
+   "source": "walkerplus",
+   "source_key": "ar0726e442800",
+   "name_ja": "廬山寺",
+   "url": "https://koyo.walkerplus.com/detail/ar0726e442800/",
+   "status_original": "情報なし",
+   "status": "UNKNOWN",
+   "data_type": "derived",
+   "fetched_at": "2026-11-17T11:39:22+09:00",
+   "area": "京都府・京都市上京区",
+   "observed_basis": "дата не публикуется; статус из системы JR",
+   "derived_from": "jr_odekake",
+   "extra": {
+    "typical": "例年の紅葉見頃:11月中旬~11月下旬"
+   }
+  },
+  {
+   "source": "walkerplus",
+   "source_key": "ar0726e563243",
+   "name_ja": "妙顕寺",
+   "url": "https://koyo.walkerplus.com/detail/ar0726e563243/",
+   "status_original": "情報なし",
+   "status": "UNKNOWN",
+   "data_type": "derived",
+   "fetched_at": "2026-11-17T11:39:22+09:00",
+   "area": "京都府・京都市上京区",
+   "observed_basis": "дата не публикуется; статус из системы JR",
+   "derived_from": "jr_odekake",
+   "extra": {
+    "typical": "例年の紅葉見頃:11月中旬~12月上旬"
+   }
+  },
+  {
+   "source": "walkerplus",
+   "source_key": "ar0726e13137",
+   "name_ja": "永観堂 禅林寺",
+   "url": "https://koyo.walkerplus.com/detail/ar0726e13137/",
+   "status_original": "色づき始め",
+   "status": "STARTING",
+   "stage_lo": 1,
+   "stage_hi": 3,
+   "data_type": "derived",
+   "fetched_at": "2026-11-17T11:39:22+09:00",
+   "area": "京都府・京都市左京区",
+   "observed_basis": "дата не публикуется; статус из системы JR",
+   "derived_from": "jr_odekake",
+   "extra": {
+    "typical": "例年の紅葉見頃:11月中旬~11月下旬"
+   }
+  },
+  {
+   "source": "walkerplus",
+   "source_key": "ar0726e13138",
+   "name_ja": "真如堂(真正極楽寺)",
+   "url": "https://koyo.walkerplus.com/detail/ar0726e13138/",
+   "status_original": "情報なし",
+   "status": "UNKNOWN",
+   "data_type": "derived",
+   "fetched_at": "2026-11-17T11:39:22+09:00",
+   "area": "京都府・京都市左京区",
+   "observed_basis": "дата не публикуется; статус из системы JR",
+   "derived_from": "jr_odekake",
+   "extra": {
+    "typical": "例年の紅葉見頃:11月下旬~12月上旬"
+   }
+  },
+  {
+   "source": "walkerplus",
+   "source_key": "ar0726e13142",
+   "name_ja": "南禅寺",
+   "url": "https://koyo.walkerplus.com/detail/ar0726e13142/",
+   "status_original": "情報なし",
+   "status": "UNKNOWN",
+   "data_type": "derived",
+   "fetched_at": "2026-11-17T11:39:22+09:00",
+   "area": "京都府・京都市左京区",
+   "observed_basis": "дата не публикуется; статус из системы JR",
+   "derived_from": "jr_odekake",
+   "extra": {
+    "typical": "例年の紅葉見頃:11月中旬~12月上旬"
+   }
+  },
+  {
+   "source": "walkerplus",
+   "source_key": "ar0726e13146",
+   "name_ja": "洛北(圓光寺)",
+   "url": "https://koyo.walkerplus.com/detail/ar0726e13146/",
+   "status_original": "今見頃",
+   "status": "PEAK",
+   "stage_lo": 3,
+   "stage_hi": 4,
+   "data_type": "derived",
+   "fetched_at": "2026-11-17T11:39:22+09:00",
+   "area": "京都府・京都市左京区",
+   "observed_basis": "дата не публикуется; статус из системы JR",
+   "derived_from": "jr_odekake",
+   "extra": {
+    "typical": "例年の紅葉見頃:11月中旬~12月上旬"
+   }
+  },
+  {
+   "source": "walkerplus",
+   "source_key": "ar0726e13166",
+   "name_ja": "大原(三千院)",
+   "url": "https://koyo.walkerplus.com/detail/ar0726e13166/",
+   "status_original": "今見頃",
+   "status": "PEAK",
+   "stage_lo": 3,
+   "stage_hi": 4,
+   "data_type": "derived",
+   "fetched_at": "2026-11-17T11:39:22+09:00",
+   "area": "京都府・京都市左京区",
+   "observed_basis": "дата не публикуется; статус из системы JR",
+   "derived_from": "jr_odekake",
+   "extra": {
+    "typical": "例年の紅葉見頃:11月中旬~11月下旬"
+   }
+  },
+  {
+   "source": "walkerplus",
+   "source_key": "ar0726e13167",
+   "name_ja": "大原(実光院)",
+   "url": "https://koyo.walkerplus.com/detail/ar0726e13167/",
+   "status_original": "情報なし",
+   "status": "UNKNOWN",
+   "data_type": "derived",
+   "fetched_at": "2026-11-17T11:39:22+09:00",
+   "area": "京都府・京都市左京区",
+   "observed_basis": "дата не публикуется; статус из системы JR",
+   "derived_from": "jr_odekake",
+   "extra": {
+    "typical": "例年の紅葉見頃:11月中旬"
+   }
+  },
+  {
+   "source": "walkerplus",
+   "source_key": "ar0726e13168",
+   "name_ja": "宝泉院",
+   "url": "https://koyo.walkerplus.com/detail/ar0726e13168/",
+   "status_original": "情報なし",
+   "status": "UNKNOWN",
+   "data_type": "derived",
+   "fetched_at": "2026-11-17T11:39:22+09:00",
+   "area": "京都府・京都市左京区",
+   "observed_basis": "дата не публикуется; статус из системы JR",
+   "derived_from": "jr_odekake",
+   "extra": {
+    "typical": "例年の紅葉見頃:11月上旬~11月下旬"
+   }
+  },
+  {
+   "source": "walkerplus",
+   "source_key": "ar0726e13174",
+   "name_ja": "鞍馬寺",
+   "url": "https://koyo.walkerplus.com/detail/ar0726e13174/",
+   "status_original": "情報なし",
+   "status": "UNKNOWN",
+   "data_type": "derived",
+   "fetched_at": "2026-11-17T11:39:22+09:00",
+   "area": "京都府・京都市左京区",
+   "observed_basis": "дата не публикуется; статус из системы JR",
+   "derived_from": "jr_odekake",
+   "extra": {
+    "typical": "例年の紅葉見頃:11月中旬~11月下旬"
+   }
+  },
+  {
+   "source": "walkerplus",
+   "source_key": "ar0726e13175",
+   "name_ja": "洛北(貴船神社)",
+   "url": "https://koyo.walkerplus.com/detail/ar0726e13175/",
+   "status_original": "色づき始め",
+   "status": "STARTING",
+   "stage_lo": 1,
+   "stage_hi": 3,
+   "data_type": "derived",
+   "fetched_at": "2026-11-17T11:39:22+09:00",
+   "area": "京都府・京都市左京区",
+   "observed_basis": "дата не публикуется; статус из системы JR",
+   "derived_from": "jr_odekake",
+   "extra": {
+    "typical": "例年の紅葉見頃:11月中旬~11月下旬"
+   }
+  },
+  {
+   "source": "walkerplus",
+   "source_key": "ar0726e13176",
+   "name_ja": "洛北蓮華寺",
+   "url": "https://koyo.walkerplus.com/detail/ar0726e13176/",
+   "status_original": "情報なし",
+   "status": "UNKNOWN",
+   "data_type": "derived",
+   "fetched_at": "2026-11-17T11:39:22+09:00",
+   "area": "京都府・京都市左京区",
+   "observed_basis": "дата не публикуется; статус из системы JR",
+   "derived_from": "jr_odekake",
+   "extra": {
+    "typical": "例年の紅葉見頃:11月下旬~12月上旬"
+   }
+  },
+  {
+   "source": "walkerplus",
+   "source_key": "ar0726e154665",
+   "name_ja": "岩倉実相院門跡",
+   "url": "https://koyo.walkerplus.com/detail/ar0726e154665/",
+   "status_original": "今見頃",
+   "status": "PEAK",
+   "stage_lo": 3,
+   "stage_hi": 4,
+   "data_type": "derived",
+   "fetched_at": "2026-11-17T11:39:22+09:00",
+   "area": "京都府・京都市左京区",
+   "observed_basis": "дата не публикуется; статус из системы JR",
+   "derived_from": "jr_odekake",
+   "extra": {
+    "typical": "例年の紅葉見頃:11月上旬~12月上旬"
+   }
+  },
+  {
+   "source": "walkerplus",
+   "source_key": "ar0726e154666",
+   "name_ja": "京都府立植物園",
+   "url": "https://koyo.walkerplus.com/detail/ar0726e154666/",
+   "status_original": "色づき始め",
+   "status": "STARTING",
+   "stage_lo": 1,
+   "stage_hi": 3,
+   "data_type": "derived",
+   "fetched_at": "2026-11-17T11:39:22+09:00",
+   "area": "京都府・京都市左京区",
+   "observed_basis": "дата не публикуется; статус из системы JR",
+   "derived_from": "jr_odekake",
+   "extra": {
+    "typical": "例年の紅葉見頃:11月中旬~12月上旬"
+   }
+  },
+  {
+   "source": "walkerplus",
+   "source_key": "ar0726e154668",
+   "name_ja": "下鴨神社",
+   "url": "https://koyo.walkerplus.com/detail/ar0726e154668/",
+   "status_original": "青葉",
+   "status": "GREEN",
+   "stage_lo": 0,
+   "stage_hi": 0,
+   "data_type": "derived",
+   "fetched_at": "2026-11-17T11:39:22+09:00",
+   "area": "京都府・京都市左京区",
+   "observed_basis": "дата не публикуется; статус из системы JR",
+   "derived_from": "jr_odekake",
+   "extra": {
+    "typical": "例年の紅葉見頃:12月上旬~12月中旬"
+   }
+  },
+  {
+   "source": "walkerplus",
+   "source_key": "ar0726e321275",
+   "name_ja": "近代日本庭園の傑作 名勝無鄰菴",
+   "url": "https://koyo.walkerplus.com/detail/ar0726e321275/",
+   "status_original": "情報なし",
+   "status": "UNKNOWN",
+   "data_type": "derived",
+   "fetched_at": "2026-11-17T11:39:22+09:00",
+   "area": "京都府・京都市左京区",
+   "observed_basis": "дата не публикуется; статус из системы JR",
+   "derived_from": "jr_odekake",
+   "extra": {
+    "typical": "例年の紅葉見頃:11月下旬~12月上旬"
+   }
+  },
+  {
+   "source": "walkerplus",
+   "source_key": "ar0726e322486",
+   "name_ja": "天授庵(南禅寺塔頭)",
+   "url": "https://koyo.walkerplus.com/detail/ar0726e322486/",
+   "status_original": "情報なし",
+   "status": "UNKNOWN",
+   "data_type": "derived",
+   "fetched_at": "2026-11-17T11:39:22+09:00",
+   "area": "京都府・京都市左京区",
+   "observed_basis": "дата не публикуется; статус из системы JR",
+   "derived_from": "jr_odekake",
+   "extra": {
+    "typical": "例年の紅葉見頃:11月中旬~11月下旬"
+   }
+  },
+  {
+   "source": "walkerplus",
+   "source_key": "ar0726e323187",
+   "name_ja": "浄土宗大本山 くろ谷 金戒光明寺",
+   "url": "https://koyo.walkerplus.com/detail/ar0726e323187/",
+   "status_original": "情報なし",
+   "status": "UNKNOWN",
+   "data_type": "derived",
+   "fetched_at": "2026-11-17T11:39:22+09:00",
+   "area": "京都府・京都市左京区",
+   "observed_basis": "дата не публикуется; статус из системы JR",
+   "derived_from": "jr_odekake",
+   "extra": {
+    "typical": "例年の紅葉見頃:特別日中拝観2026年11月13日(金)~12月6日(日)、夜間拝観11月13日(金)~12月6日(日)"
+   }
+  },
+  {
+   "source": "walkerplus",
+   "source_key": "ar0726e327190",
+   "name_ja": "詩仙堂丈山寺",
+   "url": "https://koyo.walkerplus.com/detail/ar0726e327190/",
+   "status_original": "情報なし",
+   "status": "UNKNOWN",
+   "data_type": "derived",
+   "fetched_at": "2026-11-17T11:39:22+09:00",
+   "area": "京都府・京都市左京区",
+   "observed_basis": "дата не публикуется; статус из системы JR",
+   "derived_from": "jr_odekake",
+   "extra": {
+    "typical": "例年の紅葉見頃:11月中旬~11月下旬"
+   }
+  },
+  {
+   "source": "walkerplus",
+   "source_key": "ar0726e373079",
+   "name_ja": "南禅寺 高徳庵(最勝院)",
+   "url": "https://koyo.walkerplus.com/detail/ar0726e373079/",
+   "status_original": "情報なし",
+   "status": "UNKNOWN",
+   "data_type": "derived",
+   "fetched_at": "2026-11-17T11:39:22+09:00",
+   "area": "京都府・京都市左京区",
+   "observed_basis": "дата не публикуется; статус из системы JR",
+   "derived_from": "jr_odekake",
+   "extra": {
+    "typical": "例年の紅葉見頃:11月中旬~12月上旬"
+   }
+  },
+  {
+   "source": "walkerplus",
+   "source_key": "ar0726e373492",
+   "name_ja": "曼殊院門跡",
+   "url": "https://koyo.walkerplus.com/detail/ar0726e373492/",
+   "status_original": "情報なし",
+   "status": "UNKNOWN",
+   "data_type": "derived",
+   "fetched_at": "2026-11-17T11:39:22+09:00",
+   "area": "京都府・京都市左京区",
+   "observed_basis": "дата не публикуется; статус из системы JR",
+   "derived_from": "jr_odekake",
+   "extra": {
+    "typical": "例年の紅葉見頃:11月下旬"
+   }
+  },
+  {
+   "source": "walkerplus",
+   "source_key": "ar0726e373500",
+   "name_ja": "八瀬もみじの小径",
+   "url": "https://koyo.walkerplus.com/detail/ar0726e373500/",
+   "status_original": "情報なし",
+   "status": "UNKNOWN",
+   "data_type": "derived",
+   "fetched_at": "2026-11-17T11:39:22+09:00",
+   "area": "京都府・京都市左京区",
+   "observed_basis": "дата не публикуется; статус из системы JR",
+   "derived_from": "jr_odekake",
+   "extra": {
+    "typical": "例年の紅葉見頃:11月中旬~12月上旬"
+   }
+  },
+  {
+   "source": "walkerplus",
+   "source_key": "ar0726e373591",
+   "name_ja": "慈照寺(銀閣寺)",
+   "url": "https://koyo.walkerplus.com/detail/ar0726e373591/",
+   "status_original": "情報なし",
+   "status": "UNKNOWN",
+   "data_type": "derived",
+   "fetched_at": "2026-11-17T11:39:22+09:00",
+   "area": "京都府・京都市左京区",
+   "observed_basis": "дата не публикуется; статус из системы JR",
+   "derived_from": "jr_odekake",
+   "extra": {
+    "typical": "例年の紅葉見頃:11月中旬~11月下旬"
+   }
+  },
+  {
+   "source": "walkerplus",
+   "source_key": "ar0726e373592",
+   "name_ja": "もみじのトンネル",
+   "url": "https://koyo.walkerplus.com/detail/ar0726e373592/",
+   "status_original": "情報なし",
+   "status": "UNKNOWN",
+   "data_type": "derived",
+   "fetched_at": "2026-11-17T11:39:22+09:00",
+   "area": "京都府・京都市左京区",
+   "observed_basis": "дата не публикуется; статус из системы JR",
+   "derived_from": "jr_odekake",
+   "extra": {
+    "typical": "例年の紅葉見頃:11月上旬~11月下旬"
+   }
+  },
+  {
+   "source": "walkerplus",
+   "source_key": "ar0726e392492",
+   "name_ja": "白龍園の紅葉(2026白龍園 秋の特別公開)",
+   "url": "https://koyo.walkerplus.com/detail/ar0726e392492/",
+   "status_original": "情報なし",
+   "status": "UNKNOWN",
+   "data_type": "derived",
+   "fetched_at": "2026-11-17T11:39:22+09:00",
+   "area": "京都府・京都市左京区",
+   "observed_basis": "дата не публикуется; статус из системы JR",
+   "derived_from": "jr_odekake",
+   "extra": {
+    "typical": "例年の紅葉見頃:2026年10月10日(土)~12月6日(日)"
+   }
+  },
+  {
+   "source": "walkerplus",
+   "source_key": "ar0726e393308",
+   "name_ja": "哲学の道",
+   "url": "https://koyo.walkerplus.com/detail/ar0726e393308/",
+   "status_original": "色づき始め",
+   "status": "STARTING",
+   "stage_lo": 1,
+   "stage_hi": 3,
+   "data_type": "derived",
+   "fetched_at": "2026-11-17T11:39:22+09:00",
+   "area": "京都府・京都市左京区",
+   "observed_basis": "дата не публикуется; статус из системы JR",
+   "derived_from": "jr_odekake",
+   "extra": {
+    "typical": "例年の紅葉見頃:11月中旬~12月上旬"
+   }
+  },
+  {
+   "source": "walkerplus",
+   "source_key": "ar0726e416761",
+   "name_ja": "瑠璃光院",
+   "url": "https://koyo.walkerplus.com/detail/ar0726e416761/",
+   "status_original": "情報なし",
+   "status": "UNKNOWN",
+   "data_type": "derived",
+   "fetched_at": "2026-11-17T11:39:22+09:00",
+   "area": "京都府・京都市左京区",
+   "observed_basis": "дата не публикуется; статус из системы JR",
+   "derived_from": "jr_odekake",
+   "extra": {
+    "typical": "例年の紅葉見頃:2026年10月1日(木)~12月13日(日)"
+   }
+  },
+  {
+   "source": "walkerplus",
+   "source_key": "ar0726e444237",
+   "name_ja": "赤山禅院",
+   "url": "https://koyo.walkerplus.com/detail/ar0726e444237/",
+   "status_original": "情報なし",
+   "status": "UNKNOWN",
+   "data_type": "derived",
+   "fetched_at": "2026-11-17T11:39:22+09:00",
+   "area": "京都府・京都市左京区",
+   "observed_basis": "дата не публикуется; статус из системы JR",
+   "derived_from": "jr_odekake",
+   "extra": {
+    "typical": "例年の紅葉見頃:11月下旬~12月上旬"
+   }
+  },
+  {
+   "source": "walkerplus",
+   "source_key": "ar0726e444704",
+   "name_ja": "鷺森神社",
+   "url": "https://koyo.walkerplus.com/detail/ar0726e444704/",
+   "status_original": "情報なし",
+   "status": "UNKNOWN",
+   "data_type": "derived",
+   "fetched_at": "2026-11-17T11:39:22+09:00",
+   "area": "京都府・京都市左京区",
+   "observed_basis": "дата не публикуется; статус из системы JR",
+   "derived_from": "jr_odekake",
+   "extra": {
+    "typical": "例年の紅葉見頃:11月中旬~12月上旬"
+   }
+  },
+  {
+   "source": "walkerplus",
+   "source_key": "ar0726e445349",
+   "name_ja": "金福寺",
+   "url": "https://koyo.walkerplus.com/detail/ar0726e445349/",
+   "status_original": "情報なし",
+   "status": "UNKNOWN",
+   "data_type": "derived",
+   "fetched_at": "2026-11-17T11:39:22+09:00",
+   "area": "京都府・京都市左京区",
+   "observed_basis": "дата не публикуется; статус из системы JR",
+   "derived_from": "jr_odekake",
+   "extra": {
+    "typical": "例年の紅葉見頃:11月中旬~11月下旬"
+   }
+  },
+  {
+   "source": "walkerplus",
+   "source_key": "ar0726e446148",
+   "name_ja": "寂光院",
+   "url": "https://koyo.walkerplus.com/detail/ar0726e446148/",
+   "status_original": "情報なし",
+   "status": "UNKNOWN",
+   "data_type": "derived",
+   "fetched_at": "2026-11-17T11:39:22+09:00",
+   "area": "京都府・京都市左京区",
+   "observed_basis": "дата не публикуется; статус из системы JR",
+   "derived_from": "jr_odekake",
+   "extra": {
+    "typical": "例年の紅葉見頃:11月中旬~11月下旬"
+   }
+  },
+  {
+   "source": "walkerplus",
+   "source_key": "ar0726e518547",
+   "name_ja": "白沙村荘",
+   "url": "https://koyo.walkerplus.com/detail/ar0726e518547/",
+   "status_original": "情報なし",
+   "status": "UNKNOWN",
+   "data_type": "derived",
+   "fetched_at": "2026-11-17T11:39:22+09:00",
+   "area": "京都府・京都市左京区",
+   "observed_basis": "дата не публикуется; статус из системы JR",
+   "derived_from": "jr_odekake",
+   "extra": {
+    "typical": "例年の紅葉見頃:11月中旬~12月上旬"
+   }
+  },
+  {
+   "source": "walkerplus",
+   "source_key": "ar0726e518738",
+   "name_ja": "古知谷 阿弥陀寺",
+   "url": "https://koyo.walkerplus.com/detail/ar0726e518738/",
+   "status_original": "情報なし",
+   "status": "UNKNOWN",
+   "data_type": "derived",
+   "fetched_at": "2026-11-17T11:39:22+09:00",
+   "area": "京都府・京都市左京区",
+   "observed_basis": "дата не публикуется; статус из системы JR",
+   "derived_from": "jr_odekake",
+   "extra": {
+    "typical": "例年の紅葉見頃:11月中旬~12月上旬"
+   }
+  },
+  {
+   "source": "walkerplus",
+   "source_key": "ar0726e519069",
+   "name_ja": "旧三井家下鴨別邸",
+   "url": "https://koyo.walkerplus.com/detail/ar0726e519069/",
+   "status_original": "情報なし",
+   "status": "UNKNOWN",
+   "data_type": "derived",
+   "fetched_at": "2026-11-17T11:39:22+09:00",
+   "area": "京都府・京都市左京区",
+   "observed_basis": "дата не публикуется; статус из системы JR",
+   "derived_from": "jr_odekake",
+   "extra": {
+    "typical": "例年の紅葉見頃:2026年11月19日(木)~12月6日(日) ※秋の特別公開(主屋2階・3階望楼)"
+   }
+  },
+  {
+   "source": "walkerplus",
+   "source_key": "ar0726e519261",
+   "name_ja": "平安神宮",
+   "url": "https://koyo.walkerplus.com/detail/ar0726e519261/",
+   "status_original": "情報なし",
+   "status": "UNKNOWN",
+   "data_type": "derived",
+   "fetched_at": "2026-11-17T11:39:22+09:00",
+   "area": "京都府・京都市左京区",
+   "observed_basis": "дата не публикуется; статус из системы JR",
+   "derived_from": "jr_odekake",
+   "extra": {
+    "typical": "例年の紅葉見頃:11月中旬~11月下旬"
+   }
+  },
+  {
+   "source": "walkerplus",
+   "source_key": "ar0726e519350",
+   "name_ja": "琵琶湖疏水",
+   "url": "https://koyo.walkerplus.com/detail/ar0726e519350/",
+   "status_original": "情報なし",
+   "status": "UNKNOWN",
+   "data_type": "derived",
+   "fetched_at": "2026-11-17T11:39:22+09:00",
+   "area": "京都府・京都市左京区",
+   "observed_basis": "дата не публикуется; статус из системы JR",
+   "derived_from": "jr_odekake",
+   "extra": {
+    "typical": "例年の紅葉見頃:11月中旬~11月下旬"
+   }
+  },
+  {
+   "source": "walkerplus",
+   "source_key": "ar0726e618082",
+   "name_ja": "安楽寺",
+   "url": "https://koyo.walkerplus.com/detail/ar0726e618082/",
+   "status_original": "情報なし",
+   "status": "UNKNOWN",
+   "data_type": "derived",
+   "fetched_at": "2026-11-17T11:39:22+09:00",
+   "area": "京都府・京都市左京区",
+   "observed_basis": "дата не публикуется; статус из системы JR",
+   "derived_from": "jr_odekake",
+   "extra": {
+    "typical": "例年の紅葉見頃:11月上旬~12月上旬"
+   }
+  },
+  {
+   "source": "walkerplus",
+   "source_key": "ar0726e369200",
+   "name_ja": "元離宮二条城",
+   "url": "https://koyo.walkerplus.com/detail/ar0726e369200/",
+   "status_original": "色づき始め",
+   "status": "STARTING",
+   "stage_lo": 1,
+   "stage_hi": 3,
+   "data_type": "derived",
+   "fetched_at": "2026-11-17T11:39:22+09:00",
+   "area": "京都府・京都市中京区",
+   "observed_basis": "дата не публикуется; статус из системы JR",
+   "derived_from": "jr_odekake",
+   "extra": {
+    "typical": "例年の紅葉見頃:11月中旬~12月上旬"
+   }
+  },
+  {
+   "source": "walkerplus",
+   "source_key": "ar0726e13139",
+   "name_ja": "東山(清水寺)",
+   "url": "https://koyo.walkerplus.com/detail/ar0726e13139/",
+   "status_original": "色づき始め",
+   "status": "STARTING",
+   "stage_lo": 1,
+   "stage_hi": 3,
+   "data_type": "derived",
+   "fetched_at": "2026-11-17T11:39:22+09:00",
+   "area": "京都府・京都市東山区",
+   "observed_basis": "дата не публикуется; статус из системы JR",
+   "derived_from": "jr_odekake",
+   "extra": {
+    "typical": "例年の紅葉見頃:11月下旬~12月上旬"
+   }
+  },
+  {
+   "source": "walkerplus",
+   "source_key": "ar0726e13140",
+   "name_ja": "東山(長楽寺)",
+   "url": "https://koyo.walkerplus.com/detail/ar0726e13140/",
+   "status_original": "情報なし",
+   "status": "UNKNOWN",
+   "data_type": "derived",
+   "fetched_at": "2026-11-17T11:39:22+09:00",
+   "area": "京都府・京都市東山区",
+   "observed_basis": "дата не публикуется; статус из системы JR",
+   "derived_from": "jr_odekake",
+   "extra": {
+    "typical": "例年の紅葉見頃:11月中旬~11月下旬"
+   }
+  },
+  {
+   "source": "walkerplus",
+   "source_key": "ar0726e13141",
+   "name_ja": "大本山 東福寺",
+   "url": "https://koyo.walkerplus.com/detail/ar0726e13141/",
+   "status_original": "色づき始め",
+   "status": "STARTING",
+   "stage_lo": 1,
+   "stage_hi": 3,
+   "data_type": "derived",
+   "fetched_at": "2026-11-17T11:39:22+09:00",
+   "area": "京都府・京都市東山区",
+   "observed_basis": "дата не публикуется; статус из системы JR",
+   "derived_from": "jr_odekake",
+   "extra": {
+    "typical": "例年の紅葉見頃:11月下旬~12月上旬"
+   }
+  },
+  {
+   "source": "walkerplus",
+   "source_key": "ar0726e13211",
+   "name_ja": "東山(高台寺)",
+   "url": "https://koyo.walkerplus.com/detail/ar0726e13211/",
+   "status_original": "色づき始め",
+   "status": "STARTING",
+   "stage_lo": 1,
+   "stage_hi": 3,
+   "data_type": "derived",
+   "fetched_at": "2026-11-17T11:39:22+09:00",
+   "area": "京都府・京都市東山区",
+   "observed_basis": "дата не публикуется; статус из системы JR",
+   "derived_from": "jr_odekake",
+   "extra": {
+    "typical": "例年の紅葉見頃:11月中旬~12月上旬"
+   }
+  },
+  {
+   "source": "walkerplus",
+   "source_key": "ar0726e154672",
+   "name_ja": "浄土宗 総本山知恩院",
+   "url": "https://koyo.walkerplus.com/detail/ar0726e154672/",
+   "status_original": "色づき始め",
+   "status": "STARTING",
+   "stage_lo": 1,
+   "stage_hi": 3,
+   "data_type": "derived",
+   "fetched_at": "2026-11-17T11:39:22+09:00",
+   "area": "京都府・京都市東山区",
+   "observed_basis": "дата не публикуется; статус из системы JR",
+   "derived_from": "jr_odekake",
+   "extra": {
+    "typical": "例年の紅葉見頃:11月中旬~12月上旬"
+   }
+  },
+  {
+   "source": "walkerplus",
+   "source_key": "ar0726e323191",
+   "name_ja": "総本山御寺泉涌寺",
+   "url": "https://koyo.walkerplus.com/detail/ar0726e323191/",
+   "status_original": "今見頃",
+   "status": "PEAK",
+   "stage_lo": 3,
+   "stage_hi": 4,
+   "data_type": "derived",
+   "fetched_at": "2026-11-17T11:39:22+09:00",
+   "area": "京都府・京都市東山区",
+   "observed_basis": "дата не публикуется; статус из системы JR",
+   "derived_from": "jr_odekake",
+   "extra": {
+    "typical": "例年の紅葉見頃:11月中旬~11月下旬"
+   }
+  },
+  {
+   "source": "walkerplus",
+   "source_key": "ar0726e325237",
+   "name_ja": "青蓮院門跡",
+   "url": "https://koyo.walkerplus.com/detail/ar0726e325237/",
+   "status_original": "情報なし",
+   "status": "UNKNOWN",
+   "data_type": "derived",
+   "fetched_at": "2026-11-17T11:39:22+09:00",
+   "area": "京都府・京都市東山区",
+   "observed_basis": "дата не публикуется; статус из системы JR",
+   "derived_from": "jr_odekake",
+   "extra": {
+    "typical": "例年の紅葉見頃:11月中旬~12月上旬"
+   }
+  },
+  {
+   "source": "walkerplus",
+   "source_key": "ar0726e327189",
+   "name_ja": "圓徳院",
+   "url": "https://koyo.walkerplus.com/detail/ar0726e327189/",
+   "status_original": "情報なし",
+   "status": "UNKNOWN",
+   "data_type": "derived",
+   "fetched_at": "2026-11-17T11:39:22+09:00",
+   "area": "京都府・京都市東山区",
+   "observed_basis": "дата не публикуется; статус из системы JR",
+   "derived_from": "jr_odekake",
+   "extra": {
+    "typical": "例年の紅葉見頃:11月中旬~12月上旬"
+   }
+  },
+  {
+   "source": "walkerplus",
+   "source_key": "ar0726e373076",
+   "name_ja": "雲龍院",
+   "url": "https://koyo.walkerplus.com/detail/ar0726e373076/",
+   "status_original": "情報なし",
+   "status": "UNKNOWN",
+   "data_type": "derived",
+   "fetched_at": "2026-11-17T11:39:22+09:00",
+   "area": "京都府・京都市東山区",
+   "observed_basis": "дата не публикуется; статус из системы JR",
+   "derived_from": "jr_odekake",
+   "extra": {
+    "typical": "例年の紅葉見頃:11月中旬~12月上旬"
+   }
+  },
+  {
+   "source": "walkerplus",
+   "source_key": "ar0726e445203",
+   "name_ja": "建仁寺",
+   "url": "https://koyo.walkerplus.com/detail/ar0726e445203/",
+   "status_original": "情報なし",
+   "status": "UNKNOWN",
+   "data_type": "derived",
+   "fetched_at": "2026-11-17T11:39:22+09:00",
+   "area": "京都府・京都市東山区",
+   "observed_basis": "дата не публикуется; статус из системы JR",
+   "derived_from": "jr_odekake",
+   "extra": {
+    "typical": "例年の紅葉見頃:11月下旬〜12月上旬"
+   }
+  },
+  {
+   "source": "walkerplus",
+   "source_key": "ar0726e446504",
+   "name_ja": "今熊野観音寺",
+   "url": "https://koyo.walkerplus.com/detail/ar0726e446504/",
+   "status_original": "情報なし",
+   "status": "UNKNOWN",
+   "data_type": "derived",
+   "fetched_at": "2026-11-17T11:39:22+09:00",
+   "area": "京都府・京都市東山区",
+   "observed_basis": "дата не публикуется; статус из системы JR",
+   "derived_from": "jr_odekake",
+   "extra": {
+    "typical": "例年の紅葉見頃:11月中旬~11月下旬"
+   }
+  },
+  {
+   "source": "walkerplus",
+   "source_key": "ar0726e565840",
+   "name_ja": "智積院",
+   "url": "https://koyo.walkerplus.com/detail/ar0726e565840/",
+   "status_original": "情報なし",
+   "status": "UNKNOWN",
+   "data_type": "derived",
+   "fetched_at": "2026-11-17T11:39:22+09:00",
+   "area": "京都府・京都市東山区",
+   "observed_basis": "дата не публикуется; статус из системы JR",
+   "derived_from": "jr_odekake",
+   "extra": {
+    "typical": "例年の紅葉見頃:11月中旬~12月上旬"
+   }
+  },
+  {
+   "source": "walkerplus",
+   "source_key": "ar0726e154662",
+   "name_ja": "梅小路公園 朱雀の庭",
+   "url": "https://koyo.walkerplus.com/detail/ar0726e154662/",
+   "status_original": "色づき始め",
+   "status": "STARTING",
+   "stage_lo": 1,
+   "stage_hi": 3,
+   "data_type": "derived",
+   "fetched_at": "2026-11-17T11:39:22+09:00",
+   "area": "京都府・京都市下京区",
+   "observed_basis": "дата не публикуется; статус из системы JR",
+   "derived_from": "jr_odekake",
+   "extra": {
+    "typical": "例年の紅葉見頃:11月中旬~12月上旬"
+   }
+  },
+  {
+   "source": "walkerplus",
+   "source_key": "ar0726e393292",
+   "name_ja": "渉成園",
+   "url": "https://koyo.walkerplus.com/detail/ar0726e393292/",
+   "status_original": "情報なし",
+   "status": "UNKNOWN",
+   "data_type": "derived",
+   "fetched_at": "2026-11-17T11:39:22+09:00",
+   "area": "京都府・京都市下京区",
+   "observed_basis": "дата не публикуется; статус из системы JR",
+   "derived_from": "jr_odekake",
+   "extra": {
+    "typical": "例年の紅葉見頃:10月下旬~12月上旬"
+   }
+  },
+  {
+   "source": "walkerplus",
+   "source_key": "ar0726e123782",
+   "name_ja": "東寺(教王護国寺)",
+   "url": "https://koyo.walkerplus.com/detail/ar0726e123782/",
+   "status_original": "情報なし",
+   "status": "UNKNOWN",
+   "data_type": "derived",
+   "fetched_at": "2026-11-17T11:39:22+09:00",
+   "area": "京都府・京都市南区",
+   "observed_basis": "дата не публикуется; статус из системы JR",
+   "derived_from": "jr_odekake",
+   "extra": {
+    "typical": "例年の紅葉見頃:11月中旬~12月上旬"
+   }
+  },
+  {
+   "source": "walkerplus",
+   "source_key": "ar0726e12990",
+   "name_ja": "高雄(神護寺)",
+   "url": "https://koyo.walkerplus.com/detail/ar0726e12990/",
+   "status_original": "今見頃",
+   "status": "PEAK",
+   "stage_lo": 3,
+   "stage_hi": 4,
+   "data_type": "derived",
+   "fetched_at": "2026-11-17T11:39:22+09:00",
+   "area": "京都府・京都市右京区",
+   "observed_basis": "дата не публикуется; статус из системы JR",
+   "derived_from": "jr_odekake",
+   "extra": {
+    "typical": "例年の紅葉見頃:11月上旬~11月下旬"
+   }
+  },
+  {
+   "source": "walkerplus",
+   "source_key": "ar0726e12993",
+   "name_ja": "槇尾(西明寺)",
+   "url": "https://koyo.walkerplus.com/detail/ar0726e12993/",
+   "status_original": "情報なし",
+   "status": "UNKNOWN",
+   "data_type": "derived",
+   "fetched_at": "2026-11-17T11:39:22+09:00",
+   "area": "京都府・京都市右京区",
+   "observed_basis": "дата не публикуется; статус из системы JR",
+   "derived_from": "jr_odekake",
+   "extra": {
+    "typical": "例年の紅葉見頃:11月中旬~11月下旬"
+   }
+  },
+  {
+   "source": "walkerplus",
+   "source_key": "ar0726e13147",
+   "name_ja": "嵐山",
+   "url": "https://koyo.walkerplus.com/detail/ar0726e13147/",
+   "status_original": "今見頃",
+   "status": "PEAK",
+   "stage_lo": 3,
+   "stage_hi": 4,
+   "data_type": "derived",
+   "fetched_at": "2026-11-17T11:39:22+09:00",
+   "area": "京都府・京都市右京区",
+   "observed_basis": "дата не публикуется; статус из системы JR",
+   "derived_from": "jr_odekake",
+   "extra": {
+    "typical": "例年の紅葉見頃:11月下旬~12月上旬"
+   }
+  },
+  {
+   "source": "walkerplus",
+   "source_key": "ar0726e13148",
+   "name_ja": "嵐山(鹿王院)",
+   "url": "https://koyo.walkerplus.com/detail/ar0726e13148/",
+   "status_original": "情報なし",
+   "status": "UNKNOWN",
+   "data_type": "derived",
+   "fetched_at": "2026-11-17T11:39:22+09:00",
+   "area": "京都府・京都市右京区",
+   "observed_basis": "дата не публикуется; статус из системы JR",
+   "derived_from": "jr_odekake",
+   "extra": {
+    "typical": "例年の紅葉見頃:11月下旬~12月上旬"
+   }
+  },
+  {
+   "source": "walkerplus",
+   "source_key": "ar0726e13149",
+   "name_ja": "常寂光寺",
+   "url": "https://koyo.walkerplus.com/detail/ar0726e13149/",
+   "status_original": "色づき始め",
+   "status": "STARTING",
+   "stage_lo": 1,
+   "stage_hi": 3,
+   "data_type": "derived",
+   "fetched_at": "2026-11-17T11:39:22+09:00",
+   "area": "京都府・京都市右京区",
+   "observed_basis": "дата не публикуется; статус из системы JR",
+   "derived_from": "jr_odekake",
+   "extra": {
+    "typical": "例年の紅葉見頃:11月中旬~11月下旬"
+   }
+  },
+  {
+   "source": "walkerplus",
+   "source_key": "ar0726e13150",
+   "name_ja": "小倉山二尊院",
+   "url": "https://koyo.walkerplus.com/detail/ar0726e13150/",
+   "status_original": "今見頃",
+   "status": "PEAK",
+   "stage_lo": 3,
+   "stage_hi": 4,
+   "data_type": "derived",
+   "fetched_at": "2026-11-17T11:39:22+09:00",
+   "area": "京都府・京都市右京区",
+   "observed_basis": "дата не публикуется; статус из системы JR",
+   "derived_from": "jr_odekake",
+   "extra": {
+    "typical": "例年の紅葉見頃:11月中旬~11月下旬"
+   }
+  },
+  {
+   "source": "walkerplus",
+   "source_key": "ar0726e13151",
+   "name_ja": "宝筐院",
+   "url": "https://koyo.walkerplus.com/detail/ar0726e13151/",
+   "status_original": "色づき始め",
+   "status": "STARTING",
+   "stage_lo": 1,
+   "stage_hi": 3,
+   "data_type": "derived",
+   "fetched_at": "2026-11-17T11:39:22+09:00",
+   "area": "京都府・京都市右京区",
+   "observed_basis": "дата не публикуется; статус из системы JR",
+   "derived_from": "jr_odekake",
+   "extra": {
+    "typical": "例年の紅葉見頃:11月下旬~12月上旬"
+   }
+  },
+  {
+   "source": "walkerplus",
+   "source_key": "ar0726e154659",
+   "name_ja": "龍安寺",
+   "url": "https://koyo.walkerplus.com/detail/ar0726e154659/",
+   "status_original": "色づき始め",
+   "status": "STARTING",
+   "stage_lo": 1,
+   "stage_hi": 3,
+   "data_type": "derived",
+   "fetched_at": "2026-11-17T11:39:22+09:00",
+   "area": "京都府・京都市右京区",
+   "observed_basis": "дата не публикуется; статус из системы JR",
+   "derived_from": "jr_odekake",
+   "extra": {
+    "typical": "例年の紅葉見頃:11月下旬~12月上旬"
+   }
+  },
+  {
+   "source": "walkerplus",
+   "source_key": "ar0726e154663",
+   "name_ja": "妙心寺退蔵院(余香苑)",
+   "url": "https://koyo.walkerplus.com/detail/ar0726e154663/",
+   "status_original": "色づき始め",
+   "status": "STARTING",
+   "stage_lo": 1,
+   "stage_hi": 3,
+   "data_type": "derived",
+   "fetched_at": "2026-11-17T11:39:22+09:00",
+   "area": "京都府・京都市右京区",
+   "observed_basis": "дата не публикуется; статус из системы JR",
+   "derived_from": "jr_odekake",
+   "extra": {
+    "typical": "例年の紅葉見頃:11月下旬~12月上旬"
+   }
+  },
+  {
+   "source": "walkerplus",
+   "source_key": "ar0726e154674",
+   "name_ja": "天龍寺",
+   "url": "https://koyo.walkerplus.com/detail/ar0726e154674/",
+   "status_original": "今見頃",
+   "status": "PEAK",
+   "stage_lo": 3,
+   "stage_hi": 4,
+   "data_type": "derived",
+   "fetched_at": "2026-11-17T11:39:22+09:00",
+   "area": "京都府・京都市右京区",
+   "observed_basis": "дата не публикуется; статус из системы JR",
+   "derived_from": "jr_odekake",
+   "extra": {
+    "typical": "例年の紅葉見頃:11月中旬~12月上旬"
+   }
+  },
+  {
+   "source": "walkerplus",
+   "source_key": "ar0726e154675",
+   "name_ja": "旧嵯峨御所 大本山大覚寺",
+   "url": "https://koyo.walkerplus.com/detail/ar0726e154675/",
+   "status_original": "色づき始め",
+   "status": "STARTING",
+   "stage_lo": 1,
+   "stage_hi": 3,
+   "data_type": "derived",
+   "fetched_at": "2026-11-17T11:39:22+09:00",
+   "area": "京都府・京都市右京区",
+   "observed_basis": "дата не публикуется; статус из системы JR",
+   "derived_from": "jr_odekake",
+   "extra": {
+    "typical": "例年の紅葉見頃:11月下旬~12月上旬"
+   }
+  },
+  {
+   "source": "walkerplus",
+   "source_key": "ar0726e322496",
+   "name_ja": "仁和寺",
+   "url": "https://koyo.walkerplus.com/detail/ar0726e322496/",
+   "status_original": "色づき始め",
+   "status": "STARTING",
+   "stage_lo": 1,
+   "stage_hi": 3,
+   "data_type": "derived",
+   "fetched_at": "2026-11-17T11:39:22+09:00",
+   "area": "京都府・京都市右京区",
+   "observed_basis": "дата не публикуется; статус из системы JR",
+   "derived_from": "jr_odekake",
+   "extra": {
+    "typical": "例年の紅葉見頃:11月中旬~12月上旬"
+   }
+  },
+  {
+   "source": "walkerplus",
+   "source_key": "ar0726e323493",
+   "name_ja": "宝厳院",
+   "url": "https://koyo.walkerplus.com/detail/ar0726e323493/",
+   "status_original": "情報なし",
+   "status": "UNKNOWN",
+   "data_type": "derived",
+   "fetched_at": "2026-11-17T11:39:22+09:00",
+   "area": "京都府・京都市右京区",
+   "observed_basis": "дата не публикуется; статус из системы JR",
+   "derived_from": "jr_odekake",
+   "extra": {
+    "typical": "例年の紅葉見頃:11月中旬~12月上旬"
+   }
+  },
+  {
+   "source": "walkerplus",
+   "source_key": "ar0726e372644",
+   "name_ja": "祇王寺",
+   "url": "https://koyo.walkerplus.com/detail/ar0726e372644/",
+   "status_original": "情報なし",
+   "status": "UNKNOWN",
+   "data_type": "derived",
+   "fetched_at": "2026-11-17T11:39:22+09:00",
+   "area": "京都府・京都市右京区",
+   "observed_basis": "дата не публикуется; статус из системы JR",
+   "derived_from": "jr_odekake",
+   "extra": {
+    "typical": "例年の紅葉見頃:11月下旬~12月上旬"
+   }
+  },
+  {
+   "source": "walkerplus",
+   "source_key": "ar0726e372650",
+   "name_ja": "あだし野念仏寺",
+   "url": "https://koyo.walkerplus.com/detail/ar0726e372650/",
+   "status_original": "情報なし",
+   "status": "UNKNOWN",
+   "data_type": "derived",
+   "fetched_at": "2026-11-17T11:39:22+09:00",
+   "area": "京都府・京都市右京区",
+   "observed_basis": "дата не публикуется; статус из системы JR",
+   "derived_from": "jr_odekake",
+   "extra": {
+    "typical": "例年の紅葉見頃:11月中旬~12月上旬"
+   }
+  },
+  {
+   "source": "walkerplus",
+   "source_key": "ar0726e372783",
+   "name_ja": "嵯峨野トロッコ列車",
+   "url": "https://koyo.walkerplus.com/detail/ar0726e372783/",
+   "status_original": "情報なし",
+   "status": "UNKNOWN",
+   "data_type": "derived",
+   "fetched_at": "2026-11-17T11:39:22+09:00",
+   "area": "京都府・京都市右京区",
+   "observed_basis": "дата не публикуется; статус из системы JR",
+   "derived_from": "jr_odekake",
+   "extra": {
+    "typical": "例年の紅葉見頃:11月中旬~12月上旬"
+   }
+  },
+  {
+   "source": "walkerplus",
+   "source_key": "ar0726e373595",
+   "name_ja": "妙心寺山内大法院",
+   "url": "https://koyo.walkerplus.com/detail/ar0726e373595/",
+   "status_original": "情報なし",
+   "status": "UNKNOWN",
+   "data_type": "derived",
+   "fetched_at": "2026-11-17T11:39:22+09:00",
+   "area": "京都府・京都市右京区",
+   "observed_basis": "дата не публикуется; статус из системы JR",
+   "derived_from": "jr_odekake",
+   "extra": {
+    "typical": "例年の紅葉見頃:11月中旬~11月下旬"
+   }
+  },
+  {
+   "source": "walkerplus",
+   "source_key": "ar0726e444556",
+   "name_ja": "清凉寺(嵯峨釈迦堂)",
+   "url": "https://koyo.walkerplus.com/detail/ar0726e444556/",
+   "status_original": "情報なし",
+   "status": "UNKNOWN",
+   "data_type": "derived",
+   "fetched_at": "2026-11-17T11:39:22+09:00",
+   "area": "京都府・京都市右京区",
+   "observed_basis": "дата не публикуется; статус из системы JR",
+   "derived_from": "jr_odekake",
+   "extra": {
+    "typical": "例年の紅葉見頃:11月中旬~12月上旬"
+   }
+  },
+  {
+   "source": "walkerplus",
+   "source_key": "ar0726e478693",
+   "name_ja": "法金剛院",
+   "url": "https://koyo.walkerplus.com/detail/ar0726e478693/",
+   "status_original": "情報なし",
+   "status": "UNKNOWN",
+   "data_type": "derived",
+   "fetched_at": "2026-11-17T11:39:22+09:00",
+   "area": "京都府・京都市右京区",
+   "observed_basis": "дата не публикуется; статус из системы JR",
+   "derived_from": "jr_odekake",
+   "extra": {
+    "typical": "例年の紅葉見頃:11月下旬~12月上旬"
+   }
+  },
+  {
+   "source": "walkerplus",
+   "source_key": "ar0726e519266",
+   "name_ja": "大河内山荘庭園",
+   "url": "https://koyo.walkerplus.com/detail/ar0726e519266/",
+   "status_original": "情報なし",
+   "status": "UNKNOWN",
+   "data_type": "derived",
+   "fetched_at": "2026-11-17T11:39:22+09:00",
+   "area": "京都府・京都市右京区",
+   "observed_basis": "дата не публикуется; статус из системы JR",
+   "derived_from": "jr_odekake",
+   "extra": {
+    "typical": "例年の紅葉見頃:11月中旬~11月下旬"
+   }
+  },
+  {
+   "source": "walkerplus",
+   "source_key": "ar0726e520595",
+   "name_ja": "嵐山 祐斎亭",
+   "url": "https://koyo.walkerplus.com/detail/ar0726e520595/",
+   "status_original": "情報なし",
+   "status": "UNKNOWN",
+   "data_type": "derived",
+   "fetched_at": "2026-11-17T11:39:22+09:00",
+   "area": "京都府・京都市右京区",
+   "observed_basis": "дата не публикуется; статус из системы JR",
+   "derived_from": "jr_odekake",
+   "extra": {
+    "typical": "例年の紅葉見頃:11月中旬~12月上旬"
+   }
+  },
+  {
+   "source": "walkerplus",
+   "source_key": "ar0726e520596",
+   "name_ja": "愛宕念仏寺",
+   "url": "https://koyo.walkerplus.com/detail/ar0726e520596/",
+   "status_original": "情報なし",
+   "status": "UNKNOWN",
+   "data_type": "derived",
+   "fetched_at": "2026-11-17T11:39:22+09:00",
+   "area": "京都府・京都市右京区",
+   "observed_basis": "дата не публикуется; статус из системы JR",
+   "derived_from": "jr_odekake",
+   "extra": {
+    "typical": "例年の紅葉見頃:11月上旬~11月中旬"
+   }
+  },
+  {
+   "source": "walkerplus",
+   "source_key": "ar0726e13144",
+   "name_ja": "醍醐寺",
+   "url": "https://koyo.walkerplus.com/detail/ar0726e13144/",
+   "status_original": "色づき始め",
+   "status": "STARTING",
+   "stage_lo": 1,
+   "stage_hi": 3,
+   "data_type": "derived",
+   "fetched_at": "2026-11-17T11:39:22+09:00",
+   "area": "京都府・京都市伏見区",
+   "observed_basis": "дата не публикуется; статус из системы JR",
+   "derived_from": "jr_odekake",
+   "extra": {
+    "typical": "例年の紅葉見頃:11月中旬~12月上旬"
+   }
+  },
+  {
+   "source": "walkerplus",
+   "source_key": "ar0726e154673",
+   "name_ja": "城南宮 神苑 楽水苑",
+   "url": "https://koyo.walkerplus.com/detail/ar0726e154673/",
+   "status_original": "色づき始め",
+   "status": "STARTING",
+   "stage_lo": 1,
+   "stage_hi": 3,
+   "data_type": "derived",
+   "fetched_at": "2026-11-17T11:39:22+09:00",
+   "area": "京都府・京都市伏見区",
+   "observed_basis": "дата не публикуется; статус из системы JR",
+   "derived_from": "jr_odekake",
+   "extra": {
+    "typical": "例年の紅葉見頃:11月下旬~12月上旬"
+   }
+  },
+  {
+   "source": "walkerplus",
+   "source_key": "ar0726e570901",
+   "name_ja": "伏見稲荷大社",
+   "url": "https://koyo.walkerplus.com/detail/ar0726e570901/",
+   "status_original": "情報なし",
+   "status": "UNKNOWN",
+   "data_type": "derived",
+   "fetched_at": "2026-11-17T11:39:22+09:00",
+   "area": "京都府・京都市伏見区",
+   "observed_basis": "дата не публикуется; статус из системы JR",
+   "derived_from": "jr_odekake",
+   "extra": {
+    "typical": "例年の紅葉見頃:11月中旬〜12月上旬"
+   }
+  },
+  {
+   "source": "walkerplus",
+   "source_key": "ar0726e13143",
+   "name_ja": "毘沙門堂",
+   "url": "https://koyo.walkerplus.com/detail/ar0726e13143/",
+   "status_original": "色づき始め",
+   "status": "STARTING",
+   "stage_lo": 1,
+   "stage_hi": 3,
+   "data_type": "derived",
+   "fetched_at": "2026-11-17T11:39:22+09:00",
+   "area": "京都府・京都市山科区",
+   "observed_basis": "дата не публикуется; статус из системы JR",
+   "derived_from": "jr_odekake",
+   "extra": {
+    "typical": "例年の紅葉見頃:11月中旬~11月下旬"
+   }
+  },
+  {
+   "source": "walkerplus",
+   "source_key": "ar0726e154661",
+   "name_ja": "隨心院",
+   "url": "https://koyo.walkerplus.com/detail/ar0726e154661/",
+   "status_original": "色づき始め",
+   "status": "STARTING",
+   "stage_lo": 1,
+   "stage_hi": 3,
+   "data_type": "derived",
+   "fetched_at": "2026-11-17T11:39:22+09:00",
+   "area": "京都府・京都市山科区",
+   "observed_basis": "дата не публикуется; статус из системы JR",
+   "derived_from": "jr_odekake",
+   "extra": {
+    "typical": "例年の紅葉見頃:11月中旬~11月下旬"
+   }
+  },
+  {
+   "source": "walkerplus",
+   "source_key": "ar0726e325234",
+   "name_ja": "将軍塚青龍殿",
+   "url": "https://koyo.walkerplus.com/detail/ar0726e325234/",
+   "status_original": "情報なし",
+   "status": "UNKNOWN",
+   "data_type": "derived",
+   "fetched_at": "2026-11-17T11:39:22+09:00",
+   "area": "京都府・京都市山科区",
+   "observed_basis": "дата не публикуется; статус из системы JR",
+   "derived_from": "jr_odekake",
+   "extra": {
+    "typical": "例年の紅葉見頃:11月中旬~11月下旬"
+   }
+  },
+  {
+   "source": "walkerplus",
+   "source_key": "ar0726e446329",
+   "name_ja": "勧修寺",
+   "url": "https://koyo.walkerplus.com/detail/ar0726e446329/",
+   "status_original": "色づき始め",
+   "status": "STARTING",
+   "stage_lo": 1,
+   "stage_hi": 3,
+   "data_type": "derived",
+   "fetched_at": "2026-11-17T11:39:22+09:00",
+   "area": "京都府・京都市山科区",
+   "observed_basis": "дата не публикуется; статус из системы JR",
+   "derived_from": "jr_odekake",
+   "extra": {
+    "typical": "例年の紅葉見頃:11月上旬~12月上旬"
+   }
+  },
+  {
+   "source": "walkerplus",
+   "source_key": "ar0726e478702",
+   "name_ja": "安祥寺",
+   "url": "https://koyo.walkerplus.com/detail/ar0726e478702/",
+   "status_original": "情報なし",
+   "status": "UNKNOWN",
+   "data_type": "derived",
+   "fetched_at": "2026-11-17T11:39:22+09:00",
+   "area": "京都府・京都市山科区",
+   "observed_basis": "дата не публикуется; статус из системы JR",
+   "derived_from": "jr_odekake",
+   "extra": {
+    "typical": "例年の紅葉見頃:11月下旬~12月上旬"
+   }
+  },
+  {
+   "source": "walkerplus",
+   "source_key": "ar0726e13132",
+   "name_ja": "洛西(勝持寺)",
+   "url": "https://koyo.walkerplus.com/detail/ar0726e13132/",
+   "status_original": "情報なし",
+   "status": "UNKNOWN",
+   "data_type": "derived",
+   "fetched_at": "2026-11-17T11:39:22+09:00",
+   "area": "京都府・京都市西京区",
+   "observed_basis": "дата не публикуется; статус из системы JR",
+   "derived_from": "jr_odekake",
+   "extra": {
+    "typical": "例年の紅葉見頃:11月中旬~11月下旬"
+   }
+  },
+  {
+   "source": "walkerplus",
+   "source_key": "ar0726e13133",
+   "name_ja": "洛西(善峯寺)",
+   "url": "https://koyo.walkerplus.com/detail/ar0726e13133/",
+   "status_original": "今見頃",
+   "status": "PEAK",
+   "stage_lo": 3,
+   "stage_hi": 4,
+   "data_type": "derived",
+   "fetched_at": "2026-11-17T11:39:22+09:00",
+   "area": "京都府・京都市西京区",
+   "observed_basis": "дата не публикуется; статус из системы JR",
+   "derived_from": "jr_odekake",
+   "extra": {
+    "typical": "例年の紅葉見頃:11月中旬~12月上旬"
+   }
+  },
+  {
+   "source": "walkerplus",
+   "source_key": "ar0726e13134",
+   "name_ja": "洛西(大原野神社)",
+   "url": "https://koyo.walkerplus.com/detail/ar0726e13134/",
+   "status_original": "情報なし",
+   "status": "UNKNOWN",
+   "data_type": "derived",
+   "fetched_at": "2026-11-17T11:39:22+09:00",
+   "area": "京都府・京都市西京区",
+   "observed_basis": "дата не публикуется; статус из системы JR",
+   "derived_from": "jr_odekake",
+   "extra": {
+    "typical": "例年の紅葉見頃:11月中旬~12月上旬"
+   }
+  },
+  {
+   "source": "walkerplus",
+   "source_key": "ar0726e366296",
+   "name_ja": "正法寺",
+   "url": "https://koyo.walkerplus.com/detail/ar0726e366296/",
+   "status_original": "今見頃",
+   "status": "PEAK",
+   "stage_lo": 3,
+   "stage_hi": 4,
+   "data_type": "derived",
+   "fetched_at": "2026-11-17T11:39:22+09:00",
+   "area": "京都府・京都市西京区",
+   "observed_basis": "дата не публикуется; статус из системы JR",
+   "derived_from": "jr_odekake",
+   "extra": {
+    "typical": "例年の紅葉見頃:11月中旬~11月下旬"
+   }
+  },
+  {
+   "source": "walkerplus",
+   "source_key": "ar0726e444236",
+   "name_ja": "十輪寺",
+   "url": "https://koyo.walkerplus.com/detail/ar0726e444236/",
+   "status_original": "情報なし",
+   "status": "UNKNOWN",
+   "data_type": "derived",
+   "fetched_at": "2026-11-17T11:39:22+09:00",
+   "area": "京都府・京都市西京区",
+   "observed_basis": "дата не публикуется; статус из системы JR",
+   "derived_from": "jr_odekake",
+   "extra": {
+    "typical": "例年の紅葉見頃:11月中旬~11月下旬"
+   }
+  },
+  {
+   "source": "walkerplus",
+   "source_key": "ar0726e518336",
+   "name_ja": "浄住寺",
+   "url": "https://koyo.walkerplus.com/detail/ar0726e518336/",
+   "status_original": "情報なし",
+   "status": "UNKNOWN",
+   "data_type": "derived",
+   "fetched_at": "2026-11-17T11:39:22+09:00",
+   "area": "京都府・京都市西京区",
+   "observed_basis": "дата не публикуется; статус из системы JR",
+   "derived_from": "jr_odekake",
+   "extra": {
+    "typical": "例年の紅葉見頃:2026年11月21日(土)~12月13日(日)"
+   }
+  },
+  {
+   "source": "walkerplus",
+   "source_key": "ar0726e203663",
+   "name_ja": "長安寺",
+   "url": "https://koyo.walkerplus.com/detail/ar0726e203663/",
+   "status_original": "今見頃",
+   "status": "PEAK",
+   "stage_lo": 3,
+   "stage_hi": 4,
+   "data_type": "derived",
+   "fetched_at": "2026-11-17T11:39:22+09:00",
+   "area": "京都府・福知山市",
+   "observed_basis": "дата не публикуется; статус из системы JR",
+   "derived_from": "jr_odekake",
+   "extra": {
+    "typical": "例年の紅葉見頃:11月中旬"
+   }
+  },
+  {
+   "source": "walkerplus",
+   "source_key": "ar0726e154651",
+   "name_ja": "金剛院",
+   "url": "https://koyo.walkerplus.com/detail/ar0726e154651/",
+   "status_original": "今見頃",
+   "status": "PEAK",
+   "stage_lo": 3,
+   "stage_hi": 4,
+   "data_type": "derived",
+   "fetched_at": "2026-11-17T11:39:22+09:00",
+   "area": "京都府・舞鶴市",
+   "observed_basis": "дата не публикуется; статус из системы JR",
+   "derived_from": "jr_odekake",
+   "extra": {
+    "typical": "例年の紅葉見頃:11月上旬~11月下旬"
+   }
+  },
+  {
+   "source": "walkerplus",
+   "source_key": "ar0726e203499",
+   "name_ja": "安国寺",
+   "url": "https://koyo.walkerplus.com/detail/ar0726e203499/",
+   "status_original": "今見頃",
+   "status": "PEAK",
+   "stage_lo": 3,
+   "stage_hi": 4,
+   "data_type": "derived",
+   "fetched_at": "2026-11-17T11:39:22+09:00",
+   "area": "京都府・綾部市",
+   "observed_basis": "дата не публикуется; статус из системы JR",
+   "derived_from": "jr_odekake",
+   "extra": {
+    "typical": "例年の紅葉見頃:11月上旬~11月下旬"
+   }
+  },
+  {
+   "source": "walkerplus",
+   "source_key": "ar0726e373274",
+   "name_ja": "大本神苑(綾部)",
+   "url": "https://koyo.walkerplus.com/detail/ar0726e373274/",
+   "status_original": "色づき始め",
+   "status": "STARTING",
+   "stage_lo": 1,
+   "stage_hi": 3,
+   "data_type": "derived",
+   "fetched_at": "2026-11-17T11:39:22+09:00",
+   "area": "京都府・綾部市",
+   "observed_basis": "дата не публикуется; статус из системы JR",
+   "derived_from": "jr_odekake",
+   "extra": {
+    "typical": "例年の紅葉見頃:11月中旬~11月下旬"
+   }
+  },
+  {
+   "source": "walkerplus",
+   "source_key": "ar0726e13009",
+   "name_ja": "宇治(興聖寺)",
+   "url": "https://koyo.walkerplus.com/detail/ar0726e13009/",
+   "status_original": "青葉",
+   "status": "GREEN",
+   "stage_lo": 0,
+   "stage_hi": 0,
+   "data_type": "derived",
+   "fetched_at": "2026-11-17T11:39:22+09:00",
+   "area": "京都府・宇治市",
+   "observed_basis": "дата не публикуется; статус из системы JR",
+   "derived_from": "jr_odekake",
+   "extra": {
+    "typical": "例年の紅葉見頃:11月下旬~12月上旬"
+   }
+  },
+  {
+   "source": "walkerplus",
+   "source_key": "ar0726e13152",
+   "name_ja": "宇治(三室戸寺)",
+   "url": "https://koyo.walkerplus.com/detail/ar0726e13152/",
+   "status_original": "今見頃",
+   "status": "PEAK",
+   "stage_lo": 3,
+   "stage_hi": 4,
+   "data_type": "derived",
+   "fetched_at": "2026-11-17T11:39:22+09:00",
+   "area": "京都府・宇治市",
+   "observed_basis": "дата не публикуется; статус из системы JR",
+   "derived_from": "jr_odekake",
+   "extra": {
+    "typical": "例年の紅葉見頃:11月中旬~12月上旬"
+   }
+  },
+  {
+   "source": "walkerplus",
+   "source_key": "ar0726e207747",
+   "name_ja": "平等院",
+   "url": "https://koyo.walkerplus.com/detail/ar0726e207747/",
+   "status_original": "色づき始め",
+   "status": "STARTING",
+   "stage_lo": 1,
+   "stage_hi": 3,
+   "data_type": "derived",
+   "fetched_at": "2026-11-17T11:39:22+09:00",
+   "area": "京都府・宇治市",
+   "observed_basis": "дата не публикуется; статус из системы JR",
+   "derived_from": "jr_odekake",
+   "extra": {
+    "typical": "例年の紅葉見頃:11月中旬~12月上旬"
+   }
+  },
+  {
+   "source": "walkerplus",
+   "source_key": "ar0726e373269",
+   "name_ja": "宇治市源氏物語ミュージアム",
+   "url": "https://koyo.walkerplus.com/detail/ar0726e373269/",
+   "status_original": "情報なし",
+   "status": "UNKNOWN",
+   "data_type": "derived",
+   "fetched_at": "2026-11-17T11:39:22+09:00",
+   "area": "京都府・宇治市",
+   "observed_basis": "дата не публикуется; статус из системы JR",
+   "derived_from": "jr_odekake",
+   "extra": {
+    "typical": "例年の紅葉見頃:11月中旬~12月上旬"
+   }
+  },
+  {
+   "source": "walkerplus",
+   "source_key": "ar0726e373605",
+   "name_ja": "宇治川ライン",
+   "url": "https://koyo.walkerplus.com/detail/ar0726e373605/",
+   "status_original": "情報なし",
+   "status": "UNKNOWN",
+   "data_type": "derived",
+   "fetched_at": "2026-11-17T11:39:22+09:00",
+   "area": "京都府・宇治市",
+   "observed_basis": "дата не публикуется; статус из системы JR",
+   "derived_from": "jr_odekake",
+   "extra": {
+    "typical": "例年の紅葉見頃:11月下旬~12月上旬"
+   }
+  },
+  {
+   "source": "walkerplus",
+   "source_key": "ar0726e12724",
+   "name_ja": "成相寺",
+   "url": "https://koyo.walkerplus.com/detail/ar0726e12724/",
+   "status_original": "今見頃",
+   "status": "PEAK",
+   "stage_lo": 3,
+   "stage_hi": 4,
+   "data_type": "derived",
+   "fetched_at": "2026-11-17T11:39:22+09:00",
+   "area": "京都府・宮津市",
+   "observed_basis": "дата не публикуется; статус из системы JR",
+   "derived_from": "jr_odekake",
+   "extra": {
+    "typical": "例年の紅葉見頃:11月中旬~11月下旬"
+   }
+  },
+  {
+   "source": "walkerplus",
+   "source_key": "ar0726e12689",
+   "name_ja": "出雲大神宮",
+   "url": "https://koyo.walkerplus.com/detail/ar0726e12689/",
+   "status_original": "情報なし",
+   "status": "UNKNOWN",
+   "data_type": "derived",
+   "fetched_at": "2026-11-17T11:39:22+09:00",
+   "area": "京都府・亀岡市",
+   "observed_basis": "дата не публикуется; статус из системы JR",
+   "derived_from": "jr_odekake",
+   "extra": {
+    "typical": "例年の紅葉見頃:11月中旬~11月下旬"
+   }
+  },
+  {
+   "source": "walkerplus",
+   "source_key": "ar0726e12690",
+   "name_ja": "鍬山神社",
+   "url": "https://koyo.walkerplus.com/detail/ar0726e12690/",
+   "status_original": "今見頃",
+   "status": "PEAK",
+   "stage_lo": 3,
+   "stage_hi": 4,
+   "data_type": "derived",
+   "fetched_at": "2026-11-17T11:39:22+09:00",
+   "area": "京都府・亀岡市",
+   "observed_basis": "дата не публикуется; статус из системы JR",
+   "derived_from": "jr_odekake",
+   "extra": {
+    "typical": "例年の紅葉見頃:11月上旬~11月中旬"
+   }
+  },
+  {
+   "source": "walkerplus",
+   "source_key": "ar0726e12691",
+   "name_ja": "保津峡(保津川下り)",
+   "url": "https://koyo.walkerplus.com/detail/ar0726e12691/",
+   "status_original": "色づき始め",
+   "status": "STARTING",
+   "stage_lo": 1,
+   "stage_hi": 3,
+   "data_type": "derived",
+   "fetched_at": "2026-11-17T11:39:22+09:00",
+   "area": "京都府・亀岡市",
+   "observed_basis": "дата не публикуется; статус из системы JR",
+   "derived_from": "jr_odekake",
+   "extra": {
+    "typical": "例年の紅葉見頃:11月中旬~12月上旬"
+   }
+  },
+  {
+   "source": "walkerplus",
+   "source_key": "ar0726e373288",
+   "name_ja": "大本神苑(亀岡)",
+   "url": "https://koyo.walkerplus.com/detail/ar0726e373288/",
+   "status_original": "情報なし",
+   "status": "UNKNOWN",
+   "data_type": "derived",
+   "fetched_at": "2026-11-17T11:39:22+09:00",
+   "area": "京都府・亀岡市",
+   "observed_basis": "дата не публикуется; статус из системы JR",
+   "derived_from": "jr_odekake",
+   "extra": {
+    "typical": "例年の紅葉見頃:11月中旬~11月下旬"
+   }
+  },
+  {
+   "source": "walkerplus",
+   "source_key": "ar0726e521303",
+   "name_ja": "向日神社",
+   "url": "https://koyo.walkerplus.com/detail/ar0726e521303/",
+   "status_original": "色づき始め",
+   "status": "STARTING",
+   "stage_lo": 1,
+   "stage_hi": 3,
+   "data_type": "derived",
+   "fetched_at": "2026-11-17T11:39:22+09:00",
+   "area": "京都府・向日市",
+   "observed_basis": "дата не публикуется; статус из системы JR",
+   "derived_from": "jr_odekake",
+   "extra": {
+    "typical": "例年の紅葉見頃:11月中旬~12月上旬"
+   }
+  },
+  {
+   "source": "walkerplus",
+   "source_key": "ar0726e12692",
+   "name_ja": "光明寺",
+   "url": "https://koyo.walkerplus.com/detail/ar0726e12692/",
+   "status_original": "色づき始め",
+   "status": "STARTING",
+   "stage_lo": 1,
+   "stage_hi": 3,
+   "data_type": "derived",
+   "fetched_at": "2026-11-17T11:39:22+09:00",
+   "area": "京都府・長岡京市",
+   "observed_basis": "дата не публикуется; статус из системы JR",
+   "derived_from": "jr_odekake",
+   "extra": {
+    "typical": "例年の紅葉見頃:2026年11月14日(土)~12月6日(日)"
+   }
+  },
+  {
+   "source": "walkerplus",
+   "source_key": "ar0726e12693",
+   "name_ja": "柳谷観音 楊谷寺",
+   "url": "https://koyo.walkerplus.com/detail/ar0726e12693/",
+   "status_original": "情報なし",
+   "status": "UNKNOWN",
+   "data_type": "derived",
+   "fetched_at": "2026-11-17T11:39:22+09:00",
+   "area": "京都府・長岡京市",
+   "observed_basis": "дата не публикуется; статус из системы JR",
+   "derived_from": "jr_odekake",
+   "extra": {
+    "typical": "例年の紅葉見頃:11月中旬~12月上旬"
+   }
+  },
+  {
+   "source": "walkerplus",
+   "source_key": "ar0726e443262",
+   "name_ja": "長岡天満宮",
+   "url": "https://koyo.walkerplus.com/detail/ar0726e443262/",
+   "status_original": "情報なし",
+   "status": "UNKNOWN",
+   "data_type": "derived",
+   "fetched_at": "2026-11-17T11:39:22+09:00",
+   "area": "京都府・長岡京市",
+   "observed_basis": "дата не публикуется; статус из системы JR",
+   "derived_from": "jr_odekake",
+   "extra": {
+    "typical": "例年の紅葉見頃:11月中旬~12月上旬"
+   }
+  },
+  {
+   "source": "walkerplus",
+   "source_key": "ar0726e446719",
+   "name_ja": "乙訓寺",
+   "url": "https://koyo.walkerplus.com/detail/ar0726e446719/",
+   "status_original": "情報なし",
+   "status": "UNKNOWN",
+   "data_type": "derived",
+   "fetched_at": "2026-11-17T11:39:22+09:00",
+   "area": "京都府・長岡京市",
+   "observed_basis": "дата не публикуется; статус из системы JR",
+   "derived_from": "jr_odekake",
+   "extra": {
+    "typical": "例年の紅葉見頃:11月中旬~11月下旬"
+   }
+  },
+  {
+   "source": "walkerplus",
+   "source_key": "ar0726e12694",
+   "name_ja": "石清水八幡宮",
+   "url": "https://koyo.walkerplus.com/detail/ar0726e12694/",
+   "status_original": "色づき始め",
+   "status": "STARTING",
+   "stage_lo": 1,
+   "stage_hi": 3,
+   "data_type": "derived",
+   "fetched_at": "2026-11-17T11:39:22+09:00",
+   "area": "京都府・八幡市",
+   "observed_basis": "дата не публикуется; статус из системы JR",
+   "derived_from": "jr_odekake",
+   "extra": {
+    "typical": "例年の紅葉見頃:11月中旬"
+   }
+  },
+  {
+   "source": "walkerplus",
+   "source_key": "ar0726e12696",
+   "name_ja": "善法律寺",
+   "url": "https://koyo.walkerplus.com/detail/ar0726e12696/",
+   "status_original": "情報なし",
+   "status": "UNKNOWN",
+   "data_type": "derived",
+   "fetched_at": "2026-11-17T11:39:22+09:00",
+   "area": "京都府・八幡市",
+   "observed_basis": "дата не публикуется; статус из системы JR",
+   "derived_from": "jr_odekake",
+   "extra": {
+    "typical": "例年の紅葉見頃:11月中旬~12月上旬"
+   }
+  },
+  {
+   "source": "walkerplus",
+   "source_key": "ar0726e321032",
+   "name_ja": "酬恩庵 一休寺",
+   "url": "https://koyo.walkerplus.com/detail/ar0726e321032/",
+   "status_original": "情報なし",
+   "status": "UNKNOWN",
+   "data_type": "derived",
+   "fetched_at": "2026-11-17T11:39:22+09:00",
+   "area": "京都府・京田辺市",
+   "observed_basis": "дата не публикуется; статус из системы JR",
+   "derived_from": "jr_odekake",
+   "extra": {
+    "typical": "例年の紅葉見頃:11月中旬"
+   }
+  },
+  {
+   "source": "walkerplus",
+   "source_key": "ar0726e447039",
+   "name_ja": "大野ダム公園",
+   "url": "https://koyo.walkerplus.com/detail/ar0726e447039/",
+   "status_original": "情報なし",
+   "status": "UNKNOWN",
+   "data_type": "derived",
+   "fetched_at": "2026-11-17T11:39:22+09:00",
+   "area": "京都府・南丹市",
+   "observed_basis": "дата не публикуется; статус из системы JR",
+   "derived_from": "jr_odekake",
+   "extra": {
+    "typical": "例年の紅葉見頃:11月中旬~11月下旬"
+   }
+  },
+  {
+   "source": "walkerplus",
+   "source_key": "ar0726e154670",
+   "name_ja": "浄瑠璃寺",
+   "url": "https://koyo.walkerplus.com/detail/ar0726e154670/",
+   "status_original": "色づき始め",
+   "status": "STARTING",
+   "stage_lo": 1,
+   "stage_hi": 3,
+   "data_type": "derived",
+   "fetched_at": "2026-11-17T11:39:22+09:00",
+   "area": "京都府・木津川市",
+   "observed_basis": "дата не публикуется; статус из системы JR",
+   "derived_from": "jr_odekake",
+   "extra": {
+    "typical": "例年の紅葉見頃:11月中旬~11月下旬"
+   }
+  },
+  {
+   "source": "walkerplus",
+   "source_key": "ar0726e321510",
+   "name_ja": "岩船寺",
+   "url": "https://koyo.walkerplus.com/detail/ar0726e321510/",
+   "status_original": "情報なし",
+   "status": "UNKNOWN",
+   "data_type": "derived",
+   "fetched_at": "2026-11-17T11:39:22+09:00",
+   "area": "京都府・木津川市",
+   "observed_basis": "дата не публикуется; статус из системы JR",
+   "derived_from": "jr_odekake",
+   "extra": {
+    "typical": "例年の紅葉見頃:11月中旬~12月上旬"
+   }
+  },
+  {
+   "source": "walkerplus",
+   "source_key": "ar0726e154669",
+   "name_ja": "笠置山もみじ公園",
+   "url": "https://koyo.walkerplus.com/detail/ar0726e154669/",
+   "status_original": "色づき始め",
+   "status": "STARTING",
+   "stage_lo": 1,
+   "stage_hi": 3,
+   "data_type": "derived",
+   "fetched_at": "2026-11-17T11:39:22+09:00",
+   "area": "京都府・相楽郡笠置町",
+   "observed_basis": "дата не публикуется; статус из системы JR",
+   "derived_from": "jr_odekake",
+   "extra": {
+    "typical": "例年の紅葉見頃:11月中旬~11月下旬"
+   }
+  },
+  {
+   "source": "walkerplus",
+   "source_key": "ar0726e154654",
+   "name_ja": "京都府立関西文化学術研究都市記念公園(けいはんな記念公園)",
+   "url": "https://koyo.walkerplus.com/detail/ar0726e154654/",
+   "status_original": "色づき始め",
+   "status": "STARTING",
+   "stage_lo": 1,
+   "stage_hi": 3,
+   "data_type": "derived",
+   "fetched_at": "2026-11-17T11:39:22+09:00",
+   "area": "京都府・相楽郡精華町",
+   "observed_basis": "дата не публикуется; статус из системы JR",
+   "derived_from": "jr_odekake",
+   "extra": {
+    "typical": "例年の紅葉見頃:11月上旬~11月下旬"
+   }
+  },
+  {
+   "source": "walkerplus",
+   "source_key": "ar0726e392870",
+   "name_ja": "慈徳院",
+   "url": "https://koyo.walkerplus.com/detail/ar0726e392870/",
+   "status_original": "情報なし",
+   "status": "UNKNOWN",
+   "data_type": "derived",
+   "fetched_at": "2026-11-17T11:39:22+09:00",
+   "area": "京都府・与謝郡与謝野町",
+   "observed_basis": "дата не публикуется; статус из системы JR",
+   "derived_from": "jr_odekake",
+   "extra": {
+    "typical": "例年の紅葉見頃:11月中旬~11月下旬"
+   }
+  }
+ ]
+}

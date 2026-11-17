@@ -1,0 +1,99 @@
+<!doctype html>
+<html lang="ru">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>KOYO RADAR — клёны Киото сейчас</title>
+<meta name="description" content="Где сейчас красивые красные клёны в Киото: сверка Sōda Kyoto, JR Odekake, Weathernews, Japan Explorers и др.">
+<meta name="theme-color" content="#b3122e">
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+<meta name="apple-mobile-web-app-title" content="Koyo Radar">
+<link rel="manifest" href="manifest.webmanifest">
+<link rel="icon" href="icon.svg" type="image/svg+xml">
+<link rel="apple-touch-icon" href="icon-180.png">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<header class="top">
+  <div class="brand"><span class="leaf" aria-hidden="true">🍁</span> KOYO RADAR <small>Киото</small></div>
+  <div id="fresh" class="fresh">Загрузка данных…</div>
+</header>
+
+<main>
+  <section id="weather" class="weather" hidden></section>
+
+  <nav class="tabs" role="tablist" aria-label="День">
+    <button role="tab" data-day="0" aria-selected="true">Сейчас</button>
+    <button role="tab" data-day="1" aria-selected="false">Завтра</button>
+    <button role="tab" data-day="2" aria-selected="false">Послезавтра</button>
+  </nav>
+
+  <div class="controls">
+    <input id="q" type="search" placeholder="Поиск: Тофуку-дзи, Eikando, 南禅寺…" autocomplete="off">
+    <div class="row">
+      <select id="district" aria-label="Район"><option value="">Все районы</option></select>
+      <button id="near" class="chip" type="button" aria-pressed="false">📍 Рядом</button>
+      <button id="filtersBtn" class="chip" type="button" aria-pressed="false">Фильтры</button>
+    </div>
+    <div id="filters" hidden>
+      <div class="chips" id="statusChips" aria-label="Статус"></div>
+      <div class="row toggles">
+        <label><input type="checkbox" id="onlyConfirmed"> только подтверждённые наблюдениями</label>
+        <label><input type="checkbox" id="showFar"> показать далёкие (север префектуры)</label>
+      </div>
+    </div>
+  </div>
+
+  <section id="summary" class="summary"></section>
+  <section id="list" class="list" aria-live="polite"></section>
+
+  <details class="panel" id="sourcesPanel">
+    <summary>Источники и их состояние</summary>
+    <div id="sources"></div>
+  </details>
+
+  <details class="panel" id="howPanel">
+    <summary>Как читать данные (методика)</summary>
+    <div class="how">
+      <p><b>Статус</b> места — согласованный вывод по всем источникам. Оригинальный статус каждого сайта показан рядом, в деталях места.</p>
+      <ul class="legend" id="legend"></ul>
+      <p><b>Проверка</b>:
+        <span class="ver v-confirmed">✓✓ подтверждено</span> — минимум 2 независимых свежих (≤4 дн.) наблюдения согласны;
+        <span class="ver v-single">✓ 1 источник</span> — одно свежее наблюдение;
+        <span class="ver v-stale">⏳ устарело</span> — наблюдения старше 4 дней;
+        <span class="ver v-model">≈ модель</span> — реальных наблюдений нет, только прогноз/модель.</p>
+      <p><b>Дата наблюдения ≠ дата обновления сайта.</b> «Наблюдение» — это дата съёмки фото (Sōda), дата отчёта самого храма (JR), дата последнего репорта (Weathernews) или дата, явно указанная в новости. Если сайт переиздан сегодня, а фото трёхдневное, мы показываем 3 дня.</p>
+      <p><b>Koyo Score (0–100)</b> — наша оценка привлекательности листвы, а <u>не</u> измеренный процент красных листьев. Он зависит от стадии (пик = максимум) и от качества подтверждения (модель без наблюдений даёт не более ~60).</p>
+      <p><b>Проценты источников</b> показываются только если источник их публикует, с пояснением смысла. Например, 87% у Japan Explorers — позиция в прогнозном окне сезона, а не доля красных листьев. Проценты у JR берутся только из прямого текста храма («4割ほど» = ~40%).</p>
+      <p><b>Противоречие</b> — когда два свежих независимых наблюдения расходятся на 2+ стадии (с поправкой на то, что листва за дни успевает измениться).</p>
+      <p><b>Walkerplus</b> получает статусы из той же системы JR («提供元：JRシステム»), поэтому не считается отдельным подтверждением.</p>
+      <p><b>Завтра/послезавтра</b> — простая фенологическая проекция (≈11 дней от начала окраски до пика, пик ≈8 дней) с учётом прогнозных дат пика. Это прогноз, а не наблюдение.</p>
+    </div>
+  </details>
+
+  <footer class="foot">
+    <p>Данные: Sōda Kyoto (JR東海), JR Odekake (JR西日本), Weathernews, Japan Explorers, Walkerplus; Japan-Guide — ручной импорт. Все права на данные и фото — у первоисточников; ссылки ведут на оригинал. Время — Asia/Tokyo.</p>
+    <p id="unmatched"></p>
+  </footer>
+</main>
+
+<template id="cardTpl">
+  <article class="card">
+    <button class="head" type="button" aria-expanded="false">
+      <div class="score"><b></b><small>score</small></div>
+      <div class="info">
+        <div class="name"><span class="ru"></span> <span class="en"></span></div>
+        <div class="ja"></div>
+        <div class="meta"><span class="pill"></span><span class="ver"></span><span class="dist"></span></div>
+        <div class="obs"></div>
+        <div class="verdict"></div>
+      </div>
+    </button>
+    <div class="detail" hidden></div>
+  </article>
+</template>
+
+<script src="app.js" defer></script>
+</body>
+</html>

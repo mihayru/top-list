@@ -1,0 +1,17 @@
+{
+  "source": "japan_guide",
+  "source_name": "Japan-Guide blog",
+  "_comment": "Скопируйте в data/manual/japan_guide.json (без подчёркивания в начале имени). place = id из data/places.json или точное название (Jingoji, 神護寺). status: GREEN|STARTING|PARTIAL|NEAR_PEAK|PEAK|PAST_PEAK|FALLEN. url обязателен.",
+  "entries": [
+    {
+      "place": "sanzenin",
+      "status": "PEAK",
+      "status_original": "best",
+      "observed_at": "2026-11-16",
+      "published_at": "2026-11-16",
+      "data_type": "field_report",
+      "url": "https://www.japan-guide.com/blog/",
+      "comment": "Пример: текст отчёта"
+    }
+  ]
+}
