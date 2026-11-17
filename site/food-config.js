@@ -1,3 +1,3 @@
-/* Address of the secure «Где поесть» proxy (Cloudflare Worker). Not a secret — the keys live on the proxy.
-   Leave empty until the proxy is deployed (see worker/README.md); it can also be set in the tab itself. */
-window.KOYO_FOOD_API = "";
+/* Address of the secure «Где поесть» proxy (Cloudflare Worker). Not a secret — keys live on the proxy.
+   Written automatically by deploy-food-proxy.yml. */
+window.KOYO_FOOD_API = "https://koyo-food-proxy.mjgang258.workers.dev";
