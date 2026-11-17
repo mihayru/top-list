@@ -44,6 +44,8 @@ jobs:
           if git diff --cached --quiet; then echo "no changes"; exit 0; fi
           git commit -m "data: update $(TZ=Asia/Tokyo date '+%Y-%m-%d %H:%M JST')"
           for i in 1 2 3; do git pull --rebase -X theirs && git push && break; sleep 5; done
+      - name: Cache-busting version for static files
+        run: sed -i "s/__V__/${GITHUB_SHA::8}-$(date +%s)/g" site/index.html
       - uses: actions/upload-pages-artifact@v3
         with:
           path: site

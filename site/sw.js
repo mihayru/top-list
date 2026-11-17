@@ -1,5 +1,5 @@
 /* Offline support: app shell cache-first, data network-first (falls back to last copy). */
-const SHELL = "koyo-shell-v4";
+const SHELL = "koyo-shell-v5";
 const DATA = "koyo-data";
 const ASSETS = ["./", "index.html", "style.css", "app.js", "planner.js", "user.js", "manifest.webmanifest", "icon.svg"];
 self.addEventListener("install", e => { e.waitUntil(caches.open(SHELL).then(c => c.addAll(ASSETS)).then(() => self.skipWaiting())); });
@@ -19,5 +19,5 @@ self.addEventListener("fetch", e => {
   }
   e.respondWith(fetch(e.request).then(r => {
     const copy = r.clone(); caches.open(SHELL).then(c => c.put(e.request, copy)); return r;
-  }).catch(() => caches.match(e.request)));
+  }).catch(() => caches.match(e.request, { ignoreSearch: true })));
 });

@@ -175,3 +175,9 @@ select.act.tiny { font-size: 12px; padding: 3px 4px; max-width: 140px; }
 .alt .pick { justify-self: start; margin-top: 3px; background: var(--accent); color: #fff; border-color: var(--accent); }
 .card.lu .lu-b { padding: 10px 12px; display: grid; gap: 3px; }
 .vside { display: grid; gap: 4px; justify-items: end; }
+
+/* the hidden attribute must always win over display rules (.list{display:grid} etc.) */
+[hidden] { display: none !important; }
+.lu-head { cursor: pointer; display: grid; gap: 3px; }
+.lu-head .tap { color: var(--accent); }
+.card.lu .stop-detail { margin-top: 6px; }

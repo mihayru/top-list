@@ -273,6 +273,7 @@
   // ---------------------------------------------------------------- Routes view
   let curDate = null;
   const openStops = new Set();
+  const openLu = new Set();
   let replacing = null; // {kind:'day'|'eve', id, radius}
 
   function pickDefaultDate() {
@@ -396,7 +397,11 @@
     const dates = lu.dates?.length ? "только " + lu.dates.map(shortDay).join(", ") :
       `${shortDay(lu.start)}–${shortDay(lu.end)}` + (lu.weekdays?.length ? " · только " + lu.weekdays.map(w => ["пн", "вт", "ср", "чт", "пт", "сб", "вс"][w]).join("/") + (lu.holidays_too ? " и праздники" : "") : "") +
       (lu.except?.length ? " · кроме " + lu.except.map(shortDay).join(", ") : "");
-    return `<h4>Подсветка 2026</h4><div>Даты: <b>${esc(dates)}</b>. Проверено: ${esc(lu.checked_at || "—")}.</div>
+    const photos = (lu.photos || []).length ? `<h4>Свежие фото листвы (Sōda Kyoto, днём)</h4><div class="gallery">${lu.photos.map(ph =>
+      `<a class="ph" href="${esc(safeUrl(ph.url))}" target="_blank" rel="noopener"><img src="${esc(safeUrl(ph.url))}" loading="lazy" decoding="async" referrerpolicy="no-referrer" alt="${esc(ph.caption || "")}" onerror="this.parentNode.classList.add('broken')"><span>📷 ${esc(shortDay(ph.date))}</span></a>`).join("")}</div>` : "";
+    return `<div class="btns"><a class="btn" href="${esc(safeUrl(lu.gmaps))}" target="_blank" rel="noopener">🗺 Google Maps</a>${lu.official_url ? ` <a class="btn alt" href="${esc(safeUrl(lu.official_url))}" target="_blank" rel="noopener">Официальный сайт</a>` : ""}</div>
+      ${photos}
+      <h4>Подсветка 2026</h4><div>Даты: <b>${esc(dates)}</b>. Проверено: ${esc(lu.checked_at || "—")}.</div>
       <h4>Источники расписания</h4>${srcs}
       <h4>Листва на территории</h4>${p ? window.KoyoApp.detailHTML(p) : "<div class='minor'>Нет данных о листве по этому месту.</div>"}`;
   }
@@ -539,22 +544,37 @@
         const vis = U.visited["lu:" + lu.id];
         const res = P.reservations(U.plans)["lu:" + lu.id];
         const dates = lu.dates?.length ? "только " + lu.dates.map(shortDay).join(", ") : `${shortDay(lu.start)}–${shortDay(lu.end)}` + (lu.weekdays?.length ? " (пт/сб/вс и праздники)" : "") + (lu.except?.length ? ", кроме " + lu.except.map(shortDay).join(", ") : "");
+        const open = openLu.has(lu.id);
         return `<article class="card lu${vis ? " visited" : ""}" data-lu="${esc(lu.id)}"><div class="lu-b">
-          <div class="name">🌙 ${esc(lu.name_ru)} <span class="en">${esc(lu.name_en)}</span></div>
+          <div class="lu-head" role="button" tabindex="0" aria-expanded="${open}">
+          <div class="name">🌙 ${esc(lu.name_ru)} <span class="en">${esc(lu.name_en)}</span> <span class="chev">${open ? "▴" : "▾"}</span></div>
           <div class="ja">${esc(lu.name_ja)} · ${esc(lu.district_ru || "")}</div>
           <div class="mini">${active ? "<b>работает сегодня</b>" : "сегодня не работает"} · ${esc(dates)}</div>
           <div class="mini"><b>${esc(t.open)}–${esc(t.close)}</b>, последний вход <b>${esc(t.last)}</b> · ${esc(luPrice(lu))}${lu.reservation ? " · нужна бронь" : lu.reservation === false ? " · без брони" : " · бронь: не указано"}</div>
           <div>Листва: ${luLeafHTML(lu, today)}</div>
           <div class="mini">${esc(lu.confirmation?.ru || "")} · проверено ${esc(lu.checked_at || "—")}</div>
+          <div class="mini tap">${open ? "Свернуть" : "Подробнее: фото, источники, листва ▾"}</div>
+          </div>
           <div class="st-act">
             <button class="act${vis ? " on" : ""}" data-a="v">${vis ? "✓ Был" : "Был здесь"}</button>
             ${dateSelect("luday", res ? "🗓 " + shortDay(res) : "＋ В вечер")}
             ${lu.official_url ? `<a class="act" href="${esc(safeUrl(lu.official_url))}" target="_blank" rel="noopener">Офиц. сайт</a>` : ""}
             <a class="act" href="${esc(safeUrl(lu.gmaps))}" target="_blank" rel="noopener">Карта</a>
-          </div></div></article>`;
+          </div>
+          <div class="stop-detail"${open ? "" : " hidden"}>${open ? luDetailHTML(lu) : ""}</div></div></article>`;
       }).join("");
     root.querySelectorAll(".card.lu").forEach(c => {
       const id = c.dataset.lu;
+      const head = c.querySelector(".lu-head"), det = c.querySelector(".stop-detail");
+      const toggle = () => {
+        if (det.hidden) { det.innerHTML = luDetailHTML(luById().get(id)); det.hidden = false; openLu.add(id); }
+        else { det.hidden = true; openLu.delete(id); }
+        head.setAttribute("aria-expanded", String(!det.hidden));
+        head.querySelector(".chev").textContent = det.hidden ? "▾" : "▴";
+        head.querySelector(".tap").textContent = det.hidden ? "Подробнее: фото, источники, листва ▾" : "Свернуть";
+      };
+      head.addEventListener("click", toggle);
+      head.addEventListener("keydown", e => { if (e.key === "Enter" || e.key === " ") { e.preventDefault(); toggle(); } });
       c.querySelector('[data-a="v"]').addEventListener("click", () => toggleVisited("lu:" + id));
       c.querySelector(".luday").addEventListener("change", e => {
         const date = e.target.value; if (!date) return;

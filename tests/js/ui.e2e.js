@@ -122,8 +122,14 @@ const OUT = process.argv[3];
   await p.click('.maintabs [data-view="leaf"]');
   await p.click('.leafmode [data-mode="lu"]');
   await p.waitForSelector(".card.lu");
-  if (OUT) await p.screenshot({ path: OUT + "/lu.png" });
+  assert.ok(!(await p.isVisible("#list")), "places list hidden in light-up mode");
+  assert.ok(await p.isVisible("#lightupList"), "light-up list visible");
+  await p.click(".card.lu .lu-head");
+  await p.waitForSelector(".card.lu .stop-detail:not([hidden]) .src");
+  if (OUT) await p.screenshot({ path: OUT + "/lu.png", fullPage: true });
   await p.click('.leafmode [data-mode="places"]');
+  assert.ok(await p.isVisible("#list"), "places list back");
+  assert.ok(!(await p.isVisible("#lightupList")), "light-up list hidden again");
 
   // Export works
   await p.click('.maintabs [data-view="visited"]');
