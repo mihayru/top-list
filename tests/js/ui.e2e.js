@@ -22,9 +22,9 @@ const OUT = process.argv[3];
 
   // Routes: plan 18th with Sanzen-in manually, then build 19th
   await p.click('.maintabs [data-view="routes"]');
-  await p.click('.daychip[data-date="2026-11-18"]');
+  await p.click('.daybtn[data-date="2026-11-18"]');
   await p.evaluate(() => KoyoUser._addStop("2026-11-18", "sanzenin"));
-  await p.click('.daychip[data-date="2026-11-19"]');
+  await p.click('.daybtn[data-date="2026-11-19"]');
   await p.click("#rebuildBtn");
   await p.waitForSelector(".stops .stop");
   let s = await st();
@@ -34,7 +34,9 @@ const OUT = process.argv[3];
 
   // Pin first stop, remove second, rebuild -> pinned kept, removed absent, set changed
   const pinId = p19a[0], remId = p19a[1];
+  await p.click(`.stop[data-id="${pinId}"] .st-top`);            // details hold pin / remove / move
   await p.click(`.stop[data-id="${pinId}"] [data-a="pin"]`);
+  await p.click(`.stop[data-id="${remId}"] .st-top`);
   await p.click(`.stop[data-id="${remId}"] [data-a="remove"]`);
   await p.click("#rebuildBtn");
   await p.waitForFunction(id => JSON.parse(localStorage.getItem("koyo.user.v1")).plans["2026-11-19"].rebuilds >= 2, pinId);
@@ -49,12 +51,12 @@ const OUT = process.argv[3];
   await p.evaluate(id => KoyoUser._markVisited(id, "2026-11-17"), p19b[1] || p19b[0]);
   s = await st();
   assert.ok(s.plans["2026-11-19"].needsRebuild, "future plan flagged");
-  await p.waitForSelector(".warnbox");
+  await p.waitForSelector(".crit");
 
   // Reload: everything persists
   await p.reload({ waitUntil: "networkidle" });
-  await p.waitForSelector(".daychip");
-  await p.click('.daychip[data-date="2026-11-19"]');
+  await p.waitForSelector(".daybtn");
+  await p.click('.daybtn[data-date="2026-11-19"]');
   await p.waitForSelector(".stops .stop");
   const s2 = await st();
   assert.deepStrictEqual(Object.keys(s2.plans).sort(), Object.keys(s.plans).sort());
@@ -72,7 +74,7 @@ const OUT = process.argv[3];
 
   // Delete 18th plan -> sanzenin free
   await p.click('.maintabs [data-view="routes"]');
-  await p.click('.daychip[data-date="2026-11-18"]');
+  await p.click('.daybtn[data-date="2026-11-18"]');
   p.once("dialog", d => d.accept());
   await p.click('[data-a="delete"]');
   s = await st();
@@ -80,7 +82,7 @@ const OUT = process.argv[3];
 
   // Replace one day stop via UI: others kept, persisted after reload
   await p.click('.maintabs [data-view="routes"]');
-  await p.click('.daychip[data-date="2026-11-20"]');
+  await p.click('.daybtn[data-date="2026-11-20"]');
   await p.click("#rebuildBtn");
   await p.waitForFunction(() => (JSON.parse(localStorage.getItem("koyo.user.v1")).plans["2026-11-20"] || {}).stops?.length >= 3);
   s = await st();
@@ -115,18 +117,19 @@ const OUT = process.argv[3];
   const snap = JSON.stringify((await st()).plans["2026-11-20"]);
   await p.reload({ waitUntil: "networkidle" });
   assert.strictEqual(JSON.stringify((await st()).plans["2026-11-20"]), snap, "persisted after reload");
-  await p.click('.daychip[data-date="2026-11-20"]');
+  await p.click('.daybtn[data-date="2026-11-20"]');
   if (OUT) await p.screenshot({ path: OUT + "/r20.png", fullPage: true });
 
   // Variety mode: switching does not overwrite the saved plan; rebuild applies it
   await p.click('.maintabs [data-view="routes"]');
-  await p.click('.daychip[data-date="2026-11-21"]');
+  await p.click('.daybtn[data-date="2026-11-21"]');
   await p.click("#rebuildBtn");
   await p.waitForFunction(() => (JSON.parse(localStorage.getItem("koyo.user.v1")).plans["2026-11-21"] || {}).rebuilds >= 1);
   const saved21 = JSON.stringify((await st()).plans["2026-11-21"].stops);
   await p.click('[data-var="diverse"]');
   assert.strictEqual(JSON.stringify((await st()).plans["2026-11-21"].stops), saved21, "mode switch does not touch saved plan");
   assert.strictEqual((await st()).settings.variety, "diverse");
+  await p.click("details.more > summary");      // monotony now lives in «Подробнее о дне»
   await p.waitForSelector(".mono summary");
   await p.click("#rebuildBtn");
   await p.waitForFunction(() => (JSON.parse(localStorage.getItem("koyo.user.v1")).plans["2026-11-21"] || {}).rebuilds >= 2);

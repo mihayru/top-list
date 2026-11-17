@@ -304,7 +304,8 @@
       const rows = r.items.map(a => {
         const p = m.get(a.id);
         return `<li class="alt">${(a.badges || []).length ? `<div class="badges">${a.badges.map(b => `<span class="badge">${esc(b)}</span>`).join("")}</div>` : ""}
-          <div><b>${esc(p.ru)}</b> <small>${esc(p.en)} · ${esc(p.district_ru)}${DV && p.cat ? " · " + esc(DV.label(p)) : ""}</small></div>
+          <div class="alt-h">${window.KoyoIcons ? window.KoyoIcons.svg(window.KoyoIcons.cat(p.cat)) : ""}<b>${esc(shortName(p.ru, p.en, p.ja))}</b></div>
+          <div class="mini">${esc(p.district_ru || "")}${DV && p.cat ? " · " + esc(DV.CAT_RU[p.cat] || "") : ""}</div>
           <div>${leafLine(p, date)}</div>
           <div class="mini">${a.extraMin >= 0 ? "+" : ""}${a.extraMin} мин к дню · ${a.extraKm >= 0 ? "+" : ""}${a.extraKm} км пути · прибытие ~${P.fmtTime(a.arrive)}${a.reordered ? " · порядок остановок изменится" : ""}</div>
           <div class="mini why">Почему: ${esc(a.reason)}</div>
@@ -331,9 +332,9 @@
     }
     const rows = items.map(a => {
       const lu = L.get(a.id); const t = luTimes(lu);
-      return `<li class="alt"><div><b>🌙 ${esc(lu.name_ru)}</b> <small>${esc(lu.district_ru || "")}</small></div>
+      return `<li class="alt"><div class="alt-h">${window.KoyoIcons ? window.KoyoIcons.svg("moon") : ""}<b>${esc(shortName(lu.name_ru, lu.name_en, lu.name_ja))}</b></div><div class="mini">${esc(lu.district_ru || "")}</div>
         <div>${luLeafHTML(lu, date)}</div>
-        <div class="mini">${esc(t.open)}–${esc(t.close)}, последний вход ${esc(t.last)} · ${esc(luPrice(lu))} · прибытие ~${P.fmtTime(a.arrive)} · ${a.km} км, ${a.extraMin >= 0 ? "+" : ""}${a.extraMin} мин дороги</div>
+        <div class="mini">${esc(t.open)}–${esc(t.close)}, вход до ${esc(t.last)}${yen(lu.price_yen) ? " · " + esc(yen(lu.price_yen)) : ""} · прибытие ~${P.fmtTime(a.arrive)} · ${a.extraMin >= 0 ? "+" : ""}${a.extraMin} мин дороги</div>
         <div class="mini why">${esc(lu.confirmation?.ru || "")}</div>
         <button class="act pick" data-pick="${esc(a.id)}">Выбрать</button></li>`;
     }).join("");
@@ -350,18 +351,57 @@
     return `<details class="mono"><summary>Однообразие: <b>${esc(txt)}</b>${mo ? ` <span class="mini">(${mo.distinct} ${P.plural(mo.distinct, "тип", "типа", "типов")} мест, ${mo.features} ${P.plural(mo.features, "черта", "черты", "черт")})</span>` : ""}</summary>
       <div class="mini">Справочный показатель, не критерий качества. Формула: 30·доля повторяющихся категорий + 25·одинаковые типы подряд + 30·сходство соседних остановок (основной тип + теги) + 15·узость набора впечатлений. Учитываются только дневные места (без переходов и подсветок).${mo ? ` Сейчас: повторы ${Math.round(mo.parts.repeat * 100)}%, подряд ${Math.round(mo.parts.runs * 100)}%, сходство ${Math.round(mo.parts.sim * 100)}%, узость ${Math.round(mo.parts.narrow * 100)}%.` : " Нужно минимум 3 места с известной категорией."}</div></details>`;
   }
+  // ---- compact presentation helpers (visual only; no planning logic here)
+  const I = (n, l) => (window.KoyoIcons ? window.KoyoIcons.svg(n, l) : "");
+  const hhmm = min => min == null ? "—" : `${String(Math.floor(min / 60)).padStart(2, "0")}:${String(min % 60).padStart(2, "0")}`;
+  const STATUS_SHORT = { GREEN: "Зелёная", STARTING: "Начало", PARTIAL: "Частично", NEAR_PEAK: "Почти пик", PEAK: "Пик",
+                         PAST_PEAK: "После пика", FALLEN: "Опали", UNKNOWN: "Нет данных", CONFLICT: "Противоречие" };
+  const MONTHS_GEN = ["января", "февраля", "марта", "апреля", "мая", "июня", "июля", "августа", "сентября", "октября", "ноября", "декабря"];
+  function longDay(d) { const x = new Date(d + "T00:00:00Z"); return `${x.getUTCDate()} ${MONTHS_GEN[x.getUTCMonth()]}`; }
+  /** Short Russian name for the compact card: drop the parenthesised part; fall back to EN/JA. */
+  function shortName(ru, en, ja) {
+    const base = (ru || "").replace(/\s*[（(][^)）]*[)）]\s*/g, " ").trim();
+    return base || ru || en || ja || "—";
+  }
+  function yen(n) { return n === 0 ? "бесплатно" : (n ? "¥" + n.toLocaleString("ru-RU") : null); }
+  function leafChip(status) {
+    const st = status || "UNKNOWN";
+    return `<span class="lf" style="--c:var(--${esc(st)})">${I("leaf")}<span>${esc(STATUS_SHORT[st] || st)}</span></span>`;
+  }
+  function placeKeyInfo(p) {
+    // last entry (or closing time) only when published; daytime prices are raw text → shown in details only
+    const h = p.hours || {};
+    if (h.last_entry) return `до ${esc(h.last_entry)}`;
+    if (h.close) return `до ${esc(h.close)}`;
+    if (p.kind === "area") return "открытая территория";
+    return "";
+  }
+  function luKeyInfo(lu) {
+    const parts = [];
+    if (lu.last_entry) parts.push(`вход до ${lu.last_entry_assumed ? "~" : ""}${esc(lu.last_entry)}`);
+    else if (lu.close) parts.push(`до ${esc(lu.close)}`);
+    const pr = yen(lu.price_yen);
+    if (pr) parts.push(esc(pr));
+    return parts.join(" · ");
+  }
+
+  function legHTML(L, url, extra) {
+    const walk = L.mode === "walk";
+    const label = walk ? `~${L.min} мин пешком` : `~${L.min} мин транспортом`;
+    return `<li class="leg"><button type="button" class="leg-b" aria-expanded="false">${I(walk ? "walk" : "train")}<span class="leg-t">${label}</span>${I("chevron")}</button>
+      <div class="leg-d" hidden><div class="mini">${walk ? `Пешком, ${L.km} км${L.uphill ? ", в гору / лестницы" : ""}.` : `Автобус / метро / поезд. ${extra || ""}`}
+        ${walk ? "" : " Время — оценка для планирования (дорога до остановки, ожидание, поездка), не расписание."}</div>
+        <a class="act" href="${esc(url)}" target="_blank" rel="noopener">${I("mappin")} Как добраться</a></div></li>`;
+  }
   function homeLegHTML(a, b, toHome) {
     const home = toHome ? b : a, place = toHome ? a : b;
     const L = P.homeLeg(home, place, toHome);
-    const url = P.legUrl(a, b, L.mode);
-    if (L.mode === "walk") return `<li class="legrow walk">🚶 Пешком ≈${L.min} мин · ${L.km} км <a class="act" href="${esc(url)}" target="_blank" rel="noopener">Как добраться</a></li>`;
-    const via = L.hub ? `пешком ~${L.walkToHub} мин до ${esc(L.hub)}, далее поезд/метро/автобус` : "автобус/метро/поезд от района отеля";
-    return `<li class="legrow transit">🚌🚇 ${via} · в плане ~${L.min} мин <span class="mini">(оценка без расписания)</span> <a class="act" href="${esc(url)}" target="_blank" rel="noopener">Как добраться</a></li>`;
+    const via = L.hub ? `Пешком ~${L.walkToHub} мин до: ${esc(L.hub)}.` : "От района отеля.";
+    return legHTML(L, P.legUrl(a, b, L.mode), via);
   }
   function legRowHTML(a, b) {
     const L = P.leg(a, b);
-    if (L.mode === "walk") return `<li class="legrow walk">🚶 Пешком ≈${L.min} мин · ${L.km} км${L.uphill ? " · в гору/лестницы" : ""} <a class="act" href="${esc(P.legUrl(a, b, "walk"))}" target="_blank" rel="noopener">Как добраться</a></li>`;
-    return `<li class="legrow transit">🚌🚇 Автобус/метро/поезд · в плане ~${L.min} мин <span class="mini">(оценка без расписания, ${L.km} км по прямой)</span> <a class="act" href="${esc(P.legUrl(a, b, "transit"))}" target="_blank" rel="noopener">Как добраться</a></li>`;
+    return legHTML(L, P.legUrl(a, b, L.mode), `${L.km} км по прямой.`);
   }
   function prevPoint(plan, eveIdx) {
     const m = byId();
@@ -369,38 +409,57 @@
     const st = plan.stops || [];
     return st.length ? m.get(st[st.length - 1].id) : null;
   }
+  function fact(k, v) { return v ? `<div class="fact"><span>${esc(k)}</span><b>${v}</b></div>` : ""; }
+
   function stopHTML(date, plan, s, i, m, ds) {
     const p = m.get(s.id);
     if (!p) return `<li class="stop">Место ${esc(s.id)} не найдено в данных</li>`;
     const d = data();
     const vis = U.visited[s.id];
     const sc = P.scoreOn(p, date, d.today);
-    const hrs = P.hoursOf(p);
-    const hoursTxt = p.hours?.open ? `часы ${esc(p.hours.open)}–${esc(p.hours.close || "?")}${p.hours.last_entry ? ", вход до " + esc(p.hours.last_entry) : ""}` : (p.kind === "area" ? "открытая территория" : "часы не опубликованы (≈9:00–16:00)");
+    const open = openStops.has(s.id);
     const prev = i > 0 ? m.get(plan.stops[i - 1].id) : null;
-    return `${prev ? legRowHTML(prev, p) : ""}<li class="stop${vis ? " visited" : ""}" data-id="${esc(s.id)}">
-      <div class="st-top" role="button" tabindex="0" aria-expanded="${openStops.has(s.id)}">
-        <span class="time">${s.arrive != null ? "~" + P.fmtTime(s.arrive) : ""}</span>
-        <span class="sname">${s.pinned ? "📌 " : ""}${esc(p.ru)} <small>${esc(p.en)} · ${esc(p.ja)}</small></span>
-        <span class="chev" aria-hidden="true">${openStops.has(s.id) ? "▴" : "▾"}</span>
-        <span class="sscore" style="background:${scoreBg(sc)}">${sc ?? "—"}</span>
+    const key = placeKeyInfo(p);
+    const hoursFull = p.hours?.raw ? esc(p.hours.raw) : (p.kind === "area" ? "открытая территория" : "не опубликованы (в плане ≈9:00–16:00)");
+    const n = p.newest_observation;
+    return `${prev ? legRowHTML(prev, p) : ""}<li class="stop c${vis ? " visited" : ""}${s.pinned ? " pinned" : ""}" data-id="${esc(s.id)}">
+      <div class="st-top" role="button" tabindex="0" aria-expanded="${open}" aria-label="${esc(p.ru)}: подробности">
+        <span class="time">${hhmm(s.arrive)}</span>
+        <span class="cic" title="${esc(DV && p.cat ? DV.CAT_RU[p.cat] : "")}">${I(window.KoyoIcons ? window.KoyoIcons.cat(p.cat) : "leaf", DV && p.cat ? DV.CAT_RU[p.cat] : "место")}</span>
+        <span class="nm">${esc(shortName(p.ru, p.en, p.ja))}</span>
+        <span class="flags">${s.pinned ? I("pin", "закреплено") : ""}${vis ? I("check", "уже посещено") : ""}</span>
+        <span class="chev">${I("chevron")}</span>
       </div>
-      <div class="st-meta">${leafLine(p, date)}
-        <br><span class="mini">${DV && p.cat ? esc(DV.label(p)) + " · " : ""}~${P.visitMin(p)} мин на месте · ${hoursTxt}</span>
-        ${s.standalone ? `<br><b class="standalone">★ Интересно само по себе</b> <span class="mini">— добавлено не ради осенней листвы</span>` : ""}
-        ${vis ? `<b class="vis"> · уже посещено${vis.date ? " " + esc(shortDay(vis.date)) : ""}</b>` : ""}</div>
-      <div class="st-act">
-        <button class="act" data-a="replace"${s.pinned ? " disabled title='Открепите, чтобы заменить'" : ""}>⇄ Заменить</button>
-        <button class="act${vis ? " on" : ""}" data-a="visit">${vis ? "✓ Был" : "Был здесь"}</button>
-        <button class="act${s.pinned ? " on" : ""}" data-a="pin">${s.pinned ? "📌 Закреплено" : "📌 Закрепить"}</button>
-      </div>
-      <div class="st-act2">
-        <button class="linkbtn" data-a="remove">Убрать</button>
-        <a class="linkbtn" href="${esc(safeUrl(p.gmaps))}" target="_blank" rel="noopener">Карта</a>
-        <select class="act tiny" data-a="move"><option value="">→ другой день</option>${ds.filter(x => x !== date).map(x => `<option value="${x}">${esc(fmtDay(x))}</option>`).join("")}</select>
+      <div class="st-sub">${leafChip(p.status)}${key ? `<span class="kv">${key}</span>` : ""}${s.standalone ? `<span class="kv sa">★ интересно само по себе</span>` : ""}</div>
+      ${vis ? `<div class="crit ok">${I("check")} Уже посещено${vis.date ? " " + esc(shortDay(vis.date)) : ""}</div>` : ""}
+      <div class="qa">
+        <button type="button" class="qa-b" data-a="replace"${s.pinned ? ' disabled title="Открепите, чтобы заменить"' : ""}>${I("refresh")}<span>Заменить</span></button>
+        <button type="button" class="qa-b${vis ? " on" : ""}" data-a="visit" aria-pressed="${!!vis}">${I("check")}<span>Был</span></button>
+        <a class="qa-b" href="${esc(safeUrl(p.gmaps))}" target="_blank" rel="noopener">${I("mappin")}<span>Карта</span></a>
       </div>
       ${replacing && replacing.kind === "day" && replacing.id === s.id ? replacePanel(date, plan) : ""}
-      <div class="stop-detail"${openStops.has(s.id) ? "" : " hidden"}>${openStops.has(s.id) ? window.KoyoApp.detailHTML(p) : ""}</div></li>`;
+      <div class="stop-more"${open ? "" : " hidden"}>
+        <div class="names"><b>${esc(p.ru)}</b><span>${esc(p.en)}</span><span lang="ja">${esc(p.ja)}</span></div>
+        <div class="facts">
+          ${fact("Категория", DV && p.cat ? esc(DV.label(p)) : "")}
+          ${fact("Koyo Score", sc != null ? String(sc) : "—")}
+          ${fact("Листва", esc(STATUS_RU[p.status] || p.status))}
+          ${fact("Наблюдение", n ? `${esc(shortDay(n.date))}` : "нет свежих")}
+          ${fact("Уверенность", esc(VER_RU[p.verification] || "—"))}
+          ${fact("На месте", `~${P.visitMin(p)} мин`)}
+          ${fact("Часы", hoursFull)}
+          ${fact("Последний вход", p.hours?.last_entry ? esc(p.hours.last_entry) : "")}
+          ${fact("Стоимость", p.hours?.price_raw ? esc(p.hours.price_raw) : "")}
+          ${p.hours?.official_url ? fact("Сайт", `<a href="${esc(safeUrl(p.hours.official_url))}" target="_blank" rel="noopener">официальный сайт</a>`) : ""}
+        </div>
+        ${s.standalone ? `<div class="mini standalone">★ Интересно само по себе — добавлено не ради осенней листвы.</div>` : ""}
+        <div class="more-act">
+          <button type="button" class="act${s.pinned ? " on" : ""}" data-a="pin">${I("pin")} ${s.pinned ? "Закреплено" : "Закрепить"}</button>
+          <button type="button" class="act" data-a="remove">Убрать</button>
+          <select class="act" data-a="move" aria-label="Перенести на другой день"><option value="">→ другой день</option>${ds.filter(x => x !== date).map(x => `<option value="${x}">${esc(fmtDay(x))}</option>`).join("")}</select>
+        </div>
+        <div class="stop-detail">${open ? window.KoyoApp.detailHTML(p) : ""}</div>
+      </div></li>`;
   }
 
   function eveHTML(date, plan, e, i) {
@@ -409,31 +468,46 @@
     const vis = U.visited["lu:" + e.id];
     const t = luTimes(lu);
     const key = "lu:" + e.id;
+    const open = openStops.has(key);
     const prevPt = prevPoint(plan, i);
     const here = byId().get(lu.place_id);
-    return `${prevPt && here ? legRowHTML(prevPt, here) : ""}<li class="stop eve${vis ? " visited" : ""}" data-lu="${esc(e.id)}">
-      <div class="st-top" role="button" tabindex="0" aria-expanded="${openStops.has(key)}">
-        <span class="time">${e.arrive != null ? "~" + P.fmtTime(e.arrive) : ""}</span>
-        <span class="sname">${e.pinned ? "📌 " : ""}🌙 ${esc(lu.name_ru)} <small>${esc(lu.name_en)} · ${esc(lu.name_ja)}</small></span>
-        <span class="chev" aria-hidden="true">${openStops.has(key) ? "▴" : "▾"}</span>
+    const leafSt = here ? here.status : "UNKNOWN";
+    const fresh = here && ["confirmed", "single"].includes(here.verification);
+    return `${prevPt && here ? legRowHTML(prevPt, here) : ""}<li class="stop c eve${vis ? " visited" : ""}${e.pinned ? " pinned" : ""}" data-lu="${esc(e.id)}">
+      <div class="st-top" role="button" tabindex="0" aria-expanded="${open}" aria-label="${esc(lu.name_ru)}: подробности">
+        <span class="time">${hhmm(e.arrive)}</span>
+        <span class="cic">${I("moon", "вечерняя подсветка")}</span>
+        <span class="nm">${esc(shortName(lu.name_ru, lu.name_en, lu.name_ja))}</span>
+        <span class="flags">${e.pinned ? I("pin", "закреплено") : ""}${vis ? I("check", "уже были") : ""}</span>
+        <span class="chev">${I("chevron")}</span>
       </div>
-      <div class="st-meta"><b>${esc(t.open)}–${esc(t.close)}</b>, последний вход <b>${esc(t.last)}</b> · ${esc(luPrice(lu))}${lu.reservation ? " · <b>нужна бронь</b>" : lu.reservation === false ? " · без брони" : ""}
-        <br>Листва: ${luLeafHTML(lu, date)}
-        <br><span class="mini">${esc(lu.confirmation?.ru || "")}${lu.conflicts?.length ? " · расхождение: " + lu.conflicts.map(c => `${c.field} Sōda ${c.souda} / Walker ${c.walkerplus}`).join(", ") : ""}</span>
-        ${e.late ? `<br><b class="warnline">⚠ Не успеть до последнего входа — замените или уберите</b>` : ""}
-        ${vis ? `<b class="vis"> · уже были</b>` : ""}</div>
-      <div class="st-act">
-        <button class="act" data-a="replace"${e.pinned ? " disabled" : ""}>⇄ Заменить</button>
-        <button class="act${vis ? " on" : ""}" data-a="visit">${vis ? "✓ Был" : "Был здесь"}</button>
-        <button class="act${e.pinned ? " on" : ""}" data-a="pin">${e.pinned ? "📌 Закреплено" : "📌 Закрепить"}</button>
-      </div>
-      <div class="st-act2">
-        <button class="linkbtn" data-a="remove">Убрать</button>
-        <a class="linkbtn" href="${esc(safeUrl(lu.gmaps))}" target="_blank" rel="noopener">Карта</a>
-        ${lu.official_url ? `<a class="linkbtn" href="${esc(safeUrl(lu.official_url))}" target="_blank" rel="noopener">Офиц. сайт</a>` : ""}
+      <div class="st-sub">${leafChip(fresh ? leafSt : (here?.newest_observation ? leafSt : "UNKNOWN"))}${luKeyInfo(lu) ? `<span class="kv">${luKeyInfo(lu)}</span>` : ""}${lu.reservation ? `<span class="kv warnline">бронь</span>` : ""}</div>
+      ${e.late ? `<div class="crit">${I("alert")} Не успеть до последнего входа — замените или уберите</div>` : ""}
+      <div class="qa">
+        <button type="button" class="qa-b" data-a="replace"${e.pinned ? " disabled" : ""}>${I("refresh")}<span>Заменить</span></button>
+        <button type="button" class="qa-b${vis ? " on" : ""}" data-a="visit" aria-pressed="${!!vis}">${I("check")}<span>Был</span></button>
+        <a class="qa-b" href="${esc(safeUrl(lu.gmaps))}" target="_blank" rel="noopener">${I("mappin")}<span>Карта</span></a>
       </div>
       ${replacing && replacing.kind === "eve" && replacing.id === e.id ? replacePanel(date, plan) : ""}
-      <div class="stop-detail"${openStops.has(key) ? "" : " hidden"}>${openStops.has(key) ? luDetailHTML(lu) : ""}</div></li>`;
+      <div class="stop-more"${open ? "" : " hidden"}>
+        <div class="names"><b>${esc(lu.name_ru)}</b><span>${esc(lu.name_en)}</span><span lang="ja">${esc(lu.name_ja)}</span></div>
+        <div class="facts">
+          ${fact("Подсветка", `${esc(t.open)}–${esc(t.close)}`)}
+          ${fact("Последний вход", esc(t.last))}
+          ${fact("Стоимость", esc(luPrice(lu)))}
+          ${fact("Бронь", lu.reservation ? "нужна" : lu.reservation === false ? "не нужна" : "не указано")}
+          ${fact("Листва", here ? esc(STATUS_RU[here.status] || here.status) + (fresh ? "" : " (" + esc(lu.leaf?.note || "нет свежих данных") + ")") : "нет данных")}
+          ${fact("Наблюдение", here?.newest_observation ? esc(shortDay(here.newest_observation.date)) : "нет свежих")}
+          ${fact("Расписание", esc(lu.confirmation?.ru || ""))}
+          ${lu.conflicts?.length ? fact("Расхождение", esc(lu.conflicts.map(c => `${c.field}: Sōda ${c.souda} / Walkerplus ${c.walkerplus}`).join("; "))) : ""}
+          ${lu.official_url ? fact("Сайт", `<a href="${esc(safeUrl(lu.official_url))}" target="_blank" rel="noopener">официальный сайт</a>`) : ""}
+        </div>
+        <div class="more-act">
+          <button type="button" class="act${e.pinned ? " on" : ""}" data-a="pin">${I("pin")} ${e.pinned ? "Закреплено" : "Закрепить"}</button>
+          <button type="button" class="act" data-a="remove">Убрать</button>
+        </div>
+        <div class="stop-detail">${open ? luDetailHTML(lu) : ""}</div>
+      </div></li>`;
   }
 
   function luDetailHTML(lu) {
@@ -463,10 +537,12 @@
     // saved plans from before the home base (or after a base change): recompute times once, keep the stops
     if (plan && U.settings.home && ((plan.stops || []).length) &&
         (!plan.homeStart || plan.home?.maps_q !== U.settings.home.maps_q || plan.home?.lat !== U.settings.home.lat)) { retimeAll(curDate); save(); }
+    const WDS = ["вс", "пн", "вт", "ср", "чт", "пт", "сб"];
     const chips = ds.map(x => {
       const pl = U.plans[x];
-      const flag = pl && (pl.needsRebuild || (pl.stops || []).some(s => U.visited[s.id]) || pl.feasible === false || pl.eveningFeasible === false) ? " ⚠" : "";
-      return `<button class="chip daychip" data-date="${x}" aria-pressed="${x === curDate}">${esc(shortDay(x))}${pl ? ` · ${(pl.stops || []).length}${(pl.evening || []).length ? "+🌙" : ""}` : ""}${flag}</button>`;
+      const flag = pl && (pl.needsRebuild || (pl.stops || []).some(s => U.visited[s.id]) || pl.feasible === false || pl.eveningFeasible === false || pl.homeEnd?.late);
+      const dt = new Date(x + "T00:00:00Z");
+      return `<button class="daybtn${pl ? " has" : ""}" data-date="${x}" aria-pressed="${x === curDate}" aria-label="${esc(fmtDay(x))}${pl ? ", план есть" : ""}${flag ? ", есть замечания" : ""}"><b>${dt.getUTCDate()}</b><small>${WDS[dt.getUTCDay()]}</small>${flag ? '<i class="dot"></i>' : ""}</button>`;
     }).join("");
     const dens = U.settings.density || "rich";
     const densCtl = `<div class="seg" role="group" aria-label="Насыщенность">${Object.entries(P.CFG.DENSITY).map(([k, v]) =>
@@ -476,9 +552,9 @@
       `<button data-var="${k}" aria-pressed="${k === vmode}">${esc(v.label)}</button>`).join("")}</div>` : "";
     let body;
     if (!plan) {
-      body = `<div class="plancard"><p>${esc(fmtDay(curDate))}: план ещё не составлен.</p>${densCtl}${varCtl}
+      body = `<div class="plancard"><div class="dh1"><b>${esc(longDay(curDate))}</b> · план ещё не составлен</div>${densCtl}${varCtl}
         <button id="rebuildBtn" class="btn big">✨ Составить план</button>
-        <p class="minor">Учитываются посещённые (${Object.keys(U.visited).length}) и места из планов других дней — они не предлагаются.</p></div>`;
+        <p class="minor">Посещённые места (${Object.keys(U.visited).length}) и места из планов других дней не предлагаются.</p></div>`;
     } else {
       const stops = plan.stops || [], evening = plan.evening || [];
       const visitedIn = stops.filter(s => U.visited[s.id]).concat(evening.filter(e => U.visited["lu:" + e.id]));
@@ -489,45 +565,48 @@
       const segs = P.segments(home && seq.length ? [home, ...seq, home] : seq);
       const lastPt = seq[seq.length - 1];
       const firstPt = seq[0];
-      const warn = [].concat(plan.warnings || []);
-      if (plan.needsRebuild || visitedIn.length) {
-        const pinnedV = stops.filter(s => s.pinned && U.visited[s.id]);
-        warn.unshift(`В плане есть уже посещённые места: ${visitedIn.map(s => m.get(s.id)?.ru || L.get(s.id)?.name_ru || s.id).join(", ")}. ` +
-          (pinnedV.length ? "Они закреплены — уберите их или открепите, затем пересоберите." : "Замените их, уберите или пересоберите день."));
-      }
-      if (plan.feasible === false && !warn.some(w => w.startsWith("Не успеть"))) warn.push("Дневные остановки не укладываются в часы работы — замените или уберите часть.");
+      // critical (shown prominently) vs. ordinary remarks (collapsed)
+      const crit = [];
+      if (plan.needsRebuild || visitedIn.length) crit.push(`В плане уже посещённые: ${visitedIn.map(s => shortName(m.get(s.id)?.ru || L.get(s.id)?.name_ru || s.id)).join(", ")} — замените, уберите или пересоберите день.`);
+      (plan.warnings || []).filter(w => /^Не успеть|посещённым/.test(w)).forEach(w => crit.push(w));
+      if (plan.feasible === false && !crit.some(w => w.startsWith("Не успеть"))) crit.push("Дневные остановки не укладываются в часы работы — замените или уберите часть.");
+      if (evening.some(e => e.late)) crit.push("Не успеть на последний вход вечерней подсветки.");
+      if (plan.homeEnd?.late) crit.push(`Возвращение ~${hhmm(plan.homeEnd.backAt)} — позже безопасного запаса для последних рейсов. Замените подсветку или уберите вторую.`);
+      const remarks = (plan.warnings || []).filter(w => !/^Не успеть|посещённым/.test(w)).concat(plan.notes || [], (plan.eveningNotes || []).map(n => "Вечер: " + n));
+      if (lastPt && P.CFG.REMOTE.includes(lastPt.district)) remarks.push(`День заканчивается в удалённом районе (${lastPt.district_ru}) — транспорт отсюда ходит реже, проверьте последний рейс.`);
+      remarks.push("Последние рейсы сайт не знает — проверьте по кнопке «Как добраться» перед вечерней программой.");
       body = `<div class="plancard">
-        <div class="ph"><b>${esc(fmtDay(curDate))}</b>${plan.district ? ` · ${esc(plan.district)}` : ""}</div>
-        ${plan.reason ? `<div class="reason">${esc(plan.reason)}</div>` : ""}
-        ${warn.map(w => `<div class="warnbox">⚠️ ${esc(w)}</div>`).join("")}
-        ${(plan.notes || []).map(n => `<div class="note">ℹ️ ${esc(n)}</div>`).join("")}
-        ${monoHTML(stops.map(s => m.get(s.id)))}
-        ${segs.length ? `<details class="segs"><summary>🗺 Маршрут в Google Maps по участкам (${segs.length})</summary><ol>${segs.map(sg =>
-          `<li>${sg.mode === "walk" ? "🚶 пешком" : "🚌🚇 транспорт"}: ${sg.points.map(x => esc(x.ru)).join(" → ")} · ${sg.mode === "walk" ? `≈${sg.min} мин` : `заложено ~${sg.min} мин`} <a class="act" href="${esc(sg.url)}" target="_blank" rel="noopener">Открыть</a></li>`).join("")}</ol>
-          <p class="minor">Пешие отрезки подряд открываются одним маршрутом. Каждый переезд на транспорте — отдельной ссылкой в режиме «общественный транспорт» (Google не поддерживает промежуточные точки для транспорта). Автомобильные маршруты не используются.</p></details>` : ""}
-        <h3 class="blk">ДЕНЬ · ${stops.length}</h3>
-        ${home && firstPt ? `<div class="homerow">🏠 <b>${esc(home.name)}</b> · выход ~${P.fmtTime(plan.homeStart?.departAt)}</div><ol class="stops">${homeLegHTML(home, firstPt, false)}</ol>` : ""}
-        <ol class="stops">${stops.map((s, i) => stopHTML(curDate, plan, s, i, m, ds)).join("") || `<div class="empty">Дневных остановок нет.</div>`}</ol>
-        <h3 class="blk">ВЕЧЕР · подсветка ${evening.length ? "· " + evening.length : ""}</h3>
-        ${(plan.eveningNotes || []).map(n => `<div class="note">🌙 ${esc(n)}</div>`).join("")}
-        <ol class="stops">${evening.map((e, i) => eveHTML(curDate, plan, e, i)).join("")}</ol>
+        <div class="dayhead">
+          <div class="dh1"><b>${esc(longDay(curDate))}</b>${plan.district ? ` · <span>${esc(plan.district)}</span>` : ""}</div>
+          <div class="dh2">${home ? I("house", "отель") : ""}<span>${home ? hhmm(plan.homeStart?.departAt) : ""}</span><span class="arr">→</span><span>${stops.length} ${P.plural(stops.length, "место", "места", "мест")}</span>${evening.length ? `<span class="arr">→</span>${I("moon")}<span>${evening.length}</span>` : ""}${home ? `<span class="arr">→</span>${I("house", "отель")}<span>${hhmm(plan.homeEnd?.backAt)}</span>` : ""}</div>
+        </div>
+        ${crit.map(w => `<div class="crit">${I("alert")} ${esc(w)}</div>`).join("")}
+        ${remarks.length ? `<details class="remarks"><summary>${I("info")} ${remarks.length} ${P.plural(remarks.length, "замечание", "замечания", "замечаний")} к маршруту</summary><ul>${remarks.map(r => `<li>${esc(r)}</li>`).join("")}</ul></details>` : ""}
+        ${home && firstPt ? `<div class="homerow">${I("house")}<span class="hn">${esc(home.name)}</span><span class="time">${hhmm(plan.homeStart?.departAt)}</span></div><ol class="stops">${homeLegHTML(home, firstPt, false)}</ol>` : ""}
+        <ol class="stops">${stops.map((s, i) => stopHTML(curDate, plan, s, i, m, ds)).join("") || `<li class="empty">Дневных остановок нет.</li>`}</ol>
+        ${evening.length ? `<h3 class="blk">${I("moon")} Вечер</h3><ol class="stops">${evening.map((e, i) => eveHTML(curDate, plan, e, i)).join("")}</ol>` : ""}
         ${home && lastPt ? `<ol class="stops">${homeLegHTML(lastPt, home, true)}</ol>
-          <div class="homerow">🏠 <b>${esc(home.name)}</b> · возвращение ~${P.fmtTime(plan.homeEnd?.backAt)}</div>
-          ${plan.homeEnd?.late ? `<div class="warnbox">⚠️ Возвращение позже, чем мы считаем безопасным для последних рейсов (${P.CFG.REMOTE.includes(lastPt.district) ? "удалённый район — до ~21:00" : "город — до ~22:30"}). Замените подсветку или уберите вторую.</div>` : ""}
-          <div class="mini">${P.CFG.REMOTE.includes(lastPt.district) ? `<b class="warnline">День заканчивается в удалённом районе (${esc(lastPt.district_ru)}): транспорт отсюда ходит реже.</b> ` : ""}Расписание последних рейсов сайт не знает — проверьте по кнопке «Как добраться» (режим транспорта) до выхода на вечернюю программу.</div>` : ""}
-        ${evening.length < 2 ? `<button class="act" data-a="addeve">＋ Добавить подсветку</button>` : ""}
+          <div class="homerow">${I("house")}<span class="hn">${esc(home.name)}</span><span class="time">${hhmm(plan.homeEnd?.backAt)}</span></div>` : ""}
+        ${evening.length < 2 ? `<button class="act addeve" data-a="addeve">${I("moon")} Добавить подсветку</button>` : ""}
         ${replacing && replacing.kind === "eve" && replacing.id === null ? replacePanel(curDate, plan) : ""}
-        ${densCtl}${varCtl}
-        <div class="btnrow"><button id="rebuildBtn" class="btn big">↻ Пересобрать весь день</button></div>
+        <details class="more"><summary>Подробнее о дне</summary>
+          ${plan.reason ? `<p class="mini">${esc(plan.reason)}</p>` : ""}
+          ${monoHTML(stops.map(s => m.get(s.id)))}
+          ${segs.length ? `<div class="segs"><b>Google Maps по участкам</b><ol>${segs.map(sg =>
+            `<li><span>${sg.mode === "walk" ? "пешком" : "транспорт"}: ${sg.points.map(x => esc(shortName(x.ru || x.name))).join(" → ")}</span> <a class="act" href="${esc(sg.url)}" target="_blank" rel="noopener">Открыть</a></li>`).join("")}</ol>
+            <p class="mini">Пешие отрезки подряд — одним маршрутом; каждый переезд — отдельной ссылкой в режиме транспорта. Автомобильные маршруты не используются.</p></div>` : ""}
+          <p class="mini">Только пешком и общественным транспортом. Минуты в пути — запас для планирования, не расписание. Часы работы — Walkerplus 2026 (где нет — ≈9:00–16:00). Пересобрано: ${plan.rebuilds || 0}; данные листвы от ${esc((plan.dataGenerated || d.generated_at || "").slice(0, 16).replace("T", " "))}.</p>
+        </details>
+        <div class="controls2">${densCtl}${varCtl}</div>
+        <button id="rebuildBtn" class="btn big wide">${I("refresh")} Пересобрать весь день</button>
         <div class="minor links">
-          ${plan.history?.length ? `<button class="linkbtn" data-a="prev">↶ Вернуть прошлый вариант</button>` : ""}
-          ${removedN ? `<button class="linkbtn" data-a="reset">Сбросить исключения дня (${removedN})</button>` : ""}
+          ${plan.history?.length ? `<button class="linkbtn" data-a="prev">↶ Прошлый вариант</button>` : ""}
+          ${removedN ? `<button class="linkbtn" data-a="reset">Сбросить исключения (${removedN})</button>` : ""}
           <button class="linkbtn danger" data-a="delete">Удалить план дня</button>
         </div>
-        <p class="minor">Только пешком и общественным транспортом. Пешком — если до следующего места ≤ 2 км (≈17 мин/км). Для транспорта в план заложен запас: дорога до остановки и ожидание ~18 мин + ~5 мин/км, для удалённых районов больше. Номера автобусов и расписание не выдумываем — точный маршрут по кнопке «Как добраться». Время на месте — по типу места. Часы работы — с Walkerplus (2026), где не опубликованы — типичные 9:00–16:00. Подсветки — только с подтверждёнными датами 2026 года. Пересобрано: ${plan.rebuilds || 0} раз; данные листвы от ${esc((plan.dataGenerated || d.generated_at || "").slice(0, 16).replace("T", " "))}.</p>
       </div>`;
     }
-    const tripCtl = `<details class="panel"><summary>Даты поездки: ${esc(shortDay(ds[0]))}–${esc(shortDay(ds[ds.length - 1]))}</summary>
+    const tripCtl = `<details class="panel"><summary>Даты поездки и домашняя база</summary>
       <div class="row" style="padding-bottom:6px"><input type="date" id="tripStart" value="${esc(U.trip.start)}"> – <input type="date" id="tripEnd" value="${esc(U.trip.end)}"></div>
       <div class="homeset"><b>🏠 Домашняя база</b> (начало и конец каждого дня)
         <label class="mini">Название <input type="text" id="homeName" value="${esc(U.settings.home?.name || "")}"></label>
@@ -536,12 +615,17 @@
           `<option value="${k}"${U.settings.home?.anchor === k || (!U.settings.home?.anchor && k === "bon") ? " selected" : ""}>${esc(v.label)}</option>`).join("")}</select></label>
         <div class="btnrow"><button class="act" id="homeSave">Сохранить базу</button><button class="act" id="homeReset">Вернуть BON Kyoto Station</button></div>
         <p class="mini">Изменение базы не трогает сохранённые планы; время переходов пересчитается, а лучший район — после «Пересобрать».</p></div></details>`;
-    root.innerHTML = `<div class="chips daychips">${chips}</div>${body}${tripCtl}`;
+    const strip = root.querySelector(".datestrip");
+    const scrollX = strip ? strip.scrollLeft : null;
+    root.innerHTML = `<div class="datestrip" role="tablist" aria-label="Дни поездки">${chips}</div>${body}${tripCtl}`;
+    const ns = root.querySelector(".datestrip");
+    if (scrollX != null) ns.scrollLeft = scrollX;
+    else { const act = ns.querySelector('[aria-pressed="true"]'); if (act) ns.scrollLeft = Math.max(0, act.offsetLeft - 16); }
     bindRoutes(root, plan, ds);
   }
 
   function bindRoutes(root, plan, ds) {
-    root.querySelectorAll(".daychip").forEach(b => b.addEventListener("click", () => { curDate = b.dataset.date; replacing = null; renderRoutes(); }));
+    root.querySelectorAll(".daybtn").forEach(b => b.addEventListener("click", () => { curDate = b.dataset.date; replacing = null; renderRoutes(); }));
     root.querySelectorAll("[data-var]").forEach(b => b.addEventListener("click", () => {
       U.settings.variety = b.dataset.var; save(); renderRoutes();
       flash(`Режим: ${DV.MODES[b.dataset.var].label}. Сохранённый план не изменён — нажмите «Пересобрать», чтобы применить.`);
@@ -551,12 +635,15 @@
       flash(`Насыщенность: ${P.CFG.DENSITY[b.dataset.dens].label}. Нажмите «Пересобрать», чтобы применить.`);
     }));
     $("#rebuildBtn")?.addEventListener("click", () => { replacing = null; rebuild(curDate); });
+    root.querySelectorAll(".leg-b").forEach(b => b.addEventListener("click", () => {
+      const d = b.nextElementSibling; d.hidden = !d.hidden; b.setAttribute("aria-expanded", String(!d.hidden));
+    }));
     const toggleDetail = (li, key, html) => {
-      const top = li.querySelector(".st-top"), det = li.querySelector(".stop-detail");
+      const top = li.querySelector(".st-top"), more = li.querySelector(".stop-more"), det = li.querySelector(".stop-detail");
       const t = () => {
-        if (det.hidden) { det.innerHTML = html(); det.hidden = false; openStops.add(key); } else { det.hidden = true; openStops.delete(key); }
-        top.setAttribute("aria-expanded", String(!det.hidden));
-        const c = li.querySelector(".chev"); if (c) c.textContent = det.hidden ? "▾" : "▴";
+        if (more.hidden) { if (!det.innerHTML) det.innerHTML = html(); more.hidden = false; openStops.add(key); }
+        else { more.hidden = true; openStops.delete(key); }
+        top.setAttribute("aria-expanded", String(!more.hidden));
       };
       top.addEventListener("click", t);
       top.addEventListener("keydown", e => { if (e.key === "Enter" || e.key === " ") { e.preventDefault(); t(); } });
