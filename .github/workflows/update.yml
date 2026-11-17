@@ -31,6 +31,9 @@ jobs:
       - run: pip install -r requirements.txt
       - name: Parser tests (saved real pages)
         run: python -m pytest -q tests
+      - name: Route planner tests
+        continue-on-error: true
+        run: node --test tests/js/planner.test.js
       - name: Collect all sources (each isolated; failures fall back to last snapshot)
         run: python -m collector.run
       - name: Commit data

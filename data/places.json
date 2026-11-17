@@ -213,7 +213,10 @@
      "ar0726e518738"
     ]
    },
-   "aliases": []
+   "aliases": [],
+   "lat": 35.138134,
+   "lon": 135.828026,
+   "coord_source": "walkerplus_map"
   },
   {
    "id": "hakuryuen",
@@ -230,7 +233,10 @@
      "ar0726e392492"
     ]
    },
-   "aliases": []
+   "aliases": [],
+   "lat": 35.096766,
+   "lon": 135.76444,
+   "coord_source": "walkerplus_map"
   },
   {
    "id": "kifune",
@@ -352,7 +358,10 @@
      "ar0726e12993"
     ]
    },
-   "aliases": []
+   "aliases": [],
+   "lat": 35.057202,
+   "lon": 135.674929,
+   "coord_source": "walkerplus_map"
   },
   {
    "id": "kozanji",
@@ -369,7 +378,10 @@
      "高山寺"
     ]
    },
-   "aliases": []
+   "aliases": [],
+   "lat": 35.060108,
+   "lon": 135.678569,
+   "coord_source": "japan_explorers_spot_page"
   },
   {
    "id": "takao_area",
@@ -727,7 +739,10 @@
      "西芳寺"
     ]
    },
-   "aliases": []
+   "aliases": [],
+   "lat": 34.991961,
+   "lon": 135.683314,
+   "coord_source": "japan_explorers_spot_page"
   },
   {
    "id": "jizoin",
@@ -741,7 +756,10 @@
      "地蔵院(竹の寺)"
     ]
    },
-   "aliases": []
+   "aliases": [],
+   "lat": 34.990417,
+   "lon": 135.686,
+   "coord_source": "japan_explorers_spot_page"
   },
   {
    "id": "hozukyo",
@@ -918,7 +936,10 @@
      "ar0726e322486"
     ]
    },
-   "aliases": []
+   "aliases": [],
+   "lat": 35.010672,
+   "lon": 135.792288,
+   "coord_source": "walkerplus_map"
   },
   {
    "id": "eikando",
@@ -992,7 +1013,10 @@
      "ar0726e323187"
     ]
    },
-   "aliases": []
+   "aliases": [],
+   "lat": 35.019649,
+   "lon": 135.788055,
+   "coord_source": "walkerplus_map"
   },
   {
    "id": "honenin",
@@ -1009,7 +1033,10 @@
      "法然院"
     ]
    },
-   "aliases": []
+   "aliases": [],
+   "lat": 35.023972,
+   "lon": 135.797417,
+   "coord_source": "japan_explorers_spot_page"
   },
   {
    "id": "tetsugaku",
@@ -1052,7 +1079,10 @@
      "ar0726e321275"
     ]
    },
-   "aliases": []
+   "aliases": [],
+   "lat": 35.011584,
+   "lon": 135.787082,
+   "coord_source": "walkerplus_map"
   },
   {
    "id": "ginkakuji",
@@ -1073,7 +1103,10 @@
     "Ginkakuji",
     "銀閣寺",
     "慈照寺"
-   ]
+   ],
+   "lat": 35.027021,
+   "lon": 135.798205,
+   "coord_source": "walkerplus_map"
   },
   {
    "id": "anrakuji",
@@ -1104,7 +1137,10 @@
      "ar0726e519261"
     ]
    },
-   "aliases": []
+   "aliases": [],
+   "lat": 35.01665,
+   "lon": 135.782428,
+   "coord_source": "walkerplus_map"
   },
   {
    "id": "kiyomizu",
@@ -1432,7 +1468,10 @@
      "ar0726e13176"
     ]
    },
-   "aliases": []
+   "aliases": [],
+   "lat": 35.06406,
+   "lon": 135.799965,
+   "coord_source": "walkerplus_map"
   },
   {
    "id": "jissoin",
@@ -1478,7 +1517,10 @@
      "ar0726e444237"
     ]
    },
-   "aliases": []
+   "aliases": [],
+   "lat": 35.056184,
+   "lon": 135.80165,
+   "coord_source": "walkerplus_map"
   },
   {
    "id": "saginomori",
@@ -1495,7 +1537,10 @@
      "ar0726e444704"
     ]
    },
-   "aliases": []
+   "aliases": [],
+   "lat": 35.049515,
+   "lon": 135.798527,
+   "coord_source": "walkerplus_map"
   },
   {
    "id": "konpukuji",
@@ -1512,7 +1557,10 @@
      "ar0726e445349"
     ]
    },
-   "aliases": []
+   "aliases": [],
+   "lat": 35.042144,
+   "lon": 135.795211,
+   "coord_source": "walkerplus_map"
   },
   {
    "id": "entsuji",
@@ -1526,7 +1574,10 @@
      "圓通寺"
     ]
    },
-   "aliases": []
+   "aliases": [],
+   "lat": 35.019611,
+   "lon": 135.770139,
+   "coord_source": "japan_explorers_spot_page"
   },
   {
    "id": "bishamondo",
@@ -1571,7 +1622,10 @@
      "ar0726e478702"
     ]
    },
-   "aliases": []
+   "aliases": [],
+   "lat": 34.995716,
+   "lon": 135.815749,
+   "coord_source": "walkerplus_map"
   },
   {
    "id": "daigoji",
@@ -1798,7 +1852,10 @@
      "ar0726e478693"
     ]
    },
-   "aliases": []
+   "aliases": [],
+   "lat": 35.019163,
+   "lon": 135.716136,
+   "coord_source": "walkerplus_map"
   },
   {
    "id": "kinkakuji",
@@ -1816,7 +1873,10 @@
     "Kinkakuji",
     "金閣寺",
     "鹿苑寺"
-   ]
+   ],
+   "lat": 35.039403,
+   "lon": 135.729364,
+   "coord_source": "japan_explorers_spot_page"
   },
   {
    "id": "kitano",
@@ -1922,7 +1982,10 @@
      "大徳寺"
     ]
    },
-   "aliases": []
+   "aliases": [],
+   "lat": 35.043889,
+   "lon": 135.746111,
+   "coord_source": "japan_explorers_spot_page"
   },
   {
    "id": "shozan",
@@ -2027,7 +2090,10 @@
      "ar0726e442800"
     ]
    },
-   "aliases": []
+   "aliases": [],
+   "lat": 35.024584,
+   "lon": 135.767906,
+   "coord_source": "walkerplus_map"
   },
   {
    "id": "myokenji",
@@ -2044,7 +2110,10 @@
      "ar0726e563243"
     ]
    },
-   "aliases": []
+   "aliases": [],
+   "lat": 35.034571,
+   "lon": 135.754682,
+   "coord_source": "walkerplus_map"
   },
   {
    "id": "myokakuji",
@@ -2155,7 +2224,10 @@
      "東本願寺"
     ]
    },
-   "aliases": []
+   "aliases": [],
+   "lat": 34.991017,
+   "lon": 135.758456,
+   "coord_source": "japan_explorers_spot_page"
   },
   {
    "id": "umekoji",
@@ -2393,7 +2465,10 @@
      "ar0726e444236"
     ]
    },
-   "aliases": []
+   "aliases": [],
+   "lat": 34.944393,
+   "lon": 135.657205,
+   "coord_source": "walkerplus_map"
   },
   {
    "id": "otokunidera",
@@ -2413,7 +2488,10 @@
      "ar0726e446719"
     ]
    },
-   "aliases": []
+   "aliases": [],
+   "lat": 34.936289,
+   "lon": 135.689088,
+   "coord_source": "walkerplus_map"
   },
   {
    "id": "nagaokatenmangu",
@@ -2430,7 +2508,10 @@
      "ar0726e443262"
     ]
    },
-   "aliases": []
+   "aliases": [],
+   "lat": 34.922697,
+   "lon": 135.686927,
+   "coord_source": "walkerplus_map"
   },
   {
    "id": "yokokuji",
@@ -2518,7 +2599,10 @@
      "ar0726e366296"
     ]
    },
-   "aliases": []
+   "aliases": [],
+   "lat": 34.956951,
+   "lon": 135.655549,
+   "coord_source": "walkerplus_map"
   },
   {
    "id": "iwashimizu",
@@ -2712,7 +2796,10 @@
      "常照皇寺"
     ]
    },
-   "aliases": []
+   "aliases": [],
+   "lat": 35.200889,
+   "lon": 135.685361,
+   "coord_source": "japan_explorers_spot_page"
   },
   {
    "id": "konoji",
@@ -2726,7 +2813,10 @@
      "籠神社"
     ]
    },
-   "aliases": []
+   "aliases": [],
+   "lat": 35.582814,
+   "lon": 135.196669,
+   "coord_source": "japan_explorers_spot_page"
   },
   {
    "id": "rurikei",
@@ -2740,7 +2830,10 @@
      "るり渓"
     ]
    },
-   "aliases": []
+   "aliases": [],
+   "lat": 35.035817,
+   "lon": 135.404608,
+   "coord_source": "japan_explorers_spot_page"
   },
   {
    "id": "oonodam",

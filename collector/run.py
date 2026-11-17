@@ -221,7 +221,7 @@ def build(results, reg: Registry, now):
         # coordinates: registry override > JR (venue map link) > Weathernews
         lat = p.get("lat")
         lon = p.get("lon")
-        coord_src = "registry" if lat is not None else None
+        coord_src = (p.get("coord_source") or "registry") if lat is not None else None
         if lat is None:
             for src in ("jr_odekake", "weathernews"):
                 o = next((x for x in obs if x["source"] == src and x.get("lat") is not None), None)

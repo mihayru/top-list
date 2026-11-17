@@ -206,6 +206,7 @@
       if (det.hidden) open(); else { det.hidden = true; head.setAttribute("aria-expanded", "false"); state.open.delete(p.id); }
     });
     if (state.open.has(p.id)) open();
+    if (window.KoyoUser) window.KoyoUser.decorateCard(t, p);
     return t;
   }
 
@@ -369,11 +370,13 @@
       state.data = await r.json();
     } catch (e) {
       $("#fresh").textContent = "Не удалось загрузить данные: " + e.message;
-      return;
+      return state.data;
     }
     const first = !$("#statusChips").children.length;
     if (first) { buildControls(); restore(); }
     renderHeader(); renderSources(); render();
+    if (window.KoyoUser) window.KoyoUser.onData();
+    return state.data;
   }
 
   if ("serviceWorker" in navigator) {
@@ -382,5 +385,6 @@
   document.addEventListener("visibilitychange", () => {
     if (document.visibilityState === "visible" && state.data && hoursAgo(state.data.generated_at) > 1) load();
   });
+  window.KoyoApp = { get data() { return state.data; }, render: () => state.data && render(), reload: load };
   load();
 })();
