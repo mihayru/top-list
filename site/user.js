@@ -327,6 +327,17 @@
       <div class="btnrow">${(replacing.radius || 7) <= 7 ? `<button class="act" data-widen="1">Искать дальше (до 15 км)</button>` : ""}<button class="act" data-cancel="1">Отмена</button></div></div>`;
   }
 
+  function legRowHTML(a, b) {
+    const L = P.leg(a, b);
+    if (L.mode === "walk") return `<li class="legrow walk">🚶 Пешком ≈${L.min} мин · ${L.km} км${L.uphill ? " · в гору/лестницы" : ""} <a class="act" href="${esc(P.legUrl(a, b, "walk"))}" target="_blank" rel="noopener">Как добраться</a></li>`;
+    return `<li class="legrow transit">🚌🚇 Автобус/метро/поезд · в плане ~${L.min} мин <span class="mini">(оценка без расписания, ${L.km} км по прямой)</span> <a class="act" href="${esc(P.legUrl(a, b, "transit"))}" target="_blank" rel="noopener">Как добраться</a></li>`;
+  }
+  function prevPoint(plan, eveIdx) {
+    const m = byId();
+    if (eveIdx > 0) { const lu = luById().get(plan.evening[eveIdx - 1].id); return lu ? m.get(lu.place_id) : null; }
+    const st = plan.stops || [];
+    return st.length ? m.get(st[st.length - 1].id) : null;
+  }
   function stopHTML(date, plan, s, i, m, ds) {
     const p = m.get(s.id);
     if (!p) return `<li class="stop">Место ${esc(s.id)} не найдено в данных</li>`;
@@ -335,14 +346,15 @@
     const sc = P.scoreOn(p, date, d.today);
     const hrs = P.hoursOf(p);
     const hoursTxt = p.hours?.open ? `часы ${esc(p.hours.open)}–${esc(p.hours.close || "?")}${p.hours.last_entry ? ", вход до " + esc(p.hours.last_entry) : ""}` : (p.kind === "area" ? "открытая территория" : "часы не опубликованы (≈9:00–16:00)");
-    return `<li class="stop${vis ? " visited" : ""}" data-id="${esc(s.id)}">
+    const prev = i > 0 ? m.get(plan.stops[i - 1].id) : null;
+    return `${prev ? legRowHTML(prev, p) : ""}<li class="stop${vis ? " visited" : ""}" data-id="${esc(s.id)}">
       <div class="st-top" role="button" tabindex="0" aria-expanded="${openStops.has(s.id)}">
         <span class="time">${s.arrive != null ? "~" + P.fmtTime(s.arrive) : ""}</span>
         <span class="sname">${s.pinned ? "📌 " : ""}${esc(p.ru)} <small>${esc(p.en)} · ${esc(p.ja)}</small></span>
         <span class="chev" aria-hidden="true">${openStops.has(s.id) ? "▴" : "▾"}</span>
         <span class="sscore" style="background:${scoreBg(sc)}">${sc ?? "—"}</span>
       </div>
-      <div class="st-meta">${i > 0 && s.travel ? `🚶/🚌 ~${s.travel} мин (${s.km} км) · ` : ""}${leafLine(p, date)}
+      <div class="st-meta">${leafLine(p, date)}
         <br><span class="mini">~${P.visitMin(p)} мин на месте · ${hoursTxt}</span>
         ${vis ? `<b class="vis"> · уже посещено${vis.date ? " " + esc(shortDay(vis.date)) : ""}</b>` : ""}</div>
       <div class="st-act">
@@ -365,13 +377,15 @@
     const vis = U.visited["lu:" + e.id];
     const t = luTimes(lu);
     const key = "lu:" + e.id;
-    return `<li class="stop eve${vis ? " visited" : ""}" data-lu="${esc(e.id)}">
+    const prevPt = prevPoint(plan, i);
+    const here = byId().get(lu.place_id);
+    return `${prevPt && here ? legRowHTML(prevPt, here) : ""}<li class="stop eve${vis ? " visited" : ""}" data-lu="${esc(e.id)}">
       <div class="st-top" role="button" tabindex="0" aria-expanded="${openStops.has(key)}">
         <span class="time">${e.arrive != null ? "~" + P.fmtTime(e.arrive) : ""}</span>
         <span class="sname">${e.pinned ? "📌 " : ""}🌙 ${esc(lu.name_ru)} <small>${esc(lu.name_en)} · ${esc(lu.name_ja)}</small></span>
         <span class="chev" aria-hidden="true">${openStops.has(key) ? "▴" : "▾"}</span>
       </div>
-      <div class="st-meta">${e.travel ? `🚶/🚌 ~${e.travel} мин (${e.km} км) · ` : ""}<b>${esc(t.open)}–${esc(t.close)}</b>, последний вход <b>${esc(t.last)}</b> · ${esc(luPrice(lu))}${lu.reservation ? " · <b>нужна бронь</b>" : lu.reservation === false ? " · без брони" : ""}
+      <div class="st-meta"><b>${esc(t.open)}–${esc(t.close)}</b>, последний вход <b>${esc(t.last)}</b> · ${esc(luPrice(lu))}${lu.reservation ? " · <b>нужна бронь</b>" : lu.reservation === false ? " · без брони" : ""}
         <br>Листва: ${luLeafHTML(lu, date)}
         <br><span class="mini">${esc(lu.confirmation?.ru || "")}${lu.conflicts?.length ? " · расхождение: " + lu.conflicts.map(c => `${c.field} Sōda ${c.souda} / Walker ${c.walkerplus}`).join(", ") : ""}</span>
         ${e.late ? `<br><b class="warnline">⚠ Не успеть до последнего входа — замените или уберите</b>` : ""}
@@ -432,7 +446,10 @@
       const visitedIn = stops.filter(s => U.visited[s.id]).concat(evening.filter(e => U.visited["lu:" + e.id]));
       const removedN = ((U.removed[curDate] || []).length + ((U.removedEvening || {})[curDate] || []).length);
       const L = luById();
-      const gm = P.gmapsRoute(stops.map(s => m.get(s.id)).concat(evening.map(e => L.get(e.id))));
+      const seq = stops.map(s => m.get(s.id)).concat(evening.map(e => m.get(L.get(e.id)?.place_id))).filter(x => x && x.lat != null);
+      const segs = P.segments(seq);
+      const lastPt = seq[seq.length - 1];
+      const base = U.settings.base || "京都駅";
       const warn = [].concat(plan.warnings || []);
       if (plan.needsRebuild || visitedIn.length) {
         const pinnedV = stops.filter(s => s.pinned && U.visited[s.id]);
@@ -445,12 +462,16 @@
         ${plan.reason ? `<div class="reason">${esc(plan.reason)}</div>` : ""}
         ${warn.map(w => `<div class="warnbox">⚠️ ${esc(w)}</div>`).join("")}
         ${(plan.notes || []).map(n => `<div class="note">ℹ️ ${esc(n)}</div>`).join("")}
-        <div class="btnrow">${gm ? `<a class="btn alt" href="${esc(gm)}" target="_blank" rel="noopener">🗺 Весь день в Google Maps</a>` : ""}</div>
+        ${segs.length ? `<details class="segs"><summary>🗺 Маршрут в Google Maps по участкам (${segs.length})</summary><ol>${segs.map(sg =>
+          `<li>${sg.mode === "walk" ? "🚶 пешком" : "🚌🚇 транспорт"}: ${sg.points.map(x => esc(x.ru)).join(" → ")} · ${sg.mode === "walk" ? `≈${sg.min} мин` : `заложено ~${sg.min} мин`} <a class="act" href="${esc(sg.url)}" target="_blank" rel="noopener">Открыть</a></li>`).join("")}</ol>
+          <p class="minor">Пешие отрезки подряд открываются одним маршрутом. Каждый переезд на транспорте — отдельной ссылкой в режиме «общественный транспорт» (Google не поддерживает промежуточные точки для транспорта). Автомобильные маршруты не используются.</p></details>` : ""}
         <h3 class="blk">ДЕНЬ · ${stops.length}</h3>
         <ol class="stops">${stops.map((s, i) => stopHTML(curDate, plan, s, i, m, ds)).join("") || `<div class="empty">Дневных остановок нет.</div>`}</ol>
         <h3 class="blk">ВЕЧЕР · подсветка ${evening.length ? "· " + evening.length : ""}</h3>
         ${(plan.eveningNotes || []).map(n => `<div class="note">🌙 ${esc(n)}</div>`).join("")}
         <ol class="stops">${evening.map((e, i) => eveHTML(curDate, plan, e, i)).join("")}</ol>
+        ${lastPt ? `<div class="legrow transit">🏨 Обратно: ${esc(lastPt.ru)} → ${esc(base)} <a class="act" href="${esc(P.legUrlTo(lastPt, base, "transit"))}" target="_blank" rel="noopener">Как добраться</a>
+          ${P.CFG.REMOTE.includes(lastPt.district) ? `<div class="mini warnline">День заканчивается в удалённом районе (${esc(lastPt.district_ru)}): автобусы/поезда отсюда ходят реже — проверьте последний рейс в Google Maps заранее.</div>` : `<div class="mini">Последний рейс проверьте по кнопке «Как добраться» (Google Maps, режим транспорта).</div>`}</div>` : ""}
         ${evening.length < 2 ? `<button class="act" data-a="addeve">＋ Добавить подсветку</button>` : ""}
         ${replacing && replacing.kind === "eve" && replacing.id === null ? replacePanel(curDate, plan) : ""}
         ${densCtl}
@@ -460,11 +481,12 @@
           ${removedN ? `<button class="linkbtn" data-a="reset">Сбросить исключения дня (${removedN})</button>` : ""}
           <button class="linkbtn danger" data-a="delete">Удалить план дня</button>
         </div>
-        <p class="minor">Время ориентировочное: дорога ≈ 8 мин + 3,5 мин/км; время на месте — по типу места. Часы работы — с Walkerplus (2026), где не опубликованы — типичные 9:00–16:00. Подсветки — только с подтверждёнными датами 2026 года. Пересобрано: ${plan.rebuilds || 0} раз; данные листвы от ${esc((plan.dataGenerated || d.generated_at || "").slice(0, 16).replace("T", " "))}.</p>
+        <p class="minor">Только пешком и общественным транспортом. Пешком — если до следующего места ≤ 2 км (≈17 мин/км). Для транспорта в план заложен запас: дорога до остановки и ожидание ~18 мин + ~5 мин/км, для удалённых районов больше. Номера автобусов и расписание не выдумываем — точный маршрут по кнопке «Как добраться». Время на месте — по типу места. Часы работы — с Walkerplus (2026), где не опубликованы — типичные 9:00–16:00. Подсветки — только с подтверждёнными датами 2026 года. Пересобрано: ${plan.rebuilds || 0} раз; данные листвы от ${esc((plan.dataGenerated || d.generated_at || "").slice(0, 16).replace("T", " "))}.</p>
       </div>`;
     }
     const tripCtl = `<details class="panel"><summary>Даты поездки: ${esc(shortDay(ds[0]))}–${esc(shortDay(ds[ds.length - 1]))}</summary>
-      <div class="row" style="padding-bottom:10px"><input type="date" id="tripStart" value="${esc(U.trip.start)}"> – <input type="date" id="tripEnd" value="${esc(U.trip.end)}"></div></details>`;
+      <div class="row" style="padding-bottom:6px"><input type="date" id="tripStart" value="${esc(U.trip.start)}"> – <input type="date" id="tripEnd" value="${esc(U.trip.end)}"></div>
+      <label class="mini" style="display:block;padding-bottom:10px">Где ночуете (для кнопки «Обратно»): <input type="text" id="baseInput" value="${esc(U.settings.base || "京都駅")}" placeholder="京都駅 или название отеля"></label></details>`;
     root.innerHTML = `<div class="chips daychips">${chips}</div>${body}${tripCtl}`;
     bindRoutes(root, plan, ds);
   }
@@ -529,6 +551,7 @@
     const ts = $("#tripStart"), te = $("#tripEnd");
     const upd = () => { if (ts.value && te.value && ts.value <= te.value) { U.trip = { start: ts.value, end: te.value }; save(); renderRoutes(); } };
     ts?.addEventListener("change", upd); te?.addEventListener("change", upd);
+    $("#baseInput")?.addEventListener("change", e => { U.settings.base = e.target.value.trim() || "京都駅"; save(); renderRoutes(); });
   }
 
   // ---------------------------------------------------------------- Light-ups list (inside the Leaf tab)

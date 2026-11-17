@@ -157,7 +157,7 @@
     return `
       <div class="btns">
         <a class="btn" href="${esc(safeUrl(p.gmaps))}" target="_blank" rel="noopener">🗺 Google Maps</a>
-        ${p.lat != null ? `<a class="btn alt" href="https://www.google.com/maps/dir/?api=1&destination=${p.lat},${p.lon}&travelmode=transit" target="_blank" rel="noopener">🚆 Маршрут</a>` : ""}
+        <a class="btn alt" href="https://www.google.com/maps/dir/?api=1&destination=${encodeURIComponent(p.maps_q || p.ja)}&travelmode=transit" target="_blank" rel="noopener">🚆 Как добраться (транспорт)</a>
       </div>
       <h4>Вывод</h4>
       <div>${esc(p.basis_ru)}. ${p.status === "CONFLICT" ? `Наиболее вероятно: <b>${esc(STATUS_RU[p.likely_status])}</b>.` : ""}

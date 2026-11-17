@@ -10,6 +10,7 @@ from __future__ import annotations
 import argparse
 import hashlib
 import json
+import re
 import sys
 import traceback
 from datetime import date, timedelta
@@ -172,10 +173,41 @@ def weather_ru(text):
     return out.strip()
 
 
-def gmaps(p, lat, lon):
-    if lat is not None and lon is not None:
-        return f"https://www.google.com/maps/search/?api=1&query={lat},{lon}"
-    return f"https://www.google.com/maps/search/?api=1&query={quote(p['ja'] + ' 京都')}"
+MAPS_NAME = {  # names Google recognises as a place (instead of a "Dropped pin")
+    "arashiyama": "渡月橋", "tetsugaku": "哲学の道", "yase": "八瀬もみじの小径", "eiden_tunnel": "叡山電車 市原駅",
+    "kitano": "北野天満宮", "shimogamo": "下鴨神社", "kasagi": "笠置山もみじ公園", "umekoji": "梅小路公園",
+    "gyoen": "京都御苑", "komyoji": "長岡京 光明寺", "shohoji_wazuka": "和束 正法寺", "shohoji_oharano": "大原野 正法寺",
+    "koshoji": "宇治 興聖寺", "kurodani": "金戒光明寺", "ginkakuji": "銀閣寺", "kinkakuji": "金閣寺",
+    "saihoji": "西芳寺", "jizoin": "地蔵院 竹の寺", "tenjuan": "天授庵", "tofukuji_komyoin": "東福寺 光明院",
+    "taizoin": "退蔵院", "daihoin": "妙心寺 大法院", "kibune_area": "貴船", "takao_area": "高雄",
+    "hozukyo": "保津峡", "torokko": "トロッコ嵯峨駅", "okochi": "大河内山荘庭園", "botanical": "京都府立植物園",
+    "yokokuji": "楊谷寺", "ikkyuji": "酬恩庵 一休寺", "kongoin": "金剛院 舞鶴", "chooanji": "長安寺 福知山",
+    "ankokuji": "安国寺 綾部", "oomoto_ayabe": "大本 梅松苑", "shozan": "しょうざんリゾート京都",
+}
+DISTRICT_CITY = {"ohara": "京都市左京区", "takao": "京都市右京区", "arashiyama": "京都市右京区", "kurama": "京都市左京区",
+                 "ichijoji": "京都市左京区", "okazaki": "京都市左京区", "higashiyama": "京都市東山区", "tofukuji": "京都市東山区",
+                 "yamashina": "京都市山科区", "kinkakuji": "京都市北区", "kitayama": "京都市北区", "central": "京都市"}
+CITY_RE = re.compile(r"(京都市[^区]{1,3}区|[^\s都府県・]{1,4}市|[^\s都府県・]{1,4}郡[^\s町村]{1,4}[町村])")
+
+
+def maps_query(p, obs):
+    """Exact Japanese name + municipality, so Google resolves a real place, never a dropped pin."""
+    name = MAPS_NAME.get(p["id"]) or re.sub(r"[（(].*?[)）]", "", p["ja"]).strip()
+    city = None
+    for o in obs:
+        for txt in (o.get("area"), (o.get("extra") or {}).get("address")):
+            m = CITY_RE.search(txt or "")
+            if m and ("京都" in (txt or "") or o["source"] != "walkerplus" or "・" in (txt or "")):
+                city = m.group(1)
+                break
+        if city:
+            break
+    city = city or DISTRICT_CITY.get(p.get("district"))
+    return f"{name} {city}" if city else f"{name} 京都"
+
+
+def gmaps(q):
+    return f"https://www.google.com/maps/search/?api=1&query={quote(q)}"
 
 
 def build(results, reg: Registry, now, details=None):
@@ -266,7 +298,7 @@ def build(results, reg: Registry, now, details=None):
         places_out.append({
             "id": pid, "ja": p["ja"], "en": en_name, "ru": p["ru"], "kind": p.get("kind", "spot"),
             "district": p["district"], "district_ru": dist.get("ru"), "district_en": dist.get("en"),
-            "lat": lat, "lon": lon, "coord_source": coord_src, "gmaps": gmaps(p, lat, lon),
+            "lat": lat, "lon": lon, "coord_source": coord_src, "maps_q": maps_query(p, obs), "gmaps": gmaps(maps_query(p, obs)),
             **a,
             "forecast": fc,
             "score": s0, "score_tomorrow": s1, "score_d2": s2,
