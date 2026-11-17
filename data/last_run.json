@@ -1,30 +1,30 @@
 {
- "generated_at": "2026-11-17T15:04:20+09:00",
+ "generated_at": "2026-11-17T15:05:47+09:00",
  "requests": [
   {
    "url": "https://souda-kyoto.jp/guide/season/koyo/modal.json",
    "status": 200,
-   "ms": 193
+   "ms": 334
   },
   {
    "url": "https://kisetsu.jr-odekake.net/result/MMJ/A1005?lang=ja",
    "status": 200,
-   "ms": 447
+   "ms": 541
   },
   {
    "url": "https://kisetsu.jr-odekake.net/result/MMJ/A1005?lang=en",
    "status": 200,
-   "ms": 313
+   "ms": 379
   },
   {
    "url": "https://weathernews.jp/koyo/area/kyoto/",
    "status": 200,
-   "ms": 886
+   "ms": 20
   },
   {
    "url": "https://www.japan-explorers.com/koyo/kyoto/",
    "status": 200,
-   "ms": 520
+   "ms": 641
   },
   {
    "url": "https://koyo.walkerplus.com/list/ar0726/",
@@ -34,69 +34,69 @@
   {
    "url": "https://koyo.walkerplus.com/list/ar0726/2.html",
    "status": 200,
-   "ms": 13
+   "ms": 12
   },
   {
    "url": "https://koyo.walkerplus.com/list/ar0726/3.html",
    "status": 200,
-   "ms": 375
+   "ms": 11
   },
   {
    "url": "https://koyo.walkerplus.com/list/ar0726/4.html",
    "status": 200,
-   "ms": 293
+   "ms": 12
   },
   {
    "url": "https://koyo.walkerplus.com/list/ar0726/5.html",
    "status": 200,
-   "ms": 660
+   "ms": 11
   },
   {
    "url": "https://koyo.walkerplus.com/list/ar0726/6.html",
    "status": 200,
-   "ms": 645
+   "ms": 12
   },
   {
    "url": "https://koyo.walkerplus.com/list/ar0726/7.html",
    "status": 200,
-   "ms": 375
+   "ms": 12
   },
   {
    "url": "https://koyo.walkerplus.com/list/ar0726/8.html",
    "status": 200,
-   "ms": 664
+   "ms": 12
   },
   {
    "url": "https://koyo.walkerplus.com/list/ar0726/9.html",
    "status": 200,
-   "ms": 669
+   "ms": 11
   },
   {
    "url": "https://koyo.walkerplus.com/list/ar0726/10.html",
    "status": 200,
-   "ms": 644
+   "ms": 12
   },
   {
    "url": "https://koyo.walkerplus.com/list/ar0726/11.html",
    "status": 200,
-   "ms": 645
+   "ms": 11
   },
   {
    "url": "https://koyo.walkerplus.com/list/ar0726/12.html",
    "status": 200,
-   "ms": 682
+   "ms": 12
   },
   {
    "url": "https://koyo.walkerplus.com/list/ar0726/13.html",
    "status": 200,
-   "ms": 240
+   "ms": 12
   }
  ],
  "sources": [
   {
    "id": "souda",
-   "status": "error",
-   "error": "FetchError: HTTP 403 (access restricted) for https://souda-kyoto.jp/guide/season/koyo/modal.json",
+   "status": "ok",
+   "error": null,
    "count": 77,
    "matched": 77
   },
