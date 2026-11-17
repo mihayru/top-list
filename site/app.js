@@ -112,8 +112,12 @@
   function srcBlock(o, p) {
     const derived = o.data_type === "derived";
     const pct = o.percent != null ? `<div class="pct">Процент источника: <b>${esc(o.percent)}%</b> — ${esc(o.percent_meaning || "смысл не указан")}</div>` : "";
-    const photos = (o.photos || []).map((ph, i) =>
-      `<a href="${esc(safeUrl(ph.url))}" target="_blank" rel="noopener">📷 фото ${i + 1}${ph.date ? " (" + fmtDate(ph.date) + ")" : ""}</a>`).join("");
+    const gallery = (o.photos || []).length ? `<div class="gallery">${o.photos.map((ph, i) =>
+      `<a class="ph" href="${esc(safeUrl(ph.url))}" target="_blank" rel="noopener">
+         <img src="${esc(safeUrl(ph.url))}" loading="lazy" decoding="async" referrerpolicy="no-referrer"
+              alt="${esc(ph.caption || "фото листвы")}" onerror="this.parentNode.classList.add('broken')">
+         <span>📷 ${ph.date ? fmtDate(ph.date) + " (" + agoText(ph.date) + ")" : "фото " + (i + 1)}</span></a>`).join("")}</div>` : "";
+    const photos = "";
     const news = o.news ? `<div class="cm">Новость: <a href="${esc(safeUrl(o.news.url))}" target="_blank" rel="noopener nofollow">${esc(o.news.title || "ссылка")}</a>${o.news.date ? " · " + fmtDate(o.news.date) : ""}</div>` : "";
     const fc = (o.forecast_start || o.forecast_end) ? `<div class="dates">Прогноз пика: <b>${fmtDate(o.forecast_start)}${o.forecast_end ? " – " + fmtDate(o.forecast_end) : ""}</b></div>` : "";
     const g = gloss(o.comment);
@@ -130,6 +134,7 @@
         <span>Публикация/обновление: ${fmtDT(o.published_at)}</span>
         <span>Проверено нами: ${fmtDT(o.fetched_at)}${o.source_stale ? " ⚠️ источник сейчас недоступен — показан последний успешный сбор" : ""}</span>
       </div>
+      ${gallery}
       ${fc}${pct}
       ${o.comment ? `<div class="cm">${esc(o.comment)}</div>` : ""}
       ${g ? `<div class="gloss">≈ ${esc(g)}</div>` : ""}
@@ -385,6 +390,6 @@
   document.addEventListener("visibilitychange", () => {
     if (document.visibilityState === "visible" && state.data && hoursAgo(state.data.generated_at) > 1) load();
   });
-  window.KoyoApp = { get data() { return state.data; }, render: () => state.data && render(), reload: load };
+  window.KoyoApp = { get data() { return state.data; }, render: () => state.data && render(), reload: load, detailHTML };
   load();
 })();

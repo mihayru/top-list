@@ -193,6 +193,7 @@
 
   // ---------------------------------------------------------------- Routes view
   let curDate = null;
+  const openStops = new Set();
   function pickDefaultDate() {
     const ds = tripDates(); const t = tokyoToday();
     return ds.includes(t) ? t : (ds.find(d => d > t) || ds[ds.length - 1]);
@@ -233,9 +234,10 @@
         const vis = U.visited[s.id];
         const sc = P.scoreOn(p, curDate, d.today);
         return `<li class="stop${vis ? " visited" : ""}" data-id="${esc(s.id)}">
-          <div class="st-top">
+          <div class="st-top" role="button" tabindex="0" aria-expanded="${openStops.has(s.id)}">
             <span class="time">${s.arrive != null ? "~" + P.fmtTime(s.arrive) : ""}</span>
             <span class="sname">${s.pinned ? "📌 " : ""}${esc(p.ru)} <small>${esc(p.en)} · ${esc(p.ja)}</small></span>
+            <span class="chev" aria-hidden="true">${openStops.has(s.id) ? "▴" : "▾"}</span>
             <span class="sscore" style="background:${sc >= 85 ? "#b3001f" : sc >= 70 ? "#d6331c" : sc >= 55 ? "#e0701f" : "#c79a1c"}">${sc ?? "—"}</span>
           </div>
           <div class="st-meta">${i > 0 && s.travel ? `🚶/🚌 ~${s.travel} мин (${s.km} км) · ` : ""}<span class="pill" style="background:var(--${esc(p.status)})">${esc(STATUS_RU[p.status] || p.status)}</span> ${esc(p.verdict?.ru || "")}
@@ -246,7 +248,8 @@
             <button class="act" data-a="remove">Убрать</button>
             <a class="act" href="${esc(p.gmaps)}" target="_blank" rel="noopener">Карта</a>
             <select class="act" data-a="move"><option value="">→ день</option>${ds.filter(x => x !== curDate).map(x => `<option value="${x}">${esc(fmtDay(x))}</option>`).join("")}</select>
-          </div></li>`;
+          </div>
+          <div class="stop-detail"${openStops.has(s.id) ? "" : " hidden"}>${openStops.has(s.id) ? window.KoyoApp.detailHTML(p) : ""}</div></li>`;
       }).join("");
       body = `<div class="plancard">
         <div class="ph"><b>${esc(fmtDay(curDate))}</b>${plan.district ? ` · ${esc(plan.district)}` : ""}</div>
@@ -274,6 +277,17 @@
     $("#rebuildBtn")?.addEventListener("click", () => rebuild(curDate));
     root.querySelectorAll(".stop").forEach(li => {
       const id = li.dataset.id;
+      const top = li.querySelector(".st-top"), det = li.querySelector(".stop-detail");
+      const toggle = () => {
+        if (!det) return;
+        const p = byId().get(id); if (!p) return;
+        if (det.hidden) { det.innerHTML = window.KoyoApp.detailHTML(p); det.hidden = false; openStops.add(id); }
+        else { det.hidden = true; openStops.delete(id); }
+        top.setAttribute("aria-expanded", String(!det.hidden));
+        const c = li.querySelector(".chev"); if (c) c.textContent = det.hidden ? "▾" : "▴";
+      };
+      top?.addEventListener("click", toggle);
+      top?.addEventListener("keydown", e => { if (e.key === "Enter" || e.key === " ") { e.preventDefault(); toggle(); } });
       li.querySelectorAll("[data-a]").forEach(el => {
         const a = el.dataset.a;
         if (a === "move") el.addEventListener("change", e => { if (e.target.value) moveStop(curDate, e.target.value, id); });
