@@ -1,7 +1,7 @@
 /* Offline support: app shell cache-first, data network-first (falls back to last copy). */
-const SHELL = "koyo-shell-v9";
+const SHELL = "koyo-shell-v10";
 const DATA = "koyo-data";
-const ASSETS = ["./", "index.html", "style.css", "app.js", "planner.js", "diversity.js", "icons.js", "user.js", "manifest.webmanifest", "icon.svg"];
+const ASSETS = ["./", "index.html", "style.css", "app.js", "planner.js", "diversity.js", "icons.js", "food-core.js", "food.js", "food-config.js", "user.js", "manifest.webmanifest", "icon.svg"];
 self.addEventListener("install", e => { e.waitUntil(caches.open(SHELL).then(c => c.addAll(ASSETS)).then(() => self.skipWaiting())); });
 self.addEventListener("activate", e => {
   e.waitUntil(caches.keys().then(ks => Promise.all(ks.filter(k => k !== SHELL && k !== DATA).map(k => caches.delete(k)))).then(() => self.clients.claim()));

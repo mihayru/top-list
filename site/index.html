@@ -21,9 +21,10 @@
 </header>
 
 <nav class="maintabs" aria-label="Разделы">
-  <button data-view="leaf" aria-selected="true">🍁 Листва</button>
-  <button data-view="routes" aria-selected="false">🗓 Маршруты</button>
-  <button data-view="visited" aria-selected="false">✓ Посещённые</button>
+  <button data-view="leaf" aria-selected="true"><span class="ti" aria-hidden="true">🍁</span><span class="tl">Листва</span></button>
+  <button data-view="routes" aria-selected="false"><span class="ti" aria-hidden="true">🗓</span><span class="tl">Маршруты</span></button>
+  <button data-view="visited" aria-selected="false"><span class="ti" aria-hidden="true">✓</span><span class="tl">Посещённые</span></button>
+  <button data-view="food" aria-selected="false"><span class="ti" aria-hidden="true">🍜</span><span class="tl">Где поесть</span></button>
 </nav>
 <div id="flash" class="flash" hidden></div>
 <main>
@@ -90,6 +91,7 @@
 </div>
 <section id="view-routes" hidden></section>
 <section id="view-visited" hidden></section>
+<section id="view-food" hidden></section>
   <footer class="foot">
     <p>Данные: Sōda Kyoto (JR東海), JR Odekake (JR西日本), Weathernews, Japan Explorers, Walkerplus; Japan-Guide — ручной импорт. Все права на данные и фото — у первоисточников; ссылки ведут на оригинал. Время — Asia/Tokyo.</p>
     <p id="unmatched"></p>
@@ -117,5 +119,8 @@
 <script src="planner.js?v=__V__" defer></script>
 <script src="app.js?v=__V__" defer></script>
 <script src="user.js?v=__V__" defer></script>
+<script src="food-config.js?v=__V__" defer></script>
+<script src="food-core.js?v=__V__" defer></script>
+<script src="food.js?v=__V__" defer></script>
 </body>
 </html>

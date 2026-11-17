@@ -33,7 +33,10 @@ jobs:
         run: python -m pytest -q tests
       - name: Route planner tests
         continue-on-error: true
-        run: node --test tests/js/planner.test.js tests/js/planner2.test.js tests/js/transport.test.js tests/js/diversity.test.js tests/js/home.test.js
+        run: node --test tests/js/planner.test.js tests/js/planner2.test.js tests/js/transport.test.js tests/js/diversity.test.js tests/js/home.test.js tests/js/food.test.js
+      - name: Food proxy tests (mocked Google/Claude, no keys)
+        continue-on-error: true
+        run: cd worker && npm install --no-audit --no-fund && npm test
       - name: Collect all sources (each isolated; failures fall back to last snapshot)
         run: python -m collector.run
       - name: Commit data

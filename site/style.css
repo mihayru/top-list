@@ -326,3 +326,60 @@ a { overflow-wrap: anywhere; }
 .stop.c .st-sub { margin: 2px 0 5px; }
 .leg-b { min-height: 30px; }
 .stops { gap: 2px; }
+
+/* ================= «Где поесть» ================= */
+.maintabs { grid-template-columns: repeat(4, minmax(0, 1fr)); }
+.maintabs button { font-size: 13.5px; padding: 8px 2px; }
+@media (max-width: 420px) { .maintabs button { font-size: 12.5px; padding: 8px 1px; } }
+@media (max-width: 350px) { .maintabs button { font-size: 11.5px; } }
+#view-food { padding-top: 6px; }
+.fhead { display: grid; gap: 8px; margin-bottom: 8px; min-width: 0; }
+.fbtns { display: flex; flex-wrap: wrap; gap: 8px; align-items: center; }
+.fbtns .btn.big { min-height: 48px; }
+.fbtns .act { min-height: 44px; }
+.fwhere { display: flex; gap: 6px; min-width: 0; }
+.fwhere input { flex: 1 1 auto; min-width: 0; font-size: 16px; padding: 9px 10px; border-radius: 10px; border: 1px solid var(--line); background: var(--card); color: var(--ink); }
+.fwhere .act { min-height: 44px; flex: 0 0 auto; }
+.fchips { display: flex; gap: 6px; overflow-x: auto; scrollbar-width: none; padding: 2px 0 6px; overscroll-behavior-x: contain; -webkit-overflow-scrolling: touch; }
+.fchips::-webkit-scrollbar { display: none; }
+.fchip { flex: 0 0 auto; min-height: 40px; border: 1px solid var(--line); background: var(--card); color: var(--ink); border-radius: 999px; padding: 6px 12px; font: 600 13.5px/1.1 inherit; font-family: inherit; white-space: nowrap; }
+.fchip[aria-pressed="true"] { background: var(--ink); color: var(--bg); border-color: var(--ink); }
+.fpanel { background: var(--card); border: 1px solid var(--line); border-radius: 14px; padding: 0 12px 8px; margin: 8px 0; min-width: 0; }
+.fpanel summary { padding: 12px 0; font-weight: 700; cursor: pointer; }
+.fpanel input[type=url] { width: 100%; font-size: 15px; padding: 7px; border: 1px solid var(--line); border-radius: 8px; background: var(--card); color: var(--ink); margin-top: 4px; }
+.ftog { display: flex; gap: 8px; align-items: flex-start; font-size: 13.5px; margin: 6px 0; min-width: 0; }
+.ftog input { width: 20px; height: 20px; flex: 0 0 auto; }
+.fstate { background: var(--chip); border-radius: 12px; padding: 10px 12px; margin: 8px 0; font-size: 14px; }
+.fstate code { overflow-wrap: anywhere; }
+.fsum-line { font-size: 13px; color: var(--muted); margin: 6px 2px; overflow-wrap: anywhere; }
+.flist { display: grid; gap: 8px; }
+.fcard { background: var(--card); border: 1px solid var(--line); border-radius: 14px; padding: 8px 10px; min-width: 0; display: grid; gap: 3px; }
+.fc-top { display: grid; grid-template-columns: auto minmax(0, 1fr); gap: 8px; align-items: center; }
+.fc-ic { font-size: 20px; width: 28px; text-align: center; }
+.fc-ph { width: 44px; height: 44px; object-fit: cover; border-radius: 8px; background: var(--chip); }
+.fc-nm { margin: 0; font-size: 15.5px; line-height: 1.25; min-width: 0; display: -webkit-box; -webkit-line-clamp: 2; -webkit-box-orient: vertical; overflow: hidden; overflow-wrap: anywhere; }
+.fc-l { display: flex; flex-wrap: wrap; gap: 2px 6px; font-size: 13px; color: var(--muted); min-width: 0; }
+.fc-l > span { min-width: 0; overflow-wrap: anywhere; }
+.fc-r { color: var(--ink); font-weight: 700; }
+.fc-r small { color: var(--muted); font-weight: 500; }
+.fo.ok { color: #1d7a35; font-weight: 600; } .fo.warn { color: #b06a00; font-weight: 600; } .fo.bad { color: #b3001f; font-weight: 600; } .fo.unk { color: var(--muted); }
+.fc-act { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 6px; margin-top: 4px; }
+.fa { min-height: 44px; min-width: 0; display: inline-flex; align-items: center; justify-content: center; border: 1px solid var(--line); border-radius: 10px; background: var(--chip); color: var(--ink);
+  font: 600 13px/1.1 inherit; font-family: inherit; text-decoration: none; white-space: nowrap; overflow: hidden; text-overflow: ellipsis; padding: 0 4px; }
+.fa.sum[aria-expanded="true"] { background: var(--ink); color: var(--bg); }
+.fsum { border-top: 1px solid var(--line); margin-top: 6px; padding-top: 6px; font-size: 13.5px; display: grid; gap: 6px; min-width: 0; overflow-wrap: anywhere; }
+.fs-b b { display: block; font-size: 13px; }
+.fs-b p { margin: 2px 0 0; }
+.fs-b small, .fs-meta { color: var(--muted); font-size: 12px; }
+.fs-note { background: var(--chip); border-radius: 8px; padding: 6px 8px; font-size: 13px; }
+.fs-load { color: var(--muted); font-size: 13px; padding: 6px 0; }
+.fs-foot a { font-weight: 600; }
+.fhow { font-size: 13px; margin: 10px 0; }
+.fhow summary { color: var(--muted); cursor: pointer; min-height: 32px; }
+
+.maintabs button { display: flex; align-items: center; justify-content: center; gap: 4px; }
+.maintabs .tl { min-width: 0; overflow: hidden; text-overflow: ellipsis; }
+@media (max-width: 430px) {
+  .maintabs button { flex-direction: column; gap: 1px; padding: 6px 1px; font-size: 11.5px; line-height: 1.15; }
+  .maintabs .ti { font-size: 16px; }
+}

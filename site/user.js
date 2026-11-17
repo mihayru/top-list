@@ -827,12 +827,13 @@
 
   // ---------------------------------------------------------------- navigation
   function showView(name) {
-    ["leaf", "routes", "visited"].forEach(v => { const el = $("#view-" + v); if (el) el.hidden = v !== name; });
+    ["leaf", "routes", "visited", "food"].forEach(v => { const el = $("#view-" + v); if (el) el.hidden = v !== name; });
     document.querySelectorAll(".maintabs button").forEach(b => b.setAttribute("aria-selected", String(b.dataset.view === name)));
     try { sessionStorage.setItem("koyo.view", name); } catch (e) { /* ignore */ }
     if (name === "routes") renderRoutes();
     if (name === "visited") renderVisited();
     if (name === "leaf") renderLightups();
+    if (name === "food" && window.KoyoFood) window.KoyoFood.render();
     window.scrollTo(0, 0);
   }
   function refreshAll() {
@@ -855,7 +856,7 @@
     initial = sessionStorage.getItem("koyo.view") || location.hash.replace("#", "") || "leaf";
     leafMode = sessionStorage.getItem("koyo.leafmode") || "places";
   } catch (e) { /* ignore */ }
-  if (!["leaf", "routes", "visited"].includes(initial)) initial = "leaf";
+  if (!["leaf", "routes", "visited", "food"].includes(initial)) initial = "leaf";
 
   window.KoyoUser = {
     decorateCard, onData: () => { renderRoutes(); renderVisited(); renderLightups(); },

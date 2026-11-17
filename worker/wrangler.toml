@@ -1,0 +1,16 @@
+# Cloudflare Worker: secure proxy for KOYO RADAR «Где поесть».
+# Secrets (never in the repo):  wrangler secret put GOOGLE_MAPS_KEY
+#                               wrangler secret put ANTHROPIC_API_KEY   (only if ALLOW_LLM_REVIEW_SUMMARY = "true")
+name = "koyo-food-proxy"
+main = "src/index.js"
+compatibility_date = "2024-11-01"
+compatibility_flags = ["nodejs_compat"]
+
+[vars]
+ALLOWED_ORIGINS = "https://mihayru.github.io"
+# LLM summaries of raw Google reviews are OFF by default: Google Maps Platform terms restrict
+# creating derivative content from Places data. Read worker/README.md before turning this on.
+ALLOW_LLM_REVIEW_SUMMARY = "false"
+# Soft per-IP limits (requests per minute) — real cost protection is the per-day quota in Google Cloud.
+RATE_SEARCH_PER_MIN = "12"
+RATE_SUMMARY_PER_MIN = "6"
