@@ -22,11 +22,13 @@ from .adapters.manual import Manual
 from .adapters.souda import Souda
 from .adapters.walkerplus import Walkerplus
 from .adapters.weathernews import Weathernews
+from .details import collect_details, needs_refresh
+from .lightups import build_lightups, place_hours
 from .http import Fetcher
 from .merge import (TYPE_RU, assess, forecast_info, koyo_score, project_stage, verdict)
 from .places import Registry
 from .statuses import RU, STAGES
-from .util import iso, now_jst
+from .util import iso, norm_name, now_jst
 
 ROOT = Path(__file__).resolve().parents[1]
 DATA = ROOT / "data"
@@ -176,7 +178,7 @@ def gmaps(p, lat, lon):
     return f"https://www.google.com/maps/search/?api=1&query={quote(p['ja'] + ' 京都')}"
 
 
-def build(results, reg: Registry, now):
+def build(results, reg: Registry, now, details=None):
     today = now.date()
     by_place: dict[str, list[dict]] = {}
     unmatched = []
@@ -273,9 +275,12 @@ def build(results, reg: Registry, now):
             "observations": obs_out,
             "history": history.get(pid, []),
             "n_sources": len({o["source"] for o in obs}),
+            "visit_min": p.get("visit_min"),
+            "hours": place_hours(details, pid),
         })
 
     places_out.sort(key=lambda x: (-(x["score"] or -1), x["id"]))
+    lightups = build_lightups(details, reg, {p["id"]: p for p in places_out})
     sources_out = []
     for sid, r in results.items():
         sources_out.append({k: r.get(k) for k in ("id", "name", "home", "kind", "description", "status", "error",
@@ -301,6 +306,8 @@ def build(results, reg: Registry, now):
                                                                {"id": "CONFLICT", "ru": RU["CONFLICT"]}],
         "places": places_out,
         "unmatched": unmatched,
+        "lightups": lightups,
+        "details_fetched_at": (details or {}).get("fetched_at"),
     }
 
 
@@ -313,7 +320,15 @@ def main(argv=None):
     reg = Registry()
     results, log = collect(set(args.only) if args.only else None, args.offline, now)
     append_history(results, now.date())
-    out = build(results, reg, now)
+    details = load_json(SNAP / "details.json", None)
+    if not args.offline and needs_refresh(details, now):
+        try:
+            wids = {k: pid for (src, k), pid in reg.by_key.items() if src == "walkerplus"}
+            details = collect_details(Fetcher(), now, wids, log=lambda m: print(m, file=sys.stderr))
+            save_json(SNAP / "details.json", details)
+        except Exception as e:  # noqa: BLE001 — details are optional
+            print(f"[error] details: {e}", file=sys.stderr)
+    out = build(results, reg, now, details)
     save_json(OUT, out, compact=True)
     save_json(DATA / "last_run.json", {"generated_at": out["generated_at"], "requests": log,
                                        "sources": [{k: s.get(k) for k in ("id", "status", "error", "count", "matched")}

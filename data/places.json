@@ -119,7 +119,8 @@
     "Sanzen-in",
     "大原三千院",
     "三千院門跡"
-   ]
+   ],
+   "visit_min": 60
   },
   {
    "id": "jakkoin",
@@ -142,7 +143,8 @@
      "ar0726e446148"
     ]
    },
-   "aliases": []
+   "aliases": [],
+   "visit_min": 45
   },
   {
    "id": "hosenin",
@@ -162,7 +164,8 @@
      "ar0726e13168"
     ]
    },
-   "aliases": []
+   "aliases": [],
+   "visit_min": 40
   },
   {
    "id": "jikkoin",
@@ -182,7 +185,8 @@
      "ar0726e13167"
     ]
    },
-   "aliases": []
+   "aliases": [],
+   "visit_min": 30
   },
   {
    "id": "shorinin",
@@ -196,7 +200,8 @@
      "shourinin"
     ]
    },
-   "aliases": []
+   "aliases": [],
+   "visit_min": 25
   },
   {
    "id": "kochidani",
@@ -216,7 +221,8 @@
    "aliases": [],
    "lat": 35.138134,
    "lon": 135.828026,
-   "coord_source": "walkerplus_map"
+   "coord_source": "walkerplus_map",
+   "visit_min": 40
   },
   {
    "id": "hakuryuen",
@@ -236,7 +242,8 @@
    "aliases": [],
    "lat": 35.096766,
    "lon": 135.76444,
-   "coord_source": "walkerplus_map"
+   "coord_source": "walkerplus_map",
+   "visit_min": 50
   },
   {
    "id": "kifune",
@@ -259,7 +266,8 @@
      "ar0726e13175"
     ]
    },
-   "aliases": []
+   "aliases": [],
+   "visit_min": 40
   },
   {
    "id": "kibune_area",
@@ -273,7 +281,8 @@
      "貴船周辺"
     ]
    },
-   "aliases": []
+   "aliases": [],
+   "visit_min": 35
   },
   {
    "id": "kurama",
@@ -290,7 +299,8 @@
      "ar0726e13174"
     ]
    },
-   "aliases": []
+   "aliases": [],
+   "visit_min": 90
   },
   {
    "id": "shimyoin",
@@ -310,7 +320,8 @@
      "ar0726e519070"
     ]
    },
-   "aliases": []
+   "aliases": [],
+   "visit_min": 40
   },
   {
    "id": "jingoji",
@@ -341,7 +352,8 @@
     "Jingo-ji",
     "Jingō-ji",
     "神護寺"
-   ]
+   ],
+   "visit_min": 75
   },
   {
    "id": "saimyoji",
@@ -361,7 +373,8 @@
    "aliases": [],
    "lat": 35.057202,
    "lon": 135.674929,
-   "coord_source": "walkerplus_map"
+   "coord_source": "walkerplus_map",
+   "visit_min": 35
   },
   {
    "id": "kozanji",
@@ -381,7 +394,8 @@
    "aliases": [],
    "lat": 35.060108,
    "lon": 135.678569,
-   "coord_source": "japan_explorers_spot_page"
+   "coord_source": "japan_explorers_spot_page",
+   "visit_min": 45
   },
   {
    "id": "takao_area",
@@ -395,7 +409,8 @@
      "26204"
     ]
    },
-   "aliases": []
+   "aliases": [],
+   "visit_min": 35
   },
   {
    "id": "parkway",
@@ -409,7 +424,8 @@
      "16107"
     ]
    },
-   "aliases": []
+   "aliases": [],
+   "visit_min": 35
   },
   {
    "id": "arashiyama",
@@ -440,7 +456,8 @@
     "Togetsukyo",
     "渡月橋",
     "嵐山"
-   ]
+   ],
+   "visit_min": 60
   },
   {
    "id": "tenryuji",
@@ -470,7 +487,8 @@
     "Tenryuji",
     "Tenryu-ji",
     "Tenryū-ji"
-   ]
+   ],
+   "visit_min": 75
   },
   {
    "id": "jojakkoji",
@@ -496,7 +514,8 @@
      "ar0726e13149"
     ]
    },
-   "aliases": []
+   "aliases": [],
+   "visit_min": 45
   },
   {
    "id": "nisonin",
@@ -519,7 +538,8 @@
      "ar0726e13150"
     ]
    },
-   "aliases": []
+   "aliases": [],
+   "visit_min": 40
   },
   {
    "id": "giouji",
@@ -542,7 +562,8 @@
      "ar0726e372644"
     ]
    },
-   "aliases": []
+   "aliases": [],
+   "visit_min": 30
   },
   {
    "id": "hogonin",
@@ -562,7 +583,8 @@
      "ar0726e323493"
     ]
    },
-   "aliases": []
+   "aliases": [],
+   "visit_min": 40
   },
   {
    "id": "hokyoin",
@@ -588,7 +610,8 @@
      "ar0726e13151"
     ]
    },
-   "aliases": []
+   "aliases": [],
+   "visit_min": 35
   },
   {
    "id": "seiryoji",
@@ -608,7 +631,8 @@
      "ar0726e444556"
     ]
    },
-   "aliases": []
+   "aliases": [],
+   "visit_min": 40
   },
   {
    "id": "daikakuji",
@@ -634,7 +658,8 @@
      "ar0726e154675"
     ]
    },
-   "aliases": []
+   "aliases": [],
+   "visit_min": 60
   },
   {
    "id": "rokuoin",
@@ -654,7 +679,8 @@
      "ar0726e13148"
     ]
    },
-   "aliases": []
+   "aliases": [],
+   "visit_min": 35
   },
   {
    "id": "okochi",
@@ -674,7 +700,8 @@
      "ar0726e519266"
     ]
    },
-   "aliases": []
+   "aliases": [],
+   "visit_min": 50
   },
   {
    "id": "adashino",
@@ -691,7 +718,8 @@
      "ar0726e372650"
     ]
    },
-   "aliases": []
+   "aliases": [],
+   "visit_min": 35
   },
   {
    "id": "otagi",
@@ -708,7 +736,8 @@
      "ar0726e520596"
     ]
    },
-   "aliases": []
+   "aliases": [],
+   "visit_min": 40
   },
   {
    "id": "torokko",
@@ -725,7 +754,8 @@
      "ar0726e372783"
     ]
    },
-   "aliases": []
+   "aliases": [],
+   "visit_min": 35
   },
   {
    "id": "saihoji",
@@ -742,7 +772,8 @@
    "aliases": [],
    "lat": 34.991961,
    "lon": 135.683314,
-   "coord_source": "japan_explorers_spot_page"
+   "coord_source": "japan_explorers_spot_page",
+   "visit_min": 45
   },
   {
    "id": "jizoin",
@@ -759,7 +790,8 @@
    "aliases": [],
    "lat": 34.990417,
    "lon": 135.686,
-   "coord_source": "japan_explorers_spot_page"
+   "coord_source": "japan_explorers_spot_page",
+   "visit_min": 45
   },
   {
    "id": "hozukyo",
@@ -779,7 +811,8 @@
      "ar0726e12691"
     ]
    },
-   "aliases": []
+   "aliases": [],
+   "visit_min": 35
   },
   {
    "id": "tofukuji",
@@ -810,7 +843,8 @@
     "Tofuku-ji",
     "Tōfuku-ji",
     "通天橋"
-   ]
+   ],
+   "visit_min": 75
   },
   {
    "id": "tofukuji_komyoin",
@@ -824,7 +858,8 @@
      "tofukuji-komyoin"
     ]
    },
-   "aliases": []
+   "aliases": [],
+   "visit_min": 30
   },
   {
    "id": "sennyuji",
@@ -850,7 +885,8 @@
      "ar0726e323191"
     ]
    },
-   "aliases": []
+   "aliases": [],
+   "visit_min": 50
   },
   {
    "id": "imakumano",
@@ -870,7 +906,8 @@
      "ar0726e446504"
     ]
    },
-   "aliases": []
+   "aliases": [],
+   "visit_min": 30
   },
   {
    "id": "chishakuin",
@@ -893,7 +930,8 @@
      "ar0726e565840"
     ]
    },
-   "aliases": []
+   "aliases": [],
+   "visit_min": 40
   },
   {
    "id": "nanzenji",
@@ -919,7 +957,8 @@
    "aliases": [
     "Nanzenji",
     "Nanzen-ji"
-   ]
+   ],
+   "visit_min": 60
   },
   {
    "id": "tenjuan",
@@ -939,7 +978,8 @@
    "aliases": [],
    "lat": 35.010672,
    "lon": 135.792288,
-   "coord_source": "walkerplus_map"
+   "coord_source": "walkerplus_map",
+   "visit_min": 35
   },
   {
    "id": "eikando",
@@ -970,7 +1010,8 @@
     "Zenrinji",
     "禅林寺",
     "永観堂禅林寺"
-   ]
+   ],
+   "visit_min": 75
   },
   {
    "id": "shinnyodo",
@@ -993,7 +1034,8 @@
      "ar0726e13138"
     ]
    },
-   "aliases": []
+   "aliases": [],
+   "visit_min": 40
   },
   {
    "id": "kurodani",
@@ -1016,7 +1058,8 @@
    "aliases": [],
    "lat": 35.019649,
    "lon": 135.788055,
-   "coord_source": "walkerplus_map"
+   "coord_source": "walkerplus_map",
+   "visit_min": 45
   },
   {
    "id": "honenin",
@@ -1036,7 +1079,8 @@
    "aliases": [],
    "lat": 35.023972,
    "lon": 135.797417,
-   "coord_source": "japan_explorers_spot_page"
+   "coord_source": "japan_explorers_spot_page",
+   "visit_min": 25
   },
   {
    "id": "tetsugaku",
@@ -1059,7 +1103,8 @@
    "aliases": [
     "Philosopher's Path",
     "Tetsugaku no Michi"
-   ]
+   ],
+   "visit_min": 40
   },
   {
    "id": "murinan",
@@ -1082,7 +1127,8 @@
    "aliases": [],
    "lat": 35.011584,
    "lon": 135.787082,
-   "coord_source": "walkerplus_map"
+   "coord_source": "walkerplus_map",
+   "visit_min": 40
   },
   {
    "id": "ginkakuji",
@@ -1106,7 +1152,8 @@
    ],
    "lat": 35.027021,
    "lon": 135.798205,
-   "coord_source": "walkerplus_map"
+   "coord_source": "walkerplus_map",
+   "visit_min": 60
   },
   {
    "id": "anrakuji",
@@ -1123,7 +1170,8 @@
      "ar0726e618082"
     ]
    },
-   "aliases": []
+   "aliases": [],
+   "visit_min": 30
   },
   {
    "id": "heian",
@@ -1140,7 +1188,8 @@
    "aliases": [],
    "lat": 35.01665,
    "lon": 135.782428,
-   "coord_source": "walkerplus_map"
+   "coord_source": "walkerplus_map",
+   "visit_min": 40
   },
   {
    "id": "kiyomizu",
@@ -1169,7 +1218,8 @@
    "aliases": [
     "Kiyomizudera",
     "Kiyomizu"
-   ]
+   ],
+   "visit_min": 75
   },
   {
    "id": "kodaiji",
@@ -1195,7 +1245,8 @@
      "ar0726e13211"
     ]
    },
-   "aliases": []
+   "aliases": [],
+   "visit_min": 50
   },
   {
    "id": "entokuin",
@@ -1212,7 +1263,8 @@
      "ar0726e327189"
     ]
    },
-   "aliases": []
+   "aliases": [],
+   "visit_min": 35
   },
   {
    "id": "kenninji",
@@ -1232,7 +1284,8 @@
      "ar0726e445203"
     ]
    },
-   "aliases": []
+   "aliases": [],
+   "visit_min": 45
   },
   {
    "id": "shorenin",
@@ -1255,7 +1308,8 @@
      "ar0726e325237"
     ]
    },
-   "aliases": []
+   "aliases": [],
+   "visit_min": 45
   },
   {
    "id": "chionin",
@@ -1275,7 +1329,8 @@
      "ar0726e154672"
     ]
    },
-   "aliases": []
+   "aliases": [],
+   "visit_min": 60
   },
   {
    "id": "maruyama",
@@ -1292,7 +1347,8 @@
      "円山公園"
     ]
    },
-   "aliases": []
+   "aliases": [],
+   "visit_min": 30
   },
   {
    "id": "shogunzuka",
@@ -1312,7 +1368,8 @@
      "ar0726e325234"
     ]
    },
-   "aliases": []
+   "aliases": [],
+   "visit_min": 40
   },
   {
    "id": "rurikoin",
@@ -1338,7 +1395,8 @@
    "aliases": [
     "Rurikoin",
     "Ruriko-in"
-   ]
+   ],
+   "visit_min": 50
   },
   {
    "id": "yase",
@@ -1358,7 +1416,8 @@
      "ar0726e373500"
     ]
    },
-   "aliases": []
+   "aliases": [],
+   "visit_min": 30
   },
   {
    "id": "eiden_tunnel",
@@ -1378,7 +1437,8 @@
      "ar0726e373592"
     ]
    },
-   "aliases": []
+   "aliases": [],
+   "visit_min": 20
   },
   {
    "id": "manshuin",
@@ -1401,7 +1461,8 @@
      "ar0726e373492"
     ]
    },
-   "aliases": []
+   "aliases": [],
+   "visit_min": 45
   },
   {
    "id": "shisendo",
@@ -1421,7 +1482,8 @@
      "ar0726e327190"
     ]
    },
-   "aliases": []
+   "aliases": [],
+   "visit_min": 40
   },
   {
    "id": "enkoji",
@@ -1451,7 +1513,8 @@
     "Enkoji",
     "Enko-ji",
     "円光寺"
-   ]
+   ],
+   "visit_min": 45
   },
   {
    "id": "rengeji",
@@ -1471,7 +1534,8 @@
    "aliases": [],
    "lat": 35.06406,
    "lon": 135.799965,
-   "coord_source": "walkerplus_map"
+   "coord_source": "walkerplus_map",
+   "visit_min": 35
   },
   {
    "id": "jissoin",
@@ -1497,7 +1561,8 @@
      "ar0726e154665"
     ]
    },
-   "aliases": []
+   "aliases": [],
+   "visit_min": 35
   },
   {
    "id": "sekizan",
@@ -1520,7 +1585,8 @@
    "aliases": [],
    "lat": 35.056184,
    "lon": 135.80165,
-   "coord_source": "walkerplus_map"
+   "coord_source": "walkerplus_map",
+   "visit_min": 40
   },
   {
    "id": "saginomori",
@@ -1540,7 +1606,8 @@
    "aliases": [],
    "lat": 35.049515,
    "lon": 135.798527,
-   "coord_source": "walkerplus_map"
+   "coord_source": "walkerplus_map",
+   "visit_min": 20
   },
   {
    "id": "konpukuji",
@@ -1560,7 +1627,8 @@
    "aliases": [],
    "lat": 35.042144,
    "lon": 135.795211,
-   "coord_source": "walkerplus_map"
+   "coord_source": "walkerplus_map",
+   "visit_min": 30
   },
   {
    "id": "entsuji",
@@ -1577,7 +1645,8 @@
    "aliases": [],
    "lat": 35.019611,
    "lon": 135.770139,
-   "coord_source": "japan_explorers_spot_page"
+   "coord_source": "japan_explorers_spot_page",
+   "visit_min": 40
   },
   {
    "id": "bishamondo",
@@ -1605,7 +1674,8 @@
    },
    "aliases": [
     "Bishamondo"
-   ]
+   ],
+   "visit_min": 45
   },
   {
    "id": "anshoji",
@@ -1625,7 +1695,8 @@
    "aliases": [],
    "lat": 34.995716,
    "lon": 135.815749,
-   "coord_source": "walkerplus_map"
+   "coord_source": "walkerplus_map",
+   "visit_min": 30
   },
   {
    "id": "daigoji",
@@ -1654,7 +1725,8 @@
    "aliases": [
     "Daigoji",
     "Daigo-ji"
-   ]
+   ],
+   "visit_min": 90
   },
   {
    "id": "kajuji",
@@ -1677,7 +1749,8 @@
      "ar0726e446329"
     ]
    },
-   "aliases": []
+   "aliases": [],
+   "visit_min": 40
   },
   {
    "id": "zuishinin",
@@ -1700,7 +1773,8 @@
      "ar0726e154661"
     ]
    },
-   "aliases": []
+   "aliases": [],
+   "visit_min": 40
   },
   {
    "id": "yamashina_canal",
@@ -1717,7 +1791,8 @@
      "山科疏水"
     ]
    },
-   "aliases": []
+   "aliases": [],
+   "visit_min": 30
   },
   {
    "id": "ryoanji",
@@ -1743,7 +1818,8 @@
      "ar0726e154659"
     ]
    },
-   "aliases": []
+   "aliases": [],
+   "visit_min": 45
   },
   {
    "id": "ninnaji",
@@ -1769,7 +1845,8 @@
      "ar0726e322496"
     ]
    },
-   "aliases": []
+   "aliases": [],
+   "visit_min": 60
   },
   {
    "id": "tojiin",
@@ -1792,7 +1869,8 @@
      "ar0726e445201"
     ]
    },
-   "aliases": []
+   "aliases": [],
+   "visit_min": 40
   },
   {
    "id": "taizoin",
@@ -1815,7 +1893,8 @@
      "ar0726e154663"
     ]
    },
-   "aliases": []
+   "aliases": [],
+   "visit_min": 40
   },
   {
    "id": "daihoin",
@@ -1835,7 +1914,8 @@
      "ar0726e373595"
     ]
    },
-   "aliases": []
+   "aliases": [],
+   "visit_min": 30
   },
   {
    "id": "hokongoin",
@@ -1855,7 +1935,8 @@
    "aliases": [],
    "lat": 35.019163,
    "lon": 135.716136,
-   "coord_source": "walkerplus_map"
+   "coord_source": "walkerplus_map",
+   "visit_min": 35
   },
   {
    "id": "kinkakuji",
@@ -1876,7 +1957,8 @@
    ],
    "lat": 35.039403,
    "lon": 135.729364,
-   "coord_source": "japan_explorers_spot_page"
+   "coord_source": "japan_explorers_spot_page",
+   "visit_min": 45
   },
   {
    "id": "kitano",
@@ -1905,7 +1987,8 @@
    "aliases": [
     "Kitano Tenmangu",
     "北野天満宮"
-   ]
+   ],
+   "visit_min": 50
   },
   {
    "id": "genkoan",
@@ -1928,7 +2011,8 @@
      "ar0726e13169"
     ]
    },
-   "aliases": []
+   "aliases": [],
+   "visit_min": 35
   },
   {
    "id": "joshoji",
@@ -1948,7 +2032,8 @@
      "ar0726e372635"
     ]
    },
-   "aliases": []
+   "aliases": [],
+   "visit_min": 35
   },
   {
    "id": "kamigamo",
@@ -1968,7 +2053,8 @@
      "ar0726e393283"
     ]
    },
-   "aliases": []
+   "aliases": [],
+   "visit_min": 40
   },
   {
    "id": "daitokuji",
@@ -1985,7 +2071,8 @@
    "aliases": [],
    "lat": 35.043889,
    "lon": 135.746111,
-   "coord_source": "japan_explorers_spot_page"
+   "coord_source": "japan_explorers_spot_page",
+   "visit_min": 50
   },
   {
    "id": "shozan",
@@ -2002,7 +2089,8 @@
      "ar0726e519074"
     ]
    },
-   "aliases": []
+   "aliases": [],
+   "visit_min": 45
   },
   {
    "id": "botanical",
@@ -2022,7 +2110,8 @@
      "ar0726e154666"
     ]
    },
-   "aliases": []
+   "aliases": [],
+   "visit_min": 60
   },
   {
    "id": "shimogamo",
@@ -2050,7 +2139,8 @@
     "下鴨神社",
     "糺の森",
     "賀茂御祖神社"
-   ]
+   ],
+   "visit_min": 40
   },
   {
    "id": "gyoen",
@@ -2073,7 +2163,8 @@
      "ar0726e373495"
     ]
    },
-   "aliases": []
+   "aliases": [],
+   "visit_min": 45
   },
   {
    "id": "rozanji",
@@ -2093,7 +2184,8 @@
    "aliases": [],
    "lat": 35.024584,
    "lon": 135.767906,
-   "coord_source": "walkerplus_map"
+   "coord_source": "walkerplus_map",
+   "visit_min": 30
   },
   {
    "id": "myokenji",
@@ -2113,7 +2205,8 @@
    "aliases": [],
    "lat": 35.034571,
    "lon": 135.754682,
-   "coord_source": "walkerplus_map"
+   "coord_source": "walkerplus_map",
+   "visit_min": 30
   },
   {
    "id": "myokakuji",
@@ -2127,7 +2220,8 @@
      "16104"
     ]
    },
-   "aliases": []
+   "aliases": [],
+   "visit_min": 45
   },
   {
    "id": "nijo",
@@ -2153,7 +2247,8 @@
      "ar0726e369200"
     ]
    },
-   "aliases": []
+   "aliases": [],
+   "visit_min": 75
   },
   {
    "id": "toji",
@@ -2176,7 +2271,8 @@
      "ar0726e123782"
     ]
    },
-   "aliases": []
+   "aliases": [],
+   "visit_min": 60
   },
   {
    "id": "shoseien",
@@ -2196,7 +2292,8 @@
      "ar0726e393292"
     ]
    },
-   "aliases": []
+   "aliases": [],
+   "visit_min": 40
   },
   {
    "id": "nishihonganji",
@@ -2210,7 +2307,8 @@
      "16103"
     ]
    },
-   "aliases": []
+   "aliases": [],
+   "visit_min": 45
   },
   {
    "id": "higashihonganji",
@@ -2227,7 +2325,8 @@
    "aliases": [],
    "lat": 34.991017,
    "lon": 135.758456,
-   "coord_source": "japan_explorers_spot_page"
+   "coord_source": "japan_explorers_spot_page",
+   "visit_min": 45
   },
   {
    "id": "umekoji",
@@ -2247,7 +2346,8 @@
      "ar0726e154662"
     ]
    },
-   "aliases": []
+   "aliases": [],
+   "visit_min": 40
   },
   {
    "id": "byodoin",
@@ -2273,7 +2373,8 @@
      "ar0726e207747"
     ]
    },
-   "aliases": []
+   "aliases": [],
+   "visit_min": 75
   },
   {
    "id": "koshoji",
@@ -2299,7 +2400,8 @@
      "ar0726e13009"
     ]
    },
-   "aliases": []
+   "aliases": [],
+   "visit_min": 30
   },
   {
    "id": "mimurotoji",
@@ -2322,7 +2424,8 @@
      "ar0726e13152"
     ]
    },
-   "aliases": []
+   "aliases": [],
+   "visit_min": 50
   },
   {
    "id": "jonangu",
@@ -2348,7 +2451,8 @@
      "ar0726e154673"
     ]
    },
-   "aliases": []
+   "aliases": [],
+   "visit_min": 45
   },
   {
    "id": "inari",
@@ -2365,7 +2469,8 @@
      "ar0726e570901"
     ]
    },
-   "aliases": []
+   "aliases": [],
+   "visit_min": 90
   },
   {
    "id": "ujigawa",
@@ -2382,7 +2487,8 @@
      "ar0726e373605"
     ]
    },
-   "aliases": []
+   "aliases": [],
+   "visit_min": 35
   },
   {
    "id": "uji_botanical",
@@ -2396,7 +2502,8 @@
      "26198"
     ]
    },
-   "aliases": []
+   "aliases": [],
+   "visit_min": 45
   },
   {
    "id": "komyoji",
@@ -2422,7 +2529,8 @@
      "ar0726e12692"
     ]
    },
-   "aliases": []
+   "aliases": [],
+   "visit_min": 45
   },
   {
    "id": "yoshiminedera",
@@ -2448,7 +2556,8 @@
      "ar0726e13133"
     ]
    },
-   "aliases": []
+   "aliases": [],
+   "visit_min": 75
   },
   {
    "id": "jurinji",
@@ -2468,7 +2577,8 @@
    "aliases": [],
    "lat": 34.944393,
    "lon": 135.657205,
-   "coord_source": "walkerplus_map"
+   "coord_source": "walkerplus_map",
+   "visit_min": 30
   },
   {
    "id": "otokunidera",
@@ -2491,7 +2601,8 @@
    "aliases": [],
    "lat": 34.936289,
    "lon": 135.689088,
-   "coord_source": "walkerplus_map"
+   "coord_source": "walkerplus_map",
+   "visit_min": 30
   },
   {
    "id": "nagaokatenmangu",
@@ -2511,7 +2622,8 @@
    "aliases": [],
    "lat": 34.922697,
    "lon": 135.686927,
-   "coord_source": "walkerplus_map"
+   "coord_source": "walkerplus_map",
+   "visit_min": 35
   },
   {
    "id": "yokokuji",
@@ -2531,7 +2643,8 @@
      "ar0726e12693"
     ]
    },
-   "aliases": []
+   "aliases": [],
+   "visit_min": 45
   },
   {
    "id": "oharano_jinja",
@@ -2551,7 +2664,8 @@
      "ar0726e13134"
     ]
    },
-   "aliases": []
+   "aliases": [],
+   "visit_min": 30
   },
   {
    "id": "shojiji",
@@ -2568,7 +2682,8 @@
      "ar0726e13132"
     ]
    },
-   "aliases": []
+   "aliases": [],
+   "visit_min": 35
   },
   {
    "id": "muko",
@@ -2585,7 +2700,8 @@
      "ar0726e521303"
     ]
    },
-   "aliases": []
+   "aliases": [],
+   "visit_min": 45
   },
   {
    "id": "shohoji_oharano",
@@ -2602,7 +2718,8 @@
    "aliases": [],
    "lat": 34.956951,
    "lon": 135.655549,
-   "coord_source": "walkerplus_map"
+   "coord_source": "walkerplus_map",
+   "visit_min": 45
   },
   {
    "id": "iwashimizu",
@@ -2622,7 +2739,8 @@
      "ar0726e12694"
     ]
    },
-   "aliases": []
+   "aliases": [],
+   "visit_min": 45
   },
   {
    "id": "ikkyuji",
@@ -2645,7 +2763,8 @@
      "ar0726e321032"
     ]
    },
-   "aliases": []
+   "aliases": [],
+   "visit_min": 45
   },
   {
    "id": "joruriji",
@@ -2665,7 +2784,8 @@
      "ar0726e154670"
     ]
    },
-   "aliases": []
+   "aliases": [],
+   "visit_min": 45
   },
   {
    "id": "kasagi",
@@ -2688,7 +2808,8 @@
      "ar0726e154669"
     ]
    },
-   "aliases": []
+   "aliases": [],
+   "visit_min": 90
   },
   {
    "id": "keihanna",
@@ -2711,7 +2832,8 @@
      "ar0726e154654"
     ]
    },
-   "aliases": []
+   "aliases": [],
+   "visit_min": 60
   },
   {
    "id": "shohoji_wazuka",
@@ -2728,7 +2850,8 @@
      "26118"
     ]
    },
-   "aliases": []
+   "aliases": [],
+   "visit_min": 45
   },
   {
    "id": "kuwayama",
@@ -2748,7 +2871,8 @@
      "ar0726e12690"
     ]
    },
-   "aliases": []
+   "aliases": [],
+   "visit_min": 45
   },
   {
    "id": "izumo",
@@ -2765,7 +2889,8 @@
      "ar0726e12689"
     ]
    },
-   "aliases": []
+   "aliases": [],
+   "visit_min": 45
   },
   {
    "id": "oomoto_ayabe",
@@ -2782,7 +2907,8 @@
      "ar0726e373274"
     ]
    },
-   "aliases": []
+   "aliases": [],
+   "visit_min": 45
   },
   {
    "id": "jozokoji",
@@ -2799,7 +2925,8 @@
    "aliases": [],
    "lat": 35.200889,
    "lon": 135.685361,
-   "coord_source": "japan_explorers_spot_page"
+   "coord_source": "japan_explorers_spot_page",
+   "visit_min": 45
   },
   {
    "id": "konoji",
@@ -2816,7 +2943,8 @@
    "aliases": [],
    "lat": 35.582814,
    "lon": 135.196669,
-   "coord_source": "japan_explorers_spot_page"
+   "coord_source": "japan_explorers_spot_page",
+   "visit_min": 45
   },
   {
    "id": "rurikei",
@@ -2833,7 +2961,8 @@
    "aliases": [],
    "lat": 35.035817,
    "lon": 135.404608,
-   "coord_source": "japan_explorers_spot_page"
+   "coord_source": "japan_explorers_spot_page",
+   "visit_min": 35
   },
   {
    "id": "oonodam",
@@ -2850,7 +2979,8 @@
      "ar0726e447039"
     ]
    },
-   "aliases": []
+   "aliases": [],
+   "visit_min": 35
   },
   {
    "id": "kongoin",
@@ -2870,7 +3000,8 @@
      "ar0726e154651"
     ]
    },
-   "aliases": []
+   "aliases": [],
+   "visit_min": 45
   },
   {
    "id": "chooanji",
@@ -2890,7 +3021,8 @@
      "ar0726e203663"
     ]
    },
-   "aliases": []
+   "aliases": [],
+   "visit_min": 45
   },
   {
    "id": "ankokuji",
@@ -2910,7 +3042,8 @@
      "ar0726e203499"
     ]
    },
-   "aliases": []
+   "aliases": [],
+   "visit_min": 45
   },
   {
    "id": "nariaiji",
@@ -2930,7 +3063,8 @@
      "ar0726e12724"
     ]
    },
-   "aliases": []
+   "aliases": [],
+   "visit_min": 45
   },
   {
    "id": "ooeyama",
@@ -2944,7 +3078,8 @@
      "26109"
     ]
    },
-   "aliases": []
+   "aliases": [],
+   "visit_min": 35
   },
   {
    "id": "ryuonji",
@@ -2958,7 +3093,8 @@
      "26187"
     ]
    },
-   "aliases": []
+   "aliases": [],
+   "visit_min": 45
   },
   {
    "id": "hongan_kitayama",
@@ -2972,7 +3108,8 @@
      "16115"
     ]
    },
-   "aliases": []
+   "aliases": [],
+   "visit_min": 45
   }
  ]
 }

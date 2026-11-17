@@ -1,0 +1,24 @@
+{
+ "_comment": "Ручная сверка с официальными сайтами (2026). Записывается только то, что прямо опубликовано на официальной странице. checked_at — дата проверки.",
+ "items": {
+  "kodaiji": {"official_url": "https://www.kodaiji.com/saiji.html", "checked_at": "2026-11-17",
+              "start": "2026-10-23", "end": "2026-12-13", "open": "17:00", "close": "22:00", "last_entry": "21:30",
+              "confirmed": ["dates", "hours"], "note": "Официально: 2026年10月23日～12月13日, 9:00–21:30 受付終了 (22:00 閉門), 17:00 点灯; цена днём и вечером одинаковая."},
+  "kiyomizu": {"official_url": "https://www.kiyomizudera.or.jp/news/yakan-haikanautumn.php", "checked_at": "2026-11-17",
+               "start": "2026-11-21", "end": "2026-11-30", "open": "17:30", "close": "21:00", "last_entry": "21:00", "reservation": false,
+               "confirmed": ["dates", "hours", "reservation"], "note": "Официально: 11/21–11/30, 17:30–21:00 受付終了, 予約不要."},
+  "toji": {"official_url": "https://toji.or.jp/exhibition/2026_autumn/", "checked_at": "2026-11-17",
+           "start": "2026-10-31", "end": "2026-12-13", "open": "18:00", "close": "21:30", "last_entry": "21:00",
+           "confirmed": ["dates", "hours"], "note": "Официально: 2026/10/31–12/13, 18:00–21:30, приём до 21:00, без выходных."},
+  "eikando": {"official_url": "https://www.eikando.or.jp/haikan.html", "checked_at": "2026-11-17",
+              "start": "2026-11-20", "end": "2026-12-06", "open": "17:30", "close": "21:00", "last_entry": "20:30", "price_yen": 1000, "reservation": false,
+              "confirmed": ["dates", "hours", "price"], "note": "Официально: 令和8年11月20日～12月6日, приём 17:30–20:30 (21:00 закрытие), 1000 иен; билеты только в день посещения;寺宝展 и подсветка — с пересменкой."},
+  "chionin": {"official_url": "https://www.chion-in.or.jp/", "checked_at": "2026-11-17",
+              "start": "2026-11-17", "end": "2026-12-06",
+              "confirmed": ["dates"], "note": "Официально (главная): «2026.11.17～12.06 知恩院 秋のライトアップ2026（夜間特別拝観）». Часы — по Sōda/Walkerplus."},
+  "entokuin": {"official_url": "https://www.kodaiji.com/entoku-in/haikan.html", "checked_at": "2026-11-17",
+               "confirmed": [], "note": "На официальном сайте подсветка 2026 не найдена (указаны только дневные часы 10:00–17:00 приём). Данные о подсветке — только Walkerplus."},
+  "umekoji": {"official_url": "https://www.kyoto-ga.jp/umekouji/index.html", "checked_at": "2026-11-17",
+              "confirmed": [], "note": "На странице парка анонс «紅葉まつり 2026» не найден. Данные — только Walkerplus."}
+ }
+}

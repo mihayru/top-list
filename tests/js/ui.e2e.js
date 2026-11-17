@@ -78,6 +78,53 @@ const OUT = process.argv[3];
   s = await st();
   assert.ok(!s.plans["2026-11-18"], "18th deleted");
 
+  // Replace one day stop via UI: others kept, persisted after reload
+  await p.click('.maintabs [data-view="routes"]');
+  await p.click('.daychip[data-date="2026-11-20"]');
+  await p.click("#rebuildBtn");
+  await p.waitForFunction(() => (JSON.parse(localStorage.getItem("koyo.user.v1")).plans["2026-11-20"] || {}).stops?.length >= 3);
+  s = await st();
+  const before20 = s.plans["2026-11-20"].stops.map(x => x.id);
+  const target = before20[2];
+  await p.click(`.stop[data-id="${target}"] [data-a="replace"]`);
+  await p.waitForSelector(".replace");
+  if (OUT) await p.screenshot({ path: OUT + "/rep.png", fullPage: true });
+  const hasPick = await p.$(".replace [data-pick]");
+  if (hasPick) {
+    await p.click(".replace [data-pick]");
+    s = await st();
+    const after20 = s.plans["2026-11-20"].stops.map(x => x.id);
+    assert.ok(!after20.includes(target), "replaced");
+    before20.filter(x => x !== target).forEach(x => assert.ok(after20.includes(x), "kept " + x));
+  }
+  // Evening replace keeps the day
+  s = await st();
+  const ev = s.plans["2026-11-20"].evening || [];
+  if (ev.length) {
+    const dayJSON = JSON.stringify(s.plans["2026-11-20"].stops.map(x => x.id));
+    await p.click(`.stop[data-lu="${ev[0].id}"] [data-a="replace"]`);
+    await p.waitForSelector(".replace");
+    const pick = await p.$(".replace [data-pick]");
+    if (pick) {
+      await pick.click();
+      const s3 = await st();
+      assert.strictEqual(JSON.stringify(s3.plans["2026-11-20"].stops.map(x => x.id)), dayJSON, "day untouched");
+      assert.notStrictEqual(s3.plans["2026-11-20"].evening[0].id, ev[0].id, "evening changed");
+    }
+  }
+  const snap = JSON.stringify((await st()).plans["2026-11-20"]);
+  await p.reload({ waitUntil: "networkidle" });
+  assert.strictEqual(JSON.stringify((await st()).plans["2026-11-20"]), snap, "persisted after reload");
+  await p.click('.daychip[data-date="2026-11-20"]');
+  if (OUT) await p.screenshot({ path: OUT + "/r20.png", fullPage: true });
+
+  // Light-up list
+  await p.click('.maintabs [data-view="leaf"]');
+  await p.click('.leafmode [data-mode="lu"]');
+  await p.waitForSelector(".card.lu");
+  if (OUT) await p.screenshot({ path: OUT + "/lu.png" });
+  await p.click('.leafmode [data-mode="places"]');
+
   // Export works
   await p.click('.maintabs [data-view="visited"]');
   await p.click("#view-visited details summary");

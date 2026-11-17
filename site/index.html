@@ -28,6 +28,12 @@
 <div id="flash" class="flash" hidden></div>
 <main>
 <div id="view-leaf">
+  <div class="seg leafmode" role="group" aria-label="Что показать">
+    <button data-mode="places" aria-pressed="true">🍁 Места</button>
+    <button data-mode="lu" aria-pressed="false">🌙 Подсветки</button>
+  </div>
+  <section id="lightupList" class="list" hidden></section>
+  <div id="leafPlaces">
   <section id="weather" class="weather" hidden></section>
 
   <nav class="tabs" role="tablist" aria-label="День">
@@ -54,6 +60,7 @@
 
   <section id="summary" class="summary"></section>
   <section id="list" class="list" aria-live="polite"></section>
+  </div>
 
   <details class="panel" id="sourcesPanel">
     <summary>Источники и их состояние</summary>
