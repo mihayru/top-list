@@ -1,0 +1,33 @@
+name: Food search diagnostics
+
+# Manual: runs search-quality probes against the live Google Places API with the repo secret.
+# Output contains only counts, ranks and public restaurant data — never the key or user coordinates.
+on:
+  workflow_dispatch:
+    inputs:
+      target:
+        description: "Restaurant to diagnose (Google text query)"
+        default: "京町家鴨しゃぶ 空 京都"
+      script:
+        description: "Diagnostic script in worker/diag"
+        default: "diagnose.mjs"
+
+permissions:
+  contents: read
+
+jobs:
+  diagnose:
+    runs-on: ubuntu-latest
+    timeout-minutes: 10
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: "20"
+      - working-directory: worker
+        run: npm install --no-audit --no-fund
+      - working-directory: worker
+        env:
+          GOOGLE_MAPS_KEY: ${{ secrets.GOOGLE_MAPS_KEY }}
+          TARGET_QUERY: ${{ inputs.target }}
+        run: node "diag/${{ inputs.script }}"
