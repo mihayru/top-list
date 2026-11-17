@@ -225,7 +225,32 @@
   }
 
   // ------------------------------------------------------------------ day plan
+  function getDiversity() {
+    if (typeof self !== "undefined" && self.KoyoDiversity) return self.KoyoDiversity;
+    try { return typeof require === "function" ? require("./diversity.js") : null; } catch (e) { return null; }
+  }
+  /** Public entry. "best" (default) = the core planner exactly as before; "balance"/"diverse"
+   *  build the best plan first, then a variety-aware variant, and keep the variant only if
+   *  leaf quality, outstanding places and transport hold (see diversity.js choose()). */
   function buildPlan(data, user, date, opts = {}) {
+    const D = getDiversity();
+    const mode = opts.variety || user.settings?.variety || "best";
+    if (mode === "best" || !D || !D.MODES[mode]) return buildPlanCore(data, user, date, opts);
+    const dens = CFG.DENSITY[opts.density || user.settings?.density || CFG.DEFAULT_DENSITY] || CFG.DENSITY.rich;
+    const base = buildPlanCore(data, user, date, opts);
+    const alt = buildPlanCore(data, user, date, { ...opts, _div: D.hooks(mode) });
+    const byId = new Map(data.places.map(p => [p.id, p]));
+    const r = D.choose(base, alt, mode, { byId, zone: o => zoneCheck(o.filter(p => p && p.lat != null), dens) });
+    const plan = r.plan;
+    plan.variety = mode; plan.varietyUsed = r.used;
+    plan.monotony = r.used ? r.monoAlt : r.monoBase;
+    if (r.used) plan.notes.push(`Разнообразие: однообразие ${r.monoBase ? r.monoBase.pct + "%" : "—"} → ${r.monoAlt ? r.monoAlt.pct + "%" : "—"} без потери качества листвы и логистики.`);
+    else plan.notes.push(`Разнообразие: оставлен маршрут «Лучшие места» (${r.why.join(", ")}).`);
+    return plan;
+  }
+
+  function buildPlanCore(data, user, date, opts = {}) {
+    const dv = opts._div || null;
     const today = opts.today || data.today;
     const dens = CFG.DENSITY[opts.density || user.settings?.density || CFG.DEFAULT_DENSITY] || CFG.DENSITY.rich;
     const sopts = { dayEnd: dens.dayEnd };
@@ -280,7 +305,8 @@
           const ins = insertBest(order, c.p, sopts);
           if (!ins.ok || pathKm(ins.o) > CFG.MAX_PATH_KM) continue;
           if (!zoneCheck(ins.o, dens).ok) continue;
-          const gain = c.value - 0.6 * (pathMin(ins.o) - pathMin(order));
+          let gain = c.value - 0.6 * (pathMin(ins.o) - pathMin(order));
+          if (dv) gain += dv.gain(chosen.map(x => x.p), c.p, c.s, CFG.GOOD);
           if (!best || gain > best.gain) best = { c, gain, o: ins.o };
         }
         if (!best) break;
@@ -290,7 +316,8 @@
     }
     function clusterValue(ch) {
       const order = bestOrder(ch.map(x => x.p), sopts);
-      return ch.reduce((s, x) => s + (x.value ?? 0), 0) - 0.6 * pathMin(order);
+      const v0 = ch.reduce((s, x) => s + (x.value ?? 0), 0) - 0.6 * pathMin(order);
+      return dv ? v0 + dv.cluster(order) : v0;
     }
 
     let chosen;
@@ -305,6 +332,28 @@
         if (!best || v > best.v) best = { ch, v };
       }
       chosen = best ? best.ch : [];
+    }
+
+    // "Разнообразие": one remarkable place without autumn colour, only if it is on the way
+    const standaloneIds = new Set();
+    if (dv && dv.mode === "diverse" && chosen.length && chosen.length < maxStops) {
+      const cur = chosen.map(x => x.p).filter(p => p.lat != null);
+      const base = bestOrder(cur, sopts);
+      const center = { lat: cur.reduce((a, p) => a + p.lat, 0) / cur.length, lon: cur.reduce((a, p) => a + p.lon, 0) / cur.length };
+      let best = null;
+      for (const p of data.places) {
+        if (!p.standalone || p.lat == null || chosen.some(x => x.p.id === p.id)) continue;
+        const why = eligible(p, user, date, res, today);
+        if (why && why !== "weak") continue;
+        if (removed.has(p.id) || avoid.has(p.id)) continue;
+        if (km(center, p) > CFG.CORE_RADIUS_KM) continue;
+        const o = bestOrder(cur.concat([p]), sopts);
+        if (!schedule(o, sopts).ok || !zoneCheck(o, dens).ok) continue;
+        const extra = pathMin(o) - pathMin(base) + visitMin(p);
+        if (extra > 20 + visitMin(p)) continue;
+        if (!best || extra < best.extra) best = { p, extra };
+      }
+      if (best) { chosen.push({ p: best.p, s: scoreOn(best.p, date, today), value: 0, standalone: true }); standaloneIds.add(best.p.id); }
     }
 
     const ordered = bestOrder(chosen.map(x => x.p), sopts);
@@ -325,6 +374,7 @@
     if (sc.items.some(i => !i.hoursKnown)) notes.push("У части мест часы работы не опубликованы — считаем типичные 9:00–16:00, проверьте на месте.");
 
     const plan = finishDay(data, date, today, ordered, pinnedIds, sopts);
+    if (standaloneIds.size) plan.stops.forEach(s => { if (standaloneIds.has(s.id)) s.standalone = true; });
     Object.assign(plan, { warnings, notes, excluded, created: new Date().toISOString(), dataGenerated: data.generated_at,
                           density: opts.density || user.settings?.density || CFG.DEFAULT_DENSITY, feasible: sc.ok });
     if (pinned.length) plan.reason += ` Вокруг закреплённых (${pinned.length}).`;
@@ -410,9 +460,47 @@
       items.push({ id: p.id, score: s, km: +anchorD.toFixed(1), extraKm, extraMin, arrive: it.arrive, reordered,
                    reason: why.join(", "), value: s - CFG.KM_COST * Math.max(0, extraKm) - (reordered ? 5 : 0) });
     }
+    // "Разнообразие": remarkable places without autumn colour, clearly labelled
+    const variety = opts.variety || user.settings?.variety || "best";
+    if (variety === "diverse") {
+      for (const p of data.places) {
+        if (!p.standalone || inPlan.has(p.id) || items.some(x => x.id === p.id) || removed.has(p.id) || p.lat == null) continue;
+        const why0 = eligible(p, user, date, res, today);
+        if (why0 && why0 !== "weak") continue;
+        const anchorD = cur.lat != null ? km(cur, p) : 99;
+        if (anchorD > radius) continue;
+        let newOrder = order.slice(); newOrder[idx] = p; newOrder = newOrder.filter(x => x.lat != null);
+        if (!zoneCheck(newOrder, dens).ok) continue;
+        const sc = schedule(newOrder, sopts); if (!sc.ok) continue;
+        const it = sc.items.find(i => i.id === p.id);
+        items.push({ id: p.id, score: scoreOn(p, date, today), km: +anchorD.toFixed(1), extraKm: +(pathKm(newOrder) - oldKm).toFixed(1),
+                     extraMin: Math.round(sc.end - (oldSc.end - visitMin(cur) + visitMin(p))), arrive: it.arrive, reordered: false,
+                     standalone: true, reason: "интересно само по себе — не ради осенней листвы", value: -1 });
+      }
+    }
     items.sort((a, b) => b.value - a.value);
-    const goodItems = items.filter(x => x.score >= CFG.GOOD);
-    const out = (goodItems.length >= 3 ? goodItems : items).slice(0, 5);
+    const goodItems = items.filter(x => x.score >= CFG.GOOD && !x.standalone);
+    let out = (goodItems.length >= 3 ? goodItems : items.filter(x => !x.standalone)).slice(0, 5);
+    // labels: best leaves / other kind of place / closest (shown when available)
+    const curScore = scoreOn(cur, date, today) ?? 0;
+    const pool2 = items.filter(x => !x.standalone);
+    const bestLeaf = pool2.slice().sort((a, b) => (b.score ?? 0) - (a.score ?? 0))[0];
+    const otherType = pool2.filter(x => byId.get(x.id)?.cat && byId.get(x.id).cat !== cur.cat && (x.score ?? 0) >= Math.max(CFG.GOOD, curScore - 10))
+      .sort((a, b) => b.value - a.value)[0];
+    const closest = pool2.slice().sort((a, b) => a.extraMin - b.extraMin || a.km - b.km)[0];
+    if (variety !== "best") {
+      for (const x of [otherType, bestLeaf, closest]) if (x && !out.includes(x)) { if (out.length >= 5) out.pop(); out.push(x); }
+      const st = items.find(x => x.standalone);
+      if (st) { if (out.length >= 5) out.pop(); out.push(st); }
+    }
+    out.forEach(x => {
+      x.badges = [];
+      if (x === bestLeaf) x.badges.push("Лучшие клёны");
+      if (x === otherType) x.badges.push("Другой тип места");
+      if (x === closest) x.badges.push("Ближе всего");
+      if (x.standalone) x.badges.push("Интересно само по себе");
+      x.cat = byId.get(x.id)?.cat || null;
+    });
     let note = null;
     if (!out.length) note = `В радиусе ${radius} км нет хороших свободных мест, открытых в это время.`;
     else if (!goodItems.length) note = "Сильных альтернатив поблизости нет — показаны допустимые (score 45–59).";

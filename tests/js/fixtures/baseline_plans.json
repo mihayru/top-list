@@ -1,0 +1,675 @@
+{
+ "calm|2026-11-17": {
+  "stops": [
+   [
+    "shogunzuka",
+    540
+   ],
+   [
+    "tenjuan",
+    598
+   ],
+   [
+    "murinan",
+    641
+   ],
+   [
+    "kurodani",
+    696
+   ]
+  ],
+  "evening": [
+   [
+    "chionin",
+    1050
+   ]
+  ]
+ },
+ "calm|2026-11-17|alt": [
+  "nanzenji",
+  "shinnyodo",
+  "chionin",
+  "ginkakuji",
+  "kodaiji"
+ ],
+ "calm|2026-11-18": {
+  "stops": [
+   [
+    "jojakkoji",
+    540
+   ],
+   [
+    "okochi",
+    589
+   ],
+   [
+    "tenryuji",
+    646
+   ],
+   [
+    "arashiyama",
+    729
+   ]
+  ],
+  "evening": [
+   [
+    "hogonin",
+    1050
+   ]
+  ]
+ },
+ "calm|2026-11-18|alt": [
+  "nisonin",
+  "seiryoji",
+  "hokyoin",
+  "otagi",
+  "hogonin"
+ ],
+ "calm|2026-11-19": {
+  "stops": [
+   [
+    "sanzenin",
+    525
+   ],
+   [
+    "jikkoin",
+    588
+   ],
+   [
+    "hosenin",
+    621
+   ],
+   [
+    "jakkoin",
+    681
+   ]
+  ],
+  "evening": []
+ },
+ "calm|2026-11-19|alt": [
+  "kochidani"
+ ],
+ "calm|2026-11-20": {
+  "stops": [
+   [
+    "konpukuji",
+    540
+   ],
+   [
+    "enkoji",
+    576
+   ],
+   [
+    "sekizan",
+    643
+   ],
+   [
+    "jissoin",
+    717
+   ]
+  ],
+  "evening": [
+   [
+    "kifune",
+    1010
+   ]
+  ]
+ },
+ "calm|2026-11-20|alt": [
+  "manshuin",
+  "shisendo",
+  "rengeji"
+ ],
+ "calm|2026-11-21": {
+  "stops": [
+   [
+    "nisonin",
+    540
+   ],
+   [
+    "seiryoji",
+    591
+   ],
+   [
+    "jingoji",
+    679
+   ],
+   [
+    "saimyoji",
+    768
+   ]
+  ],
+  "evening": [
+   [
+    "ninnaji",
+    1110
+   ]
+  ]
+ },
+ "calm|2026-11-21|alt": [
+  "kozanji",
+  "hokyoin",
+  "rokuoin",
+  "giouji",
+  "daikakuji"
+ ],
+ "calm|2026-11-22": {
+  "stops": [
+   [
+    "sennyuji",
+    540
+   ],
+   [
+    "imakumano",
+    593
+   ],
+   [
+    "nanzenji",
+    660
+   ],
+   [
+    "shinnyodo",
+    741
+   ]
+  ],
+  "evening": [
+   [
+    "nijo",
+    1080
+   ]
+  ]
+ },
+ "calm|2026-11-22|alt": [
+  "maruyama",
+  "kiyomizu",
+  "kodaiji",
+  "eikando",
+  "chishakuin"
+ ],
+ "rich|2026-11-17": {
+  "stops": [
+   [
+    "shogunzuka",
+    540
+   ],
+   [
+    "tenjuan",
+    598
+   ],
+   [
+    "murinan",
+    641
+   ],
+   [
+    "kurodani",
+    696
+   ],
+   [
+    "konpukuji",
+    772
+   ],
+   [
+    "sekizan",
+    830
+   ]
+  ],
+  "evening": [
+   [
+    "botanical",
+    1080
+   ]
+  ]
+ },
+ "rich|2026-11-17|alt": [
+  "nanzenji",
+  "shinnyodo",
+  "chionin",
+  "ginkakuji",
+  "kodaiji"
+ ],
+ "rich|2026-11-18": {
+  "stops": [
+   [
+    "arashiyama",
+    510
+   ],
+   [
+    "tenryuji",
+    578
+   ],
+   [
+    "okochi",
+    660
+   ],
+   [
+    "jojakkoji",
+    714
+   ],
+   [
+    "jingoji",
+    809
+   ],
+   [
+    "saimyoji",
+    898
+   ]
+  ],
+  "evening": [
+   [
+    "hogonin",
+    1050
+   ]
+  ]
+ },
+ "rich|2026-11-18|alt": [
+  "nisonin",
+  "seiryoji",
+  "hokyoin",
+  "hogonin",
+  "otagi"
+ ],
+ "rich|2026-11-19": {
+  "stops": [
+   [
+    "sennyuji",
+    540
+   ],
+   [
+    "imakumano",
+    593
+   ],
+   [
+    "nanzenji",
+    660
+   ],
+   [
+    "eikando",
+    727
+   ],
+   [
+    "tetsugaku",
+    805
+   ],
+   [
+    "shinnyodo",
+    860
+   ]
+  ],
+  "evening": [
+   [
+    "nijo",
+    1080
+   ],
+   [
+    "kitano",
+    1170
+   ]
+  ]
+ },
+ "rich|2026-11-19|alt": [
+  "maruyama",
+  "kiyomizu",
+  "kodaiji",
+  "chionin"
+ ],
+ "rich|2026-11-20": {
+  "stops": [
+   [
+    "enkoji",
+    540
+   ],
+   [
+    "shisendo",
+    588
+   ],
+   [
+    "jissoin",
+    667
+   ],
+   [
+    "eiden_tunnel",
+    732
+   ],
+   [
+    "hakuryuen",
+    756
+   ],
+   [
+    "kifune",
+    838
+   ]
+  ],
+  "evening": []
+ },
+ "rich|2026-11-20|alt": [
+  "manshuin"
+ ],
+ "rich|2026-11-21": {
+  "stops": [
+   [
+    "genkoan",
+    540
+   ],
+   [
+    "joshoji",
+    578
+   ],
+   [
+    "tojiin",
+    645
+   ],
+   [
+    "ryoanji",
+    694
+   ],
+   [
+    "ninnaji",
+    749
+   ],
+   [
+    "rokuoin",
+    841
+   ]
+  ],
+  "evening": [
+   [
+    "umekoji",
+    1020
+   ],
+   [
+    "chishakuin",
+    1113
+   ]
+  ]
+ },
+ "rich|2026-11-21|alt": [
+  "kamigamo",
+  "kinkakuji",
+  "daitokuji",
+  "daihoin"
+ ],
+ "rich|2026-11-22": {
+  "stops": [
+   [
+    "sanzenin",
+    525
+   ],
+   [
+    "jikkoin",
+    588
+   ],
+   [
+    "hosenin",
+    621
+   ],
+   [
+    "jakkoin",
+    681
+   ]
+  ],
+  "evening": []
+ },
+ "rich|2026-11-22|alt": [
+  "kochidani"
+ ],
+ "max|2026-11-17": {
+  "stops": [
+   [
+    "sennyuji",
+    540
+   ],
+   [
+    "shogunzuka",
+    622
+   ],
+   [
+    "tenjuan",
+    680
+   ],
+   [
+    "murinan",
+    723
+   ],
+   [
+    "kurodani",
+    778
+   ],
+   [
+    "konpukuji",
+    854
+   ],
+   [
+    "shisendo",
+    888
+   ],
+   [
+    "sekizan",
+    953
+   ]
+  ],
+  "evening": [
+   [
+    "botanical",
+    1080
+   ]
+  ]
+ },
+ "max|2026-11-17|alt": [
+  "imakumano",
+  "nanzenji",
+  "shinnyodo",
+  "tetsugaku",
+  "kodaiji"
+ ],
+ "max|2026-11-18": {
+  "stops": [
+   [
+    "arashiyama",
+    510
+   ],
+   [
+    "tenryuji",
+    578
+   ],
+   [
+    "okochi",
+    660
+   ],
+   [
+    "jojakkoji",
+    714
+   ],
+   [
+    "jingoji",
+    809
+   ],
+   [
+    "saimyoji",
+    898
+   ],
+   [
+    "kozanji",
+    946
+   ]
+  ],
+  "evening": [
+   [
+    "hogonin",
+    1050
+   ]
+  ]
+ },
+ "max|2026-11-18|alt": [
+  "nisonin",
+  "seiryoji",
+  "hokyoin",
+  "hogonin",
+  "otagi"
+ ],
+ "max|2026-11-19": {
+  "stops": [
+   [
+    "kifune",
+    510
+   ],
+   [
+    "hakuryuen",
+    600
+   ],
+   [
+    "eiden_tunnel",
+    654
+   ],
+   [
+    "jissoin",
+    704
+   ],
+   [
+    "rengeji",
+    769
+   ],
+   [
+    "yase",
+    818
+   ],
+   [
+    "manshuin",
+    876
+   ],
+   [
+    "enkoji",
+    933
+   ]
+  ],
+  "evening": [
+   [
+    "nijo",
+    1080
+   ],
+   [
+    "kitano",
+    1170
+   ]
+  ]
+ },
+ "max|2026-11-19|alt": [],
+ "max|2026-11-20": {
+  "stops": [
+   [
+    "shinnyodo",
+    540
+   ],
+   [
+    "tetsugaku",
+    595
+   ],
+   [
+    "eikando",
+    638
+   ],
+   [
+    "nanzenji",
+    720
+   ],
+   [
+    "chionin",
+    803
+   ],
+   [
+    "maruyama",
+    866
+   ],
+   [
+    "kodaiji",
+    901
+   ],
+   [
+    "kiyomizu",
+    963
+   ]
+  ],
+  "evening": [
+   [
+    "chishakuin",
+    1058
+   ],
+   [
+    "umekoji",
+    1151
+   ]
+  ]
+ },
+ "max|2026-11-20|alt": [
+  "shorenin"
+ ],
+ "max|2026-11-21": {
+  "stops": [
+   [
+    "genkoan",
+    540
+   ],
+   [
+    "joshoji",
+    578
+   ],
+   [
+    "tojiin",
+    645
+   ],
+   [
+    "ryoanji",
+    694
+   ],
+   [
+    "ninnaji",
+    749
+   ],
+   [
+    "rokuoin",
+    841
+   ],
+   [
+    "seiryoji",
+    906
+   ],
+   [
+    "nisonin",
+    957
+   ]
+  ],
+  "evening": [
+   [
+    "shozan",
+    1050
+   ]
+  ]
+ },
+ "max|2026-11-21|alt": [
+  "kinkakuji",
+  "daihoin"
+ ],
+ "max|2026-11-22": {
+  "stops": [
+   [
+    "sanzenin",
+    525
+   ],
+   [
+    "jikkoin",
+    588
+   ],
+   [
+    "hosenin",
+    621
+   ],
+   [
+    "jakkoin",
+    681
+   ]
+  ],
+  "evening": []
+ },
+ "max|2026-11-22|alt": [
+  "kochidani"
+ ]
+}

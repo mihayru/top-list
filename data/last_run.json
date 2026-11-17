@@ -1,129 +1,38 @@
 {
- "generated_at": "2026-11-17T12:55:57+09:00",
- "requests": [
-  {
-   "url": "https://souda-kyoto.jp/guide/season/koyo/modal.json",
-   "status": 200,
-   "ms": 640
-  },
-  {
-   "url": "https://kisetsu.jr-odekake.net/result/MMJ/A1005?lang=ja",
-   "status": 200,
-   "ms": 524
-  },
-  {
-   "url": "https://kisetsu.jr-odekake.net/result/MMJ/A1005?lang=en",
-   "status": 200,
-   "ms": 405
-  },
-  {
-   "url": "https://weathernews.jp/koyo/area/kyoto/",
-   "status": 200,
-   "ms": 1172
-  },
-  {
-   "url": "https://www.japan-explorers.com/koyo/kyoto/",
-   "status": 200,
-   "ms": 613
-  },
-  {
-   "url": "https://koyo.walkerplus.com/list/ar0726/",
-   "status": 200,
-   "ms": 6
-  },
-  {
-   "url": "https://koyo.walkerplus.com/list/ar0726/2.html",
-   "status": 200,
-   "ms": 19
-  },
-  {
-   "url": "https://koyo.walkerplus.com/list/ar0726/3.html",
-   "status": 200,
-   "ms": 7
-  },
-  {
-   "url": "https://koyo.walkerplus.com/list/ar0726/4.html",
-   "status": 200,
-   "ms": 17
-  },
-  {
-   "url": "https://koyo.walkerplus.com/list/ar0726/5.html",
-   "status": 200,
-   "ms": 19
-  },
-  {
-   "url": "https://koyo.walkerplus.com/list/ar0726/6.html",
-   "status": 200,
-   "ms": 37
-  },
-  {
-   "url": "https://koyo.walkerplus.com/list/ar0726/7.html",
-   "status": 200,
-   "ms": 22
-  },
-  {
-   "url": "https://koyo.walkerplus.com/list/ar0726/8.html",
-   "status": 200,
-   "ms": 18
-  },
-  {
-   "url": "https://koyo.walkerplus.com/list/ar0726/9.html",
-   "status": 200,
-   "ms": 18
-  },
-  {
-   "url": "https://koyo.walkerplus.com/list/ar0726/10.html",
-   "status": 200,
-   "ms": 18
-  },
-  {
-   "url": "https://koyo.walkerplus.com/list/ar0726/11.html",
-   "status": 200,
-   "ms": 17
-  },
-  {
-   "url": "https://koyo.walkerplus.com/list/ar0726/12.html",
-   "status": 200,
-   "ms": 17
-  },
-  {
-   "url": "https://koyo.walkerplus.com/list/ar0726/13.html",
-   "status": 200,
-   "ms": 17
-  }
- ],
+ "generated_at": "2026-11-17T13:07:59+09:00",
+ "requests": [],
  "sources": [
   {
    "id": "souda",
-   "status": "ok",
+   "status": "cached",
    "error": null,
    "count": 77,
    "matched": 77
   },
   {
    "id": "jr_odekake",
-   "status": "ok",
+   "status": "cached",
    "error": null,
    "count": 53,
    "matched": 53
   },
   {
    "id": "weathernews",
-   "status": "ok",
+   "status": "cached",
    "error": null,
    "count": 95,
    "matched": 95
   },
   {
    "id": "japan_explorers",
-   "status": "ok",
+   "status": "cached",
    "error": null,
    "count": 69,
    "matched": 69
   },
   {
    "id": "walkerplus",
-   "status": "ok",
+   "status": "cached",
    "error": null,
    "count": 125,
    "matched": 112

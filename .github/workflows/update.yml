@@ -33,7 +33,7 @@ jobs:
         run: python -m pytest -q tests
       - name: Route planner tests
         continue-on-error: true
-        run: node --test tests/js/planner.test.js tests/js/planner2.test.js tests/js/transport.test.js
+        run: node --test tests/js/planner.test.js tests/js/planner2.test.js tests/js/transport.test.js tests/js/diversity.test.js
       - name: Collect all sources (each isolated; failures fall back to last snapshot)
         run: python -m collector.run
       - name: Commit data

@@ -118,6 +118,22 @@ const OUT = process.argv[3];
   await p.click('.daychip[data-date="2026-11-20"]');
   if (OUT) await p.screenshot({ path: OUT + "/r20.png", fullPage: true });
 
+  // Variety mode: switching does not overwrite the saved plan; rebuild applies it
+  await p.click('.maintabs [data-view="routes"]');
+  await p.click('.daychip[data-date="2026-11-21"]');
+  await p.click("#rebuildBtn");
+  await p.waitForFunction(() => (JSON.parse(localStorage.getItem("koyo.user.v1")).plans["2026-11-21"] || {}).rebuilds >= 1);
+  const saved21 = JSON.stringify((await st()).plans["2026-11-21"].stops);
+  await p.click('[data-var="diverse"]');
+  assert.strictEqual(JSON.stringify((await st()).plans["2026-11-21"].stops), saved21, "mode switch does not touch saved plan");
+  assert.strictEqual((await st()).settings.variety, "diverse");
+  await p.waitForSelector(".mono summary");
+  await p.click("#rebuildBtn");
+  await p.waitForFunction(() => (JSON.parse(localStorage.getItem("koyo.user.v1")).plans["2026-11-21"] || {}).rebuilds >= 2);
+  assert.ok(((await st()).plans["2026-11-21"].notes || []).some(n => n.startsWith("Разнообразие")), "variety note");
+  if (OUT) await p.screenshot({ path: OUT + "/div.png", fullPage: true });
+  await p.click('[data-var="best"]');
+
   // Light-up list
   await p.click('.maintabs [data-view="leaf"]');
   await p.click('.leafmode [data-mode="lu"]');

@@ -3,6 +3,7 @@
 (() => {
   "use strict";
   const P = window.KoyoPlanner;
+  const DV = window.KoyoDiversity;
   const KEY = "koyo.user.v1";
   const DEFAULT_TRIP = { start: "2026-11-17", end: "2026-11-22" };
   const STATUS_RU = { GREEN: "Зелёная", STARTING: "Начало", PARTIAL: "Частично", NEAR_PEAK: "Почти пик", PEAK: "Пик",
@@ -19,7 +20,7 @@
   const scoreBg = sc => sc == null ? "#9a948c" : sc >= 85 ? "#b3001f" : sc >= 70 ? "#d6331c" : sc >= 55 ? "#e0701f" : sc >= 40 ? "#c79a1c" : "#8a857e";
 
   // ---------------------------------------------------------------- store
-  function empty() { return { v: 1, visited: {}, plans: {}, removed: {}, removedEvening: {}, trip: { ...DEFAULT_TRIP }, deleted: [], settings: { density: "rich" } }; }
+  function empty() { return { v: 1, visited: {}, plans: {}, removed: {}, removedEvening: {}, trip: { ...DEFAULT_TRIP }, deleted: [], settings: { density: "rich", variety: "best" } }; }
   function load() {
     try {
       const u = JSON.parse(localStorage.getItem(KEY) || "null");
@@ -288,7 +289,8 @@
       const r = P.alternatives(d, U, date, plan, replacing.id, { today: d.today, radius: replacing.radius });
       const rows = r.items.map(a => {
         const p = m.get(a.id);
-        return `<li class="alt"><div><b>${esc(p.ru)}</b> <small>${esc(p.en)} · ${esc(p.district_ru)}</small></div>
+        return `<li class="alt">${(a.badges || []).length ? `<div class="badges">${a.badges.map(b => `<span class="badge">${esc(b)}</span>`).join("")}</div>` : ""}
+          <div><b>${esc(p.ru)}</b> <small>${esc(p.en)} · ${esc(p.district_ru)}${DV && p.cat ? " · " + esc(DV.label(p)) : ""}</small></div>
           <div>${leafLine(p, date)}</div>
           <div class="mini">${a.extraMin >= 0 ? "+" : ""}${a.extraMin} мин к дню · ${a.extraKm >= 0 ? "+" : ""}${a.extraKm} км пути · прибытие ~${P.fmtTime(a.arrive)}${a.reordered ? " · порядок остановок изменится" : ""}</div>
           <div class="mini why">Почему: ${esc(a.reason)}</div>
@@ -327,6 +329,13 @@
       <div class="btnrow">${(replacing.radius || 7) <= 7 ? `<button class="act" data-widen="1">Искать дальше (до 15 км)</button>` : ""}<button class="act" data-cancel="1">Отмена</button></div></div>`;
   }
 
+  function monoHTML(places) {
+    if (!DV) return "";
+    const mo = DV.monotony(places);
+    const txt = mo ? `${mo.pct}%` : "недостаточно данных";
+    return `<details class="mono"><summary>Однообразие: <b>${esc(txt)}</b>${mo ? ` <span class="mini">(${mo.distinct} ${P.plural(mo.distinct, "тип", "типа", "типов")} мест, ${mo.features} ${P.plural(mo.features, "черта", "черты", "черт")})</span>` : ""}</summary>
+      <div class="mini">Справочный показатель, не критерий качества. Формула: 30·доля повторяющихся категорий + 25·одинаковые типы подряд + 30·сходство соседних остановок (основной тип + теги) + 15·узость набора впечатлений. Учитываются только дневные места (без переходов и подсветок).${mo ? ` Сейчас: повторы ${Math.round(mo.parts.repeat * 100)}%, подряд ${Math.round(mo.parts.runs * 100)}%, сходство ${Math.round(mo.parts.sim * 100)}%, узость ${Math.round(mo.parts.narrow * 100)}%.` : " Нужно минимум 3 места с известной категорией."}</div></details>`;
+  }
   function legRowHTML(a, b) {
     const L = P.leg(a, b);
     if (L.mode === "walk") return `<li class="legrow walk">🚶 Пешком ≈${L.min} мин · ${L.km} км${L.uphill ? " · в гору/лестницы" : ""} <a class="act" href="${esc(P.legUrl(a, b, "walk"))}" target="_blank" rel="noopener">Как добраться</a></li>`;
@@ -355,7 +364,8 @@
         <span class="sscore" style="background:${scoreBg(sc)}">${sc ?? "—"}</span>
       </div>
       <div class="st-meta">${leafLine(p, date)}
-        <br><span class="mini">~${P.visitMin(p)} мин на месте · ${hoursTxt}</span>
+        <br><span class="mini">${DV && p.cat ? esc(DV.label(p)) + " · " : ""}~${P.visitMin(p)} мин на месте · ${hoursTxt}</span>
+        ${s.standalone ? `<br><b class="standalone">★ Интересно само по себе</b> <span class="mini">— добавлено не ради осенней листвы</span>` : ""}
         ${vis ? `<b class="vis"> · уже посещено${vis.date ? " " + esc(shortDay(vis.date)) : ""}</b>` : ""}</div>
       <div class="st-act">
         <button class="act" data-a="replace"${s.pinned ? " disabled title='Открепите, чтобы заменить'" : ""}>⇄ Заменить</button>
@@ -436,9 +446,12 @@
     const dens = U.settings.density || "rich";
     const densCtl = `<div class="seg" role="group" aria-label="Насыщенность">${Object.entries(P.CFG.DENSITY).map(([k, v]) =>
       `<button data-dens="${k}" aria-pressed="${k === dens}">${esc(v.label)}</button>`).join("")}</div>`;
+    const vmode = U.settings.variety || "best";
+    const varCtl = DV ? `<div class="seg" role="group" aria-label="Разнообразие">${Object.entries(DV.MODES).map(([k, v]) =>
+      `<button data-var="${k}" aria-pressed="${k === vmode}">${esc(v.label)}</button>`).join("")}</div>` : "";
     let body;
     if (!plan) {
-      body = `<div class="plancard"><p>${esc(fmtDay(curDate))}: план ещё не составлен.</p>${densCtl}
+      body = `<div class="plancard"><p>${esc(fmtDay(curDate))}: план ещё не составлен.</p>${densCtl}${varCtl}
         <button id="rebuildBtn" class="btn big">✨ Составить план</button>
         <p class="minor">Учитываются посещённые (${Object.keys(U.visited).length}) и места из планов других дней — они не предлагаются.</p></div>`;
     } else {
@@ -462,6 +475,7 @@
         ${plan.reason ? `<div class="reason">${esc(plan.reason)}</div>` : ""}
         ${warn.map(w => `<div class="warnbox">⚠️ ${esc(w)}</div>`).join("")}
         ${(plan.notes || []).map(n => `<div class="note">ℹ️ ${esc(n)}</div>`).join("")}
+        ${monoHTML(stops.map(s => m.get(s.id)))}
         ${segs.length ? `<details class="segs"><summary>🗺 Маршрут в Google Maps по участкам (${segs.length})</summary><ol>${segs.map(sg =>
           `<li>${sg.mode === "walk" ? "🚶 пешком" : "🚌🚇 транспорт"}: ${sg.points.map(x => esc(x.ru)).join(" → ")} · ${sg.mode === "walk" ? `≈${sg.min} мин` : `заложено ~${sg.min} мин`} <a class="act" href="${esc(sg.url)}" target="_blank" rel="noopener">Открыть</a></li>`).join("")}</ol>
           <p class="minor">Пешие отрезки подряд открываются одним маршрутом. Каждый переезд на транспорте — отдельной ссылкой в режиме «общественный транспорт» (Google не поддерживает промежуточные точки для транспорта). Автомобильные маршруты не используются.</p></details>` : ""}
@@ -474,7 +488,7 @@
           ${P.CFG.REMOTE.includes(lastPt.district) ? `<div class="mini warnline">День заканчивается в удалённом районе (${esc(lastPt.district_ru)}): автобусы/поезда отсюда ходят реже — проверьте последний рейс в Google Maps заранее.</div>` : `<div class="mini">Последний рейс проверьте по кнопке «Как добраться» (Google Maps, режим транспорта).</div>`}</div>` : ""}
         ${evening.length < 2 ? `<button class="act" data-a="addeve">＋ Добавить подсветку</button>` : ""}
         ${replacing && replacing.kind === "eve" && replacing.id === null ? replacePanel(curDate, plan) : ""}
-        ${densCtl}
+        ${densCtl}${varCtl}
         <div class="btnrow"><button id="rebuildBtn" class="btn big">↻ Пересобрать весь день</button></div>
         <div class="minor links">
           ${plan.history?.length ? `<button class="linkbtn" data-a="prev">↶ Вернуть прошлый вариант</button>` : ""}
@@ -493,6 +507,10 @@
 
   function bindRoutes(root, plan, ds) {
     root.querySelectorAll(".daychip").forEach(b => b.addEventListener("click", () => { curDate = b.dataset.date; replacing = null; renderRoutes(); }));
+    root.querySelectorAll("[data-var]").forEach(b => b.addEventListener("click", () => {
+      U.settings.variety = b.dataset.var; save(); renderRoutes();
+      flash(`Режим: ${DV.MODES[b.dataset.var].label}. Сохранённый план не изменён — нажмите «Пересобрать», чтобы применить.`);
+    }));
     root.querySelectorAll("[data-dens]").forEach(b => b.addEventListener("click", () => {
       U.settings.density = b.dataset.dens; save(); renderRoutes();
       flash(`Насыщенность: ${P.CFG.DENSITY[b.dataset.dens].label}. Нажмите «Пересобрать», чтобы применить.`);

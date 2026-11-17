@@ -120,7 +120,13 @@
     "大原三千院",
     "三千院門跡"
    ],
-   "visit_min": 60
+   "visit_min": 60,
+   "cat": "temple",
+   "tags": [
+    "garden",
+    "nature"
+   ],
+   "standalone": true
   },
   {
    "id": "jakkoin",
@@ -144,7 +150,11 @@
     ]
    },
    "aliases": [],
-   "visit_min": 45
+   "visit_min": 45,
+   "cat": "temple",
+   "tags": [
+    "garden"
+   ]
   },
   {
    "id": "hosenin",
@@ -165,7 +175,11 @@
     ]
    },
    "aliases": [],
-   "visit_min": 40
+   "visit_min": 40,
+   "cat": "temple",
+   "tags": [
+    "garden"
+   ]
   },
   {
    "id": "jikkoin",
@@ -186,7 +200,11 @@
     ]
    },
    "aliases": [],
-   "visit_min": 30
+   "visit_min": 30,
+   "cat": "temple",
+   "tags": [
+    "garden"
+   ]
   },
   {
    "id": "shorinin",
@@ -201,7 +219,9 @@
     ]
    },
    "aliases": [],
-   "visit_min": 25
+   "visit_min": 25,
+   "cat": "temple",
+   "tags": []
   },
   {
    "id": "kochidani",
@@ -222,7 +242,11 @@
    "lat": 35.138134,
    "lon": 135.828026,
    "coord_source": "walkerplus_map",
-   "visit_min": 40
+   "visit_min": 40,
+   "cat": "temple",
+   "tags": [
+    "nature"
+   ]
   },
   {
    "id": "hakuryuen",
@@ -243,7 +267,11 @@
    "lat": 35.096766,
    "lon": 135.76444,
    "coord_source": "walkerplus_map",
-   "visit_min": 50
+   "visit_min": 50,
+   "cat": "garden",
+   "tags": [
+    "nature"
+   ]
   },
   {
    "id": "kifune",
@@ -267,7 +295,12 @@
     ]
    },
    "aliases": [],
-   "visit_min": 40
+   "visit_min": 40,
+   "cat": "temple",
+   "tags": [
+    "nature",
+    "river"
+   ]
   },
   {
    "id": "kibune_area",
@@ -282,7 +315,12 @@
     ]
    },
    "aliases": [],
-   "visit_min": 35
+   "visit_min": 35,
+   "cat": "nature",
+   "tags": [
+    "river",
+    "street"
+   ]
   },
   {
    "id": "kurama",
@@ -300,7 +338,12 @@
     ]
    },
    "aliases": [],
-   "visit_min": 90
+   "visit_min": 90,
+   "cat": "temple",
+   "tags": [
+    "nature",
+    "viewpoint"
+   ]
   },
   {
    "id": "shimyoin",
@@ -321,7 +364,11 @@
     ]
    },
    "aliases": [],
-   "visit_min": 40
+   "visit_min": 40,
+   "cat": "temple",
+   "tags": [
+    "nature"
+   ]
   },
   {
    "id": "jingoji",
@@ -353,7 +400,12 @@
     "Jingō-ji",
     "神護寺"
    ],
-   "visit_min": 75
+   "visit_min": 75,
+   "cat": "temple",
+   "tags": [
+    "nature",
+    "viewpoint"
+   ]
   },
   {
    "id": "saimyoji",
@@ -374,7 +426,12 @@
    "lat": 35.057202,
    "lon": 135.674929,
    "coord_source": "walkerplus_map",
-   "visit_min": 35
+   "visit_min": 35,
+   "cat": "temple",
+   "tags": [
+    "nature",
+    "river"
+   ]
   },
   {
    "id": "kozanji",
@@ -395,7 +452,11 @@
    "lat": 35.060108,
    "lon": 135.678569,
    "coord_source": "japan_explorers_spot_page",
-   "visit_min": 45
+   "visit_min": 45,
+   "cat": "temple",
+   "tags": [
+    "nature"
+   ]
   },
   {
    "id": "takao_area",
@@ -410,7 +471,11 @@
     ]
    },
    "aliases": [],
-   "visit_min": 35
+   "visit_min": 35,
+   "cat": "nature",
+   "tags": [
+    "river"
+   ]
   },
   {
    "id": "parkway",
@@ -425,7 +490,11 @@
     ]
    },
    "aliases": [],
-   "visit_min": 35
+   "visit_min": 35,
+   "cat": "viewpoint",
+   "tags": [
+    "nature"
+   ]
   },
   {
    "id": "arashiyama",
@@ -457,7 +526,12 @@
     "渡月橋",
     "嵐山"
    ],
-   "visit_min": 60
+   "visit_min": 60,
+   "cat": "river",
+   "tags": [
+    "viewpoint",
+    "street"
+   ]
   },
   {
    "id": "tenryuji",
@@ -488,7 +562,11 @@
     "Tenryu-ji",
     "Tenryū-ji"
    ],
-   "visit_min": 75
+   "visit_min": 75,
+   "cat": "temple",
+   "tags": [
+    "garden"
+   ]
   },
   {
    "id": "jojakkoji",
@@ -515,7 +593,12 @@
     ]
    },
    "aliases": [],
-   "visit_min": 45
+   "visit_min": 45,
+   "cat": "temple",
+   "tags": [
+    "nature",
+    "viewpoint"
+   ]
   },
   {
    "id": "nisonin",
@@ -539,7 +622,9 @@
     ]
    },
    "aliases": [],
-   "visit_min": 40
+   "visit_min": 40,
+   "cat": "temple",
+   "tags": []
   },
   {
    "id": "giouji",
@@ -563,7 +648,12 @@
     ]
    },
    "aliases": [],
-   "visit_min": 30
+   "visit_min": 30,
+   "cat": "temple",
+   "tags": [
+    "garden",
+    "nature"
+   ]
   },
   {
    "id": "hogonin",
@@ -584,7 +674,11 @@
     ]
    },
    "aliases": [],
-   "visit_min": 40
+   "visit_min": 40,
+   "cat": "garden",
+   "tags": [
+    "temple"
+   ]
   },
   {
    "id": "hokyoin",
@@ -611,7 +705,11 @@
     ]
    },
    "aliases": [],
-   "visit_min": 35
+   "visit_min": 35,
+   "cat": "temple",
+   "tags": [
+    "garden"
+   ]
   },
   {
    "id": "seiryoji",
@@ -632,7 +730,11 @@
     ]
    },
    "aliases": [],
-   "visit_min": 40
+   "visit_min": 40,
+   "cat": "temple",
+   "tags": [
+    "garden"
+   ]
   },
   {
    "id": "daikakuji",
@@ -659,7 +761,11 @@
     ]
    },
    "aliases": [],
-   "visit_min": 60
+   "visit_min": 60,
+   "cat": "temple",
+   "tags": [
+    "river"
+   ]
   },
   {
    "id": "rokuoin",
@@ -680,7 +786,11 @@
     ]
    },
    "aliases": [],
-   "visit_min": 35
+   "visit_min": 35,
+   "cat": "temple",
+   "tags": [
+    "garden"
+   ]
   },
   {
    "id": "okochi",
@@ -701,7 +811,11 @@
     ]
    },
    "aliases": [],
-   "visit_min": 50
+   "visit_min": 50,
+   "cat": "garden",
+   "tags": [
+    "viewpoint"
+   ]
   },
   {
    "id": "adashino",
@@ -719,7 +833,12 @@
     ]
    },
    "aliases": [],
-   "visit_min": 35
+   "visit_min": 35,
+   "cat": "temple",
+   "tags": [
+    "unusual"
+   ],
+   "standalone": true
   },
   {
    "id": "otagi",
@@ -737,7 +856,12 @@
     ]
    },
    "aliases": [],
-   "visit_min": 40
+   "visit_min": 40,
+   "cat": "temple",
+   "tags": [
+    "unusual"
+   ],
+   "standalone": true
   },
   {
    "id": "torokko",
@@ -755,7 +879,12 @@
     ]
    },
    "aliases": [],
-   "visit_min": 35
+   "visit_min": 35,
+   "cat": "unusual",
+   "tags": [
+    "river",
+    "nature"
+   ]
   },
   {
    "id": "saihoji",
@@ -773,7 +902,12 @@
    "lat": 34.991961,
    "lon": 135.683314,
    "coord_source": "japan_explorers_spot_page",
-   "visit_min": 45
+   "visit_min": 45,
+   "cat": "garden",
+   "tags": [
+    "temple",
+    "nature"
+   ]
   },
   {
    "id": "jizoin",
@@ -791,7 +925,11 @@
    "lat": 34.990417,
    "lon": 135.686,
    "coord_source": "japan_explorers_spot_page",
-   "visit_min": 45
+   "visit_min": 45,
+   "cat": "temple",
+   "tags": [
+    "nature"
+   ]
   },
   {
    "id": "hozukyo",
@@ -812,7 +950,11 @@
     ]
    },
    "aliases": [],
-   "visit_min": 35
+   "visit_min": 35,
+   "cat": "river",
+   "tags": [
+    "nature"
+   ]
   },
   {
    "id": "tofukuji",
@@ -844,7 +986,12 @@
     "Tōfuku-ji",
     "通天橋"
    ],
-   "visit_min": 75
+   "visit_min": 75,
+   "cat": "temple",
+   "tags": [
+    "garden",
+    "nature"
+   ]
   },
   {
    "id": "tofukuji_komyoin",
@@ -859,7 +1006,11 @@
     ]
    },
    "aliases": [],
-   "visit_min": 30
+   "visit_min": 30,
+   "cat": "garden",
+   "tags": [
+    "temple"
+   ]
   },
   {
    "id": "sennyuji",
@@ -886,7 +1037,11 @@
     ]
    },
    "aliases": [],
-   "visit_min": 50
+   "visit_min": 50,
+   "cat": "temple",
+   "tags": [
+    "garden"
+   ]
   },
   {
    "id": "imakumano",
@@ -907,7 +1062,11 @@
     ]
    },
    "aliases": [],
-   "visit_min": 30
+   "visit_min": 30,
+   "cat": "temple",
+   "tags": [
+    "nature"
+   ]
   },
   {
    "id": "chishakuin",
@@ -931,7 +1090,11 @@
     ]
    },
    "aliases": [],
-   "visit_min": 40
+   "visit_min": 40,
+   "cat": "temple",
+   "tags": [
+    "garden"
+   ]
   },
   {
    "id": "nanzenji",
@@ -958,7 +1121,12 @@
     "Nanzenji",
     "Nanzen-ji"
    ],
-   "visit_min": 60
+   "visit_min": 60,
+   "cat": "temple",
+   "tags": [
+    "unusual"
+   ],
+   "standalone": true
   },
   {
    "id": "tenjuan",
@@ -979,7 +1147,11 @@
    "lat": 35.010672,
    "lon": 135.792288,
    "coord_source": "walkerplus_map",
-   "visit_min": 35
+   "visit_min": 35,
+   "cat": "garden",
+   "tags": [
+    "temple"
+   ]
   },
   {
    "id": "eikando",
@@ -1011,7 +1183,12 @@
     "禅林寺",
     "永観堂禅林寺"
    ],
-   "visit_min": 75
+   "visit_min": 75,
+   "cat": "temple",
+   "tags": [
+    "garden",
+    "nature"
+   ]
   },
   {
    "id": "shinnyodo",
@@ -1035,7 +1212,9 @@
     ]
    },
    "aliases": [],
-   "visit_min": 40
+   "visit_min": 40,
+   "cat": "temple",
+   "tags": []
   },
   {
    "id": "kurodani",
@@ -1059,7 +1238,11 @@
    "lat": 35.019649,
    "lon": 135.788055,
    "coord_source": "walkerplus_map",
-   "visit_min": 45
+   "visit_min": 45,
+   "cat": "temple",
+   "tags": [
+    "garden"
+   ]
   },
   {
    "id": "honenin",
@@ -1080,7 +1263,11 @@
    "lat": 35.023972,
    "lon": 135.797417,
    "coord_source": "japan_explorers_spot_page",
-   "visit_min": 25
+   "visit_min": 25,
+   "cat": "temple",
+   "tags": [
+    "nature"
+   ]
   },
   {
    "id": "tetsugaku",
@@ -1104,7 +1291,13 @@
     "Philosopher's Path",
     "Tetsugaku no Michi"
    ],
-   "visit_min": 40
+   "visit_min": 40,
+   "cat": "street",
+   "tags": [
+    "river",
+    "nature"
+   ],
+   "standalone": true
   },
   {
    "id": "murinan",
@@ -1128,7 +1321,9 @@
    "lat": 35.011584,
    "lon": 135.787082,
    "coord_source": "walkerplus_map",
-   "visit_min": 40
+   "visit_min": 40,
+   "cat": "garden",
+   "tags": []
   },
   {
    "id": "ginkakuji",
@@ -1153,7 +1348,12 @@
    "lat": 35.027021,
    "lon": 135.798205,
    "coord_source": "walkerplus_map",
-   "visit_min": 60
+   "visit_min": 60,
+   "cat": "temple",
+   "tags": [
+    "garden"
+   ],
+   "standalone": true
   },
   {
    "id": "anrakuji",
@@ -1171,7 +1371,9 @@
     ]
    },
    "aliases": [],
-   "visit_min": 30
+   "visit_min": 30,
+   "cat": "temple",
+   "tags": []
   },
   {
    "id": "heian",
@@ -1189,7 +1391,12 @@
    "lat": 35.01665,
    "lon": 135.782428,
    "coord_source": "walkerplus_map",
-   "visit_min": 40
+   "visit_min": 40,
+   "cat": "temple",
+   "tags": [
+    "garden"
+   ],
+   "standalone": true
   },
   {
    "id": "kiyomizu",
@@ -1219,7 +1426,12 @@
     "Kiyomizudera",
     "Kiyomizu"
    ],
-   "visit_min": 75
+   "visit_min": 75,
+   "cat": "temple",
+   "tags": [
+    "viewpoint"
+   ],
+   "standalone": true
   },
   {
    "id": "kodaiji",
@@ -1246,7 +1458,11 @@
     ]
    },
    "aliases": [],
-   "visit_min": 50
+   "visit_min": 50,
+   "cat": "temple",
+   "tags": [
+    "garden"
+   ]
   },
   {
    "id": "entokuin",
@@ -1264,7 +1480,11 @@
     ]
    },
    "aliases": [],
-   "visit_min": 35
+   "visit_min": 35,
+   "cat": "garden",
+   "tags": [
+    "temple"
+   ]
   },
   {
    "id": "kenninji",
@@ -1285,7 +1505,11 @@
     ]
    },
    "aliases": [],
-   "visit_min": 45
+   "visit_min": 45,
+   "cat": "temple",
+   "tags": [
+    "garden"
+   ]
   },
   {
    "id": "shorenin",
@@ -1309,7 +1533,11 @@
     ]
    },
    "aliases": [],
-   "visit_min": 45
+   "visit_min": 45,
+   "cat": "temple",
+   "tags": [
+    "garden"
+   ]
   },
   {
    "id": "chionin",
@@ -1330,7 +1558,9 @@
     ]
    },
    "aliases": [],
-   "visit_min": 60
+   "visit_min": 60,
+   "cat": "temple",
+   "tags": []
   },
   {
    "id": "maruyama",
@@ -1348,7 +1578,9 @@
     ]
    },
    "aliases": [],
-   "visit_min": 30
+   "visit_min": 30,
+   "cat": "park",
+   "tags": []
   },
   {
    "id": "shogunzuka",
@@ -1369,7 +1601,11 @@
     ]
    },
    "aliases": [],
-   "visit_min": 40
+   "visit_min": 40,
+   "cat": "viewpoint",
+   "tags": [
+    "temple"
+   ]
   },
   {
    "id": "rurikoin",
@@ -1396,7 +1632,11 @@
     "Rurikoin",
     "Ruriko-in"
    ],
-   "visit_min": 50
+   "visit_min": 50,
+   "cat": "garden",
+   "tags": [
+    "temple"
+   ]
   },
   {
    "id": "yase",
@@ -1417,7 +1657,11 @@
     ]
    },
    "aliases": [],
-   "visit_min": 30
+   "visit_min": 30,
+   "cat": "nature",
+   "tags": [
+    "river"
+   ]
   },
   {
    "id": "eiden_tunnel",
@@ -1438,7 +1682,11 @@
     ]
    },
    "aliases": [],
-   "visit_min": 20
+   "visit_min": 20,
+   "cat": "unusual",
+   "tags": [
+    "nature"
+   ]
   },
   {
    "id": "manshuin",
@@ -1462,7 +1710,11 @@
     ]
    },
    "aliases": [],
-   "visit_min": 45
+   "visit_min": 45,
+   "cat": "temple",
+   "tags": [
+    "garden"
+   ]
   },
   {
    "id": "shisendo",
@@ -1483,7 +1735,11 @@
     ]
    },
    "aliases": [],
-   "visit_min": 40
+   "visit_min": 40,
+   "cat": "garden",
+   "tags": [
+    "temple"
+   ]
   },
   {
    "id": "enkoji",
@@ -1514,7 +1770,11 @@
     "Enko-ji",
     "円光寺"
    ],
-   "visit_min": 45
+   "visit_min": 45,
+   "cat": "temple",
+   "tags": [
+    "garden"
+   ]
   },
   {
    "id": "rengeji",
@@ -1535,7 +1795,11 @@
    "lat": 35.06406,
    "lon": 135.799965,
    "coord_source": "walkerplus_map",
-   "visit_min": 35
+   "visit_min": 35,
+   "cat": "garden",
+   "tags": [
+    "temple"
+   ]
   },
   {
    "id": "jissoin",
@@ -1562,7 +1826,11 @@
     ]
    },
    "aliases": [],
-   "visit_min": 35
+   "visit_min": 35,
+   "cat": "temple",
+   "tags": [
+    "garden"
+   ]
   },
   {
    "id": "sekizan",
@@ -1586,7 +1854,11 @@
    "lat": 35.056184,
    "lon": 135.80165,
    "coord_source": "walkerplus_map",
-   "visit_min": 40
+   "visit_min": 40,
+   "cat": "temple",
+   "tags": [
+    "nature"
+   ]
   },
   {
    "id": "saginomori",
@@ -1607,7 +1879,11 @@
    "lat": 35.049515,
    "lon": 135.798527,
    "coord_source": "walkerplus_map",
-   "visit_min": 20
+   "visit_min": 20,
+   "cat": "temple",
+   "tags": [
+    "nature"
+   ]
   },
   {
    "id": "konpukuji",
@@ -1628,7 +1904,11 @@
    "lat": 35.042144,
    "lon": 135.795211,
    "coord_source": "walkerplus_map",
-   "visit_min": 30
+   "visit_min": 30,
+   "cat": "temple",
+   "tags": [
+    "garden"
+   ]
   },
   {
    "id": "entsuji",
@@ -1646,7 +1926,12 @@
    "lat": 35.019611,
    "lon": 135.770139,
    "coord_source": "japan_explorers_spot_page",
-   "visit_min": 40
+   "visit_min": 40,
+   "cat": "garden",
+   "tags": [
+    "temple",
+    "viewpoint"
+   ]
   },
   {
    "id": "bishamondo",
@@ -1675,7 +1960,11 @@
    "aliases": [
     "Bishamondo"
    ],
-   "visit_min": 45
+   "visit_min": 45,
+   "cat": "temple",
+   "tags": [
+    "nature"
+   ]
   },
   {
    "id": "anshoji",
@@ -1696,7 +1985,9 @@
    "lat": 34.995716,
    "lon": 135.815749,
    "coord_source": "walkerplus_map",
-   "visit_min": 30
+   "visit_min": 30,
+   "cat": "temple",
+   "tags": []
   },
   {
    "id": "daigoji",
@@ -1726,7 +2017,12 @@
     "Daigoji",
     "Daigo-ji"
    ],
-   "visit_min": 90
+   "visit_min": 90,
+   "cat": "temple",
+   "tags": [
+    "garden",
+    "nature"
+   ]
   },
   {
    "id": "kajuji",
@@ -1750,7 +2046,11 @@
     ]
    },
    "aliases": [],
-   "visit_min": 40
+   "visit_min": 40,
+   "cat": "garden",
+   "tags": [
+    "temple"
+   ]
   },
   {
    "id": "zuishinin",
@@ -1774,7 +2074,9 @@
     ]
    },
    "aliases": [],
-   "visit_min": 40
+   "visit_min": 40,
+   "cat": "temple",
+   "tags": []
   },
   {
    "id": "yamashina_canal",
@@ -1792,7 +2094,12 @@
     ]
    },
    "aliases": [],
-   "visit_min": 30
+   "visit_min": 30,
+   "cat": "river",
+   "tags": [
+    "street",
+    "nature"
+   ]
   },
   {
    "id": "ryoanji",
@@ -1819,7 +2126,12 @@
     ]
    },
    "aliases": [],
-   "visit_min": 45
+   "visit_min": 45,
+   "cat": "garden",
+   "tags": [
+    "temple"
+   ],
+   "standalone": true
   },
   {
    "id": "ninnaji",
@@ -1846,7 +2158,9 @@
     ]
    },
    "aliases": [],
-   "visit_min": 60
+   "visit_min": 60,
+   "cat": "temple",
+   "tags": []
   },
   {
    "id": "tojiin",
@@ -1870,7 +2184,11 @@
     ]
    },
    "aliases": [],
-   "visit_min": 40
+   "visit_min": 40,
+   "cat": "garden",
+   "tags": [
+    "temple"
+   ]
   },
   {
    "id": "taizoin",
@@ -1894,7 +2212,11 @@
     ]
    },
    "aliases": [],
-   "visit_min": 40
+   "visit_min": 40,
+   "cat": "garden",
+   "tags": [
+    "temple"
+   ]
   },
   {
    "id": "daihoin",
@@ -1915,7 +2237,11 @@
     ]
    },
    "aliases": [],
-   "visit_min": 30
+   "visit_min": 30,
+   "cat": "garden",
+   "tags": [
+    "temple"
+   ]
   },
   {
    "id": "hokongoin",
@@ -1936,7 +2262,11 @@
    "lat": 35.019163,
    "lon": 135.716136,
    "coord_source": "walkerplus_map",
-   "visit_min": 35
+   "visit_min": 35,
+   "cat": "temple",
+   "tags": [
+    "garden"
+   ]
   },
   {
    "id": "kinkakuji",
@@ -1958,7 +2288,13 @@
    "lat": 35.039403,
    "lon": 135.729364,
    "coord_source": "japan_explorers_spot_page",
-   "visit_min": 45
+   "visit_min": 45,
+   "cat": "temple",
+   "tags": [
+    "garden",
+    "unusual"
+   ],
+   "standalone": true
   },
   {
    "id": "kitano",
@@ -1988,7 +2324,12 @@
     "Kitano Tenmangu",
     "北野天満宮"
    ],
-   "visit_min": 50
+   "visit_min": 50,
+   "cat": "temple",
+   "tags": [
+    "nature",
+    "river"
+   ]
   },
   {
    "id": "genkoan",
@@ -2012,7 +2353,11 @@
     ]
    },
    "aliases": [],
-   "visit_min": 35
+   "visit_min": 35,
+   "cat": "temple",
+   "tags": [
+    "unusual"
+   ]
   },
   {
    "id": "joshoji",
@@ -2033,7 +2378,9 @@
     ]
    },
    "aliases": [],
-   "visit_min": 35
+   "visit_min": 35,
+   "cat": "temple",
+   "tags": []
   },
   {
    "id": "kamigamo",
@@ -2054,7 +2401,11 @@
     ]
    },
    "aliases": [],
-   "visit_min": 40
+   "visit_min": 40,
+   "cat": "temple",
+   "tags": [
+    "river"
+   ]
   },
   {
    "id": "daitokuji",
@@ -2072,7 +2423,11 @@
    "lat": 35.043889,
    "lon": 135.746111,
    "coord_source": "japan_explorers_spot_page",
-   "visit_min": 50
+   "visit_min": 50,
+   "cat": "temple",
+   "tags": [
+    "garden"
+   ]
   },
   {
    "id": "shozan",
@@ -2090,7 +2445,9 @@
     ]
    },
    "aliases": [],
-   "visit_min": 45
+   "visit_min": 45,
+   "cat": "garden",
+   "tags": []
   },
   {
    "id": "botanical",
@@ -2111,7 +2468,11 @@
     ]
    },
    "aliases": [],
-   "visit_min": 60
+   "visit_min": 60,
+   "cat": "park",
+   "tags": [
+    "garden"
+   ]
   },
   {
    "id": "shimogamo",
@@ -2140,7 +2501,11 @@
     "糺の森",
     "賀茂御祖神社"
    ],
-   "visit_min": 40
+   "visit_min": 40,
+   "cat": "nature",
+   "tags": [
+    "temple"
+   ]
   },
   {
    "id": "gyoen",
@@ -2164,7 +2529,10 @@
     ]
    },
    "aliases": [],
-   "visit_min": 45
+   "visit_min": 45,
+   "cat": "park",
+   "tags": [],
+   "standalone": true
   },
   {
    "id": "rozanji",
@@ -2185,7 +2553,11 @@
    "lat": 35.024584,
    "lon": 135.767906,
    "coord_source": "walkerplus_map",
-   "visit_min": 30
+   "visit_min": 30,
+   "cat": "garden",
+   "tags": [
+    "temple"
+   ]
   },
   {
    "id": "myokenji",
@@ -2206,7 +2578,11 @@
    "lat": 35.034571,
    "lon": 135.754682,
    "coord_source": "walkerplus_map",
-   "visit_min": 30
+   "visit_min": 30,
+   "cat": "temple",
+   "tags": [
+    "garden"
+   ]
   },
   {
    "id": "myokakuji",
@@ -2221,7 +2597,11 @@
     ]
    },
    "aliases": [],
-   "visit_min": 45
+   "visit_min": 45,
+   "cat": "temple",
+   "tags": [
+    "garden"
+   ]
   },
   {
    "id": "nijo",
@@ -2248,7 +2628,12 @@
     ]
    },
    "aliases": [],
-   "visit_min": 75
+   "visit_min": 75,
+   "cat": "unusual",
+   "tags": [
+    "garden"
+   ],
+   "standalone": true
   },
   {
    "id": "toji",
@@ -2272,7 +2657,11 @@
     ]
    },
    "aliases": [],
-   "visit_min": 60
+   "visit_min": 60,
+   "cat": "temple",
+   "tags": [
+    "garden"
+   ]
   },
   {
    "id": "shoseien",
@@ -2293,7 +2682,9 @@
     ]
    },
    "aliases": [],
-   "visit_min": 40
+   "visit_min": 40,
+   "cat": "garden",
+   "tags": []
   },
   {
    "id": "nishihonganji",
@@ -2308,7 +2699,9 @@
     ]
    },
    "aliases": [],
-   "visit_min": 45
+   "visit_min": 45,
+   "cat": "temple",
+   "tags": []
   },
   {
    "id": "higashihonganji",
@@ -2326,7 +2719,9 @@
    "lat": 34.991017,
    "lon": 135.758456,
    "coord_source": "japan_explorers_spot_page",
-   "visit_min": 45
+   "visit_min": 45,
+   "cat": "temple",
+   "tags": []
   },
   {
    "id": "umekoji",
@@ -2347,7 +2742,11 @@
     ]
    },
    "aliases": [],
-   "visit_min": 40
+   "visit_min": 40,
+   "cat": "garden",
+   "tags": [
+    "park"
+   ]
   },
   {
    "id": "byodoin",
@@ -2374,7 +2773,13 @@
     ]
    },
    "aliases": [],
-   "visit_min": 75
+   "visit_min": 75,
+   "cat": "temple",
+   "tags": [
+    "garden",
+    "unusual"
+   ],
+   "standalone": true
   },
   {
    "id": "koshoji",
@@ -2401,7 +2806,11 @@
     ]
    },
    "aliases": [],
-   "visit_min": 30
+   "visit_min": 30,
+   "cat": "temple",
+   "tags": [
+    "nature"
+   ]
   },
   {
    "id": "mimurotoji",
@@ -2425,7 +2834,11 @@
     ]
    },
    "aliases": [],
-   "visit_min": 50
+   "visit_min": 50,
+   "cat": "temple",
+   "tags": [
+    "garden"
+   ]
   },
   {
    "id": "jonangu",
@@ -2452,7 +2865,11 @@
     ]
    },
    "aliases": [],
-   "visit_min": 45
+   "visit_min": 45,
+   "cat": "garden",
+   "tags": [
+    "temple"
+   ]
   },
   {
    "id": "inari",
@@ -2470,7 +2887,14 @@
     ]
    },
    "aliases": [],
-   "visit_min": 90
+   "visit_min": 90,
+   "cat": "temple",
+   "tags": [
+    "nature",
+    "unusual",
+    "viewpoint"
+   ],
+   "standalone": true
   },
   {
    "id": "ujigawa",
@@ -2488,7 +2912,11 @@
     ]
    },
    "aliases": [],
-   "visit_min": 35
+   "visit_min": 35,
+   "cat": "river",
+   "tags": [
+    "nature"
+   ]
   },
   {
    "id": "uji_botanical",
@@ -2503,7 +2931,11 @@
     ]
    },
    "aliases": [],
-   "visit_min": 45
+   "visit_min": 45,
+   "cat": "park",
+   "tags": [
+    "garden"
+   ]
   },
   {
    "id": "komyoji",
@@ -2530,7 +2962,11 @@
     ]
    },
    "aliases": [],
-   "visit_min": 45
+   "visit_min": 45,
+   "cat": "temple",
+   "tags": [
+    "nature"
+   ]
   },
   {
    "id": "yoshiminedera",
@@ -2557,7 +2993,12 @@
     ]
    },
    "aliases": [],
-   "visit_min": 75
+   "visit_min": 75,
+   "cat": "temple",
+   "tags": [
+    "viewpoint",
+    "nature"
+   ]
   },
   {
    "id": "jurinji",
@@ -2578,7 +3019,11 @@
    "lat": 34.944393,
    "lon": 135.657205,
    "coord_source": "walkerplus_map",
-   "visit_min": 30
+   "visit_min": 30,
+   "cat": "temple",
+   "tags": [
+    "garden"
+   ]
   },
   {
    "id": "otokunidera",
@@ -2602,7 +3047,9 @@
    "lat": 34.936289,
    "lon": 135.689088,
    "coord_source": "walkerplus_map",
-   "visit_min": 30
+   "visit_min": 30,
+   "cat": "temple",
+   "tags": []
   },
   {
    "id": "nagaokatenmangu",
@@ -2623,7 +3070,11 @@
    "lat": 34.922697,
    "lon": 135.686927,
    "coord_source": "walkerplus_map",
-   "visit_min": 35
+   "visit_min": 35,
+   "cat": "temple",
+   "tags": [
+    "park"
+   ]
   },
   {
    "id": "yokokuji",
@@ -2644,7 +3095,11 @@
     ]
    },
    "aliases": [],
-   "visit_min": 45
+   "visit_min": 45,
+   "cat": "temple",
+   "tags": [
+    "garden"
+   ]
   },
   {
    "id": "oharano_jinja",
@@ -2665,7 +3120,11 @@
     ]
    },
    "aliases": [],
-   "visit_min": 30
+   "visit_min": 30,
+   "cat": "temple",
+   "tags": [
+    "nature"
+   ]
   },
   {
    "id": "shojiji",
@@ -2683,7 +3142,9 @@
     ]
    },
    "aliases": [],
-   "visit_min": 35
+   "visit_min": 35,
+   "cat": "temple",
+   "tags": []
   },
   {
    "id": "muko",
@@ -2701,7 +3162,9 @@
     ]
    },
    "aliases": [],
-   "visit_min": 45
+   "visit_min": 45,
+   "cat": "temple",
+   "tags": []
   },
   {
    "id": "shohoji_oharano",
@@ -2719,7 +3182,11 @@
    "lat": 34.956951,
    "lon": 135.655549,
    "coord_source": "walkerplus_map",
-   "visit_min": 45
+   "visit_min": 45,
+   "cat": "temple",
+   "tags": [
+    "garden"
+   ]
   },
   {
    "id": "iwashimizu",
@@ -2740,7 +3207,12 @@
     ]
    },
    "aliases": [],
-   "visit_min": 45
+   "visit_min": 45,
+   "cat": "temple",
+   "tags": [
+    "viewpoint",
+    "nature"
+   ]
   },
   {
    "id": "ikkyuji",
@@ -2764,7 +3236,11 @@
     ]
    },
    "aliases": [],
-   "visit_min": 45
+   "visit_min": 45,
+   "cat": "temple",
+   "tags": [
+    "garden"
+   ]
   },
   {
    "id": "joruriji",
@@ -2785,7 +3261,11 @@
     ]
    },
    "aliases": [],
-   "visit_min": 45
+   "visit_min": 45,
+   "cat": "temple",
+   "tags": [
+    "garden"
+   ]
   },
   {
    "id": "kasagi",
@@ -2809,7 +3289,11 @@
     ]
    },
    "aliases": [],
-   "visit_min": 90
+   "visit_min": 90,
+   "cat": "viewpoint",
+   "tags": [
+    "nature"
+   ]
   },
   {
    "id": "keihanna",
@@ -2833,7 +3317,11 @@
     ]
    },
    "aliases": [],
-   "visit_min": 60
+   "visit_min": 60,
+   "cat": "park",
+   "tags": [
+    "garden"
+   ]
   },
   {
    "id": "shohoji_wazuka",
@@ -2851,7 +3339,9 @@
     ]
    },
    "aliases": [],
-   "visit_min": 45
+   "visit_min": 45,
+   "cat": "temple",
+   "tags": []
   },
   {
    "id": "kuwayama",
@@ -2872,7 +3362,9 @@
     ]
    },
    "aliases": [],
-   "visit_min": 45
+   "visit_min": 45,
+   "cat": "temple",
+   "tags": []
   },
   {
    "id": "izumo",
@@ -2890,7 +3382,11 @@
     ]
    },
    "aliases": [],
-   "visit_min": 45
+   "visit_min": 45,
+   "cat": "temple",
+   "tags": [
+    "nature"
+   ]
   },
   {
    "id": "oomoto_ayabe",
@@ -2908,7 +3404,9 @@
     ]
    },
    "aliases": [],
-   "visit_min": 45
+   "visit_min": 45,
+   "cat": "garden",
+   "tags": []
   },
   {
    "id": "jozokoji",
@@ -2926,7 +3424,11 @@
    "lat": 35.200889,
    "lon": 135.685361,
    "coord_source": "japan_explorers_spot_page",
-   "visit_min": 45
+   "visit_min": 45,
+   "cat": "temple",
+   "tags": [
+    "nature"
+   ]
   },
   {
    "id": "konoji",
@@ -2944,7 +3446,9 @@
    "lat": 35.582814,
    "lon": 135.196669,
    "coord_source": "japan_explorers_spot_page",
-   "visit_min": 45
+   "visit_min": 45,
+   "cat": "temple",
+   "tags": []
   },
   {
    "id": "rurikei",
@@ -2962,7 +3466,11 @@
    "lat": 35.035817,
    "lon": 135.404608,
    "coord_source": "japan_explorers_spot_page",
-   "visit_min": 35
+   "visit_min": 35,
+   "cat": "nature",
+   "tags": [
+    "river"
+   ]
   },
   {
    "id": "oonodam",
@@ -2980,7 +3488,11 @@
     ]
    },
    "aliases": [],
-   "visit_min": 35
+   "visit_min": 35,
+   "cat": "park",
+   "tags": [
+    "river"
+   ]
   },
   {
    "id": "kongoin",
@@ -3001,7 +3513,9 @@
     ]
    },
    "aliases": [],
-   "visit_min": 45
+   "visit_min": 45,
+   "cat": "temple",
+   "tags": []
   },
   {
    "id": "chooanji",
@@ -3022,7 +3536,9 @@
     ]
    },
    "aliases": [],
-   "visit_min": 45
+   "visit_min": 45,
+   "cat": "temple",
+   "tags": []
   },
   {
    "id": "ankokuji",
@@ -3043,7 +3559,9 @@
     ]
    },
    "aliases": [],
-   "visit_min": 45
+   "visit_min": 45,
+   "cat": "temple",
+   "tags": []
   },
   {
    "id": "nariaiji",
@@ -3064,7 +3582,11 @@
     ]
    },
    "aliases": [],
-   "visit_min": 45
+   "visit_min": 45,
+   "cat": "temple",
+   "tags": [
+    "viewpoint"
+   ]
   },
   {
    "id": "ooeyama",
@@ -3079,7 +3601,11 @@
     ]
    },
    "aliases": [],
-   "visit_min": 35
+   "visit_min": 35,
+   "cat": "viewpoint",
+   "tags": [
+    "nature"
+   ]
   },
   {
    "id": "ryuonji",
@@ -3094,7 +3620,9 @@
     ]
    },
    "aliases": [],
-   "visit_min": 45
+   "visit_min": 45,
+   "cat": "temple",
+   "tags": []
   },
   {
    "id": "hongan_kitayama",
@@ -3109,7 +3637,19 @@
     ]
    },
    "aliases": [],
-   "visit_min": 45
+   "visit_min": 45,
+   "cat": "temple",
+   "tags": []
   }
- ]
+ ],
+ "categories": {
+  "temple": "Храм / святилище",
+  "garden": "Японский сад",
+  "park": "Парк",
+  "nature": "Природная тропа / лес",
+  "street": "Улица / квартал",
+  "river": "Река / набережная",
+  "viewpoint": "Гора / видовая точка",
+  "unusual": "Необычное место"
+ }
 }

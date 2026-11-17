@@ -184,7 +184,8 @@
     sc.querySelector("b").textContent = v.score ?? "—";
     t.querySelector(".ru").textContent = p.ru;
     t.querySelector(".en").textContent = p.en;
-    t.querySelector(".ja").textContent = `${p.ja} · ${p.district_ru || ""}${p.kind === "area" ? " · район целиком" : ""}`;
+    const catLbl = window.KoyoDiversity && p.cat ? " · " + window.KoyoDiversity.label(p).trim() : "";
+    t.querySelector(".ja").textContent = `${p.ja} · ${p.district_ru || ""}${catLbl}${p.kind === "area" ? " · район целиком" : ""}`;
     const pill = t.querySelector(".pill");
     pill.textContent = (state.day > 0 && p.status !== "CONFLICT" ? "≈ " : "") + (STATUS_RU[v.status] || v.status);
     pill.style.background = STATUS_COLOR(v.status);

@@ -308,6 +308,7 @@ def build(results, reg: Registry, now, details=None):
             "history": history.get(pid, []),
             "n_sources": len({o["source"] for o in obs}),
             "visit_min": p.get("visit_min"),
+            "cat": p.get("cat"), "tags": p.get("tags") or [], "standalone": bool(p.get("standalone")),
             "hours": place_hours(details, pid),
         })
 
@@ -339,6 +340,7 @@ def build(results, reg: Registry, now, details=None):
         "places": places_out,
         "unmatched": unmatched,
         "lightups": lightups,
+        "categories": reg.doc.get("categories", {}),
         "details_fetched_at": (details or {}).get("fetched_at"),
     }
 
