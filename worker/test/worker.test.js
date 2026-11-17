@@ -32,7 +32,9 @@ test("search: secret stays server-side, minimal field mask, minRating 4.0, no DR
   assert.strictEqual(sent.minRating, 4.0, "rating filter applied by Google before the 20-result cap");
   assert.strictEqual(sent.textQuery, "ラーメン");
   assert.ok(sent.locationRestriction.rectangle, "hard area restriction, not a soft bias");
-  assert.ok(Math.abs((sent.locationRestriction.rectangle.low.latitude + sent.locationRestriction.rectangle.high.latitude) / 2 - 34.988) < 1e-9, "rounded origin");
+  const rects = calls.filter(c => c.url.includes("searchText")).map(c => JSON.parse(c.init.body).locationRestriction.rectangle);
+  const lo = Math.min(...rects.map(r => r.low.latitude)), hi = Math.max(...rects.map(r => r.high.latitude));
+  assert.ok(Math.abs((lo + hi) / 2 - 34.988) < 1e-9, "tiles centred on the rounded origin");
   assert.ok(!/reviews/.test(s.init.headers["X-Goog-FieldMask"]), "no reviews at stage 1");
   const rm = calls.find(c => c.url.includes("computeRouteMatrix"));
   assert.strictEqual(JSON.parse(rm.init.body).travelMode, "WALK");
@@ -63,7 +65,7 @@ test("manual address: geocoded via Text Search, then searched", async () => {
   };
   const r = await (await handle(req("/search", { where: "Kyoto Station", radiusM: 900, meal: "lunch" }), ENV, { fetch })).json();
   assert.strictEqual(r.origin.label, "Станция Киото");
-  assert.ok(calls.length >= 2 && calls.length <= 4, "geocode + bounded search calls: " + calls.length);
+  assert.ok(calls.length >= 2 && calls.length <= 5, "geocode + bounded search calls (≤ 4): " + calls.length);
 });
 
 test("origin restriction and not-configured state", async () => {
