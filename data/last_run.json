@@ -1,95 +1,95 @@
 {
- "generated_at": "2026-11-17T11:40:24+09:00",
+ "generated_at": "2026-11-17T11:56:29+09:00",
  "requests": [
   {
    "url": "https://souda-kyoto.jp/guide/season/koyo/modal.json",
    "status": 200,
-   "ms": 690
+   "ms": 199
   },
   {
    "url": "https://kisetsu.jr-odekake.net/result/MMJ/A1005?lang=ja",
    "status": 200,
-   "ms": 408
+   "ms": 487
   },
   {
    "url": "https://kisetsu.jr-odekake.net/result/MMJ/A1005?lang=en",
    "status": 200,
-   "ms": 283
+   "ms": 334
   },
   {
    "url": "https://weathernews.jp/koyo/area/kyoto/",
    "status": 200,
-   "ms": 893
+   "ms": 1180
   },
   {
    "url": "https://www.japan-explorers.com/koyo/kyoto/",
    "status": 200,
-   "ms": 429
+   "ms": 568
   },
   {
    "url": "https://koyo.walkerplus.com/list/ar0726/",
    "status": 200,
-   "ms": 16
+   "ms": 735
   },
   {
    "url": "https://koyo.walkerplus.com/list/ar0726/2.html",
    "status": 200,
-   "ms": 15
+   "ms": 456
   },
   {
    "url": "https://koyo.walkerplus.com/list/ar0726/3.html",
    "status": 200,
-   "ms": 16
+   "ms": 442
   },
   {
    "url": "https://koyo.walkerplus.com/list/ar0726/4.html",
    "status": 200,
-   "ms": 353
+   "ms": 907
   },
   {
    "url": "https://koyo.walkerplus.com/list/ar0726/5.html",
    "status": 200,
-   "ms": 365
+   "ms": 835
   },
   {
    "url": "https://koyo.walkerplus.com/list/ar0726/6.html",
    "status": 200,
-   "ms": 16
+   "ms": 858
   },
   {
    "url": "https://koyo.walkerplus.com/list/ar0726/7.html",
    "status": 200,
-   "ms": 260
+   "ms": 620
   },
   {
    "url": "https://koyo.walkerplus.com/list/ar0726/8.html",
    "status": 200,
-   "ms": 349
+   "ms": 465
   },
   {
    "url": "https://koyo.walkerplus.com/list/ar0726/9.html",
    "status": 200,
-   "ms": 641
+   "ms": 463
   },
   {
    "url": "https://koyo.walkerplus.com/list/ar0726/10.html",
    "status": 200,
-   "ms": 387
+   "ms": 533
   },
   {
    "url": "https://koyo.walkerplus.com/list/ar0726/11.html",
    "status": 200,
-   "ms": 288
+   "ms": 489
   },
   {
    "url": "https://koyo.walkerplus.com/list/ar0726/12.html",
    "status": 200,
-   "ms": 261
+   "ms": 857
   },
   {
    "url": "https://koyo.walkerplus.com/list/ar0726/13.html",
    "status": 200,
-   "ms": 364
+   "ms": 836
   }
  ],
  "sources": [
