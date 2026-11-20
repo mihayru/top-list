@@ -1,10 +1,10 @@
 {
- "fetched_at": "2026-11-19T19:22:16+09:00",
+ "fetched_at": "2026-11-20T21:53:49+09:00",
  "hours": {
   "sanzenin": {
    "source": "walkerplus",
    "source_url": "https://koyo.walkerplus.com/detail/ar0726e13166/data.html",
-   "fetched_at": "2026-11-19T19:22:16+09:00",
+   "fetched_at": "2026-11-20T21:53:49+09:00",
    "hours_raw": "11月 8:45~16:45、12月~2月 9:00~16:30",
    "open": "8:45",
    "close": "16:45",
@@ -18,7 +18,7 @@
   "jakkoin": {
    "source": "walkerplus",
    "source_url": "https://koyo.walkerplus.com/detail/ar0726e446148/data.html",
-   "fetched_at": "2026-11-19T19:22:16+09:00",
+   "fetched_at": "2026-11-20T21:53:49+09:00",
    "hours_raw": "9:00~17:00 ※12月~2月は9:00~16:30",
    "open": "9:00",
    "close": "17:00",
@@ -32,7 +32,7 @@
   "hosenin": {
    "source": "walkerplus",
    "source_url": "https://koyo.walkerplus.com/detail/ar0726e13168/data.html",
-   "fetched_at": "2026-11-19T19:22:16+09:00",
+   "fetched_at": "2026-11-20T21:53:49+09:00",
    "hours_raw": "拝観時間 9:00~17:00 (受付終了は16:30)。",
    "open": "9:00",
    "close": "17:00",
@@ -46,7 +46,7 @@
   "jikkoin": {
    "source": "walkerplus",
    "source_url": "https://koyo.walkerplus.com/detail/ar0726e13167/data.html",
-   "fetched_at": "2026-11-19T19:22:16+09:00",
+   "fetched_at": "2026-11-20T21:53:49+09:00",
    "hours_raw": "9:00~16:00(季節により変更あり)",
    "open": "9:00",
    "close": "16:00",
@@ -60,7 +60,7 @@
   "kochidani": {
    "source": "walkerplus",
    "source_url": "https://koyo.walkerplus.com/detail/ar0726e518738/data.html",
-   "fetched_at": "2026-11-19T19:22:16+09:00",
+   "fetched_at": "2026-11-20T21:53:49+09:00",
    "hours_raw": "受付時間 9:00~16:00",
    "open": "9:00",
    "close": "16:00",
@@ -74,7 +74,7 @@
   "hakuryuen": {
    "source": "walkerplus",
    "source_url": "https://koyo.walkerplus.com/detail/ar0726e392492/data.html",
-   "fetched_at": "2026-11-19T19:22:16+09:00",
+   "fetched_at": "2026-11-20T21:53:49+09:00",
    "hours_raw": "10:00〜14:00 ※10:00、11:00、12:00、13:00に観覧を募集。各回、2時間を目処に退園。各日、最終の回は観覧時間が1時間。ハイシーズンは16:00まで公開を延長する場合あり 各回50名限定(先着順)",
    "open": "10:00",
    "close": "14:00",
@@ -88,7 +88,7 @@
   "kifune": {
    "source": "walkerplus",
    "source_url": "https://koyo.walkerplus.com/detail/ar0726e13175/data.html",
-   "fetched_at": "2026-11-19T19:22:16+09:00",
+   "fetched_at": "2026-11-20T21:53:49+09:00",
    "hours_raw": "開門時間6:00~20:00 (12月~4月は6:00~18:00) 「貴船神社 紅葉ライトアップ」 開催期間中は延長(夕暮れ~20:30 )",
    "open": "6:00",
    "close": "20:00",
@@ -102,7 +102,7 @@
   "kurama": {
    "source": "walkerplus",
    "source_url": "https://koyo.walkerplus.com/detail/ar0726e13174/data.html",
-   "fetched_at": "2026-11-19T19:22:16+09:00",
+   "fetched_at": "2026-11-20T21:53:49+09:00",
    "hours_raw": "9:00〜16:15",
    "open": "9:00",
    "close": "16:15",
@@ -116,7 +116,7 @@
   "shimyoin": {
    "source": "walkerplus",
    "source_url": "https://koyo.walkerplus.com/detail/ar0726e519070/data.html",
-   "fetched_at": "2026-11-19T19:22:16+09:00",
+   "fetched_at": "2026-11-20T21:53:49+09:00",
    "hours_raw": "8:00~16:00(閉門)",
    "open": "8:00",
    "close": "16:00",
@@ -130,7 +130,7 @@
   "jingoji": {
    "source": "walkerplus",
    "source_url": "https://koyo.walkerplus.com/detail/ar0726e12990/data.html",
-   "fetched_at": "2026-11-19T19:22:16+09:00",
+   "fetched_at": "2026-11-20T21:53:49+09:00",
    "hours_raw": "拝観時間 9:00~16:00",
    "open": "9:00",
    "close": "16:00",
@@ -144,7 +144,7 @@
   "saimyoji": {
    "source": "walkerplus",
    "source_url": "https://koyo.walkerplus.com/detail/ar0726e12993/data.html",
-   "fetched_at": "2026-11-19T19:22:16+09:00",
+   "fetched_at": "2026-11-20T21:53:49+09:00",
    "hours_raw": "9:00~17:00",
    "open": "9:00",
    "close": "17:00",
@@ -158,7 +158,7 @@
   "arashiyama": {
    "source": "walkerplus",
    "source_url": "https://koyo.walkerplus.com/detail/ar0726e13147/data.html",
-   "fetched_at": "2026-11-19T19:22:16+09:00",
+   "fetched_at": "2026-11-20T21:53:49+09:00",
    "hours_raw": null,
    "price_raw": "入場無料",
    "price_yen": 0,
@@ -169,7 +169,7 @@
   "tenryuji": {
    "source": "walkerplus",
    "source_url": "https://koyo.walkerplus.com/detail/ar0726e154674/data.html",
-   "fetched_at": "2026-11-19T19:22:16+09:00",
+   "fetched_at": "2026-11-20T21:53:49+09:00",
    "hours_raw": "参拝時間8:30~17:00。2026年11月14日(土)~30日(月)は早朝参拝、7:30に庭園開門",
    "open": "8:30",
    "close": "17:00",
@@ -183,7 +183,7 @@
   "jojakkoji": {
    "source": "walkerplus",
    "source_url": "https://koyo.walkerplus.com/detail/ar0726e13149/data.html",
-   "fetched_at": "2026-11-19T19:22:16+09:00",
+   "fetched_at": "2026-11-20T21:53:49+09:00",
    "hours_raw": "9:00~17:00 (16:30受付終了)",
    "open": "9:00",
    "close": "17:00",
@@ -197,7 +197,7 @@
   "nisonin": {
    "source": "walkerplus",
    "source_url": "https://koyo.walkerplus.com/detail/ar0726e13150/data.html",
-   "fetched_at": "2026-11-19T19:22:16+09:00",
+   "fetched_at": "2026-11-20T21:53:49+09:00",
    "hours_raw": "拝観時間 9:00~16:30",
    "open": "9:00",
    "close": "16:30",
@@ -211,7 +211,7 @@
   "giouji": {
    "source": "walkerplus",
    "source_url": "https://koyo.walkerplus.com/detail/ar0726e372644/data.html",
-   "fetched_at": "2026-11-19T19:22:16+09:00",
+   "fetched_at": "2026-11-20T21:53:49+09:00",
    "hours_raw": null,
    "price_raw": "有料 参拝料:大人500円、小学生・中学生・高校生100円。祇王寺・大覚寺共通拝観券 大人1000円",
    "price_yen": 500,
@@ -222,7 +222,7 @@
   "hogonin": {
    "source": "walkerplus",
    "source_url": "https://koyo.walkerplus.com/detail/ar0726e323493/data.html",
-   "fetched_at": "2026-11-19T19:22:16+09:00",
+   "fetched_at": "2026-11-20T21:53:49+09:00",
    "hours_raw": "9:00~17:00(閉門) ※受付終了は16:45(本堂は16:30)。秋の夜間特別拝観17:30~20:30(閉門) ※受付終了は20:00",
    "open": "9:00",
    "close": "17:00",
@@ -236,7 +236,7 @@
   "hokyoin": {
    "source": "walkerplus",
    "source_url": "https://koyo.walkerplus.com/detail/ar0726e13151/data.html",
-   "fetched_at": "2026-11-19T19:22:16+09:00",
+   "fetched_at": "2026-11-20T21:53:49+09:00",
    "hours_raw": "受付時間 9:00~16:30",
    "open": "9:00",
    "close": "16:30",
@@ -250,7 +250,7 @@
   "seiryoji": {
    "source": "walkerplus",
    "source_url": "https://koyo.walkerplus.com/detail/ar0726e444556/data.html",
-   "fetched_at": "2026-11-19T19:22:16+09:00",
+   "fetched_at": "2026-11-20T21:53:49+09:00",
    "hours_raw": "9:00~16:00(4月・5月・10月・11月は16:30まで)",
    "open": "9:00",
    "close": "16:00",
@@ -264,7 +264,7 @@
   "daikakuji": {
    "source": "walkerplus",
    "source_url": "https://koyo.walkerplus.com/detail/ar0726e154675/data.html",
-   "fetched_at": "2026-11-19T19:22:16+09:00",
+   "fetched_at": "2026-11-20T21:53:49+09:00",
    "hours_raw": "9:00~17:00(受付時間 9:00~16:30)",
    "open": "9:00",
    "close": "17:00",
@@ -278,7 +278,7 @@
   "rokuoin": {
    "source": "walkerplus",
    "source_url": "https://koyo.walkerplus.com/detail/ar0726e13148/data.html",
-   "fetched_at": "2026-11-19T19:22:16+09:00",
+   "fetched_at": "2026-11-20T21:53:49+09:00",
    "hours_raw": "9:00~16:30(最終受付16:00)",
    "open": "9:00",
    "close": "16:30",
@@ -292,7 +292,7 @@
   "okochi": {
    "source": "walkerplus",
    "source_url": "https://koyo.walkerplus.com/detail/ar0726e519266/data.html",
-   "fetched_at": "2026-11-19T19:22:16+09:00",
+   "fetched_at": "2026-11-20T21:53:49+09:00",
    "hours_raw": "9:00~17:00 最終入場16:30",
    "open": "9:00",
    "close": "17:00",
@@ -306,7 +306,7 @@
   "adashino": {
    "source": "walkerplus",
    "source_url": "https://koyo.walkerplus.com/detail/ar0726e372650/data.html",
-   "fetched_at": "2026-11-19T19:22:16+09:00",
+   "fetched_at": "2026-11-20T21:53:49+09:00",
    "hours_raw": "拝観時間 9:00〜16:30 (受付終了)",
    "open": "9:00",
    "close": "16:30",
@@ -320,7 +320,7 @@
   "otagi": {
    "source": "walkerplus",
    "source_url": "https://koyo.walkerplus.com/detail/ar0726e520596/data.html",
-   "fetched_at": "2026-11-19T19:22:16+09:00",
+   "fetched_at": "2026-11-20T21:53:49+09:00",
    "hours_raw": "9:00~16:15",
    "open": "9:00",
    "close": "16:15",
@@ -334,7 +334,7 @@
   "torokko": {
    "source": "walkerplus",
    "source_url": "https://koyo.walkerplus.com/detail/ar0726e372783/data.html",
-   "fetched_at": "2026-11-19T19:22:16+09:00",
+   "fetched_at": "2026-11-20T21:53:49+09:00",
    "hours_raw": "ライトアップ時間16:30~最終列車まで",
    "price_raw": "有料 トロッコ列車運賃 大人880円、子ども440円",
    "price_yen": 880,
@@ -345,7 +345,7 @@
   "hozukyo": {
    "source": "walkerplus",
    "source_url": "https://koyo.walkerplus.com/detail/ar0726e12691/data.html",
-   "fetched_at": "2026-11-19T19:22:16+09:00",
+   "fetched_at": "2026-11-20T21:53:49+09:00",
    "hours_raw": "2026年3月10日(火)~12月13日(日)の運航時間は9:00~15:00、12月14日(月)~2027年3月9日(火)は10:00〜14:30",
    "open": "9:00",
    "close": "15:00",
@@ -359,7 +359,7 @@
   "tofukuji": {
    "source": "walkerplus",
    "source_url": "https://koyo.walkerplus.com/detail/ar0726e13141/data.html",
-   "fetched_at": "2026-11-19T19:22:16+09:00",
+   "fetched_at": "2026-11-20T21:53:49+09:00",
    "hours_raw": null,
    "price_raw": "有料 境内は無料。拝観料 本坊庭園:大人500円、中学生以下300円、幼児無料(要同伴)。通天橋:大人600円、中学生以下300円、幼児無料(要同伴)。通天橋・開山堂の秋季拝観料は公式サイト参照",
    "price_yen": 500,
@@ -370,7 +370,7 @@
   "sennyuji": {
    "source": "walkerplus",
    "source_url": "https://koyo.walkerplus.com/detail/ar0726e323191/data.html",
-   "fetched_at": "2026-11-19T19:22:16+09:00",
+   "fetched_at": "2026-11-20T21:53:49+09:00",
    "hours_raw": "9:00~17:00(受付終了16:30)。12月~2月は拝観時間9:00~16:30(受付終了16:00)",
    "open": "9:00",
    "close": "17:00",
@@ -384,7 +384,7 @@
   "imakumano": {
    "source": "walkerplus",
    "source_url": "https://koyo.walkerplus.com/detail/ar0726e446504/data.html",
-   "fetched_at": "2026-11-19T19:22:16+09:00",
+   "fetched_at": "2026-11-20T21:53:49+09:00",
    "hours_raw": "拝観時間 8:00~17:00",
    "open": "8:00",
    "close": "17:00",
@@ -398,7 +398,7 @@
   "chishakuin": {
    "source": "walkerplus",
    "source_url": "https://koyo.walkerplus.com/detail/ar0726e565840/data.html",
-   "fetched_at": "2026-11-19T19:22:16+09:00",
+   "fetched_at": "2026-11-20T21:53:49+09:00",
    "hours_raw": "9:00~16:30(受付終了16:00) 夜間拝観(ライトアップ)17:00 〜 21:00(20:40 最終受付)",
    "open": "9:00",
    "close": "16:30",
@@ -412,7 +412,7 @@
   "nanzenji": {
    "source": "walkerplus",
    "source_url": "https://koyo.walkerplus.com/detail/ar0726e13142/data.html",
-   "fetched_at": "2026-11-19T19:22:16+09:00",
+   "fetched_at": "2026-11-20T21:53:49+09:00",
    "hours_raw": "8:40~17:00",
    "open": "8:40",
    "close": "17:00",
@@ -426,7 +426,7 @@
   "tenjuan": {
    "source": "walkerplus",
    "source_url": "https://koyo.walkerplus.com/detail/ar0726e322486/data.html",
-   "fetched_at": "2026-11-19T19:22:16+09:00",
+   "fetched_at": "2026-11-20T21:53:49+09:00",
    "hours_raw": "拝観時間9:00~16:30",
    "open": "9:00",
    "close": "16:30",
@@ -440,7 +440,7 @@
   "eikando": {
    "source": "walkerplus",
    "source_url": "https://koyo.walkerplus.com/detail/ar0726e13137/data.html",
-   "fetched_at": "2026-11-19T19:22:16+09:00",
+   "fetched_at": "2026-11-20T21:53:49+09:00",
    "hours_raw": "拝観時間 9:00~17:00 (最終受付16:00)。ライトアップは17:30~21:00 (20:30受付終了)",
    "open": "9:00",
    "close": "17:00",
@@ -454,7 +454,7 @@
   "shinnyodo": {
    "source": "walkerplus",
    "source_url": "https://koyo.walkerplus.com/detail/ar0726e13138/data.html",
-   "fetched_at": "2026-11-19T19:22:16+09:00",
+   "fetched_at": "2026-11-20T21:53:49+09:00",
    "hours_raw": null,
    "price_raw": "有料 2026年11月1日~ 11月17日本堂大人1000円、高校生600円、中学生以下無料。2026年11月18日~12月7日(境内有料化期間)大人境内500円、本堂500円、高校生境内300円、本堂300円、中学生以下無料",
    "price_yen": 1000,
@@ -465,7 +465,7 @@
   "kurodani": {
    "source": "walkerplus",
    "source_url": "https://koyo.walkerplus.com/detail/ar0726e323187/data.html",
-   "fetched_at": "2026-11-19T19:22:16+09:00",
+   "fetched_at": "2026-11-20T21:53:49+09:00",
    "hours_raw": "昼間拝観10:00~16:30(最終入場16:00)、夜間拝観17:30~20:30(最終入場20:00) ※予約不要",
    "open": "10:00",
    "close": "16:30",
@@ -479,7 +479,7 @@
   "tetsugaku": {
    "source": "walkerplus",
    "source_url": "https://koyo.walkerplus.com/detail/ar0726e393308/data.html",
-   "fetched_at": "2026-11-19T19:22:16+09:00",
+   "fetched_at": "2026-11-20T21:53:49+09:00",
    "hours_raw": null,
    "price_raw": "入場無料",
    "price_yen": 0,
@@ -490,7 +490,7 @@
   "murinan": {
    "source": "walkerplus",
    "source_url": "https://koyo.walkerplus.com/detail/ar0726e321275/data.html",
-   "fetched_at": "2026-11-19T19:22:16+09:00",
+   "fetched_at": "2026-11-20T21:53:49+09:00",
    "hours_raw": "開園時間 9:00~18:00(4月~9月)、9:00~17:00(10月~3月) 2026年11月14日(土)・15日(日)、21日(土)・22日(日)・23日(祝)(1)17:30~19:30 (2)19:30~21:30は「秋の紅葉特別夜間公開 トワイライト庭園パーティー2026」最終入場は閉場時間の30分前まで※詳細公式サイト参照",
    "open": "9:00",
    "close": "18:00",
@@ -504,7 +504,7 @@
   "ginkakuji": {
    "source": "walkerplus",
    "source_url": "https://koyo.walkerplus.com/detail/ar0726e373591/data.html",
-   "fetched_at": "2026-11-19T19:22:16+09:00",
+   "fetched_at": "2026-11-20T21:53:49+09:00",
    "hours_raw": "9:00~16:30(12月~2月冬期)",
    "open": "9:00",
    "close": "16:30",
@@ -518,7 +518,7 @@
   "anrakuji": {
    "source": "walkerplus",
    "source_url": "https://koyo.walkerplus.com/detail/ar0726e618082/data.html",
-   "fetched_at": "2026-11-19T19:22:16+09:00",
+   "fetched_at": "2026-11-20T21:53:49+09:00",
    "hours_raw": "10:00~16:00",
    "open": "10:00",
    "close": "16:00",
@@ -532,7 +532,7 @@
   "heian": {
    "source": "walkerplus",
    "source_url": "https://koyo.walkerplus.com/detail/ar0726e519261/data.html",
-   "fetched_at": "2026-11-19T19:22:16+09:00",
+   "fetched_at": "2026-11-20T21:53:49+09:00",
    "hours_raw": "6:00~17:00 ライトアップ2026年11月2日(月)〜11月29日(日)17:30〜21:30(最終受付は21:00)",
    "open": "6:00",
    "close": "17:00",
@@ -546,7 +546,7 @@
   "kiyomizu": {
    "source": "walkerplus",
    "source_url": "https://koyo.walkerplus.com/detail/ar0726e13139/data.html",
-   "fetched_at": "2026-11-19T19:22:16+09:00",
+   "fetched_at": "2026-11-20T21:53:49+09:00",
    "hours_raw": "通常拝観時間 6:00~18:00(季節により変動あり)",
    "open": "6:00",
    "close": "18:00",
@@ -560,7 +560,7 @@
   "kodaiji": {
    "source": "walkerplus",
    "source_url": "https://koyo.walkerplus.com/detail/ar0726e13211/data.html",
-   "fetched_at": "2026-11-19T19:22:16+09:00",
+   "fetched_at": "2026-11-20T21:53:49+09:00",
    "hours_raw": "拝観時間 9:00~17:30(最終受付17:00)。高台寺秋の夜間特別拝観 9:00~22:00(最終受付21:30)。高台御朱印処は16:30まで、ライトアップ期間中は 17:00より夜間限定の御朱印の授与あり 高台寺御朱印処は16:00まで",
    "open": "9:00",
    "close": "17:30",
@@ -574,7 +574,7 @@
   "entokuin": {
    "source": "walkerplus",
    "source_url": "https://koyo.walkerplus.com/detail/ar0726e327189/data.html",
-   "fetched_at": "2026-11-19T19:22:16+09:00",
+   "fetched_at": "2026-11-20T21:53:49+09:00",
    "hours_raw": "10:00~17:30 (17:00受付終了)。春・秋ライトアップ期間は10:00~21:30受付終了",
    "open": "10:00",
    "close": "17:30",
@@ -588,7 +588,7 @@
   "kenninji": {
    "source": "walkerplus",
    "source_url": "https://koyo.walkerplus.com/detail/ar0726e445203/data.html",
-   "fetched_at": "2026-11-19T19:22:16+09:00",
+   "fetched_at": "2026-11-20T21:53:49+09:00",
    "hours_raw": "拝観時間 10:00~16:30 (17:00閉門)",
    "open": "10:00",
    "close": "16:30",
@@ -602,7 +602,7 @@
   "shorenin": {
    "source": "walkerplus",
    "source_url": "https://koyo.walkerplus.com/detail/ar0726e325237/data.html",
-   "fetched_at": "2026-11-19T19:22:16+09:00",
+   "fetched_at": "2026-11-20T21:53:49+09:00",
    "hours_raw": "9:00~17:00(受付終了16:30)",
    "open": "9:00",
    "close": "17:00",
@@ -616,7 +616,7 @@
   "chionin": {
    "source": "walkerplus",
    "source_url": "https://koyo.walkerplus.com/detail/ar0726e154672/data.html",
-   "fetched_at": "2026-11-19T19:22:16+09:00",
+   "fetched_at": "2026-11-20T21:53:49+09:00",
    "hours_raw": "9:00~16:30(受付は16:00まで)。ライトアップ開催時は17:30~21:30(最終受付21:00)",
    "open": "9:00",
    "close": "16:30",
@@ -630,7 +630,7 @@
   "shogunzuka": {
    "source": "walkerplus",
    "source_url": "https://koyo.walkerplus.com/detail/ar0726e325234/data.html",
-   "fetched_at": "2026-11-19T19:22:16+09:00",
+   "fetched_at": "2026-11-20T21:53:49+09:00",
    "hours_raw": "9:00~17:00 (16:30受付終了)",
    "open": "9:00",
    "close": "17:00",
@@ -644,7 +644,7 @@
   "rurikoin": {
    "source": "walkerplus",
    "source_url": "https://koyo.walkerplus.com/detail/ar0726e416761/data.html",
-   "fetched_at": "2026-11-19T19:22:16+09:00",
+   "fetched_at": "2026-11-20T21:53:49+09:00",
    "hours_raw": "10:00~17:00 (16:30受付終了) 11月13日(金)〜12月6日(日)は予約制となります ※お出かけの際は、必ず公式サイトにてご確認ください。",
    "open": "10:00",
    "close": "17:00",
@@ -658,7 +658,7 @@
   "yase": {
    "source": "walkerplus",
    "source_url": "https://koyo.walkerplus.com/detail/ar0726e373500/data.html",
-   "fetched_at": "2026-11-19T19:22:16+09:00",
+   "fetched_at": "2026-11-20T21:53:49+09:00",
    "hours_raw": "24時間",
    "price_raw": "入場無料",
    "price_yen": 0,
@@ -669,7 +669,7 @@
   "eiden_tunnel": {
    "source": "walkerplus",
    "source_url": "https://koyo.walkerplus.com/detail/ar0726e373592/data.html",
-   "fetched_at": "2026-11-19T19:22:16+09:00",
+   "fetched_at": "2026-11-20T21:53:49+09:00",
    "hours_raw": "もみじのトンネルの徐行運行 9:00~21:00頃 夕暮れ~21:00頃まではライトアップを実施",
    "open": "9:00",
    "close": "21:00",
@@ -683,7 +683,7 @@
   "manshuin": {
    "source": "walkerplus",
    "source_url": "https://koyo.walkerplus.com/detail/ar0726e373492/data.html",
-   "fetched_at": "2026-11-19T19:22:16+09:00",
+   "fetched_at": "2026-11-20T21:53:49+09:00",
    "hours_raw": "9:00~17:00(受付は~16:30)",
    "open": "9:00",
    "close": "17:00",
@@ -697,7 +697,7 @@
   "shisendo": {
    "source": "walkerplus",
    "source_url": "https://koyo.walkerplus.com/detail/ar0726e327190/data.html",
-   "fetched_at": "2026-11-19T19:22:16+09:00",
+   "fetched_at": "2026-11-20T21:53:49+09:00",
    "hours_raw": "9:00~17:00 (最終受付16:45)",
    "open": "9:00",
    "close": "17:00",
@@ -711,7 +711,7 @@
   "enkoji": {
    "source": "walkerplus",
    "source_url": "https://koyo.walkerplus.com/detail/ar0726e13146/data.html",
-   "fetched_at": "2026-11-19T19:22:16+09:00",
+   "fetched_at": "2026-11-20T21:53:49+09:00",
    "hours_raw": "11月10日(火)~12月10日(木)の特別拝観期間は9:00~17:00 ※要予約で拝観者数を制限",
    "open": "9:00",
    "close": "17:00",
@@ -720,12 +720,12 @@
    "price_yen": 1500,
    "official_url": "https://www.enkouji.jp/",
    "festival_raw": "なし。",
-   "has_lightup": true
+   "has_lightup": false
   },
   "rengeji": {
    "source": "walkerplus",
    "source_url": "https://koyo.walkerplus.com/detail/ar0726e13176/data.html",
-   "fetched_at": "2026-11-19T19:22:16+09:00",
+   "fetched_at": "2026-11-20T21:53:49+09:00",
    "hours_raw": "9:00~17:00",
    "open": "9:00",
    "close": "17:00",
@@ -739,7 +739,7 @@
   "jissoin": {
    "source": "walkerplus",
    "source_url": "https://koyo.walkerplus.com/detail/ar0726e154665/data.html",
-   "fetched_at": "2026-11-19T19:22:16+09:00",
+   "fetched_at": "2026-11-20T21:53:49+09:00",
    "hours_raw": "拝観時間 9:00~17:00",
    "open": "9:00",
    "close": "17:00",
@@ -753,7 +753,7 @@
   "sekizan": {
    "source": "walkerplus",
    "source_url": "https://koyo.walkerplus.com/detail/ar0726e444237/data.html",
-   "fetched_at": "2026-11-19T19:22:16+09:00",
+   "fetched_at": "2026-11-20T21:53:49+09:00",
    "hours_raw": "9:00~16:30",
    "open": "9:00",
    "close": "16:30",
@@ -767,7 +767,7 @@
   "saginomori": {
    "source": "walkerplus",
    "source_url": "https://koyo.walkerplus.com/detail/ar0726e444704/data.html",
-   "fetched_at": "2026-11-19T19:22:16+09:00",
+   "fetched_at": "2026-11-20T21:53:49+09:00",
    "hours_raw": "24時間",
    "price_raw": "入場無料",
    "price_yen": 0,
@@ -778,7 +778,7 @@
   "konpukuji": {
    "source": "walkerplus",
    "source_url": "https://koyo.walkerplus.com/detail/ar0726e445349/data.html",
-   "fetched_at": "2026-11-19T19:22:16+09:00",
+   "fetched_at": "2026-11-20T21:53:49+09:00",
    "hours_raw": "9:00~17:00 (受付終了16:30) 毎年11月1日~12月10日までは休みなし",
    "open": "9:00",
    "close": "17:00",
@@ -792,7 +792,7 @@
   "bishamondo": {
    "source": "walkerplus",
    "source_url": "https://koyo.walkerplus.com/detail/ar0726e13143/data.html",
-   "fetched_at": "2026-11-19T19:22:16+09:00",
+   "fetched_at": "2026-11-20T21:53:49+09:00",
    "hours_raw": "9:00~16:30 (受付終了16:00) ※12月~2月末まで 15:30受付終了",
    "open": "9:00",
    "close": "16:30",
@@ -801,12 +801,12 @@
    "price_yen": 1000,
    "official_url": "https://www.bishamon.or.jp/",
    "festival_raw": "なし。",
-   "has_lightup": false
+   "has_lightup": true
   },
   "anshoji": {
    "source": "walkerplus",
    "source_url": "https://koyo.walkerplus.com/detail/ar0726e478702/data.html",
-   "fetched_at": "2026-11-19T19:22:16+09:00",
+   "fetched_at": "2026-11-20T21:53:49+09:00",
    "hours_raw": "拝観受付時間:11月・12月  9:00~16:00(閉門16:30)。寺菓房せむい 11:00~15:00(売り切れ次第閉店)",
    "open": "9:00",
    "close": "16:00",
@@ -820,7 +820,7 @@
   "daigoji": {
    "source": "walkerplus",
    "source_url": "https://koyo.walkerplus.com/detail/ar0726e13144/data.html",
-   "fetched_at": "2026-11-19T19:22:16+09:00",
+   "fetched_at": "2026-11-20T21:53:49+09:00",
    "hours_raw": "9:00~17:00、12月8日以降は~16:30 ※拝観受付終了は閉門30分前。秋期夜間拝観 2026年11月20日(金)〜12月6日(日) 18:00~20:50(最終受付20:10)※場所は伽藍のみ 12月第1日曜日の翌日~2月末日は16:30まで※拝観受付終了は閉門30分前",
    "open": "9:00",
    "close": "17:00",
@@ -834,7 +834,7 @@
   "kajuji": {
    "source": "walkerplus",
    "source_url": "https://koyo.walkerplus.com/detail/ar0726e446329/data.html",
-   "fetched_at": "2026-11-19T19:22:16+09:00",
+   "fetched_at": "2026-11-20T21:53:49+09:00",
    "hours_raw": "拝観時間 9:00~16:00",
    "open": "9:00",
    "close": "16:00",
@@ -848,7 +848,7 @@
   "zuishinin": {
    "source": "walkerplus",
    "source_url": "https://koyo.walkerplus.com/detail/ar0726e154661/data.html",
-   "fetched_at": "2026-11-19T19:22:16+09:00",
+   "fetched_at": "2026-11-20T21:53:49+09:00",
    "hours_raw": "入場時間9:00~16:30 2026年11月1日(日)~11月30日(月)秋期本尊特別御開帳 9:00~16:00(閉門16:30)",
    "open": "9:00",
    "close": "16:30",
@@ -862,7 +862,7 @@
   "ryoanji": {
    "source": "walkerplus",
    "source_url": "https://koyo.walkerplus.com/detail/ar0726e154659/data.html",
-   "fetched_at": "2026-11-19T19:22:16+09:00",
+   "fetched_at": "2026-11-20T21:53:49+09:00",
    "hours_raw": "拝観時間 3月~11月8:00~17:00、12月~2月8:30~16:30",
    "open": "8:00",
    "close": "17:00",
@@ -876,7 +876,7 @@
   "ninnaji": {
    "source": "walkerplus",
    "source_url": "https://koyo.walkerplus.com/detail/ar0726e322496/data.html",
-   "fetched_at": "2026-11-19T19:22:16+09:00",
+   "fetched_at": "2026-11-20T21:53:49+09:00",
    "hours_raw": "拝観時間 9:00~17:00 (最終受付16:30)。12月~2月 9:00~16:30 (最終受付16:00)。「仁和寺紅葉雲海ライトアップ」期間は18:30~21:00 (受付18:00~20:30)",
    "open": "9:00",
    "close": "17:00",
@@ -890,7 +890,7 @@
   "tojiin": {
    "source": "walkerplus",
    "source_url": "https://koyo.walkerplus.com/detail/ar0726e445201/data.html",
-   "fetched_at": "2026-11-19T19:22:16+09:00",
+   "fetched_at": "2026-11-20T21:53:49+09:00",
    "hours_raw": "参拝時間 9:00~16:30 (最終受付16:00)",
    "open": "9:00",
    "close": "16:30",
@@ -904,7 +904,7 @@
   "taizoin": {
    "source": "walkerplus",
    "source_url": "https://koyo.walkerplus.com/detail/ar0726e154663/data.html",
-   "fetched_at": "2026-11-19T19:22:16+09:00",
+   "fetched_at": "2026-11-20T21:53:49+09:00",
    "hours_raw": "9:00~17:00(閉門)",
    "open": "9:00",
    "close": "17:00",
@@ -918,7 +918,7 @@
   "daihoin": {
    "source": "walkerplus",
    "source_url": "https://koyo.walkerplus.com/detail/ar0726e373595/data.html",
-   "fetched_at": "2026-11-19T19:22:16+09:00",
+   "fetched_at": "2026-11-20T21:53:49+09:00",
    "hours_raw": "9:00~16:00",
    "open": "9:00",
    "close": "16:00",
@@ -932,7 +932,7 @@
   "hokongoin": {
    "source": "walkerplus",
    "source_url": "https://koyo.walkerplus.com/detail/ar0726e478693/data.html",
-   "fetched_at": "2026-11-19T19:22:16+09:00",
+   "fetched_at": "2026-11-20T21:53:49+09:00",
    "hours_raw": "9:30~16:30 (受付は16:00まで)",
    "open": "9:30",
    "close": "16:30",
@@ -946,7 +946,7 @@
   "kitano": {
    "source": "walkerplus",
    "source_url": "https://koyo.walkerplus.com/detail/ar0726e154656/data.html",
-   "fetched_at": "2026-11-19T19:22:16+09:00",
+   "fetched_at": "2026-11-20T21:53:49+09:00",
    "hours_raw": "開苑時間9:00~16:00(最終受付15:40)。ライトアップ期間中は9:00~20:00(最終受付19:40)",
    "open": "9:00",
    "close": "16:00",
@@ -960,7 +960,7 @@
   "genkoan": {
    "source": "walkerplus",
    "source_url": "https://koyo.walkerplus.com/detail/ar0726e13169/data.html",
-   "fetched_at": "2026-11-19T19:22:16+09:00",
+   "fetched_at": "2026-11-20T21:53:49+09:00",
    "hours_raw": "拝観時間 9:00~17:00",
    "open": "9:00",
    "close": "17:00",
@@ -974,7 +974,7 @@
   "joshoji": {
    "source": "walkerplus",
    "source_url": "https://koyo.walkerplus.com/detail/ar0726e372635/data.html",
-   "fetched_at": "2026-11-19T19:22:16+09:00",
+   "fetched_at": "2026-11-20T21:53:49+09:00",
    "hours_raw": "8:30~17:00",
    "open": "8:30",
    "close": "17:00",
@@ -988,7 +988,7 @@
   "kamigamo": {
    "source": "walkerplus",
    "source_url": "https://koyo.walkerplus.com/detail/ar0726e393283/data.html",
-   "fetched_at": "2026-11-19T19:22:16+09:00",
+   "fetched_at": "2026-11-20T21:53:49+09:00",
    "hours_raw": null,
    "price_raw": "入場無料",
    "price_yen": 0,
@@ -999,7 +999,7 @@
   "shozan": {
    "source": "walkerplus",
    "source_url": "https://koyo.walkerplus.com/detail/ar0726e519074/data.html",
-   "fetched_at": "2026-11-19T19:22:16+09:00",
+   "fetched_at": "2026-11-20T21:53:49+09:00",
    "hours_raw": "庭園入場9:00~17:00(閉門)",
    "open": "9:00",
    "close": "17:00",
@@ -1013,7 +1013,7 @@
   "botanical": {
    "source": "walkerplus",
    "source_url": "https://koyo.walkerplus.com/detail/ar0726e154666/data.html",
-   "fetched_at": "2026-11-19T19:22:16+09:00",
+   "fetched_at": "2026-11-20T21:53:49+09:00",
    "hours_raw": "紅葉期間無休 9:00~17:00(最終入園16:00) ライトアップ(2026年11月14日(土)~12月13日(日))18:00~21:30(20:30最終入場)",
    "open": "9:00",
    "close": "17:00",
@@ -1027,7 +1027,7 @@
   "shimogamo": {
    "source": "walkerplus",
    "source_url": "https://koyo.walkerplus.com/detail/ar0726e154668/data.html",
-   "fetched_at": "2026-11-19T19:22:16+09:00",
+   "fetched_at": "2026-11-20T21:53:49+09:00",
    "hours_raw": "開門時間 6:30~17:00(楼門内)、森は制限なし",
    "open": "6:30",
    "close": "17:00",
@@ -1041,7 +1041,7 @@
   "gyoen": {
    "source": "walkerplus",
    "source_url": "https://koyo.walkerplus.com/detail/ar0726e373495/data.html",
-   "fetched_at": "2026-11-19T19:22:16+09:00",
+   "fetched_at": "2026-11-20T21:53:49+09:00",
    "hours_raw": "24時間",
    "price_raw": "入場無料",
    "price_yen": 0,
@@ -1052,7 +1052,7 @@
   "rozanji": {
    "source": "walkerplus",
    "source_url": "https://koyo.walkerplus.com/detail/ar0726e442800/data.html",
-   "fetched_at": "2026-11-19T19:22:16+09:00",
+   "fetched_at": "2026-11-20T21:53:49+09:00",
    "hours_raw": "拝観時間 9:00~16:00",
    "open": "9:00",
    "close": "16:00",
@@ -1066,7 +1066,7 @@
   "myokenji": {
    "source": "walkerplus",
    "source_url": "https://koyo.walkerplus.com/detail/ar0726e563243/data.html",
-   "fetched_at": "2026-11-19T19:22:16+09:00",
+   "fetched_at": "2026-11-20T21:53:49+09:00",
    "hours_raw": "通常公開 10:00~12:00、13:00~16:00。秋の特別公開 10:00~16:30、夜間ライトアップ18:00~20:00",
    "open": "10:00",
    "close": "12:00",
@@ -1080,7 +1080,7 @@
   "nijo": {
    "source": "walkerplus",
    "source_url": "https://koyo.walkerplus.com/detail/ar0726e369200/data.html",
-   "fetched_at": "2026-11-19T19:22:16+09:00",
+   "fetched_at": "2026-11-20T21:53:49+09:00",
    "hours_raw": "8:45~16:00(閉城17:00)。「NAKED meets 二条城 2026」は18:00~21:00(22:00閉場)",
    "open": "8:45",
    "close": "16:00",
@@ -1094,7 +1094,7 @@
   "toji": {
    "source": "walkerplus",
    "source_url": "https://koyo.walkerplus.com/detail/ar0726e123782/data.html",
-   "fetched_at": "2026-11-19T19:22:16+09:00",
+   "fetched_at": "2026-11-20T21:53:49+09:00",
    "hours_raw": "開門時間(通年)5:00~17:00。拝観時間(通年)金堂・講堂8:00~17:00(16:30受付終了)、観智院9:00~17:00(16:30受付終了) ※ライトアップは18:00~21:30(21:00受付終了)",
    "open": "5:00",
    "close": "17:00",
@@ -1108,7 +1108,7 @@
   "shoseien": {
    "source": "walkerplus",
    "source_url": "https://koyo.walkerplus.com/detail/ar0726e393292/data.html",
-   "fetched_at": "2026-11-19T19:22:16+09:00",
+   "fetched_at": "2026-11-20T21:53:49+09:00",
    "hours_raw": "3月~10月 9:00~17:00(受付は16:30まで)。11月~2月 9:00~16:00(受付は15:30まで)。 夜間特別拝観「NAKED GARDEN NIGHTS 東本願寺・渉成園」2026年10月31日(土)~12月6日(日)18:00~22:00(東本願寺最終入場21:00、観覧終了21:20、渉成園観覧終了22:00)。",
    "open": "9:00",
    "close": "17:00",
@@ -1122,7 +1122,7 @@
   "umekoji": {
    "source": "walkerplus",
    "source_url": "https://koyo.walkerplus.com/detail/ar0726e154662/data.html",
-   "fetched_at": "2026-11-19T19:22:16+09:00",
+   "fetched_at": "2026-11-20T21:53:49+09:00",
    "hours_raw": "入場時間9:00~17:00(最終入場16:30)※17:00~21:00(最終入場20:30)のライトアップは別料金(紅葉まつり期間中。入れ替え制)",
    "open": "9:00",
    "close": "17:00",
@@ -1136,7 +1136,7 @@
   "byodoin": {
    "source": "walkerplus",
    "source_url": "https://koyo.walkerplus.com/detail/ar0726e207747/data.html",
-   "fetched_at": "2026-11-19T19:22:16+09:00",
+   "fetched_at": "2026-11-20T21:53:49+09:00",
    "hours_raw": "庭園 8:45~17:30(最終受付17:15)。ミュージアム 9:00~17:00(最終受付16:45)。鳳凰堂内部拝観 9:30~16:10(受付開始9:10、20分毎に1回35名先着順)。",
    "open": "8:45",
    "close": "17:30",
@@ -1150,7 +1150,7 @@
   "koshoji": {
    "source": "walkerplus",
    "source_url": "https://koyo.walkerplus.com/detail/ar0726e13009/data.html",
-   "fetched_at": "2026-11-19T19:22:16+09:00",
+   "fetched_at": "2026-11-20T21:53:49+09:00",
    "hours_raw": null,
    "price_raw": "有料 拝観は志納金500円が必要",
    "price_yen": 500,
@@ -1161,7 +1161,7 @@
   "mimurotoji": {
    "source": "walkerplus",
    "source_url": "https://koyo.walkerplus.com/detail/ar0726e13152/data.html",
-   "fetched_at": "2026-11-19T19:22:16+09:00",
+   "fetched_at": "2026-11-20T21:53:49+09:00",
    "hours_raw": "8:30~15:10 朱印最終受付は15:10",
    "open": "8:30",
    "close": "15:10",
@@ -1175,7 +1175,7 @@
   "jonangu": {
    "source": "walkerplus",
    "source_url": "https://koyo.walkerplus.com/detail/ar0726e154673/data.html",
-   "fetched_at": "2026-11-19T19:22:16+09:00",
+   "fetched_at": "2026-11-20T21:53:49+09:00",
    "hours_raw": "入場時間 9:00~16:00",
    "open": "9:00",
    "close": "16:00",
@@ -1189,7 +1189,7 @@
   "inari": {
    "source": "walkerplus",
    "source_url": "https://koyo.walkerplus.com/detail/ar0726e570901/data.html",
-   "fetched_at": "2026-11-19T19:22:16+09:00",
+   "fetched_at": "2026-11-20T21:53:49+09:00",
    "hours_raw": "24時間",
    "price_raw": "入場無料",
    "price_yen": 0,
@@ -1200,7 +1200,7 @@
   "ujigawa": {
    "source": "walkerplus",
    "source_url": "https://koyo.walkerplus.com/detail/ar0726e373605/data.html",
-   "fetched_at": "2026-11-19T19:22:16+09:00",
+   "fetched_at": "2026-11-20T21:53:49+09:00",
    "hours_raw": null,
    "price_raw": "入場無料",
    "price_yen": 0,
@@ -1211,7 +1211,7 @@
   "komyoji": {
    "source": "walkerplus",
    "source_url": "https://koyo.walkerplus.com/detail/ar0726e12692/data.html",
-   "fetched_at": "2026-11-19T19:22:16+09:00",
+   "fetched_at": "2026-11-20T21:53:49+09:00",
    "hours_raw": "拝観時間 9:00~16:00",
    "open": "9:00",
    "close": "16:00",
@@ -1225,7 +1225,7 @@
   "yoshiminedera": {
    "source": "walkerplus",
    "source_url": "https://koyo.walkerplus.com/detail/ar0726e13133/data.html",
-   "fetched_at": "2026-11-19T19:22:16+09:00",
+   "fetched_at": "2026-11-20T21:53:49+09:00",
    "hours_raw": "開門時間 土日祝8:00(平日8:30)~17:00 拝観受付(最終入場)16:45まで",
    "open": "8:30",
    "close": "17:00",
@@ -1239,7 +1239,7 @@
   "jurinji": {
    "source": "walkerplus",
    "source_url": "https://koyo.walkerplus.com/detail/ar0726e444236/data.html",
-   "fetched_at": "2026-11-19T19:22:16+09:00",
+   "fetched_at": "2026-11-20T21:53:49+09:00",
    "hours_raw": "拝観時間 9:00~17:00",
    "open": "9:00",
    "close": "17:00",
@@ -1253,7 +1253,7 @@
   "otokunidera": {
    "source": "walkerplus",
    "source_url": "https://koyo.walkerplus.com/detail/ar0726e446719/data.html",
-   "fetched_at": "2026-11-19T19:22:16+09:00",
+   "fetched_at": "2026-11-20T21:53:49+09:00",
    "hours_raw": "開山時間8:00~17:00",
    "open": "8:00",
    "close": "17:00",
@@ -1267,7 +1267,7 @@
   "nagaokatenmangu": {
    "source": "walkerplus",
    "source_url": "https://koyo.walkerplus.com/detail/ar0726e443262/data.html",
-   "fetched_at": "2026-11-19T19:22:16+09:00",
+   "fetched_at": "2026-11-20T21:53:49+09:00",
    "hours_raw": "社務所受付 9:00~17:00。ライトアップ 16:30~20:00",
    "open": "9:00",
    "close": "17:00",
@@ -1281,7 +1281,7 @@
   "yokokuji": {
    "source": "walkerplus",
    "source_url": "https://koyo.walkerplus.com/detail/ar0726e12693/data.html",
-   "fetched_at": "2026-11-19T19:22:16+09:00",
+   "fetched_at": "2026-11-20T21:53:49+09:00",
    "hours_raw": "9:00~17:00 (最終受付16:30)",
    "open": "9:00",
    "close": "17:00",
@@ -1295,7 +1295,7 @@
   "oharano_jinja": {
    "source": "walkerplus",
    "source_url": "https://koyo.walkerplus.com/detail/ar0726e13134/data.html",
-   "fetched_at": "2026-11-19T19:22:16+09:00",
+   "fetched_at": "2026-11-20T21:53:49+09:00",
    "hours_raw": "24時間",
    "price_raw": "入場無料",
    "price_yen": 0,
@@ -1306,7 +1306,7 @@
   "shojiji": {
    "source": "walkerplus",
    "source_url": "https://koyo.walkerplus.com/detail/ar0726e13132/data.html",
-   "fetched_at": "2026-11-19T19:22:16+09:00",
+   "fetched_at": "2026-11-20T21:53:49+09:00",
    "hours_raw": "拝観時間 9:30~16:30 (16:00受付終了)",
    "open": "9:30",
    "close": "16:30",
@@ -1320,7 +1320,7 @@
   "muko": {
    "source": "walkerplus",
    "source_url": "https://koyo.walkerplus.com/detail/ar0726e521303/data.html",
-   "fetched_at": "2026-11-19T19:22:16+09:00",
+   "fetched_at": "2026-11-20T21:53:49+09:00",
    "hours_raw": "夜間は22:00まで",
    "price_raw": "入場無料",
    "price_yen": 0,
@@ -1331,7 +1331,7 @@
   "shohoji_oharano": {
    "source": "walkerplus",
    "source_url": "https://koyo.walkerplus.com/detail/ar0726e366296/data.html",
-   "fetched_at": "2026-11-19T19:22:16+09:00",
+   "fetched_at": "2026-11-20T21:53:49+09:00",
    "hours_raw": "9:00~17:00",
    "open": "9:00",
    "close": "17:00",
@@ -1345,7 +1345,7 @@
   "iwashimizu": {
    "source": "walkerplus",
    "source_url": "https://koyo.walkerplus.com/detail/ar0726e12694/data.html",
-   "fetched_at": "2026-11-19T19:22:16+09:00",
+   "fetched_at": "2026-11-20T21:53:49+09:00",
    "hours_raw": null,
    "price_raw": "入場無料",
    "price_yen": 0,
@@ -1356,7 +1356,7 @@
   "ikkyuji": {
    "source": "walkerplus",
    "source_url": "https://koyo.walkerplus.com/detail/ar0726e321032/data.html",
-   "fetched_at": "2026-11-19T19:22:16+09:00",
+   "fetched_at": "2026-11-20T21:53:49+09:00",
    "hours_raw": "拝観時間9:00~17:00",
    "open": "9:00",
    "close": "17:00",
@@ -1370,7 +1370,7 @@
   "joruriji": {
    "source": "walkerplus",
    "source_url": "https://koyo.walkerplus.com/detail/ar0726e154670/data.html",
-   "fetched_at": "2026-11-19T19:22:16+09:00",
+   "fetched_at": "2026-11-20T21:53:49+09:00",
    "hours_raw": "9:00~17:00(最終入園16:30)",
    "open": "9:00",
    "close": "17:00",
@@ -1384,7 +1384,7 @@
   "kasagi": {
    "source": "walkerplus",
    "source_url": "https://koyo.walkerplus.com/detail/ar0726e154669/data.html",
-   "fetched_at": "2026-11-19T19:22:16+09:00",
+   "fetched_at": "2026-11-20T21:53:49+09:00",
    "hours_raw": "8:00~17:00 ライトアップ期間中は21:00まで",
    "open": "8:00",
    "close": "17:00",
@@ -1398,7 +1398,7 @@
   "keihanna": {
    "source": "walkerplus",
    "source_url": "https://koyo.walkerplus.com/detail/ar0726e154654/data.html",
-   "fetched_at": "2026-11-19T19:22:16+09:00",
+   "fetched_at": "2026-11-20T21:53:49+09:00",
    "hours_raw": "9:00~17:00 夜間ライトアップ開催時は21:00まで(受付は20:30まで)",
    "open": "9:00",
    "close": "17:00",
@@ -1412,7 +1412,7 @@
   "kuwayama": {
    "source": "walkerplus",
    "source_url": "https://koyo.walkerplus.com/detail/ar0726e12690/data.html",
-   "fetched_at": "2026-11-19T19:22:16+09:00",
+   "fetched_at": "2026-11-20T21:53:49+09:00",
    "hours_raw": "8:00~17:00 ライトアップは17:00~20:00",
    "open": "8:00",
    "close": "17:00",
@@ -1426,7 +1426,7 @@
   "izumo": {
    "source": "walkerplus",
    "source_url": "https://koyo.walkerplus.com/detail/ar0726e12689/data.html",
-   "fetched_at": "2026-11-19T19:22:16+09:00",
+   "fetched_at": "2026-11-20T21:53:49+09:00",
    "hours_raw": null,
    "price_raw": "入場無料",
    "price_yen": 0,
@@ -1437,7 +1437,7 @@
   "oomoto_ayabe": {
    "source": "walkerplus",
    "source_url": "https://koyo.walkerplus.com/detail/ar0726e373274/data.html",
-   "fetched_at": "2026-11-19T19:22:16+09:00",
+   "fetched_at": "2026-11-20T21:53:49+09:00",
    "hours_raw": "10:00〜21:00(20日のみ日没〜)",
    "open": "10:00",
    "close": "21:00",
@@ -1451,7 +1451,7 @@
   "oonodam": {
    "source": "walkerplus",
    "source_url": "https://koyo.walkerplus.com/detail/ar0726e447039/data.html",
-   "fetched_at": "2026-11-19T19:22:16+09:00",
+   "fetched_at": "2026-11-20T21:53:49+09:00",
    "hours_raw": "24時間",
    "price_raw": "入場無料 イベント期間中は駐車料金500円",
    "price_yen": 500,
@@ -1462,7 +1462,7 @@
   "kongoin": {
    "source": "walkerplus",
    "source_url": "https://koyo.walkerplus.com/detail/ar0726e154651/data.html",
-   "fetched_at": "2026-11-19T19:22:16+09:00",
+   "fetched_at": "2026-11-20T21:53:49+09:00",
    "hours_raw": "9:00~16:00",
    "open": "9:00",
    "close": "16:00",
@@ -1476,7 +1476,7 @@
   "chooanji": {
    "source": "walkerplus",
    "source_url": "https://koyo.walkerplus.com/detail/ar0726e203663/data.html",
-   "fetched_at": "2026-11-19T19:22:16+09:00",
+   "fetched_at": "2026-11-20T21:53:49+09:00",
    "hours_raw": "入山時間 9:00~16:30",
    "open": "9:00",
    "close": "16:30",
@@ -1490,7 +1490,7 @@
   "ankokuji": {
    "source": "walkerplus",
    "source_url": "https://koyo.walkerplus.com/detail/ar0726e203499/data.html",
-   "fetched_at": "2026-11-19T19:22:16+09:00",
+   "fetched_at": "2026-11-20T21:53:49+09:00",
    "hours_raw": "24時間",
    "price_raw": "入場無料 境内の拝観は無料",
    "price_yen": 0,
@@ -1501,7 +1501,7 @@
   "nariaiji": {
    "source": "walkerplus",
    "source_url": "https://koyo.walkerplus.com/detail/ar0726e12724/data.html",
-   "fetched_at": "2026-11-19T19:22:16+09:00",
+   "fetched_at": "2026-11-20T21:53:49+09:00",
    "hours_raw": "参拝時間 8:00~16:30",
    "open": "8:00",
    "close": "16:30",
@@ -1518,7 +1518,7 @@
    "source": "souda",
    "source_url": "https://souda-kyoto.jp/event/detail/lightup-autumn.html",
    "as_of": "2026-08",
-   "fetched_at": "2026-11-19T19:22:16+09:00",
+   "fetched_at": "2026-11-20T21:53:49+09:00",
    "name_ja": "清水寺",
    "souda_slug": "kiyomizudera",
    "schedule_raw": "2026年11月21日(土)~30日(月)\n17:30~21:00(受付終了)",
@@ -1537,7 +1537,7 @@
    "source": "souda",
    "source_url": "https://souda-kyoto.jp/event/detail/lightup-autumn.html",
    "as_of": "2026-08",
-   "fetched_at": "2026-11-19T19:22:16+09:00",
+   "fetched_at": "2026-11-20T21:53:49+09:00",
    "name_ja": "高台寺",
    "souda_slug": "kodaiji",
    "schedule_raw": "2026年10月23日(金)~12月13日(日)\n17:00(点灯)~22:00(受付終了21:30)",
@@ -1556,7 +1556,7 @@
    "source": "souda",
    "source_url": "https://souda-kyoto.jp/event/detail/lightup-autumn.html",
    "as_of": "2026-08",
-   "fetched_at": "2026-11-19T19:22:16+09:00",
+   "fetched_at": "2026-11-20T21:53:49+09:00",
    "name_ja": "知恩院",
    "souda_slug": "chionin",
    "schedule_raw": "2026年11月17日(火)~12月6日(日)\n17:30~21:30(受付終了21:00)",
@@ -1575,7 +1575,7 @@
    "source": "souda",
    "source_url": "https://souda-kyoto.jp/event/detail/lightup-autumn.html",
    "as_of": "2026-08",
-   "fetched_at": "2026-11-19T19:22:16+09:00",
+   "fetched_at": "2026-11-20T21:53:49+09:00",
    "name_ja": "青蓮院門跡",
    "souda_slug": "shorenin",
    "schedule_raw": "2026年11月6日(金)~12月6日(日)\n18:00~22:00(受付終了21:30)",
@@ -1594,7 +1594,7 @@
    "source": "souda",
    "source_url": "https://souda-kyoto.jp/event/detail/lightup-autumn.html",
    "as_of": "2026-08",
-   "fetched_at": "2026-11-19T19:22:16+09:00",
+   "fetched_at": "2026-11-20T21:53:49+09:00",
    "name_ja": "永観堂",
    "souda_slug": "eikando",
    "schedule_raw": "2026年11月20日(金)~12月6日(日)\n17:30~21:00(受付終了20:30)",
@@ -1613,7 +1613,7 @@
    "source": "souda",
    "source_url": "https://souda-kyoto.jp/event/detail/lightup-autumn.html",
    "as_of": "2026-08",
-   "fetched_at": "2026-11-19T19:22:16+09:00",
+   "fetched_at": "2026-11-20T21:53:49+09:00",
    "name_ja": "くろ谷 金戒光明寺",
    "souda_slug": "kurodani-konkaikomyoji",
    "schedule_raw": "2026年11月13日(金)~12月6日(日)\n17:30~20:30(受付終了20:00)",
@@ -1632,7 +1632,7 @@
    "source": "souda",
    "source_url": "https://souda-kyoto.jp/event/detail/lightup-autumn.html",
    "as_of": "2026-08",
-   "fetched_at": "2026-11-19T19:22:16+09:00",
+   "fetched_at": "2026-11-20T21:53:49+09:00",
    "name_ja": "東寺",
    "souda_slug": "toji",
    "schedule_raw": "2026年10月31日(土)~12月13日(日)\n18:00~21:30(受付終了21:00)",
@@ -1651,7 +1651,7 @@
    "source": "souda",
    "source_url": "https://souda-kyoto.jp/event/detail/lightup-autumn.html",
    "as_of": "2026-08",
-   "fetched_at": "2026-11-19T19:22:16+09:00",
+   "fetched_at": "2026-11-20T21:53:49+09:00",
    "name_ja": "宝厳院",
    "souda_slug": "hogonin",
    "schedule_raw": "2026年11月13日(金)~12月6日(日)\n17:30~20:30(受付終了20:00)",
@@ -1670,7 +1670,7 @@
    "source": "souda",
    "source_url": "https://souda-kyoto.jp/event/detail/lightup-autumn.html",
    "as_of": "2026-08",
-   "fetched_at": "2026-11-19T19:22:16+09:00",
+   "fetched_at": "2026-11-20T21:53:49+09:00",
    "name_ja": "嵯峨野トロッコ列車",
    "souda_slug": null,
    "schedule_raw": "2026年10月24日(土)~12月29日(火) ※12月16日(水)除く\n点灯時間16:30以降、最終列車まで\n※臨時列車の運行は\n公式ホームページ\nでご確認ください。",
@@ -1688,7 +1688,7 @@
    "source": "souda",
    "source_url": "https://souda-kyoto.jp/event/detail/lightup-autumn.html",
    "as_of": "2026-08",
-   "fetched_at": "2026-11-19T19:22:16+09:00",
+   "fetched_at": "2026-11-20T21:53:49+09:00",
    "name_ja": "貴船神社",
    "souda_slug": "kifunejinja",
    "schedule_raw": "2026年11月7日(土)~24日(火)\n日没~20:30",
@@ -1709,7 +1709,7 @@
    "source": "souda",
    "source_url": "https://souda-kyoto.jp/event/detail/lightup-autumn.html",
    "as_of": "2026-08",
-   "fetched_at": "2026-11-19T19:22:16+09:00",
+   "fetched_at": "2026-11-20T21:53:49+09:00",
    "name_ja": "北野天満宮",
    "souda_slug": "kitanotenmangu",
    "schedule_raw": "2026年11月13日(金)~12月6日(日)\n日没~20:00(受付終了19:40)",
@@ -1731,7 +1731,7 @@
   {
    "source": "walkerplus",
    "source_url": "https://koyo.walkerplus.com/detail/ar0726e13175/",
-   "fetched_at": "2026-11-19T19:22:16+09:00",
+   "fetched_at": "2026-11-20T21:53:49+09:00",
    "walker_id": "ar0726e13175",
    "place_id": "kifune",
    "schedule_raw": "2026年11月7日(土)~24日(火)夕暮れ~20:30 貴船神社 紅葉ライトアップ",
@@ -1750,7 +1750,7 @@
   {
    "source": "walkerplus",
    "source_url": "https://koyo.walkerplus.com/detail/ar0726e323493/",
-   "fetched_at": "2026-11-19T19:22:16+09:00",
+   "fetched_at": "2026-11-20T21:53:49+09:00",
    "walker_id": "ar0726e323493",
    "place_id": "hogonin",
    "schedule_raw": "秋の夜間特別拝観 2026年11月13日(金)~12月6日(日)",
@@ -1764,7 +1764,7 @@
   {
    "source": "walkerplus",
    "source_url": "https://koyo.walkerplus.com/detail/ar0726e372783/",
-   "fetched_at": "2026-11-19T19:22:16+09:00",
+   "fetched_at": "2026-11-20T21:53:49+09:00",
    "walker_id": "ar0726e372783",
    "place_id": "torokko",
    "schedule_raw": "2026年10月24日(土)~12月29日(火)16:30以降から最終列車まで(予定)",
@@ -1778,7 +1778,7 @@
   {
    "source": "walkerplus",
    "source_url": "https://koyo.walkerplus.com/detail/ar0726e13141/",
-   "fetched_at": "2026-11-19T19:22:16+09:00",
+   "fetched_at": "2026-11-20T21:53:49+09:00",
    "walker_id": "ar0726e13141",
    "place_id": "tofukuji",
    "schedule_raw": "2026年11月18日(水)~12月6日(日)の17時30分~19時30分には、夜間特別拝観(チケット前半2300円、後半2800円)を実施。※受付窓口JR東海",
@@ -1795,7 +1795,7 @@
   {
    "source": "walkerplus",
    "source_url": "https://koyo.walkerplus.com/detail/ar0726e565840/",
-   "fetched_at": "2026-11-19T19:22:16+09:00",
+   "fetched_at": "2026-11-20T21:53:49+09:00",
    "walker_id": "ar0726e565840",
    "place_id": "chishakuin",
    "schedule_raw": "2026年11月7日(土)~12月6日(日)17:00 〜 21:00(20:40 最終受付)",
@@ -1812,7 +1812,7 @@
   {
    "source": "walkerplus",
    "source_url": "https://koyo.walkerplus.com/detail/ar0726e323187/",
-   "fetched_at": "2026-11-19T19:22:16+09:00",
+   "fetched_at": "2026-11-20T21:53:49+09:00",
    "walker_id": "ar0726e323187",
    "place_id": "kurodani",
    "schedule_raw": "2026年11月13日(金)から12月6日(日)は特別夜間拝観期間で、紅葉のライトアップ",
@@ -1826,7 +1826,7 @@
   {
    "source": "walkerplus",
    "source_url": "https://koyo.walkerplus.com/detail/ar0726e321275/",
-   "fetched_at": "2026-11-19T19:22:16+09:00",
+   "fetched_at": "2026-11-20T21:53:49+09:00",
    "walker_id": "ar0726e321275",
    "place_id": "murinan",
    "schedule_raw": "2026年11月14日(土)・15日(日)、21日(土)・22日(日)・23日(祝) (1)17:30~19:30 (2)19:30~21:30秋の紅葉特別夜間公開 トワイライト庭園パーティー2026[問合せ先:公式サイト参照]",
@@ -1850,7 +1850,7 @@
   {
    "source": "walkerplus",
    "source_url": "https://koyo.walkerplus.com/detail/ar0726e519261/",
-   "fetched_at": "2026-11-19T19:22:16+09:00",
+   "fetched_at": "2026-11-20T21:53:49+09:00",
    "walker_id": "ar0726e519261",
    "place_id": "heian",
    "schedule_raw": "2026年11月2日(月)〜11月29日(日)17:30〜21:30(最終受付は21:00)「WONDER NIGHT JINGU 〜月華〜」(https://www.wonder-night.com/#pricing)",
@@ -1875,7 +1875,7 @@
   {
    "source": "walkerplus",
    "source_url": "https://koyo.walkerplus.com/detail/ar0726e13211/",
-   "fetched_at": "2026-11-19T19:22:16+09:00",
+   "fetched_at": "2026-11-20T21:53:49+09:00",
    "walker_id": "ar0726e13211",
    "place_id": "kodaiji",
    "schedule_raw": "2026年10月23日(金)~12月13日(日)の17時~22時には、高台寺秋の夜間特別拝観を実施(最終受付は21時30分)",
@@ -1892,7 +1892,7 @@
   {
    "source": "walkerplus",
    "source_url": "https://koyo.walkerplus.com/detail/ar0726e327189/",
-   "fetched_at": "2026-11-19T19:22:16+09:00",
+   "fetched_at": "2026-11-20T21:53:49+09:00",
    "walker_id": "ar0726e327189",
    "place_id": "entokuin",
    "schedule_raw": "2026年10月23日(金)~12月13日(日)17:00~22:00(21:30受付終了)",
@@ -1909,7 +1909,7 @@
   {
    "source": "walkerplus",
    "source_url": "https://koyo.walkerplus.com/detail/ar0726e445203/",
-   "fetched_at": "2026-11-19T19:22:16+09:00",
+   "fetched_at": "2026-11-20T21:53:49+09:00",
    "walker_id": "ar0726e445203",
    "place_id": "kenninji",
    "schedule_raw": "2026年11月20日(金)~12月6日(日)までJR東海主催の夜間ライトアップ。詳細はJR東海公式サイト要確認",
@@ -1923,7 +1923,7 @@
   {
    "source": "walkerplus",
    "source_url": "https://koyo.walkerplus.com/detail/ar0726e325237/",
-   "fetched_at": "2026-11-19T19:22:16+09:00",
+   "fetched_at": "2026-11-20T21:53:49+09:00",
    "walker_id": "ar0726e325237",
    "place_id": "shorenin",
    "schedule_raw": "夜間特別拝観:2026年11月7日(土)~12月6日(日)18時~22時(最終受付時刻21時30分)、拝観ご志納大人1500円、小学生・中学生・高校生1000円",
@@ -1940,7 +1940,7 @@
   {
    "source": "walkerplus",
    "source_url": "https://koyo.walkerplus.com/detail/ar0726e154672/",
-   "fetched_at": "2026-11-19T19:22:16+09:00",
+   "fetched_at": "2026-11-20T21:53:49+09:00",
    "walker_id": "ar0726e154672",
    "place_id": "chionin",
    "schedule_raw": "2026年11月17日(火)~12月6日(日)17:30~21:30(最終受付21:00)",
@@ -1957,7 +1957,7 @@
   {
    "source": "walkerplus",
    "source_url": "https://koyo.walkerplus.com/detail/ar0726e373592/",
-   "fetched_at": "2026-11-19T19:22:16+09:00",
+   "fetched_at": "2026-11-20T21:53:49+09:00",
    "walker_id": "ar0726e373592",
    "place_id": "eiden_tunnel",
    "schedule_raw": "2026年11月7日(土)~12月6日(日) もみじのトンネルライトアップ",
@@ -1971,7 +1971,7 @@
   {
    "source": "walkerplus",
    "source_url": "https://koyo.walkerplus.com/detail/ar0726e13144/",
-   "fetched_at": "2026-11-19T19:22:16+09:00",
+   "fetched_at": "2026-11-20T21:53:49+09:00",
    "walker_id": "ar0726e13144",
    "place_id": "daigoji",
    "schedule_raw": "2026年11月20日(金)〜12月6日(日)の期間には秋期夜間拝観も行われ、国宝の五重塔や金堂、弁天堂などが紅葉とともにライトアップされる",
@@ -1985,7 +1985,7 @@
   {
    "source": "walkerplus",
    "source_url": "https://koyo.walkerplus.com/detail/ar0726e322496/",
-   "fetched_at": "2026-11-19T19:22:16+09:00",
+   "fetched_at": "2026-11-20T21:53:49+09:00",
    "walker_id": "ar0726e322496",
    "place_id": "ninnaji",
    "schedule_raw": "仁和寺紅葉雲海ライトアップ:2026年10月24日(土)~12月13日(日)の金土日祝18時30分〜21時に開催(20時30分受付終了、拝観料2800円、 高校生以下は次世代への文化支援として無料)",
@@ -2008,7 +2008,7 @@
   {
    "source": "walkerplus",
    "source_url": "https://koyo.walkerplus.com/detail/ar0726e519074/",
-   "fetched_at": "2026-11-19T19:22:16+09:00",
+   "fetched_at": "2026-11-20T21:53:49+09:00",
    "walker_id": "ar0726e519074",
    "place_id": "shozan",
    "schedule_raw": "2026年10月31日(土)~12月6日(日)しょうざん庭園 秋の紅葉ライトアップ17:30~20:00(最終受付19:30)",
@@ -2025,7 +2025,7 @@
   {
    "source": "walkerplus",
    "source_url": "https://koyo.walkerplus.com/detail/ar0726e154666/",
-   "fetched_at": "2026-11-19T19:22:16+09:00",
+   "fetched_at": "2026-11-20T21:53:49+09:00",
    "walker_id": "ar0726e154666",
    "place_id": "botanical",
    "schedule_raw": "NIGHT GARDEN of Autumn Colors」秋のナイトガーデン~紅葉と灯りの散歩道~ 2026年11月14日(土)~12月13日(日)18:00~21:00(20:30最終入場)",
@@ -2042,7 +2042,7 @@
   {
    "source": "walkerplus",
    "source_url": "https://koyo.walkerplus.com/detail/ar0726e563243/",
-   "fetched_at": "2026-11-19T19:22:16+09:00",
+   "fetched_at": "2026-11-20T21:53:49+09:00",
    "walker_id": "ar0726e563243",
    "place_id": "myokenji",
    "schedule_raw": "2026年11月21日(土)~12月13日(日)18:00~20:00 秋の特別拝観ライトアップ",
@@ -2059,7 +2059,7 @@
   {
    "source": "walkerplus",
    "source_url": "https://koyo.walkerplus.com/detail/ar0726e369200/",
-   "fetched_at": "2026-11-19T19:22:16+09:00",
+   "fetched_at": "2026-11-20T21:53:49+09:00",
    "walker_id": "ar0726e369200",
    "place_id": "nijo",
    "schedule_raw": "2026年10月23日(金)~12月6日(日)18:00~21:00(22:00閉場)「NAKED meets 二条城 2026」でライトアップを実施",
@@ -2076,7 +2076,7 @@
   {
    "source": "walkerplus",
    "source_url": "https://koyo.walkerplus.com/detail/ar0726e123782/",
-   "fetched_at": "2026-11-19T19:22:16+09:00",
+   "fetched_at": "2026-11-20T21:53:49+09:00",
    "walker_id": "ar0726e123782",
    "place_id": "toji",
    "schedule_raw": "2026年10月31日(土)〜12月13日(日)18:00~21:30(21:00受付終了)紅葉ライトアップと金堂・講堂夜間特別拝観",
@@ -2093,7 +2093,7 @@
   {
    "source": "walkerplus",
    "source_url": "https://koyo.walkerplus.com/detail/ar0726e393292/",
-   "fetched_at": "2026-11-19T19:22:16+09:00",
+   "fetched_at": "2026-11-20T21:53:49+09:00",
    "walker_id": "ar0726e393292",
    "place_id": "shoseien",
    "schedule_raw": "2026年10月31日(土)から12月6日(日)夜間特別拝観「NAKED GARDEN NIGHTS 東本願寺・渉成園」18:00~22:00(東本願寺最終入場21:00、観覧終了21:20、渉成園観覧終了22:00)。",
@@ -2110,7 +2110,7 @@
   {
    "source": "walkerplus",
    "source_url": "https://koyo.walkerplus.com/detail/ar0726e154662/",
-   "fetched_at": "2026-11-19T19:22:16+09:00",
+   "fetched_at": "2026-11-20T21:53:49+09:00",
    "walker_id": "ar0726e154662",
    "place_id": "umekoji",
    "schedule_raw": "あり。 2026年11月13日(金)~29日(日) 17:00~21:00(最終入園20:30) 梅小路公園 紅葉まつり[問合せ先:(公財)京都市都市緑化協会 075-352-2500]料金は大人600円、小学生300円、未就学児無料。VIVA SQUARE KYOTO、京都水族館または京都鉄道博物館の当日半券持参で、料金から100円割引になる",
@@ -2130,7 +2130,7 @@
   {
    "source": "walkerplus",
    "source_url": "https://koyo.walkerplus.com/detail/ar0726e443262/",
-   "fetched_at": "2026-11-19T19:22:16+09:00",
+   "fetched_at": "2026-11-20T21:53:49+09:00",
    "walker_id": "ar0726e443262",
    "place_id": "nagaokatenmangu",
    "schedule_raw": "2026年11月14日(土)から12月6日(日)にはライトアップを開催",
@@ -2144,7 +2144,7 @@
   {
    "source": "walkerplus",
    "source_url": "https://koyo.walkerplus.com/detail/ar0726e12693/",
-   "fetched_at": "2026-11-19T19:22:16+09:00",
+   "fetched_at": "2026-11-20T21:53:49+09:00",
    "walker_id": "ar0726e12693",
    "place_id": "yokokuji",
    "schedule_raw": "あり。 柳谷観音 楊谷寺もみじウィーク 2026年11月14日(土)~12月6日(日)9:00~17:00[問合せ先:柳谷観音 楊谷寺075-956-0017]",
@@ -2169,7 +2169,7 @@
   {
    "source": "walkerplus",
    "source_url": "https://koyo.walkerplus.com/detail/ar0726e154654/",
-   "fetched_at": "2026-11-19T19:22:16+09:00",
+   "fetched_at": "2026-11-20T21:53:49+09:00",
    "walker_id": "ar0726e154654",
    "place_id": "keihanna",
    "schedule_raw": "2026年11月21日(土)~29日(日)紅葉ライトアップ×にほんの芸能18:00~19:00。11月22日(日)・23日(祝)・28日(土)・29日(日)紅葉ライトアップツアー申込制1人500円18:00~19:00[問合せ先:けいはんな記念公園管理事務所 0774-93-1200]",
@@ -2186,7 +2186,7 @@
   {
    "source": "walkerplus",
    "source_url": "https://koyo.walkerplus.com/detail/ar0726e12690/",
-   "fetched_at": "2026-11-19T19:22:16+09:00",
+   "fetched_at": "2026-11-20T21:53:49+09:00",
    "walker_id": "ar0726e12690",
    "place_id": "kuwayama",
    "schedule_raw": "2026年11月10日(火)~14日(土)17:00~20:00",
@@ -2203,7 +2203,7 @@
   {
    "source": "walkerplus",
    "source_url": "https://koyo.walkerplus.com/detail/ar0726e12689/",
-   "fetched_at": "2026-11-19T19:22:16+09:00",
+   "fetched_at": "2026-11-20T21:53:49+09:00",
    "walker_id": "ar0726e12689",
    "place_id": "izumo",
    "schedule_raw": "2026年11月21日(土)~23日(祝)17:00~20:00",
@@ -2228,7 +2228,7 @@
   {
    "source": "walkerplus",
    "source_url": "https://koyo.walkerplus.com/detail/ar0726e12724/",
-   "fetched_at": "2026-11-19T19:22:16+09:00",
+   "fetched_at": "2026-11-20T21:53:49+09:00",
    "walker_id": "ar0726e12724",
    "place_id": "nariaiji",
    "schedule_raw": "2026年11月14日(土)・15日(日)17:00〜21:00入場料1000円(中学生以下無料)",
