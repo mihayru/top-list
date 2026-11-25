@@ -1,7 +1,7 @@
 {
- "fetched_at": "2026-11-25T13:54:03+09:00",
+ "fetched_at": "2026-11-26T02:14:38+09:00",
  "meta": {
-  "published_at": "2026-11-24T19:21:12+09:00"
+  "published_at": "2026-11-25T20:23:57+09:00"
  },
  "observations": [
   {
@@ -14,11 +14,11 @@
    "stage_lo": 4,
    "stage_hi": 4,
    "data_type": "photo",
-   "fetched_at": "2026-11-25T13:54:03+09:00",
+   "fetched_at": "2026-11-26T02:14:38+09:00",
    "area": "京都駅周辺",
    "observed_at": "2026-11-23",
    "observed_basis": "дата съёмки в подписи к фото",
-   "published_at": "2026-11-24T19:21:12+09:00",
+   "published_at": "2026-11-25T20:23:57+09:00",
    "comment": "瓢箪池から五重塔を望む 見頃です。 / 瓢箪池まわり 見頃です。 / 境内全体に見頃です。",
    "photos": [
     {
@@ -57,32 +57,32 @@
    "stage_lo": 4,
    "stage_hi": 4,
    "data_type": "photo",
-   "fetched_at": "2026-11-25T13:54:03+09:00",
+   "fetched_at": "2026-11-26T02:14:38+09:00",
    "area": "祇園・東山",
-   "observed_at": "2026-11-22",
+   "observed_at": "2026-11-25",
    "observed_basis": "дата съёмки в подписи к фото",
-   "published_at": "2026-11-24T19:21:12+09:00",
-   "comment": "霧島の庭 見頃です。 / 相阿弥の庭 見頃です。 / 相阿弥の庭 全体に色づいてきました。 / 宸殿横 見頃です。",
+   "published_at": "2026-11-25T20:23:57+09:00",
+   "comment": "霧島の庭 見頃です。 / 相阿弥の庭 見頃です。 / 宸殿横 見頃です。 / 拝観受付前 見頃です。",
    "photos": [
     {
-     "url": "https://souda-kyoto.jp/guide/season/koyo/ea410e00000046pm-img/7_1122syorenin1_kirishima.jpg",
+     "url": "https://souda-kyoto.jp/guide/season/koyo/ea410e00000046pm-img/2_1125syorenin1.jpg",
      "caption": "霧島の庭 見頃です。",
-     "date": "2026-11-22"
+     "date": "2026-11-25"
     },
     {
-     "url": "https://souda-kyoto.jp/guide/season/koyo/ea410e00000046pm-img/7_1122syorenin2_soami.jpg",
+     "url": "https://souda-kyoto.jp/guide/season/koyo/ea410e00000046pm-img/2_1125syorenin2.jpg",
      "caption": "相阿弥の庭 見頃です。",
-     "date": "2026-11-22"
+     "date": "2026-11-25"
     },
     {
-     "url": "https://souda-kyoto.jp/guide/season/koyo/ea410e00000046pm-img/7_1122syorenin3_soami.jpg",
-     "caption": "相阿弥の庭 全体に色づいてきました。",
-     "date": "2026-11-22"
-    },
-    {
-     "url": "https://souda-kyoto.jp/guide/season/koyo/ea410e00000046pm-img/7_1122syorenin4_shinden.jpg",
+     "url": "https://souda-kyoto.jp/guide/season/koyo/ea410e00000046pm-img/2_1125syorenin3.jpg",
      "caption": "宸殿横 見頃です。",
-     "date": "2026-11-22"
+     "date": "2026-11-25"
+    },
+    {
+     "url": "https://souda-kyoto.jp/guide/season/koyo/ea410e00000046pm-img/2_1125syorenin4.jpg",
+     "caption": "拝観受付前 見頃です。",
+     "date": "2026-11-25"
     }
    ],
    "extra": {
@@ -95,32 +95,42 @@
    "source_key": "kenninji",
    "name_ja": "建仁寺",
    "url": "https://souda-kyoto.jp/guide/season/koyo/index.html",
-   "status_original": "色づきはじめ",
-   "status": "STARTING",
-   "stage_lo": 1,
-   "stage_hi": 2,
+   "status_original": "一部見頃",
+   "status": "NEAR_PEAK",
+   "stage_lo": 2,
+   "stage_hi": 3,
    "data_type": "photo",
-   "fetched_at": "2026-11-25T13:54:03+09:00",
+   "fetched_at": "2026-11-26T02:14:38+09:00",
    "area": "祇園・東山",
-   "observed_at": "2026-11-22",
+   "observed_at": "2026-11-25",
    "observed_basis": "дата съёмки в подписи к фото",
-   "published_at": "2026-11-24T19:21:12+09:00",
-   "comment": "潮音庭 ほんのり色づき始めています。 / 方丈北の納骨堂 見頃です。",
+   "published_at": "2026-11-25T20:23:57+09:00",
+   "comment": "潮音庭 ゆっくり色づきが進んでいます。 / 方丈北側 見頃です。 / 東陽坊付近 見頃です。 / 山門付近 見頃です。",
    "photos": [
     {
-     "url": "https://souda-kyoto.jp/guide/season/koyo/ea410e00000046si-img/2_1122kenninji1.jpg",
-     "caption": "潮音庭 ほんのり色づき始めています。",
-     "date": "2026-11-22"
+     "url": "https://souda-kyoto.jp/guide/season/koyo/ea410e00000046si-img/1125kenninji5.jpg",
+     "caption": "潮音庭 ゆっくり色づきが進んでいます。",
+     "date": "2026-11-25"
     },
     {
-     "url": "https://souda-kyoto.jp/guide/season/koyo/ea410e00000046si-img/2_1122kenninji2.jpg",
-     "caption": "潮音庭 ほんのり色づき始めています。",
-     "date": "2026-11-22"
+     "url": "https://souda-kyoto.jp/guide/season/koyo/ea410e00000046si-img/1125kenninji3.jpg",
+     "caption": "潮音庭 ゆっくり色づきが進んでいます。",
+     "date": "2026-11-25"
     },
     {
-     "url": "https://souda-kyoto.jp/guide/season/koyo/ea410e00000046si-img/2_1122kenninji3.jpg",
-     "caption": "方丈北の納骨堂 見頃です。",
-     "date": "2026-11-22"
+     "url": "https://souda-kyoto.jp/guide/season/koyo/ea410e00000046si-img/1125kenninji1.jpg",
+     "caption": "方丈北側 見頃です。",
+     "date": "2026-11-25"
+    },
+    {
+     "url": "https://souda-kyoto.jp/guide/season/koyo/ea410e00000046si-img/1125kenninji2.jpg",
+     "caption": "東陽坊付近 見頃です。",
+     "date": "2026-11-25"
+    },
+    {
+     "url": "https://souda-kyoto.jp/guide/season/koyo/ea410e00000046si-img/1125kenninji4.jpg",
+     "caption": "山門付近 見頃です。",
+     "date": "2026-11-25"
     }
    ],
    "extra": {
@@ -138,32 +148,32 @@
    "stage_lo": 2,
    "stage_hi": 3,
    "data_type": "photo",
-   "fetched_at": "2026-11-25T13:54:03+09:00",
+   "fetched_at": "2026-11-26T02:14:38+09:00",
    "area": "祇園・東山",
-   "observed_at": "2026-11-22",
+   "observed_at": "2026-11-25",
    "observed_basis": "дата съёмки в подписи к фото",
-   "published_at": "2026-11-24T19:21:12+09:00",
-   "comment": "臥龍池まわり 見頃です。 / 方丈前庭 色づきが進んでいます。 / 開山堂前の中門横 色づきが進んでいます。 / 遺芳庵横 見頃です。",
+   "published_at": "2026-11-25T20:23:57+09:00",
+   "comment": "方丈前庭 見頃です。 / 湖月庵付近 見頃です。 / 開山堂前の中門横 色づきが進んでいます。 / 中門付近の石段 一部見頃です。",
    "photos": [
     {
-     "url": "https://souda-kyoto.jp/guide/season/koyo/ea410e00000046r1-img/2_1122kodaiji1.jpg",
-     "caption": "臥龍池まわり 見頃です。",
-     "date": "2026-11-22"
+     "url": "https://souda-kyoto.jp/guide/season/koyo/ea410e00000046r1-img/1125kodaiji2.jpg",
+     "caption": "方丈前庭 見頃です。",
+     "date": "2026-11-25"
     },
     {
-     "url": "https://souda-kyoto.jp/guide/season/koyo/ea410e00000046r1-img/2_1122kodaiji2.jpg",
-     "caption": "方丈前庭 色づきが進んでいます。",
-     "date": "2026-11-22"
+     "url": "https://souda-kyoto.jp/guide/season/koyo/ea410e00000046r1-img/1125kodaiji1.jpg",
+     "caption": "湖月庵付近 見頃です。",
+     "date": "2026-11-25"
     },
     {
-     "url": "https://souda-kyoto.jp/guide/season/koyo/ea410e00000046r1-img/2_1122kodaiji3.jpg",
+     "url": "https://souda-kyoto.jp/guide/season/koyo/ea410e00000046r1-img/1125kodaiji3.jpg",
      "caption": "開山堂前の中門横 色づきが進んでいます。",
-     "date": "2026-11-22"
+     "date": "2026-11-25"
     },
     {
-     "url": "https://souda-kyoto.jp/guide/season/koyo/ea410e00000046r1-img/2_1122kodaiji4_ikoan.jpg",
-     "caption": "遺芳庵横 見頃です。",
-     "date": "2026-11-22"
+     "url": "https://souda-kyoto.jp/guide/season/koyo/ea410e00000046r1-img/1125kodaiji4.jpg",
+     "caption": "中門付近の石段 一部見頃です。",
+     "date": "2026-11-25"
     }
    ],
    "extra": {
@@ -181,32 +191,32 @@
    "stage_lo": 4,
    "stage_hi": 4,
    "data_type": "photo",
-   "fetched_at": "2026-11-25T13:54:03+09:00",
+   "fetched_at": "2026-11-26T02:14:38+09:00",
    "area": "祇園・東山",
-   "observed_at": "2026-11-20",
+   "observed_at": "2026-11-25",
    "observed_basis": "дата съёмки в подписи к фото",
-   "published_at": "2026-11-24T19:21:12+09:00",
-   "comment": "展望台から境内を望む 見頃です。 / 大日堂前 見頃です。 / 枯山水庭園 見頃です。 / 庭園入口は色づき始め。",
+   "published_at": "2026-11-25T20:23:57+09:00",
+   "comment": "展望台から境内を望む 見頃です。 / 枯山水庭園 見頃です。 / 庭園入口 見頃です。 / 大日堂前 見頃です。",
    "photos": [
     {
-     "url": "https://souda-kyoto.jp/guide/season/koyo/ea410e00000046vg-img/1120shogun1.jpg",
+     "url": "https://souda-kyoto.jp/guide/season/koyo/ea410e00000046vg-img/2_1125seiryu1.jpg",
      "caption": "展望台から境内を望む 見頃です。",
-     "date": "2026-11-20"
+     "date": "2026-11-25"
     },
     {
-     "url": "https://souda-kyoto.jp/guide/season/koyo/ea410e00000046vg-img/1120shogun2.jpg",
-     "caption": "大日堂前 見頃です。",
-     "date": "2026-11-20"
-    },
-    {
-     "url": "https://souda-kyoto.jp/guide/season/koyo/ea410e00000046vg-img/1120shogun3.jpg",
+     "url": "https://souda-kyoto.jp/guide/season/koyo/ea410e00000046vg-img/2_1125seiryu2.jpg",
      "caption": "枯山水庭園 見頃です。",
-     "date": "2026-11-20"
+     "date": "2026-11-25"
     },
     {
-     "url": "https://souda-kyoto.jp/guide/season/koyo/ea410e00000046vg-img/1120shogun4.jpg",
-     "caption": "庭園入口は色づき始め。",
-     "date": "2026-11-20"
+     "url": "https://souda-kyoto.jp/guide/season/koyo/ea410e00000046vg-img/2_1125seiryu3.jpg",
+     "caption": "庭園入口 見頃です。",
+     "date": "2026-11-25"
+    },
+    {
+     "url": "https://souda-kyoto.jp/guide/season/koyo/ea410e00000046vg-img/2_1125seiryu4.jpg",
+     "caption": "大日堂前 見頃です。",
+     "date": "2026-11-25"
     }
    ],
    "extra": {
@@ -224,32 +234,32 @@
    "stage_lo": 4,
    "stage_hi": 4,
    "data_type": "photo",
-   "fetched_at": "2026-11-25T13:54:03+09:00",
+   "fetched_at": "2026-11-26T02:14:38+09:00",
    "area": "祇園・東山",
-   "observed_at": "2026-11-20",
+   "observed_at": "2026-11-25",
    "observed_basis": "дата съёмки в подписи к фото",
-   "published_at": "2026-11-24T19:21:12+09:00",
-   "comment": "本堂を望む 見頃です。 / 本堂下あたり 色づきが進み、一部見頃です。 / 子安塔あたりから本堂を望む 色づきが進んでいます。 / 三重塔まわり 一部見頃です。",
+   "published_at": "2026-11-25T20:23:57+09:00",
+   "comment": "本堂を望む 見頃です。 / 本堂下あたり 見頃です。 / 放生池まわり 見頃です。 / 子安塔 見頃です。",
    "photos": [
     {
-     "url": "https://souda-kyoto.jp/guide/season/koyo/ea410e00000046tz-img/1120kiyomizudera1.jpg",
+     "url": "https://souda-kyoto.jp/guide/season/koyo/ea410e00000046tz-img/2_1125kiyomizu1.jpg",
      "caption": "本堂を望む 見頃です。",
-     "date": "2026-11-20"
+     "date": "2026-11-25"
     },
     {
-     "url": "https://souda-kyoto.jp/guide/season/koyo/ea410e00000046tz-img/1120kiyomizudera2.jpg",
-     "caption": "本堂下あたり 色づきが進み、一部見頃です。",
-     "date": "2026-11-20"
+     "url": "https://souda-kyoto.jp/guide/season/koyo/ea410e00000046tz-img/2_1125kiyomizu2.jpg",
+     "caption": "本堂下あたり 見頃です。",
+     "date": "2026-11-25"
     },
     {
-     "url": "https://souda-kyoto.jp/guide/season/koyo/ea410e00000046tz-img/1120kiyomizudera3.jpg",
-     "caption": "子安塔あたりから本堂を望む 色づきが進んでいます。",
-     "date": "2026-11-20"
+     "url": "https://souda-kyoto.jp/guide/season/koyo/ea410e00000046tz-img/2_1125kiyomizu3.jpg",
+     "caption": "放生池まわり 見頃です。",
+     "date": "2026-11-25"
     },
     {
-     "url": "https://souda-kyoto.jp/guide/season/koyo/ea410e00000046tz-img/1120kiyomizudera4.jpg",
-     "caption": "三重塔まわり 一部見頃です。",
-     "date": "2026-11-20"
+     "url": "https://souda-kyoto.jp/guide/season/koyo/ea410e00000046tz-img/2_1125kiyomizu4.jpg",
+     "caption": "子安塔 見頃です。",
+     "date": "2026-11-25"
     }
    ],
    "extra": {
@@ -267,11 +277,11 @@
    "stage_lo": 4,
    "stage_hi": 4,
    "data_type": "photo",
-   "fetched_at": "2026-11-25T13:54:03+09:00",
+   "fetched_at": "2026-11-26T02:14:38+09:00",
    "area": "北野天満宮・二条城",
    "observed_at": "2026-11-23",
    "observed_basis": "дата съёмки в подписи к фото",
-   "published_at": "2026-11-24T19:21:12+09:00",
+   "published_at": "2026-11-25T20:23:57+09:00",
    "comment": "展望所から本殿を望む 見頃です。 / 鶯橋まわり 見頃に近づいています。 / 鶯橋から紙屋川を望む まだ青葉もあります。 / 舞台 色づきが進んでいます。",
    "photos": [
     {
@@ -310,11 +320,11 @@
    "stage_lo": 4,
    "stage_hi": 4,
    "data_type": "photo",
-   "fetched_at": "2026-11-25T13:54:03+09:00",
+   "fetched_at": "2026-11-26T02:14:38+09:00",
    "area": "北野天満宮・二条城",
    "observed_at": "2026-11-22",
    "observed_basis": "дата съёмки в подписи к фото",
-   "published_at": "2026-11-24T19:21:12+09:00",
+   "published_at": "2026-11-25T20:23:57+09:00",
    "comment": "西南隅櫓 見頃です。 / 天守跡から城内を望む 見頃です。 / 椿の道 上から全体に色づいてきました。 / 清流園の南側小径 見頃です。",
    "photos": [
     {
@@ -353,11 +363,11 @@
    "stage_lo": 4,
    "stage_hi": 4,
    "data_type": "photo",
-   "fetched_at": "2026-11-25T13:54:03+09:00",
+   "fetched_at": "2026-11-26T02:14:38+09:00",
    "area": "上賀茂神社・大徳寺",
    "observed_at": "2026-11-23",
    "observed_basis": "дата съёмки в подписи к фото",
-   "published_at": "2026-11-24T19:21:12+09:00",
+   "published_at": "2026-11-25T20:23:57+09:00",
    "comment": "悟りの窓と迷いの窓 見頃です。 / 「悟りの窓と迷いの窓」の奥のモミジ 見頃です。 / 山門横 見頃です。 / 参道 見頃です。",
    "photos": [
     {
@@ -396,11 +406,11 @@
    "stage_lo": 4,
    "stage_hi": 4,
    "data_type": "photo",
-   "fetched_at": "2026-11-25T13:54:03+09:00",
+   "fetched_at": "2026-11-26T02:14:38+09:00",
    "area": "上賀茂神社・大徳寺",
    "observed_at": "2026-11-23",
    "observed_basis": "дата съёмки в подписи к фото",
-   "published_at": "2026-11-24T19:21:12+09:00",
+   "published_at": "2026-11-25T20:23:57+09:00",
    "comment": "本堂裏 見頃です。 / 帯塚付近 見頃です。 / 吉野門前 見頃です。 / 遺芳庵まわり 色づき始め。",
    "photos": [
     {
@@ -439,11 +449,11 @@
    "stage_lo": 4,
    "stage_hi": 4,
    "data_type": "photo",
-   "fetched_at": "2026-11-25T13:54:03+09:00",
+   "fetched_at": "2026-11-26T02:14:38+09:00",
    "area": "嵯峨野・嵐山",
    "observed_at": "2026-11-24",
    "observed_basis": "дата съёмки в подписи к фото",
-   "published_at": "2026-11-24T19:21:12+09:00",
+   "published_at": "2026-11-25T20:23:57+09:00",
    "comment": "仁王門まわり 色づきが進み、見頃です。 / 本堂前 見頃です。 / 多宝塔まわり 見頃です。",
    "photos": [
     {
@@ -482,11 +492,11 @@
    "stage_lo": 4,
    "stage_hi": 4,
    "data_type": "photo",
-   "fetched_at": "2026-11-25T13:54:03+09:00",
+   "fetched_at": "2026-11-26T02:14:38+09:00",
    "area": "嵯峨野・嵐山",
    "observed_at": "2026-11-23",
    "observed_basis": "дата съёмки в подписи к фото",
-   "published_at": "2026-11-24T19:21:12+09:00",
+   "published_at": "2026-11-25T20:23:57+09:00",
    "comment": "曹源池庭園 見頃です。 / 望京の丘へ続く階段 見頃です。 / 望京の丘から境内を望む 見頃です。 / 北門付近 見頃です。 / 大方丈横 見頃です。",
    "photos": [
     {
@@ -530,11 +540,11 @@
    "stage_lo": 4,
    "stage_hi": 4,
    "data_type": "photo",
-   "fetched_at": "2026-11-25T13:54:03+09:00",
+   "fetched_at": "2026-11-26T02:14:38+09:00",
    "area": "嵯峨野・嵐山",
    "observed_at": "2026-11-23",
    "observed_basis": "дата съёмки в подписи к фото",
-   "published_at": "2026-11-24T19:21:12+09:00",
+   "published_at": "2026-11-25T20:23:57+09:00",
    "comment": "獅子吼の庭 見頃です。 / 書院前 色づきが進んでいます。 / 獅子吼の庭 苦海まわり 見頃です。 / 参道 見頃です。",
    "photos": [
     {
@@ -578,11 +588,11 @@
    "stage_lo": 4,
    "stage_hi": 4,
    "data_type": "photo",
-   "fetched_at": "2026-11-25T13:54:03+09:00",
+   "fetched_at": "2026-11-26T02:14:38+09:00",
    "area": "嵯峨野・嵐山",
    "observed_at": "2026-11-24",
    "observed_basis": "дата съёмки в подписи к фото",
-   "published_at": "2026-11-24T19:21:12+09:00",
+   "published_at": "2026-11-25T20:23:57+09:00",
    "comment": "庭園 見頃です。 / 本堂裏 見頃です。 / 本堂から庭園を望む 見頃になってきました。",
    "photos": [
     {
@@ -616,11 +626,11 @@
    "stage_lo": 4,
    "stage_hi": 4,
    "data_type": "photo",
-   "fetched_at": "2026-11-25T13:54:03+09:00",
+   "fetched_at": "2026-11-26T02:14:38+09:00",
    "area": "嵯峨野・嵐山",
    "observed_at": "2026-11-23",
    "observed_basis": "дата съёмки в подписи к фото",
-   "published_at": "2026-11-24T19:21:12+09:00",
+   "published_at": "2026-11-25T20:23:57+09:00",
    "comment": "多宝塔まわり 見頃です。 / 山門横の土塀沿い 見頃が近い。 / 本堂横 見頃です。 / 弁天堂 見頃です。",
    "photos": [
     {
@@ -659,11 +669,11 @@
    "stage_lo": 2,
    "stage_hi": 3,
    "data_type": "photo",
-   "fetched_at": "2026-11-25T13:54:03+09:00",
+   "fetched_at": "2026-11-26T02:14:38+09:00",
    "area": "嵯峨野・嵐山",
    "observed_at": "2026-11-23",
    "observed_basis": "дата съёмки в подписи к фото",
-   "published_at": "2026-11-24T19:21:12+09:00",
+   "published_at": "2026-11-25T20:23:57+09:00",
    "comment": "放生池まわり 見頃の木もあります。 / 名古曽滝跡付近 見頃になってきました。 / 大沢池まわり 清々しい眺めです。 / 大沢池まわり 一部では色づきが進んでいます。",
    "photos": [
     {
@@ -702,11 +712,11 @@
    "stage_lo": 4,
    "stage_hi": 4,
    "data_type": "photo",
-   "fetched_at": "2026-11-25T13:54:03+09:00",
+   "fetched_at": "2026-11-26T02:14:38+09:00",
    "area": "嵯峨野・嵐山",
    "observed_at": "2026-11-22",
    "observed_basis": "дата съёмки в подписи к фото",
-   "published_at": "2026-11-24T19:21:12+09:00",
+   "published_at": "2026-11-25T20:23:57+09:00",
    "comment": "参道 見頃です。 / 参道 モミジのグラデーションが綺麗です。 / 勅使門前の参道 見頃です。 / 角倉了以像まわり 見頃です。 / 勅使門付近 見頃です。",
    "photos": [
     {
@@ -750,11 +760,11 @@
    "stage_lo": 2,
    "stage_hi": 3,
    "data_type": "photo",
-   "fetched_at": "2026-11-25T13:54:03+09:00",
+   "fetched_at": "2026-11-26T02:14:38+09:00",
    "area": "嵯峨野・嵐山",
    "observed_at": "2026-11-23",
    "observed_basis": "дата съёмки в подписи к фото",
-   "published_at": "2026-11-24T19:21:12+09:00",
+   "published_at": "2026-11-25T20:23:57+09:00",
    "comment": "草庵まわり 一部見頃になってきました。 / 苔の絨毯に散るモミジも綺麗です。 / 庭園 色づきが進んでいます。 / この辺りは青葉が多い。",
    "photos": [
     {
@@ -793,11 +803,11 @@
    "stage_lo": 4,
    "stage_hi": 4,
    "data_type": "photo",
-   "fetched_at": "2026-11-25T13:54:03+09:00",
+   "fetched_at": "2026-11-26T02:14:38+09:00",
    "area": "嵯峨野・嵐山",
    "observed_at": "2026-11-23",
    "observed_basis": "дата съёмки в подписи к фото",
-   "published_at": "2026-11-24T19:21:12+09:00",
+   "published_at": "2026-11-25T20:23:57+09:00",
    "comment": "渡月橋 見頃です。 / 大堰川沿い 見頃です。 / 船着場 見頃です。 / 亀山公園 展望台からの眺め 見頃です。",
    "photos": [
     {
@@ -836,11 +846,11 @@
    "stage_lo": 4,
    "stage_hi": 4,
    "data_type": "photo",
-   "fetched_at": "2026-11-25T13:54:03+09:00",
+   "fetched_at": "2026-11-26T02:14:38+09:00",
    "area": "嵯峨野・嵐山",
    "observed_at": "2026-11-24",
    "observed_basis": "дата съёмки в подписи к фото",
-   "published_at": "2026-11-24T19:21:12+09:00",
+   "published_at": "2026-11-25T20:23:57+09:00",
    "comment": "舎利殿前 見頃です。 / 庫裡前 見頃です。 / 参道 一部のモミジは見頃です。",
    "photos": [
     {
@@ -874,42 +884,42 @@
    "source_key": "bishamondo",
    "name_ja": "毘沙門堂門跡",
    "url": "https://souda-kyoto.jp/guide/season/koyo/index.html",
-   "status_original": "一部見頃",
-   "status": "NEAR_PEAK",
-   "stage_lo": 2,
-   "stage_hi": 3,
+   "status_original": "見頃",
+   "status": "PEAK",
+   "stage_lo": 4,
+   "stage_hi": 4,
    "data_type": "photo",
-   "fetched_at": "2026-11-25T13:54:03+09:00",
+   "fetched_at": "2026-11-26T02:14:38+09:00",
    "area": "山科・醍醐",
-   "observed_at": "2026-11-20",
+   "observed_at": "2026-11-25",
    "observed_basis": "дата съёмки в подписи к фото",
-   "published_at": "2026-11-24T19:21:12+09:00",
-   "comment": "勅使坂 見頃になってきました。 / 勅使坂 まだ青葉もあります。 / 仁王門前の参道 色づきが進んでいます。 / 弁財天堂まわり 見頃になってきました。 / 晩翠園 色づきが進んでいます。",
+   "published_at": "2026-11-25T20:23:57+09:00",
+   "comment": "勅使坂 見頃です。モミジの絨毯も綺麗です。 / 参道 見頃です。 / 仁王門前の参道 見頃です。 / 弁財天堂まわり 見頃です。 / 晩翠園 色づきが進み、見頃が近い。",
    "photos": [
     {
-     "url": "https://souda-kyoto.jp/guide/season/koyo/ea410e00000046xd-img/6_1120bisya1.jpg",
-     "caption": "勅使坂 見頃になってきました。",
-     "date": "2026-11-20"
+     "url": "https://souda-kyoto.jp/guide/season/koyo/ea410e00000046xd-img/6_1125bisya1.jpg",
+     "caption": "勅使坂 見頃です。モミジの絨毯も綺麗です。",
+     "date": "2026-11-25"
     },
     {
-     "url": "https://souda-kyoto.jp/guide/season/koyo/ea410e00000046xd-img/6_1120bisya2.jpg",
-     "caption": "勅使坂 まだ青葉もあります。",
-     "date": "2026-11-20"
+     "url": "https://souda-kyoto.jp/guide/season/koyo/ea410e00000046xd-img/6_1125bisya2.jpg",
+     "caption": "参道 見頃です。",
+     "date": "2026-11-25"
     },
     {
-     "url": "https://souda-kyoto.jp/guide/season/koyo/ea410e00000046xd-img/6_1120bisya3.jpg",
-     "caption": "仁王門前の参道 色づきが進んでいます。",
-     "date": "2026-11-20"
+     "url": "https://souda-kyoto.jp/guide/season/koyo/ea410e00000046xd-img/6_1125bisya3.jpg",
+     "caption": "仁王門前の参道 見頃です。",
+     "date": "2026-11-25"
     },
     {
-     "url": "https://souda-kyoto.jp/guide/season/koyo/ea410e00000046xd-img/6_1120bisya4.jpg",
-     "caption": "弁財天堂まわり 見頃になってきました。",
-     "date": "2026-11-20"
+     "url": "https://souda-kyoto.jp/guide/season/koyo/ea410e00000046xd-img/6_1125bisya4.jpg",
+     "caption": "弁財天堂まわり 見頃です。",
+     "date": "2026-11-25"
     },
     {
-     "url": "https://souda-kyoto.jp/guide/season/koyo/ea410e00000046xd-img/6_1120bisya5.jpg",
-     "caption": "晩翠園 色づきが進んでいます。",
-     "date": "2026-11-20"
+     "url": "https://souda-kyoto.jp/guide/season/koyo/ea410e00000046xd-img/6_1125bisya5.jpg",
+     "caption": "晩翠園 色づきが進み、見頃が近い。",
+     "date": "2026-11-25"
     }
    ],
    "extra": {
@@ -922,32 +932,32 @@
    "source_key": "anshouji",
    "name_ja": "安祥寺",
    "url": "https://souda-kyoto.jp/guide/season/koyo/index.html",
-   "status_original": "一部見頃",
-   "status": "NEAR_PEAK",
-   "stage_lo": 2,
-   "stage_hi": 3,
+   "status_original": "見頃",
+   "status": "PEAK",
+   "stage_lo": 4,
+   "stage_hi": 4,
    "data_type": "photo",
-   "fetched_at": "2026-11-25T13:54:03+09:00",
+   "fetched_at": "2026-11-26T02:14:38+09:00",
    "area": "山科・醍醐",
-   "observed_at": "2026-11-20",
+   "observed_at": "2026-11-25",
    "observed_basis": "дата съёмки в подписи к фото",
-   "published_at": "2026-11-24T19:21:12+09:00",
-   "comment": "観音堂横 見頃に近づいています。※次回の公開は11月21日(土)~です。 / 大師堂付近 一部見頃です。※次回の公開は11月21日(土)~です。 / 大師堂付近 まだ青葉もありますが見頃のモミジもあります。※次回の公開は11月21日(土)~です。",
+   "published_at": "2026-11-25T20:23:57+09:00",
+   "comment": "観音堂横 見頃です。 / 大師堂横 見頃です。",
    "photos": [
     {
-     "url": "https://souda-kyoto.jp/guide/season/koyo/ea410e00000046yu-img/1120anshoji1.jpg",
-     "caption": "観音堂横 見頃に近づいています。※次回の公開は11月21日(土)~です。",
-     "date": "2026-11-20"
+     "url": "https://souda-kyoto.jp/guide/season/koyo/ea410e00000046yu-img/6_1125ansyoji1.jpg",
+     "caption": "観音堂横 見頃です。",
+     "date": "2026-11-25"
     },
     {
-     "url": "https://souda-kyoto.jp/guide/season/koyo/ea410e00000046yu-img/1120anshoji2.jpg",
-     "caption": "大師堂付近 一部見頃です。※次回の公開は11月21日(土)~です。",
-     "date": "2026-11-20"
+     "url": "https://souda-kyoto.jp/guide/season/koyo/ea410e00000046yu-img/6_1125ansyoji2.jpg",
+     "caption": "大師堂横 見頃です。",
+     "date": "2026-11-25"
     },
     {
-     "url": "https://souda-kyoto.jp/guide/season/koyo/ea410e00000046yu-img/1120anshoji3.jpg",
-     "caption": "大師堂付近 まだ青葉もありますが見頃のモミジもあります。※次回の公開は11月21日(土)~です。",
-     "date": "2026-11-20"
+     "url": "https://souda-kyoto.jp/guide/season/koyo/ea410e00000046yu-img/6_1125ansyoji3.jpg",
+     "caption": "大師堂横 見頃です。",
+     "date": "2026-11-25"
     }
    ],
    "extra": {
@@ -965,11 +975,11 @@
    "stage_lo": 4,
    "stage_hi": 4,
    "data_type": "photo",
-   "fetched_at": "2026-11-25T13:54:03+09:00",
+   "fetched_at": "2026-11-26T02:14:38+09:00",
    "area": "山科・醍醐",
    "observed_at": "2026-11-22",
    "observed_basis": "дата съёмки в подписи к фото",
-   "published_at": "2026-11-24T19:21:12+09:00",
+   "published_at": "2026-11-25T20:23:57+09:00",
    "comment": "弁天池まわり 見頃です。 / 仁王門前の参道 全体に色づいてきました。 / 祖師堂前 全体に色づいてきました。",
    "photos": [
     {
@@ -1008,11 +1018,11 @@
    "stage_lo": 4,
    "stage_hi": 4,
    "data_type": "photo",
-   "fetched_at": "2026-11-25T13:54:03+09:00",
+   "fetched_at": "2026-11-26T02:14:38+09:00",
    "area": "山科・醍醐",
    "observed_at": "2026-11-22",
    "observed_basis": "дата съёмки в подписи к фото",
-   "published_at": "2026-11-24T19:21:12+09:00",
+   "published_at": "2026-11-25T20:23:57+09:00",
    "comment": "境内全体に見頃です。",
    "photos": [
     {
@@ -1051,11 +1061,11 @@
    "stage_lo": 2,
    "stage_hi": 3,
    "data_type": "photo",
-   "fetched_at": "2026-11-25T13:54:03+09:00",
+   "fetched_at": "2026-11-26T02:14:38+09:00",
    "area": "山科・醍醐",
    "observed_at": "2026-11-22",
    "observed_basis": "дата съёмки в подписи к фото",
-   "published_at": "2026-11-24T19:21:12+09:00",
+   "published_at": "2026-11-25T20:23:57+09:00",
    "comment": "庫裡前 見頃になってきました。 / 心字池 見頃になってきました。 / 化粧井戸付近 見頃になってきました。",
    "photos": [
     {
@@ -1089,37 +1099,37 @@
    "stage_lo": 4,
    "stage_hi": 4,
    "data_type": "photo",
-   "fetched_at": "2026-11-25T13:54:03+09:00",
+   "fetched_at": "2026-11-26T02:14:38+09:00",
    "area": "三十三間堂・東福寺",
-   "observed_at": "2026-11-22",
+   "observed_at": "2026-11-25",
    "observed_basis": "дата съёмки в подписи к фото",
-   "published_at": "2026-11-24T19:21:12+09:00",
-   "comment": "通天橋から臥雲橋を望む 見頃です。 / 通天橋まわり 見頃です。 / 通天橋まわり 全体に赤く色づいてきました。 / 洗玉澗 見頃です。 / 通天台から通天橋を望む 全体に赤く色づいてきました。",
+   "published_at": "2026-11-25T20:23:57+09:00",
+   "comment": "通天橋から臥雲橋を望む 見頃です。 / 通天橋まわり 見頃です。 / 洗玉澗 見頃です。 / 通天橋付近 見頃です。 / 本坊北庭 色づき始め。",
    "photos": [
     {
-     "url": "https://souda-kyoto.jp/guide/season/koyo/ea410e00000061w4-img/7_1122tofukuji1.jpg",
+     "url": "https://souda-kyoto.jp/guide/season/koyo/ea410e00000061w4-img/7_1125tofukuji1.jpg",
      "caption": "通天橋から臥雲橋を望む 見頃です。",
-     "date": "2026-11-22"
+     "date": "2026-11-25"
     },
     {
-     "url": "https://souda-kyoto.jp/guide/season/koyo/ea410e00000061w4-img/7_1122tofukuji2.jpg",
+     "url": "https://souda-kyoto.jp/guide/season/koyo/ea410e00000061w4-img/7_1125tofukuji2.jpg",
      "caption": "通天橋まわり 見頃です。",
-     "date": "2026-11-22"
+     "date": "2026-11-25"
     },
     {
-     "url": "https://souda-kyoto.jp/guide/season/koyo/ea410e00000061w4-img/7_1122tofukuji3.jpg",
-     "caption": "通天橋まわり 全体に赤く色づいてきました。",
-     "date": "2026-11-22"
-    },
-    {
-     "url": "https://souda-kyoto.jp/guide/season/koyo/ea410e00000061w4-img/7_1122tofukuji4.jpg",
+     "url": "https://souda-kyoto.jp/guide/season/koyo/ea410e00000061w4-img/7_1125tofukuji3.jpg",
      "caption": "洗玉澗 見頃です。",
-     "date": "2026-11-22"
+     "date": "2026-11-25"
     },
     {
-     "url": "https://souda-kyoto.jp/guide/season/koyo/ea410e00000061w4-img/7_1122tofukuji5.jpg",
-     "caption": "通天台から通天橋を望む 全体に赤く色づいてきました。",
-     "date": "2026-11-22"
+     "url": "https://souda-kyoto.jp/guide/season/koyo/ea410e00000061w4-img/7_1125tofukuji4.jpg",
+     "caption": "通天橋付近 見頃です。",
+     "date": "2026-11-25"
+    },
+    {
+     "url": "https://souda-kyoto.jp/guide/season/koyo/ea410e00000061w4-img/7_1125tofukuji5.jpg",
+     "caption": "本坊北庭 色づき始め。",
+     "date": "2026-11-25"
     }
    ],
    "extra": {
@@ -1137,27 +1147,32 @@
    "stage_lo": 2,
    "stage_hi": 3,
    "data_type": "photo",
-   "fetched_at": "2026-11-25T13:54:03+09:00",
+   "fetched_at": "2026-11-26T02:14:38+09:00",
    "area": "三十三間堂・東福寺",
-   "observed_at": "2026-11-22",
+   "observed_at": "2026-11-25",
    "observed_basis": "дата съёмки в подписи к фото",
-   "published_at": "2026-11-24T19:21:12+09:00",
-   "comment": "波心庭 色づきが進んでいます。 / 参道 色づき始めました。",
+   "published_at": "2026-11-25T20:23:57+09:00",
+   "comment": "波心庭 色づきが進んでいます。 / 吉野窓 色づきが進んでいます。 / 山門前 見頃です。 / 参道 色づき始めました。",
    "photos": [
     {
-     "url": "https://souda-kyoto.jp/guide/season/koyo/ea410e00000061x9-img/7_1122komyoin1.jpg",
+     "url": "https://souda-kyoto.jp/guide/season/koyo/ea410e00000061x9-img/1125komyoin3.jpg",
      "caption": "波心庭 色づきが進んでいます。",
-     "date": "2026-11-22"
+     "date": "2026-11-25"
     },
     {
-     "url": "https://souda-kyoto.jp/guide/season/koyo/ea410e00000061x9-img/7_1122komyoin2.jpg",
-     "caption": "波心庭 色づきが進んでいます。",
-     "date": "2026-11-22"
+     "url": "https://souda-kyoto.jp/guide/season/koyo/ea410e00000061x9-img/1125komyoin4.jpg",
+     "caption": "吉野窓 色づきが進んでいます。",
+     "date": "2026-11-25"
     },
     {
-     "url": "https://souda-kyoto.jp/guide/season/koyo/ea410e00000061x9-img/7_1122komyoin3.jpg",
+     "url": "https://souda-kyoto.jp/guide/season/koyo/ea410e00000061x9-img/1125komyoin1.jpg",
+     "caption": "山門前 見頃です。",
+     "date": "2026-11-25"
+    },
+    {
+     "url": "https://souda-kyoto.jp/guide/season/koyo/ea410e00000061x9-img/1125komyoin2.jpg",
      "caption": "参道 色づき始めました。",
-     "date": "2026-11-22"
+     "date": "2026-11-25"
     }
    ],
    "extra": {
@@ -1175,32 +1190,32 @@
    "stage_lo": 4,
    "stage_hi": 4,
    "data_type": "photo",
-   "fetched_at": "2026-11-25T13:54:03+09:00",
+   "fetched_at": "2026-11-26T02:14:38+09:00",
    "area": "三十三間堂・東福寺",
-   "observed_at": "2026-11-22",
+   "observed_at": "2026-11-25",
    "observed_basis": "дата съёмки в подписи к фото",
-   "published_at": "2026-11-24T19:21:12+09:00",
-   "comment": "御座所庭園 見頃です。 / 御座所庭園 モミジのグラデーションが綺麗です。 / 楊貴妃観音堂横 見頃です。 / 仏殿横 この辺りは青葉です。",
+   "published_at": "2026-11-25T20:23:57+09:00",
+   "comment": "御座所庭園 見頃です。 / 御座所庭園 モミジのグラデーションが綺麗です。 / 仏殿横 この辺りは青葉です。 / 楊貴妃観音堂前 見頃です。",
    "photos": [
     {
-     "url": "https://souda-kyoto.jp/guide/season/koyo/ea410e00000061ze-img/7_1122sennyuji1.jpg",
+     "url": "https://souda-kyoto.jp/guide/season/koyo/ea410e00000061ze-img/1125sennyuji1.jpg",
      "caption": "御座所庭園 見頃です。",
-     "date": "2026-11-22"
+     "date": "2026-11-25"
     },
     {
-     "url": "https://souda-kyoto.jp/guide/season/koyo/ea410e00000061ze-img/7_1122sennyuji2.jpg",
+     "url": "https://souda-kyoto.jp/guide/season/koyo/ea410e00000061ze-img/1125sennyuji2.jpg",
      "caption": "御座所庭園 モミジのグラデーションが綺麗です。",
-     "date": "2026-11-22"
+     "date": "2026-11-25"
     },
     {
-     "url": "https://souda-kyoto.jp/guide/season/koyo/ea410e00000061ze-img/7_1122sennyuji3_yokihi.jpg",
-     "caption": "楊貴妃観音堂横 見頃です。",
-     "date": "2026-11-22"
-    },
-    {
-     "url": "https://souda-kyoto.jp/guide/season/koyo/ea410e00000061ze-img/7_1122sennyuji4.jpg",
+     "url": "https://souda-kyoto.jp/guide/season/koyo/ea410e00000061ze-img/1125sennyuji3.jpg",
      "caption": "仏殿横 この辺りは青葉です。",
-     "date": "2026-11-22"
+     "date": "2026-11-25"
+    },
+    {
+     "url": "https://souda-kyoto.jp/guide/season/koyo/ea410e00000061ze-img/1125sennyuji4.jpg",
+     "caption": "楊貴妃観音堂前 見頃です。",
+     "date": "2026-11-25"
     }
    ],
    "extra": {
@@ -1218,32 +1233,32 @@
    "stage_lo": 4,
    "stage_hi": 4,
    "data_type": "photo",
-   "fetched_at": "2026-11-25T13:54:03+09:00",
+   "fetched_at": "2026-11-26T02:14:38+09:00",
    "area": "三十三間堂・東福寺",
-   "observed_at": "2026-11-22",
+   "observed_at": "2026-11-25",
    "observed_basis": "дата съёмки в подписи к фото",
-   "published_at": "2026-11-24T19:21:12+09:00",
-   "comment": "大師堂まわり 見頃です。 / 子護大師まわり 見頃です。 / 本堂前 見頃です。 / 鳥居橋 見頃ですが、まだ青葉もあります。",
+   "published_at": "2026-11-25T20:23:57+09:00",
+   "comment": "本堂前 見頃です。 / 子護大師まわり 見頃です。 / 大師堂まわり 見頃です。 / 参道 色とりどりのモミジが楽しめます。",
    "photos": [
     {
-     "url": "https://souda-kyoto.jp/guide/season/koyo/ea410e00000061yn-img/7_1122imakumano1_taishido.jpg",
-     "caption": "大師堂まわり 見頃です。",
-     "date": "2026-11-22"
-    },
-    {
-     "url": "https://souda-kyoto.jp/guide/season/koyo/ea410e00000061yn-img/7_1122imakumano2.jpg",
-     "caption": "子護大師まわり 見頃です。",
-     "date": "2026-11-22"
-    },
-    {
-     "url": "https://souda-kyoto.jp/guide/season/koyo/ea410e00000061yn-img/7_1122imakumano3.jpg",
+     "url": "https://souda-kyoto.jp/guide/season/koyo/ea410e00000061yn-img/7_1125imakumano1.jpg",
      "caption": "本堂前 見頃です。",
-     "date": "2026-11-22"
+     "date": "2026-11-25"
     },
     {
-     "url": "https://souda-kyoto.jp/guide/season/koyo/ea410e00000061yn-img/7_1122imakumano4.jpg",
-     "caption": "鳥居橋 見頃ですが、まだ青葉もあります。",
-     "date": "2026-11-22"
+     "url": "https://souda-kyoto.jp/guide/season/koyo/ea410e00000061yn-img/7_1125imakumano2.jpg",
+     "caption": "子護大師まわり 見頃です。",
+     "date": "2026-11-25"
+    },
+    {
+     "url": "https://souda-kyoto.jp/guide/season/koyo/ea410e00000061yn-img/7_1125imakumano3.jpg",
+     "caption": "大師堂まわり 見頃です。",
+     "date": "2026-11-25"
+    },
+    {
+     "url": "https://souda-kyoto.jp/guide/season/koyo/ea410e00000061yn-img/7_1125imakumano4.jpg",
+     "caption": "参道 色とりどりのモミジが楽しめます。",
+     "date": "2026-11-25"
     }
    ],
    "extra": {
@@ -1261,32 +1276,37 @@
    "stage_lo": 4,
    "stage_hi": 4,
    "data_type": "photo",
-   "fetched_at": "2026-11-25T13:54:03+09:00",
+   "fetched_at": "2026-11-26T02:14:38+09:00",
    "area": "三十三間堂・東福寺",
-   "observed_at": "2026-11-22",
+   "observed_at": "2026-11-25",
    "observed_basis": "дата съёмки в подписи к фото",
-   "published_at": "2026-11-24T19:21:12+09:00",
-   "comment": "金堂前の参道 見頃です。 / 金堂前 見頃です。 / 鐘楼堂まわり 見頃です。 / 名勝庭園 見頃です。",
+   "published_at": "2026-11-25T20:23:57+09:00",
+   "comment": "金堂前 見頃です。 / 金堂前の参道 見頃です。 / モミジとイチョウが綺麗に色づいています。 / 鐘楼堂まわり 見頃です。 / 名勝庭園 見頃です。",
    "photos": [
     {
-     "url": "https://souda-kyoto.jp/guide/season/koyo/jae3u10000002vih-img/7_1122chisyakuin1.jpg",
-     "caption": "金堂前の参道 見頃です。",
-     "date": "2026-11-22"
-    },
-    {
-     "url": "https://souda-kyoto.jp/guide/season/koyo/jae3u10000002vih-img/7_1122chisyakuin2.jpg",
+     "url": "https://souda-kyoto.jp/guide/season/koyo/jae3u10000002vih-img/7_1125chisyakuin2.jpg",
      "caption": "金堂前 見頃です。",
-     "date": "2026-11-22"
+     "date": "2026-11-25"
     },
     {
-     "url": "https://souda-kyoto.jp/guide/season/koyo/jae3u10000002vih-img/7_1122chisyakuin3.jpg",
+     "url": "https://souda-kyoto.jp/guide/season/koyo/jae3u10000002vih-img/7_1125chisyakuin1.jpg",
+     "caption": "金堂前の参道 見頃です。",
+     "date": "2026-11-25"
+    },
+    {
+     "url": "https://souda-kyoto.jp/guide/season/koyo/jae3u10000002vih-img/7_1125chisyakuin3.jpg",
+     "caption": "モミジとイチョウが綺麗に色づいています。",
+     "date": "2026-11-25"
+    },
+    {
+     "url": "https://souda-kyoto.jp/guide/season/koyo/jae3u10000002vih-img/7_1125chisyakuin4.jpg",
      "caption": "鐘楼堂まわり 見頃です。",
-     "date": "2026-11-22"
+     "date": "2026-11-25"
     },
     {
-     "url": "https://souda-kyoto.jp/guide/season/koyo/jae3u10000002vih-img/7_1122chisyakuin4.jpg",
+     "url": "https://souda-kyoto.jp/guide/season/koyo/jae3u10000002vih-img/7_1125chisyakuin5.jpg",
      "caption": "名勝庭園 見頃です。",
-     "date": "2026-11-22"
+     "date": "2026-11-25"
     }
    ],
    "extra": {
@@ -1304,11 +1324,11 @@
    "stage_lo": 4,
    "stage_hi": 4,
    "data_type": "photo",
-   "fetched_at": "2026-11-25T13:54:03+09:00",
+   "fetched_at": "2026-11-26T02:14:38+09:00",
    "area": "哲学の道・岡崎",
    "observed_at": "2026-11-24",
    "observed_basis": "дата съёмки в подписи к фото",
-   "published_at": "2026-11-24T19:21:12+09:00",
+   "published_at": "2026-11-25T20:23:57+09:00",
    "comment": "山門まわり 見頃です。 / 紫雲の庭 見頃です。 / 東坂 見頃です。",
    "photos": [
     {
@@ -1342,11 +1362,11 @@
    "stage_lo": 2,
    "stage_hi": 3,
    "data_type": "photo",
-   "fetched_at": "2026-11-25T13:54:03+09:00",
+   "fetched_at": "2026-11-26T02:14:38+09:00",
    "area": "哲学の道・岡崎",
    "observed_at": "2026-11-23",
    "observed_basis": "дата съёмки в подписи к фото",
-   "published_at": "2026-11-24T19:21:12+09:00",
+   "published_at": "2026-11-25T20:23:57+09:00",
    "comment": "白砂壇 一部見頃です。 / 山門前 まだ青葉もあります。 / この辺りは見頃です。 / 池まわり 色づきが進んでいます。",
    "photos": [
     {
@@ -1385,11 +1405,11 @@
    "stage_lo": 4,
    "stage_hi": 4,
    "data_type": "photo",
-   "fetched_at": "2026-11-25T13:54:03+09:00",
+   "fetched_at": "2026-11-26T02:14:38+09:00",
    "area": "哲学の道・岡崎",
    "observed_at": "2026-11-24",
    "observed_basis": "дата съёмки в подписи к фото",
-   "published_at": "2026-11-24T19:21:12+09:00",
+   "published_at": "2026-11-25T20:23:57+09:00",
    "comment": "三重塔を望む 見頃です。 / 本堂横 見頃です。 / 参道 見頃です。",
    "photos": [
     {
@@ -1423,11 +1443,11 @@
    "stage_lo": 4,
    "stage_hi": 4,
    "data_type": "photo",
-   "fetched_at": "2026-11-25T13:54:03+09:00",
+   "fetched_at": "2026-11-26T02:14:38+09:00",
    "area": "哲学の道・岡崎",
    "observed_at": "2026-11-23",
    "observed_basis": "дата съёмки в подписи к фото",
-   "published_at": "2026-11-24T19:21:12+09:00",
+   "published_at": "2026-11-25T20:23:57+09:00",
    "comment": "多宝塔を望む 見頃です。 / 放生池まわり 見頃です。 / 唐門まわり 見頃です。 / 御影堂前 色づきが進んでいます。 / 釈迦堂横の庭園 見頃です。",
    "photos": [
     {
@@ -1471,11 +1491,11 @@
    "stage_lo": 4,
    "stage_hi": 4,
    "data_type": "photo",
-   "fetched_at": "2026-11-25T13:54:03+09:00",
+   "fetched_at": "2026-11-26T02:14:38+09:00",
    "area": "哲学の道・岡崎",
    "observed_at": "2026-11-24",
    "observed_basis": "дата съёмки в подписи к фото",
-   "published_at": "2026-11-24T19:21:12+09:00",
+   "published_at": "2026-11-25T20:23:57+09:00",
    "comment": "三門前 見頃です。 / 庫裏前の参道 見頃です。 / 水路閣横 色づき始め。",
    "photos": [
     {
@@ -1514,11 +1534,11 @@
    "stage_lo": 4,
    "stage_hi": 4,
    "data_type": "photo",
-   "fetched_at": "2026-11-25T13:54:03+09:00",
+   "fetched_at": "2026-11-26T02:14:38+09:00",
    "area": "哲学の道・岡崎",
    "observed_at": "2026-11-24",
    "observed_basis": "дата съёмки в подписи к фото",
-   "published_at": "2026-11-24T19:21:12+09:00",
+   "published_at": "2026-11-25T20:23:57+09:00",
    "comment": "方丈東庭 少し散り始めていますが、まだ見頃です。 / 書院南庭 見頃です。 / 書院裏 散り始め。",
    "photos": [
     {
@@ -1557,11 +1577,11 @@
    "stage_lo": 2,
    "stage_hi": 3,
    "data_type": "photo",
-   "fetched_at": "2026-11-25T13:54:03+09:00",
+   "fetched_at": "2026-11-26T02:14:38+09:00",
    "area": "哲学の道・岡崎",
    "observed_at": "2026-11-23",
    "observed_basis": "дата съёмки в подписи к фото",
-   "published_at": "2026-11-24T19:21:12+09:00",
+   "published_at": "2026-11-25T20:23:57+09:00",
    "comment": "疏水沿い 色づきが進み、見頃になってきました。 / 疏水沿い 一部で見頃のモミジもあります。",
    "photos": [
     {
@@ -1600,11 +1620,11 @@
    "stage_lo": 4,
    "stage_hi": 4,
    "data_type": "photo",
-   "fetched_at": "2026-11-25T13:54:03+09:00",
+   "fetched_at": "2026-11-26T02:14:38+09:00",
    "area": "哲学の道・岡崎",
    "observed_at": "2026-11-24",
    "observed_basis": "дата съёмки в подписи к фото",
-   "published_at": "2026-11-24T19:21:12+09:00",
+   "published_at": "2026-11-25T20:23:57+09:00",
    "comment": "少し散り始めていますが、まだ見頃です。",
    "photos": [
     {
@@ -1638,32 +1658,32 @@
    "stage_lo": 4,
    "stage_hi": 4,
    "data_type": "photo",
-   "fetched_at": "2026-11-25T13:54:03+09:00",
+   "fetched_at": "2026-11-26T02:14:38+09:00",
    "area": "下鴨神社・京都御苑",
-   "observed_at": "2026-11-22",
+   "observed_at": "2026-11-25",
    "observed_basis": "дата съёмки в подписи к фото",
-   "published_at": "2026-11-24T19:21:12+09:00",
+   "published_at": "2026-11-25T20:23:57+09:00",
    "comment": "苑内全体に見頃です。",
    "photos": [
     {
-     "url": "https://souda-kyoto.jp/guide/season/koyo/ea410e0000004213-img/9_1122gyoen1.jpg",
+     "url": "https://souda-kyoto.jp/guide/season/koyo/ea410e0000004213-img/1125gyoen1.jpg",
      "caption": "苑内全体に見頃です。",
-     "date": "2026-11-22"
+     "date": "2026-11-25"
     },
     {
-     "url": "https://souda-kyoto.jp/guide/season/koyo/ea410e0000004213-img/9_1122gyoen2.jpg",
+     "url": "https://souda-kyoto.jp/guide/season/koyo/ea410e0000004213-img/1125gyoen2.jpg",
      "caption": "苑内全体に見頃です。",
-     "date": "2026-11-22"
+     "date": "2026-11-25"
     },
     {
-     "url": "https://souda-kyoto.jp/guide/season/koyo/ea410e0000004213-img/9_1122gyoen3.jpg",
+     "url": "https://souda-kyoto.jp/guide/season/koyo/ea410e0000004213-img/1125gyoen3.jpg",
      "caption": "苑内全体に見頃です。",
-     "date": "2026-11-22"
+     "date": "2026-11-25"
     },
     {
-     "url": "https://souda-kyoto.jp/guide/season/koyo/ea410e0000004213-img/9_1122gyoen4.jpg",
+     "url": "https://souda-kyoto.jp/guide/season/koyo/ea410e0000004213-img/1125gyoen4.jpg",
      "caption": "苑内全体に見頃です。",
-     "date": "2026-11-22"
+     "date": "2026-11-25"
     }
    ],
    "extra": {
@@ -1681,11 +1701,11 @@
    "stage_lo": 1,
    "stage_hi": 2,
    "data_type": "photo",
-   "fetched_at": "2026-11-25T13:54:03+09:00",
+   "fetched_at": "2026-11-26T02:14:38+09:00",
    "area": "下鴨神社・京都御苑",
    "observed_at": "2026-11-23",
    "observed_basis": "дата съёмки в подписи к фото",
-   "published_at": "2026-11-24T19:21:12+09:00",
+   "published_at": "2026-11-25T20:23:57+09:00",
    "comment": "例年色づくのが遅く、森全体に青葉です。 / 河合神社付近 まだ青葉です。 / 南口鳥居付近 色づき始めた木もあります。",
    "photos": [
     {
@@ -1719,32 +1739,32 @@
    "stage_lo": 4,
    "stage_hi": 4,
    "data_type": "photo",
-   "fetched_at": "2026-11-25T13:54:03+09:00",
+   "fetched_at": "2026-11-26T02:14:38+09:00",
    "area": "下鴨神社・京都御苑",
-   "observed_at": "2026-11-22",
+   "observed_at": "2026-11-25",
    "observed_basis": "дата съёмки в подписи к фото",
-   "published_at": "2026-11-24T19:21:12+09:00",
-   "comment": "源氏の庭 見頃です。 / 鐘楼付近 見頃です。イチョウも綺麗に色づいています♪ / 境内全体に見頃です。",
+   "published_at": "2026-11-25T20:23:57+09:00",
+   "comment": "源氏の庭 見頃です。 / 鐘楼付近 見頃です。 / 境内全体に見頃です。",
    "photos": [
     {
-     "url": "https://souda-kyoto.jp/guide/season/koyo/ea410e00000041zm-img/9_1122rozanji1.jpg",
+     "url": "https://souda-kyoto.jp/guide/season/koyo/ea410e00000041zm-img/9_1125rozanji1.jpg",
      "caption": "源氏の庭 見頃です。",
-     "date": "2026-11-22"
+     "date": "2026-11-25"
     },
     {
-     "url": "https://souda-kyoto.jp/guide/season/koyo/ea410e00000041zm-img/9_1122rozanji2.jpg",
+     "url": "https://souda-kyoto.jp/guide/season/koyo/ea410e00000041zm-img/9_1125rozanji2.jpg",
      "caption": "源氏の庭 見頃です。",
-     "date": "2026-11-22"
+     "date": "2026-11-25"
     },
     {
-     "url": "https://souda-kyoto.jp/guide/season/koyo/ea410e00000041zm-img/9_1122rozanji3.jpg",
-     "caption": "鐘楼付近 見頃です。イチョウも綺麗に色づいています♪",
-     "date": "2026-11-22"
+     "url": "https://souda-kyoto.jp/guide/season/koyo/ea410e00000041zm-img/9_1125rozanji3.jpg",
+     "caption": "鐘楼付近 見頃です。",
+     "date": "2026-11-25"
     },
     {
-     "url": "https://souda-kyoto.jp/guide/season/koyo/ea410e00000041zm-img/9_1122rozanji4.jpg",
+     "url": "https://souda-kyoto.jp/guide/season/koyo/ea410e00000041zm-img/9_1125rozanji4.jpg",
      "caption": "境内全体に見頃です。",
-     "date": "2026-11-22"
+     "date": "2026-11-25"
     }
    ],
    "extra": {
@@ -1762,11 +1782,11 @@
    "stage_lo": 2,
    "stage_hi": 3,
    "data_type": "photo",
-   "fetched_at": "2026-11-25T13:54:03+09:00",
+   "fetched_at": "2026-11-26T02:14:38+09:00",
    "area": "下鴨神社・京都御苑",
    "observed_at": "2026-11-22",
    "observed_basis": "дата съёмки в подписи к фото",
-   "published_at": "2026-11-24T19:21:12+09:00",
+   "published_at": "2026-11-25T20:23:57+09:00",
    "comment": "本堂前の参道 一部見頃です。 / 本堂裏の勅使門 色づきが進んでいます。 / 本堂横 ゆっくり色づいています。 / 四海唄導の庭 ゆっくり色づいています。",
    "photos": [
     {
@@ -1805,32 +1825,32 @@
    "stage_lo": 2,
    "stage_hi": 3,
    "data_type": "photo",
-   "fetched_at": "2026-11-25T13:54:03+09:00",
+   "fetched_at": "2026-11-26T02:14:38+09:00",
    "area": "金閣寺・龍安寺・仁和寺",
-   "observed_at": "2026-11-20",
+   "observed_at": "2026-11-25",
    "observed_basis": "дата съёмки в подписи к фото",
-   "published_at": "2026-11-24T19:21:12+09:00",
-   "comment": "石庭 ゆっくり色づいています。 / 庫裡前 色づき始め。 / 鏡容池まわり 見頃です。",
+   "published_at": "2026-11-25T20:23:57+09:00",
+   "comment": "石庭 一部見頃です。 / 庫裡前 色づきが進んでいます。 / 鏡容池まわり 見頃です。",
    "photos": [
     {
-     "url": "https://souda-kyoto.jp/guide/season/koyo/ea410e00000061bf-img/10_1120ryoanji1.jpg",
-     "caption": "石庭 ゆっくり色づいています。",
-     "date": "2026-11-20"
+     "url": "https://souda-kyoto.jp/guide/season/koyo/ea410e00000061bf-img/1125ryoanji1.jpg",
+     "caption": "石庭 一部見頃です。",
+     "date": "2026-11-25"
     },
     {
-     "url": "https://souda-kyoto.jp/guide/season/koyo/ea410e00000061bf-img/10_1120ryoanji2.jpg",
-     "caption": "庫裡前 色づき始め。",
-     "date": "2026-11-20"
+     "url": "https://souda-kyoto.jp/guide/season/koyo/ea410e00000061bf-img/1125ryoanji2.jpg",
+     "caption": "庫裡前 色づきが進んでいます。",
+     "date": "2026-11-25"
     },
     {
-     "url": "https://souda-kyoto.jp/guide/season/koyo/ea410e00000061bf-img/10_1120ryoanji3.jpg",
+     "url": "https://souda-kyoto.jp/guide/season/koyo/ea410e00000061bf-img/1125ryoanji4.jpg",
      "caption": "鏡容池まわり 見頃です。",
-     "date": "2026-11-20"
+     "date": "2026-11-25"
     },
     {
-     "url": "https://souda-kyoto.jp/guide/season/koyo/ea410e00000061bf-img/10_1120ryoanji4.jpg",
+     "url": "https://souda-kyoto.jp/guide/season/koyo/ea410e00000061bf-img/1125ryoanji3.jpg",
      "caption": "鏡容池まわり 見頃です。",
-     "date": "2026-11-20"
+     "date": "2026-11-25"
     }
    ],
    "extra": {
@@ -1843,42 +1863,37 @@
    "source_key": "ninnaji",
    "name_ja": "仁和寺",
    "url": "https://souda-kyoto.jp/guide/season/koyo/index.html",
-   "status_original": "一部見頃",
-   "status": "NEAR_PEAK",
-   "stage_lo": 2,
-   "stage_hi": 3,
+   "status_original": "見頃",
+   "status": "PEAK",
+   "stage_lo": 4,
+   "stage_hi": 4,
    "data_type": "photo",
-   "fetched_at": "2026-11-25T13:54:03+09:00",
+   "fetched_at": "2026-11-26T02:14:38+09:00",
    "area": "金閣寺・龍安寺・仁和寺",
-   "observed_at": "2026-11-20",
+   "observed_at": "2026-11-25",
    "observed_basis": "дата съёмки в подписи к фото",
-   "published_at": "2026-11-24T19:21:12+09:00",
-   "comment": "五重塔まわり 見頃です。 / 五重塔まわり これから見頃を迎えるモミジもあります。 / 金堂前の参道 色づきが進んでいます。 / 鐘楼横 綺麗に色づいています。 / 御殿北庭 見頃です。",
+   "published_at": "2026-11-25T20:23:57+09:00",
+   "comment": "五重塔まわり 見頃です。 / 参道 見頃です。 / 御殿北庭 見頃です。 / 鐘楼横 綺麗に色づいています。",
    "photos": [
     {
-     "url": "https://souda-kyoto.jp/guide/season/koyo/ea410e00000061aa-img/10_1120ninna1.jpg",
+     "url": "https://souda-kyoto.jp/guide/season/koyo/ea410e00000061aa-img/1125ninna1.jpg",
      "caption": "五重塔まわり 見頃です。",
-     "date": "2026-11-20"
+     "date": "2026-11-25"
     },
     {
-     "url": "https://souda-kyoto.jp/guide/season/koyo/ea410e00000061aa-img/10_1120ninna2.jpg",
-     "caption": "五重塔まわり これから見頃を迎えるモミジもあります。",
-     "date": "2026-11-20"
+     "url": "https://souda-kyoto.jp/guide/season/koyo/ea410e00000061aa-img/1125ninna2.jpg",
+     "caption": "参道 見頃です。",
+     "date": "2026-11-25"
     },
     {
-     "url": "https://souda-kyoto.jp/guide/season/koyo/ea410e00000061aa-img/10_1120ninna3.jpg",
-     "caption": "金堂前の参道 色づきが進んでいます。",
-     "date": "2026-11-20"
-    },
-    {
-     "url": "https://souda-kyoto.jp/guide/season/koyo/ea410e00000061aa-img/10_1120ninna4.jpg",
-     "caption": "鐘楼横 綺麗に色づいています。",
-     "date": "2026-11-20"
-    },
-    {
-     "url": "https://souda-kyoto.jp/guide/season/koyo/ea410e00000061aa-img/10_1120ninna5.jpg",
+     "url": "https://souda-kyoto.jp/guide/season/koyo/ea410e00000061aa-img/1125ninna3.jpg",
      "caption": "御殿北庭 見頃です。",
-     "date": "2026-11-20"
+     "date": "2026-11-25"
+    },
+    {
+     "url": "https://souda-kyoto.jp/guide/season/koyo/ea410e00000061aa-img/1125ninna4.jpg",
+     "caption": "鐘楼横 綺麗に色づいています。",
+     "date": "2026-11-25"
     }
    ],
    "extra": {
@@ -1896,32 +1911,32 @@
    "stage_lo": 4,
    "stage_hi": 4,
    "data_type": "photo",
-   "fetched_at": "2026-11-25T13:54:03+09:00",
+   "fetched_at": "2026-11-26T02:14:38+09:00",
    "area": "金閣寺・龍安寺・仁和寺",
-   "observed_at": "2026-11-20",
+   "observed_at": "2026-11-25",
    "observed_basis": "дата съёмки в подписи к фото",
-   "published_at": "2026-11-24T19:21:12+09:00",
-   "comment": "心字池まわり 見頃です。 / 心字池まわり 庭園全体に見頃です。 / 方丈前庭 見頃です。 / マキノ省三先生像横 見頃です。",
+   "published_at": "2026-11-25T20:23:57+09:00",
+   "comment": "庭園全体に見頃です。 / 心字池まわり 見頃です。",
    "photos": [
     {
-     "url": "https://souda-kyoto.jp/guide/season/koyo/ea410e00000061cf-img/1120tojiin1.jpg",
+     "url": "https://souda-kyoto.jp/guide/season/koyo/ea410e00000061cf-img/1125tojiin1.jpg",
+     "caption": "庭園全体に見頃です。",
+     "date": "2026-11-25"
+    },
+    {
+     "url": "https://souda-kyoto.jp/guide/season/koyo/ea410e00000061cf-img/1125tojiin2.jpg",
+     "caption": "庭園全体に見頃です。",
+     "date": "2026-11-25"
+    },
+    {
+     "url": "https://souda-kyoto.jp/guide/season/koyo/ea410e00000061cf-img/1125tojiin3.jpg",
      "caption": "心字池まわり 見頃です。",
-     "date": "2026-11-20"
+     "date": "2026-11-25"
     },
     {
-     "url": "https://souda-kyoto.jp/guide/season/koyo/ea410e00000061cf-img/1120tojiin2.jpg",
-     "caption": "心字池まわり 庭園全体に見頃です。",
-     "date": "2026-11-20"
-    },
-    {
-     "url": "https://souda-kyoto.jp/guide/season/koyo/ea410e00000061cf-img/1120tojiin3.jpg",
-     "caption": "方丈前庭 見頃です。",
-     "date": "2026-11-20"
-    },
-    {
-     "url": "https://souda-kyoto.jp/guide/season/koyo/ea410e00000061cf-img/1120tojiin4.jpg",
-     "caption": "マキノ省三先生像横 見頃です。",
-     "date": "2026-11-20"
+     "url": "https://souda-kyoto.jp/guide/season/koyo/ea410e00000061cf-img/1125tojiin4.jpg",
+     "caption": "心字池まわり 見頃です。",
+     "date": "2026-11-25"
     }
    ],
    "extra": {
@@ -1934,32 +1949,37 @@
    "source_key": "myoshinji-taizoin",
    "name_ja": "妙心寺 退蔵院",
    "url": "https://souda-kyoto.jp/guide/season/koyo/index.html",
-   "status_original": "色づきはじめ",
-   "status": "STARTING",
-   "stage_lo": 1,
-   "stage_hi": 2,
+   "status_original": "一部見頃",
+   "status": "NEAR_PEAK",
+   "stage_lo": 2,
+   "stage_hi": 3,
    "data_type": "photo",
-   "fetched_at": "2026-11-25T13:54:03+09:00",
+   "fetched_at": "2026-11-26T02:14:38+09:00",
    "area": "金閣寺・龍安寺・仁和寺",
-   "observed_at": "2026-11-20",
+   "observed_at": "2026-11-25",
    "observed_basis": "дата съёмки в подписи к фото",
-   "published_at": "2026-11-24T19:21:12+09:00",
-   "comment": "余香苑 一部色づき始めています。 / 大休庵前 色づき始め。 / 方丈へ続く参道 ゆっくり色づいてきました。",
+   "published_at": "2026-11-25T20:23:57+09:00",
+   "comment": "方丈へ続く参道 見頃になってきました。 / 余香苑 一部色づき始めています。 / 四阿付近 色づき始め。 / 大休庵前 見頃です。",
    "photos": [
     {
-     "url": "https://souda-kyoto.jp/guide/season/koyo/ea410e00000061ds-img/10_1120taizoin1.jpg",
+     "url": "https://souda-kyoto.jp/guide/season/koyo/ea410e00000061ds-img/10_1125taizo1.jpg",
+     "caption": "方丈へ続く参道 見頃になってきました。",
+     "date": "2026-11-25"
+    },
+    {
+     "url": "https://souda-kyoto.jp/guide/season/koyo/ea410e00000061ds-img/10_1125taizo2.jpg",
      "caption": "余香苑 一部色づき始めています。",
-     "date": "2026-11-20"
+     "date": "2026-11-25"
     },
     {
-     "url": "https://souda-kyoto.jp/guide/season/koyo/ea410e00000061ds-img/10_1120taizoin2.jpg",
-     "caption": "大休庵前 色づき始め。",
-     "date": "2026-11-20"
+     "url": "https://souda-kyoto.jp/guide/season/koyo/ea410e00000061ds-img/10_1125taizo3.jpg",
+     "caption": "四阿付近 色づき始め。",
+     "date": "2026-11-25"
     },
     {
-     "url": "https://souda-kyoto.jp/guide/season/koyo/ea410e00000061ds-img/10_1120taizoin3.jpg",
-     "caption": "方丈へ続く参道 ゆっくり色づいてきました。",
-     "date": "2026-11-20"
+     "url": "https://souda-kyoto.jp/guide/season/koyo/ea410e00000061ds-img/10_1125taizo4.jpg",
+     "caption": "大休庵前 見頃です。",
+     "date": "2026-11-25"
     }
    ],
    "extra": {
@@ -1977,27 +1997,32 @@
    "stage_lo": 4,
    "stage_hi": 4,
    "data_type": "photo",
-   "fetched_at": "2026-11-25T13:54:03+09:00",
+   "fetched_at": "2026-11-26T02:14:38+09:00",
    "area": "金閣寺・龍安寺・仁和寺",
-   "observed_at": "2026-11-20",
+   "observed_at": "2026-11-25",
    "observed_basis": "дата съёмки в подписи к фото",
-   "published_at": "2026-11-24T19:21:12+09:00",
-   "comment": "露地庭園 見頃です。 / 参道 見頃です。",
+   "published_at": "2026-11-25T20:23:57+09:00",
+   "comment": "露地庭園 見頃です。 / 方丈から庭園の眺め 見頃です。 / 参道 見頃です。",
    "photos": [
     {
-     "url": "https://souda-kyoto.jp/guide/season/koyo/jae3u10000006dy9-img/10_1120daihoin1.jpg",
+     "url": "https://souda-kyoto.jp/guide/season/koyo/jae3u10000006dy9-img/1125daihoin2.jpg",
      "caption": "露地庭園 見頃です。",
-     "date": "2026-11-20"
+     "date": "2026-11-25"
     },
     {
-     "url": "https://souda-kyoto.jp/guide/season/koyo/jae3u10000006dy9-img/10_1120daihoin2.jpg",
+     "url": "https://souda-kyoto.jp/guide/season/koyo/jae3u10000006dy9-img/1125daihoin1.jpg",
      "caption": "露地庭園 見頃です。",
-     "date": "2026-11-20"
+     "date": "2026-11-25"
     },
     {
-     "url": "https://souda-kyoto.jp/guide/season/koyo/jae3u10000006dy9-img/10_1120daihoin3.jpg",
+     "url": "https://souda-kyoto.jp/guide/season/koyo/jae3u10000006dy9-img/1125daihoin3.jpg",
+     "caption": "方丈から庭園の眺め 見頃です。",
+     "date": "2026-11-25"
+    },
+    {
+     "url": "https://souda-kyoto.jp/guide/season/koyo/jae3u10000006dy9-img/1125daihoin4.jpg",
      "caption": "参道 見頃です。",
-     "date": "2026-11-20"
+     "date": "2026-11-25"
     }
    ],
    "extra": {
@@ -2010,32 +2035,37 @@
    "source_key": "houkongouin",
    "name_ja": "法金剛院",
    "url": "https://souda-kyoto.jp/guide/season/koyo/index.html",
-   "status_original": "一部見頃",
-   "status": "NEAR_PEAK",
-   "stage_lo": 2,
-   "stage_hi": 3,
+   "status_original": "見頃",
+   "status": "PEAK",
+   "stage_lo": 4,
+   "stage_hi": 4,
    "data_type": "photo",
-   "fetched_at": "2026-11-25T13:54:03+09:00",
+   "fetched_at": "2026-11-26T02:14:38+09:00",
    "area": "金閣寺・龍安寺・仁和寺",
-   "observed_at": "2026-11-20",
+   "observed_at": "2026-11-25",
    "observed_basis": "дата съёмки в подписи к фото",
-   "published_at": "2026-11-24T19:21:12+09:00",
-   "comment": "庭園 一部見頃です。 / 庭園 色づきが進んでいます。 / 拝観受付前 見頃です。",
+   "published_at": "2026-11-25T20:23:57+09:00",
+   "comment": "庭園 見頃です。 / 拝観受付前 見頃です。",
    "photos": [
     {
-     "url": "https://souda-kyoto.jp/guide/season/koyo/ea410e000000h9uo-img/1120hokongoin1.jpg",
-     "caption": "庭園 一部見頃です。",
-     "date": "2026-11-20"
+     "url": "https://souda-kyoto.jp/guide/season/koyo/ea410e000000h9uo-img/1125hokongoin1.jpg",
+     "caption": "庭園 見頃です。",
+     "date": "2026-11-25"
     },
     {
-     "url": "https://souda-kyoto.jp/guide/season/koyo/ea410e000000h9uo-img/1120hokongoin2.jpg",
-     "caption": "庭園 色づきが進んでいます。",
-     "date": "2026-11-20"
+     "url": "https://souda-kyoto.jp/guide/season/koyo/ea410e000000h9uo-img/1125hokongoin2.jpg",
+     "caption": "庭園 見頃です。",
+     "date": "2026-11-25"
     },
     {
-     "url": "https://souda-kyoto.jp/guide/season/koyo/ea410e000000h9uo-img/1120hokongoin3.jpg",
+     "url": "https://souda-kyoto.jp/guide/season/koyo/ea410e000000h9uo-img/1125hokongoin3.jpg",
+     "caption": "庭園 見頃です。",
+     "date": "2026-11-25"
+    },
+    {
+     "url": "https://souda-kyoto.jp/guide/season/koyo/ea410e000000h9uo-img/1125hokongoin4.jpg",
      "caption": "拝観受付前 見頃です。",
-     "date": "2026-11-20"
+     "date": "2026-11-25"
     }
    ],
    "extra": {
@@ -2053,11 +2083,11 @@
    "stage_lo": 4,
    "stage_hi": 4,
    "data_type": "photo",
-   "fetched_at": "2026-11-25T13:54:03+09:00",
+   "fetched_at": "2026-11-26T02:14:38+09:00",
    "area": "宝ヶ池・一乗寺",
    "observed_at": "2026-11-23",
    "observed_basis": "дата съёмки в подписи к фото",
-   "published_at": "2026-11-24T19:21:12+09:00",
+   "published_at": "2026-11-25T20:23:57+09:00",
    "comment": "書院2階からの瑠璃の庭 見頃です。 / 瑠璃の庭 一部では青葉もあります。 / 臥龍の庭 見頃です。 / 参道 色づきが進んでいます。",
    "photos": [
     {
@@ -2096,11 +2126,11 @@
    "stage_lo": 4,
    "stage_hi": 4,
    "data_type": "photo",
-   "fetched_at": "2026-11-25T13:54:03+09:00",
+   "fetched_at": "2026-11-26T02:14:38+09:00",
    "area": "宝ヶ池・一乗寺",
    "observed_at": "2026-11-23",
    "observed_basis": "дата съёмки в подписи к фото",
-   "published_at": "2026-11-24T19:21:12+09:00",
+   "published_at": "2026-11-25T20:23:57+09:00",
    "comment": "書院前の庭園 見頃です。 / 参道 見頃です。",
    "photos": [
     {
@@ -2139,11 +2169,11 @@
    "stage_lo": 4,
    "stage_hi": 4,
    "data_type": "photo",
-   "fetched_at": "2026-11-25T13:54:03+09:00",
+   "fetched_at": "2026-11-26T02:14:38+09:00",
    "area": "宝ヶ池・一乗寺",
    "observed_at": "2026-11-23",
    "observed_basis": "дата съёмки в подписи к фото",
-   "published_at": "2026-11-24T19:21:12+09:00",
+   "published_at": "2026-11-25T20:23:57+09:00",
    "comment": "書院前の庭園 見頃です。 / 庭園全体に見頃が続いています。",
    "photos": [
     {
@@ -2182,11 +2212,11 @@
    "stage_lo": 4,
    "stage_hi": 4,
    "data_type": "photo",
-   "fetched_at": "2026-11-25T13:54:03+09:00",
+   "fetched_at": "2026-11-26T02:14:38+09:00",
    "area": "宝ヶ池・一乗寺",
    "observed_at": "2026-11-23",
    "observed_basis": "дата съёмки в подписи к фото",
-   "published_at": "2026-11-24T19:21:12+09:00",
+   "published_at": "2026-11-25T20:23:57+09:00",
    "comment": "十牛之庭 見頃です。 / 庭園全体に見頃です。 / 奔龍庭 見頃です。",
    "photos": [
     {
@@ -2225,11 +2255,11 @@
    "stage_lo": 4,
    "stage_hi": 4,
    "data_type": "photo",
-   "fetched_at": "2026-11-25T13:54:03+09:00",
+   "fetched_at": "2026-11-26T02:14:38+09:00",
    "area": "宝ヶ池・一乗寺",
    "observed_at": "2026-11-23",
    "observed_basis": "дата съёмки в подписи к фото",
-   "published_at": "2026-11-24T19:21:12+09:00",
+   "published_at": "2026-11-25T20:23:57+09:00",
    "comment": "書院前の庭園 見頃です。 / 本堂前 見頃です。 / 参道 モミジのグラデーションが綺麗です♪",
    "photos": [
     {
@@ -2268,27 +2298,32 @@
    "stage_lo": 4,
    "stage_hi": 4,
    "data_type": "photo",
-   "fetched_at": "2026-11-25T13:54:03+09:00",
+   "fetched_at": "2026-11-26T02:14:38+09:00",
    "area": "宝ヶ池・一乗寺",
-   "observed_at": "2026-11-20",
+   "observed_at": "2026-11-25",
    "observed_basis": "дата съёмки в подписи к фото",
-   "published_at": "2026-11-24T19:21:12+09:00",
-   "comment": "石庭 見頃です。 / 「床もみじ」のモミジ 見頃です。 / 客殿前の庭園 見頃です。",
+   "published_at": "2026-11-25T20:23:57+09:00",
+   "comment": "石庭 見頃です。 / 表門付近 見頃です。 / 「床もみじ」のモミジ 見頃です。 / 客殿前の庭園 少し散ってきました。",
    "photos": [
     {
-     "url": "https://souda-kyoto.jp/guide/season/koyo/ea410e00000041h5-img/11_1120jissoin1.jpg",
+     "url": "https://souda-kyoto.jp/guide/season/koyo/ea410e00000041h5-img/11_1125jissoin1.jpg",
      "caption": "石庭 見頃です。",
-     "date": "2026-11-20"
+     "date": "2026-11-25"
     },
     {
-     "url": "https://souda-kyoto.jp/guide/season/koyo/ea410e00000041h5-img/11_1120jissoin2.jpg",
+     "url": "https://souda-kyoto.jp/guide/season/koyo/ea410e00000041h5-img/11_1125jissoin2.jpg",
+     "caption": "表門付近 見頃です。",
+     "date": "2026-11-25"
+    },
+    {
+     "url": "https://souda-kyoto.jp/guide/season/koyo/ea410e00000041h5-img/11_1125jissoin3.jpg",
      "caption": "「床もみじ」のモミジ 見頃です。",
-     "date": "2026-11-20"
+     "date": "2026-11-25"
     },
     {
-     "url": "https://souda-kyoto.jp/guide/season/koyo/ea410e00000041h5-img/11_1120jissoin3.jpg",
-     "caption": "客殿前の庭園 見頃です。",
-     "date": "2026-11-20"
+     "url": "https://souda-kyoto.jp/guide/season/koyo/ea410e00000041h5-img/11_1125jissoin4.jpg",
+     "caption": "客殿前の庭園 少し散ってきました。",
+     "date": "2026-11-25"
     }
    ],
    "extra": {
@@ -2306,11 +2341,11 @@
    "stage_lo": 4,
    "stage_hi": 4,
    "data_type": "photo",
-   "fetched_at": "2026-11-25T13:54:03+09:00",
+   "fetched_at": "2026-11-26T02:14:38+09:00",
    "area": "宝ヶ池・一乗寺",
    "observed_at": "2026-11-23",
    "observed_basis": "дата съёмки в подписи к фото",
-   "published_at": "2026-11-24T19:21:12+09:00",
+   "published_at": "2026-11-25T20:23:57+09:00",
    "comment": "地蔵堂前 見頃です。 / 弁財天堂前 見頃です。 / 福禄寿堂まわり 見頃です。 / 参道 見頃です。",
    "photos": [
     {
@@ -2349,11 +2384,11 @@
    "stage_lo": 2,
    "stage_hi": 3,
    "data_type": "photo",
-   "fetched_at": "2026-11-25T13:54:03+09:00",
+   "fetched_at": "2026-11-26T02:14:38+09:00",
    "area": "宝ヶ池・一乗寺",
    "observed_at": "2026-11-23",
    "observed_basis": "дата съёмки в подписи к фото",
-   "published_at": "2026-11-24T19:21:12+09:00",
+   "published_at": "2026-11-25T20:23:57+09:00",
    "comment": "参道 色づきが進んでいます。 / 参道 見頃が近いモミジもあります。 / 北鳥居 色づきが進んでいます。 / 西鳥居 色づきが進んでいます。",
    "photos": [
     {
@@ -2392,11 +2427,11 @@
    "stage_lo": 4,
    "stage_hi": 4,
    "data_type": "photo",
-   "fetched_at": "2026-11-25T13:54:03+09:00",
+   "fetched_at": "2026-11-26T02:14:38+09:00",
    "area": "宝ヶ池・一乗寺",
    "observed_at": "2026-11-23",
    "observed_basis": "дата съёмки в подписи к фото",
-   "published_at": "2026-11-24T19:21:12+09:00",
+   "published_at": "2026-11-25T20:23:57+09:00",
    "comment": "枯山水庭園 見頃です。 / 芭蕉庵前 見頃です。 / 参道 “モミジの絨毯”が広がります。",
    "photos": [
     {
@@ -2435,11 +2470,11 @@
    "stage_lo": 4,
    "stage_hi": 4,
    "data_type": "photo",
-   "fetched_at": "2026-11-25T13:54:03+09:00",
+   "fetched_at": "2026-11-26T02:14:38+09:00",
    "area": "伏見・宇治",
    "observed_at": "2026-11-23",
    "observed_basis": "дата съёмки в подписи к фото",
-   "published_at": "2026-11-24T19:21:12+09:00",
+   "published_at": "2026-11-25T20:23:57+09:00",
    "comment": "鳳凰堂まわり 見頃です。 / 鳳凰堂 背面側 見頃です。 / 鐘楼付近 見頃です。 / 鳳翔館前 見頃です。",
    "photos": [
     {
@@ -2478,11 +2513,11 @@
    "stage_lo": 2,
    "stage_hi": 3,
    "data_type": "photo",
-   "fetched_at": "2026-11-25T13:54:03+09:00",
+   "fetched_at": "2026-11-26T02:14:38+09:00",
    "area": "伏見・宇治",
    "observed_at": "2026-11-22",
    "observed_basis": "дата съёмки в подписи к фото",
-   "published_at": "2026-11-24T19:21:12+09:00",
+   "published_at": "2026-11-25T20:23:57+09:00",
    "comment": "琴坂 ゆっくり色づいています。 / 石門付近 一部見頃です。 / 石門横は見頃になってきました。 / 茶筅塚 少しずつ色づいています。",
    "photos": [
     {
@@ -2521,11 +2556,11 @@
    "stage_lo": 5,
    "stage_hi": 5,
    "data_type": "photo",
-   "fetched_at": "2026-11-25T13:54:03+09:00",
+   "fetched_at": "2026-11-26T02:14:38+09:00",
    "area": "大原・鞍馬・貴船",
    "observed_at": "2026-11-24",
    "observed_basis": "дата съёмки в подписи к фото",
-   "published_at": "2026-11-24T19:21:12+09:00",
+   "published_at": "2026-11-25T20:23:57+09:00",
    "comment": "表参道 散り始め。 / 龍船閣 少し散ってきましたが、まだ楽しめそうです。 / 本殿裏 少し散ってきましたが、まだ楽しめそうです。",
    "photos": [
     {
@@ -2559,11 +2594,11 @@
    "stage_lo": 4,
    "stage_hi": 4,
    "data_type": "photo",
-   "fetched_at": "2026-11-25T13:54:03+09:00",
+   "fetched_at": "2026-11-26T02:14:38+09:00",
    "area": "大原・鞍馬・貴船",
    "observed_at": "2026-11-24",
    "observed_basis": "дата съёмки в подписи к фото",
-   "published_at": "2026-11-24T19:21:12+09:00",
+   "published_at": "2026-11-25T20:23:57+09:00",
    "comment": "往生極楽院まわり 見頃です。 / 宸殿前 “モミジの絨毯”が綺麗です。 / 観音堂まわり 見頃です。 / 聚碧園 少し散ってきましたが、まだ楽しめます。",
    "photos": [
     {
@@ -2602,11 +2637,11 @@
    "stage_lo": 4,
    "stage_hi": 4,
    "data_type": "photo",
-   "fetched_at": "2026-11-25T13:54:03+09:00",
+   "fetched_at": "2026-11-26T02:14:38+09:00",
    "area": "大原・鞍馬・貴船",
    "observed_at": "2026-11-24",
    "observed_basis": "дата съёмки в подписи к фото",
-   "published_at": "2026-11-24T19:21:12+09:00",
+   "published_at": "2026-11-25T20:23:57+09:00",
    "comment": "本堂横 見頃です。 / 山門前の参道 少し散ってきましたが、まだ楽しめます。 / 鐘楼付近 散り始め。",
    "photos": [
     {
@@ -2640,11 +2675,11 @@
    "stage_lo": 4,
    "stage_hi": 4,
    "data_type": "photo",
-   "fetched_at": "2026-11-25T13:54:03+09:00",
+   "fetched_at": "2026-11-26T02:14:38+09:00",
    "area": "大原・鞍馬・貴船",
    "observed_at": "2026-11-24",
    "observed_basis": "дата съёмки в подписи к фото",
-   "published_at": "2026-11-24T19:21:12+09:00",
+   "published_at": "2026-11-25T20:23:57+09:00",
    "comment": "額縁庭園 見頃です。 / 鶴亀の庭 見頃です。 / 宝楽園 全体に散ってきました。",
    "photos": [
     {
@@ -2683,11 +2718,11 @@
    "stage_lo": 5,
    "stage_hi": 5,
    "data_type": "photo",
-   "fetched_at": "2026-11-25T13:54:03+09:00",
+   "fetched_at": "2026-11-26T02:14:38+09:00",
    "area": "大原・鞍馬・貴船",
    "observed_at": "2026-11-24",
    "observed_basis": "дата съёмки в подписи к фото",
-   "published_at": "2026-11-24T19:21:12+09:00",
+   "published_at": "2026-11-25T20:23:57+09:00",
    "comment": "旧理覚院庭園 “モミジの絨毯”が広がります。 / 旧理覚院庭園 散り始め。 / 契心園 散り始め。",
    "photos": [
     {
@@ -2721,11 +2756,11 @@
    "stage_lo": 4,
    "stage_hi": 4,
    "data_type": "photo",
-   "fetched_at": "2026-11-25T13:54:03+09:00",
+   "fetched_at": "2026-11-26T02:14:38+09:00",
    "area": "大原・鞍馬・貴船",
    "observed_at": "2026-11-24",
    "observed_basis": "дата съёмки в подписи к фото",
-   "published_at": "2026-11-24T19:21:12+09:00",
+   "published_at": "2026-11-25T20:23:57+09:00",
    "comment": "本堂前 少し散ってきましたが、まだ見頃です。 / 鐘楼横 少し散ってきましたが、まだ見頃です。",
    "photos": [
     {
@@ -2759,11 +2794,11 @@
    "stage_lo": 4,
    "stage_hi": 4,
    "data_type": "photo",
-   "fetched_at": "2026-11-25T13:54:03+09:00",
+   "fetched_at": "2026-11-26T02:14:38+09:00",
    "area": "大原・鞍馬・貴船",
    "observed_at": "2026-11-23",
    "observed_basis": "дата съёмки в подписи к фото",
-   "published_at": "2026-11-24T19:21:12+09:00",
+   "published_at": "2026-11-25T20:23:57+09:00",
    "comment": "鶯亭まわり 見頃です。 / 園内全体に見頃です。 / 彩雲亭まわり 見頃です。",
    "photos": [
     {
@@ -2802,11 +2837,11 @@
    "stage_lo": 4,
    "stage_hi": 4,
    "data_type": "photo",
-   "fetched_at": "2026-11-25T13:54:03+09:00",
+   "fetched_at": "2026-11-26T02:14:38+09:00",
    "area": "大原野・長岡京",
    "observed_at": "2026-11-23",
    "observed_basis": "дата съёмки в подписи к фото",
-   "published_at": "2026-11-24T19:21:12+09:00",
+   "published_at": "2026-11-25T20:23:57+09:00",
    "comment": "もみじ参道 見頃です。 / 薬医門まわり 見頃です。 / 御影堂横 見頃です。 / 境内全体に見頃です。",
    "photos": [
     {
@@ -2845,11 +2880,11 @@
    "stage_lo": 4,
    "stage_hi": 4,
    "data_type": "photo",
-   "fetched_at": "2026-11-25T13:54:03+09:00",
+   "fetched_at": "2026-11-26T02:14:38+09:00",
    "area": "大原野・長岡京",
    "observed_at": "2026-11-23",
    "observed_basis": "дата съёмки в подписи к фото",
-   "published_at": "2026-11-24T19:21:12+09:00",
+   "published_at": "2026-11-25T20:23:57+09:00",
    "comment": "釈迦堂前 見頃です。 / 薬師堂裏の蓮華寿院旧跡庭 見頃です。 / 多宝塔まわり 見頃です。 / 出世稲荷社前 見頃です。 / 山門横 見頃です。",
    "photos": [
     {
@@ -2893,11 +2928,11 @@
    "stage_lo": 4,
    "stage_hi": 4,
    "data_type": "photo",
-   "fetched_at": "2026-11-25T13:54:03+09:00",
+   "fetched_at": "2026-11-26T02:14:38+09:00",
    "area": "大原野・長岡京",
    "observed_at": "2026-11-23",
    "observed_basis": "дата съёмки в подписи к фото",
-   "published_at": "2026-11-24T19:21:12+09:00",
+   "published_at": "2026-11-25T20:23:57+09:00",
    "comment": "裏山から本堂を望む 見頃です。 / 裏山 見頃です。 / 本堂前 見頃です。",
    "photos": [
     {
@@ -2931,11 +2966,11 @@
    "stage_lo": 4,
    "stage_hi": 4,
    "data_type": "photo",
-   "fetched_at": "2026-11-25T13:54:03+09:00",
+   "fetched_at": "2026-11-26T02:14:38+09:00",
    "area": "大原野・長岡京",
    "observed_at": "2026-11-23",
    "observed_basis": "дата съёмки в подписи к фото",
-   "published_at": "2026-11-24T19:21:12+09:00",
+   "published_at": "2026-11-25T20:23:57+09:00",
    "comment": "聖観世音菩薩まわり 見頃です。 / 本堂横 見頃です。 / 参道 色づいてきましたが、まだ青葉も多い。",
    "photos": [
     {
@@ -2969,11 +3004,11 @@
    "stage_lo": 4,
    "stage_hi": 4,
    "data_type": "photo",
-   "fetched_at": "2026-11-25T13:54:03+09:00",
+   "fetched_at": "2026-11-26T02:14:38+09:00",
    "area": "大原野・長岡京",
    "observed_at": "2026-11-23",
    "observed_basis": "дата съёмки в подписи к фото",
-   "published_at": "2026-11-24T19:21:12+09:00",
+   "published_at": "2026-11-25T20:23:57+09:00",
    "comment": "社殿前 見頃です。 / 錦景苑 一部見頃です。 / 参道 見頃です。 / 八条が池まわり 見頃です。",
    "photos": [
     {
@@ -3012,11 +3047,11 @@
    "stage_lo": 4,
    "stage_hi": 4,
    "data_type": "photo",
-   "fetched_at": "2026-11-25T13:54:03+09:00",
+   "fetched_at": "2026-11-26T02:14:38+09:00",
    "area": "大原野・長岡京",
    "observed_at": "2026-11-23",
    "observed_basis": "дата съёмки в подписи к фото",
-   "published_at": "2026-11-24T19:21:12+09:00",
+   "published_at": "2026-11-25T20:23:57+09:00",
    "comment": "上書院から浄土苑を望む 見頃です。 / 上書院前 見頃です。 / 本堂まわり 見頃です。 / 境内全体に見頃です。 / 奥之院前 色づきが進んでいます。",
    "photos": [
     {
@@ -3060,11 +3095,11 @@
    "stage_lo": 4,
    "stage_hi": 4,
    "data_type": "photo",
-   "fetched_at": "2026-11-25T13:54:03+09:00",
+   "fetched_at": "2026-11-26T02:14:38+09:00",
    "area": "三尾・京北",
    "observed_at": "2026-11-23",
    "observed_basis": "дата съёмки в подписи к фото",
-   "published_at": "2026-11-24T19:21:12+09:00",
+   "published_at": "2026-11-25T20:23:57+09:00",
    "comment": "金堂前の石段 見頃です。 / 金堂前 見頃です。 / 境内全体に見頃です。",
    "photos": [
     {
@@ -3098,11 +3133,11 @@
    "stage_lo": 4,
    "stage_hi": 4,
    "data_type": "photo",
-   "fetched_at": "2026-11-25T13:54:03+09:00",
+   "fetched_at": "2026-11-26T02:14:38+09:00",
    "area": "三尾・京北",
    "observed_at": "2026-11-23",
    "observed_basis": "дата съёмки в подписи к фото",
-   "published_at": "2026-11-24T19:21:12+09:00",
+   "published_at": "2026-11-25T20:23:57+09:00",
    "comment": "鐘楼まわり 見頃です。 / 本堂横の庭園 少し散り始めています。 / 本堂前 少し散り始めています。",
    "photos": [
     {
@@ -3136,11 +3171,11 @@
    "stage_lo": 4,
    "stage_hi": 4,
    "data_type": "photo",
-   "fetched_at": "2026-11-25T13:54:03+09:00",
+   "fetched_at": "2026-11-26T02:14:38+09:00",
    "area": "三尾・京北",
    "observed_at": "2026-11-23",
    "observed_basis": "дата съёмки в подписи к фото",
-   "published_at": "2026-11-24T19:21:12+09:00",
+   "published_at": "2026-11-25T20:23:57+09:00",
    "comment": "石水院 見頃です。 / 石水院 少し散り始めています。",
    "photos": [
     {
@@ -3174,11 +3209,11 @@
    "stage_lo": 4,
    "stage_hi": 4,
    "data_type": "photo",
-   "fetched_at": "2026-11-25T13:54:03+09:00",
+   "fetched_at": "2026-11-26T02:14:38+09:00",
    "area": "京田辺・木津川",
    "observed_at": "2026-11-22",
    "observed_basis": "дата съёмки в подписи к фото",
-   "published_at": "2026-11-24T19:21:12+09:00",
+   "published_at": "2026-11-25T20:23:57+09:00",
    "comment": "本堂前 見頃です。 / 参道 見頃です。 / 総門前 見頃です。 / 一休禅師像まわり 見頃です。",
    "photos": [
     {
@@ -3217,11 +3252,11 @@
    "stage_lo": 2,
    "stage_hi": 3,
    "data_type": "photo",
-   "fetched_at": "2026-11-25T13:54:03+09:00",
+   "fetched_at": "2026-11-26T02:14:38+09:00",
    "area": "その他",
    "observed_at": "2026-11-22",
    "observed_basis": "дата съёмки в подписи к фото",
-   "published_at": "2026-11-24T19:21:12+09:00",
+   "published_at": "2026-11-25T20:23:57+09:00",
    "comment": "室町の庭 一部見頃です。 / 平安の庭 一部見頃です。 / 平安の庭 色づきが進んでいます。",
    "photos": [
     {
