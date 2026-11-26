@@ -1,28 +1,28 @@
 {
- "fetched_at": "2026-11-26T02:14:38+09:00",
+ "fetched_at": "2026-11-26T11:51:23+09:00",
  "meta": {
-  "published_at": "2026-11-25T21:57:08+09:00",
+  "published_at": "2026-11-26T10:57:11+09:00",
   "weather": {
    "source": "気象庁 (via Japan Explorers)",
    "days": [
     {
-     "date": "2026-11-25",
-     "weather": "晴れ時々くもり",
-     "rain_pct": 0
-    },
-    {
      "date": "2026-11-26",
-     "weather": "晴れのちくもり",
+     "weather": "晴れのち時々くもり",
      "rain_pct": 10
     },
     {
      "date": "2026-11-27",
-     "weather": "くもり時々晴れ",
+     "weather": "晴れのちくもり",
      "rain_pct": 30
+    },
+    {
+     "date": "2026-11-28",
+     "weather": "くもり一時雨",
+     "rain_pct": 50
     }
    ]
   },
-  "comment": "京都府は69スポットのうち見頃が61件、色づき始めが6件、終盤が2件で、全国でもっとも見頃のスポットが多い県です。例年の見頃は11月中旬から12月上旬で、11月18日には嵐山の常寂光寺、20日には神護寺や泉涌寺、21日には大原の三千院が見頃と伝えられました。気温は平年並みで、見頃はほぼ例年どおりの予想です。あす25日はくもり時々晴れ、26日は晴れのちくもりで降水0%の予報です。"
+  "comment": "京都府は69スポットのうち見頃が69か所、色づき始めが3か所で、紅葉は見頃の最盛期です。見頃の中心は11月中旬〜12月上旬で、常寂光寺や善峯寺は18日の記事、高台寺や赤山禅院は20日の記事、天龍寺は21日の記事で見頃と伝えられました。嵐山・嵯峨野、東山、洛北のいずれも11月30日〜12月2日ごろまで楽しめる見込みです。気温は平年より+0.2°Cでほぼ平年並みです。週末28日はくもり一時雨で降水確率50%の予報です。"
  },
  "observations": [
   {
@@ -35,18 +35,18 @@
    "stage_lo": 3,
    "stage_hi": 4,
    "data_type": "model",
-   "fetched_at": "2026-11-26T02:14:38+09:00",
-   "percent": 91.0,
+   "fetched_at": "2026-11-26T11:51:23+09:00",
+   "percent": 94.0,
    "percent_meaning": "позиция в прогнозном окне сезона по модели Japan Explorers — НЕ доля красных листьев",
    "forecast_start": "2026-11-14",
    "forecast_end": "2026-11-28",
    "observed_basis": "модель, наблюдения нет",
-   "published_at": "2026-11-25T21:57:08+09:00",
+   "published_at": "2026-11-26T10:57:11+09:00",
    "comment": "見ごろや開放状況は現地の最新情報をご確認ください。",
    "extra": {
     "basis": "見頃",
     "news": null,
-    "page_updated": "2026-11-25T21:57:08+09:00"
+    "page_updated": "2026-11-26T10:57:11+09:00"
    }
   },
   {
@@ -59,15 +59,15 @@
    "stage_lo": 3,
    "stage_hi": 4,
    "data_type": "news",
-   "fetched_at": "2026-11-26T02:14:38+09:00",
-   "percent": 90.0,
+   "fetched_at": "2026-11-26T11:51:23+09:00",
+   "percent": 93.0,
    "percent_meaning": "позиция в прогнозном окне сезона по модели Japan Explorers — НЕ доля красных листьев",
    "forecast_start": "2026-11-16",
    "forecast_end": "2026-11-28",
    "observed_at": "2026-11-18",
    "observed_basis": "дата из заголовка новости/видео",
    "published_at": "2026-11-18",
-   "comment": "11月18日に見頃を迎えたと伝えられた嵐山の寺です。見頃は11月28日ごろまでの見込みで、境内のモミジが楽しめます。",
+   "comment": "嵯峨野の常寂光寺は、18日の記事で見頃を迎えた京都の紅葉の一つとして紹介されました。11月28日ごろまでの予想で、早めの訪問が安心です。",
    "extra": {
     "basis": "見頃・ニュース確認",
     "news": {
@@ -75,7 +75,7 @@
      "title": "京都紅葉最新7(11.18撮影)清水寺/嵐山・嵯峨野エリア(常寂光寺・二尊院・祇王寺)/金閣寺、見頃を迎えた京都の紅葉",
      "url": "https://www.youtube.com/watch?v=Q9B9nTPMQr0"
     },
-    "page_updated": "2026-11-25T21:57:08+09:00"
+    "page_updated": "2026-11-26T10:57:11+09:00"
    }
   },
   {
@@ -88,8 +88,8 @@
    "stage_lo": 3,
    "stage_hi": 4,
    "data_type": "news",
-   "fetched_at": "2026-11-26T02:14:38+09:00",
-   "percent": 90.0,
+   "fetched_at": "2026-11-26T11:51:23+09:00",
+   "percent": 93.0,
    "percent_meaning": "позиция в прогнозном окне сезона по модели Japan Explorers — НЕ доля красных листьев",
    "forecast_start": "2026-11-16",
    "forecast_end": "2026-11-28",
@@ -103,7 +103,7 @@
      "title": "紅葉をバックに駅ピアノで「枯葉」と「パッサカリア」を弾いてみた",
      "url": "https://www.youtube.com/watch?v=ZaMNhXoTSKA"
     },
-    "page_updated": "2026-11-25T21:57:08+09:00"
+    "page_updated": "2026-11-26T10:57:11+09:00"
    }
   },
   {
@@ -116,8 +116,8 @@
    "stage_lo": 3,
    "stage_hi": 4,
    "data_type": "news",
-   "fetched_at": "2026-11-26T02:14:38+09:00",
-   "percent": 90.0,
+   "fetched_at": "2026-11-26T11:51:23+09:00",
+   "percent": 93.0,
    "percent_meaning": "позиция в прогнозном окне сезона по модели Japan Explorers — НЕ доля красных листьев",
    "forecast_start": "2026-11-16",
    "forecast_end": "2026-11-28",
@@ -132,7 +132,7 @@
      "title": "11月18日、善峯寺の紅葉が見頃でした🍁 Kyoto Autumn Walk #shorts",
      "url": "https://www.youtube.com/watch?v=XVQmuFEifjw"
     },
-    "page_updated": "2026-11-25T21:57:08+09:00"
+    "page_updated": "2026-11-26T10:57:11+09:00"
    }
   },
   {
@@ -145,18 +145,18 @@
    "stage_lo": 3,
    "stage_hi": 4,
    "data_type": "model",
-   "fetched_at": "2026-11-26T02:14:38+09:00",
-   "percent": 89.0,
+   "fetched_at": "2026-11-26T11:51:23+09:00",
+   "percent": 91.0,
    "percent_meaning": "позиция в прогнозном окне сезона по модели Japan Explorers — НЕ доля красных листьев",
    "forecast_start": "2026-11-15",
    "forecast_end": "2026-11-29",
    "observed_basis": "модель, наблюдения нет",
-   "published_at": "2026-11-25T21:57:08+09:00",
+   "published_at": "2026-11-26T10:57:11+09:00",
    "comment": "高山植物の咲く7〜8月と、紅葉の秋が登山適期です。",
    "extra": {
     "basis": "見頃",
     "news": null,
-    "page_updated": "2026-11-25T21:57:08+09:00"
+    "page_updated": "2026-11-26T10:57:11+09:00"
    }
   },
   {
@@ -169,8 +169,8 @@
    "stage_lo": 3,
    "stage_hi": 4,
    "data_type": "news",
-   "fetched_at": "2026-11-26T02:14:38+09:00",
-   "percent": 87.0,
+   "fetched_at": "2026-11-26T11:51:23+09:00",
+   "percent": 90.0,
    "percent_meaning": "позиция в прогнозном окне сезона по модели Japan Explorers — НЕ доля красных листьев",
    "forecast_start": "2026-11-17",
    "forecast_end": "2026-11-29",
@@ -185,31 +185,7 @@
      "title": "【2026紅葉探訪】11月19日水景園(けいはんな記念公園)紅葉状況🍁 関西の紅葉穴場スポットが見頃を迎えてます!!️ #...",
      "url": "https://www.youtube.com/watch?v=IQVIQa_WAeM"
     },
-    "page_updated": "2026-11-25T21:57:08+09:00"
-   }
-  },
-  {
-   "source": "japan_explorers",
-   "source_key": "二条城",
-   "name_ja": "二条城",
-   "url": "https://www.japan-explorers.com/scenic-spot/%e4%ba%8c%e6%9d%a1%e5%9f%8e/",
-   "status_original": "見頃",
-   "status": "PEAK",
-   "stage_lo": 3,
-   "stage_hi": 4,
-   "data_type": "model",
-   "fetched_at": "2026-11-26T02:14:38+09:00",
-   "percent": 78.0,
-   "percent_meaning": "позиция в прогнозном окне сезона по модели Japan Explorers — НЕ доля красных листьев",
-   "forecast_start": "2026-11-21",
-   "forecast_end": "2026-11-30",
-   "observed_basis": "модель, наблюдения нет",
-   "published_at": "2026-11-25T21:57:08+09:00",
-   "comment": "3月下旬から4月の桜、11月下旬の紅葉ライトアップが見事。",
-   "extra": {
-    "basis": "見頃",
-    "news": null,
-    "page_updated": "2026-11-25T21:57:08+09:00"
+    "page_updated": "2026-11-26T10:57:11+09:00"
    }
   },
   {
@@ -222,8 +198,8 @@
    "stage_lo": 3,
    "stage_hi": 4,
    "data_type": "news",
-   "fetched_at": "2026-11-26T02:14:38+09:00",
-   "percent": 83.0,
+   "fetched_at": "2026-11-26T11:51:23+09:00",
+   "percent": 87.0,
    "percent_meaning": "позиция в прогнозном окне сезона по модели Japan Explorers — НЕ доля красных листьев",
    "forecast_start": "2026-11-18",
    "forecast_end": "2026-11-30",
@@ -237,7 +213,7 @@
      "title": "泉涌寺 紅葉情報",
      "url": "https://www.youtube.com/watch?v=ukUUgJTQK2g"
     },
-    "page_updated": "2026-11-25T21:57:08+09:00"
+    "page_updated": "2026-11-26T10:57:11+09:00"
    }
   },
   {
@@ -250,18 +226,18 @@
    "stage_lo": 3,
    "stage_hi": 4,
    "data_type": "model",
-   "fetched_at": "2026-11-26T02:14:38+09:00",
-   "percent": 86.0,
+   "fetched_at": "2026-11-26T11:51:23+09:00",
+   "percent": 89.0,
    "percent_meaning": "позиция в прогнозном окне сезона по модели Japan Explorers — НЕ доля красных листьев",
    "forecast_start": "2026-11-16",
    "forecast_end": "2026-11-30",
    "observed_basis": "модель, наблюдения нет",
-   "published_at": "2026-11-25T21:57:08+09:00",
+   "published_at": "2026-11-26T10:57:11+09:00",
    "comment": "山あいの寺だけに、新緑の四月と紅葉の十一月がとくに訪ねがいのある時季です。",
    "extra": {
     "basis": "見頃",
     "news": null,
-    "page_updated": "2026-11-25T21:57:08+09:00"
+    "page_updated": "2026-11-26T10:57:11+09:00"
    }
   },
   {
@@ -274,18 +250,18 @@
    "stage_lo": 3,
    "stage_hi": 4,
    "data_type": "model",
-   "fetched_at": "2026-11-26T02:14:38+09:00",
-   "percent": 86.0,
+   "fetched_at": "2026-11-26T11:51:23+09:00",
+   "percent": 89.0,
    "percent_meaning": "позиция в прогнозном окне сезона по модели Japan Explorers — НЕ доля красных листьев",
    "forecast_start": "2026-11-16",
    "forecast_end": "2026-11-30",
    "observed_basis": "модель, наблюдения нет",
-   "published_at": "2026-11-25T21:57:08+09:00",
+   "published_at": "2026-11-26T10:57:11+09:00",
    "comment": "初詣の正月、新緑、紅葉の頃に多くの参拝者が訪れます。",
    "extra": {
     "basis": "見頃",
     "news": null,
-    "page_updated": "2026-11-25T21:57:08+09:00"
+    "page_updated": "2026-11-26T10:57:11+09:00"
    }
   },
   {
@@ -298,18 +274,18 @@
    "stage_lo": 3,
    "stage_hi": 4,
    "data_type": "model",
-   "fetched_at": "2026-11-26T02:14:38+09:00",
-   "percent": 86.0,
+   "fetched_at": "2026-11-26T11:51:23+09:00",
+   "percent": 89.0,
    "percent_meaning": "позиция в прогнозном окне сезона по модели Japan Explorers — НЕ доля красных листьев",
    "forecast_start": "2026-11-16",
    "forecast_end": "2026-11-30",
    "observed_basis": "модель, наблюдения нет",
-   "published_at": "2026-11-25T21:57:08+09:00",
+   "published_at": "2026-11-26T10:57:11+09:00",
    "comment": "11月中旬〜下旬の床もみじが目当て 紅葉は例年11月中旬〜11月下旬。",
    "extra": {
     "basis": "見頃",
     "news": null,
-    "page_updated": "2026-11-25T21:57:08+09:00"
+    "page_updated": "2026-11-26T10:57:11+09:00"
    }
   },
   {
@@ -322,18 +298,18 @@
    "stage_lo": 3,
    "stage_hi": 4,
    "data_type": "model",
-   "fetched_at": "2026-11-26T02:14:38+09:00",
-   "percent": 86.0,
+   "fetched_at": "2026-11-26T11:51:23+09:00",
+   "percent": 89.0,
    "percent_meaning": "позиция в прогнозном окне сезона по модели Japan Explorers — НЕ доля красных листьев",
    "forecast_start": "2026-11-16",
    "forecast_end": "2026-11-30",
    "observed_basis": "модель, наблюдения нет",
-   "published_at": "2026-11-25T21:57:08+09:00",
+   "published_at": "2026-11-26T10:57:11+09:00",
    "comment": "紅葉は例年11月中旬〜下旬",
    "extra": {
     "basis": "見頃",
     "news": null,
-    "page_updated": "2026-11-25T21:57:08+09:00"
+    "page_updated": "2026-11-26T10:57:11+09:00"
    }
   },
   {
@@ -346,18 +322,18 @@
    "stage_lo": 3,
    "stage_hi": 4,
    "data_type": "model",
-   "fetched_at": "2026-11-26T02:14:38+09:00",
-   "percent": 86.0,
+   "fetched_at": "2026-11-26T11:51:23+09:00",
+   "percent": 89.0,
    "percent_meaning": "позиция в прогнозном окне сезона по модели Japan Explorers — НЕ доля красных листьев",
    "forecast_start": "2026-11-16",
    "forecast_end": "2026-11-30",
    "observed_basis": "модель, наблюдения нет",
-   "published_at": "2026-11-25T21:57:08+09:00",
+   "published_at": "2026-11-26T10:57:11+09:00",
    "comment": "紅葉は例年11月中旬〜下旬(塔頭の黄梅院などで特別公開あり)",
    "extra": {
     "basis": "見頃",
     "news": null,
-    "page_updated": "2026-11-25T21:57:08+09:00"
+    "page_updated": "2026-11-26T10:57:11+09:00"
    }
   },
   {
@@ -370,18 +346,18 @@
    "stage_lo": 3,
    "stage_hi": 4,
    "data_type": "model",
-   "fetched_at": "2026-11-26T02:14:38+09:00",
-   "percent": 86.0,
+   "fetched_at": "2026-11-26T11:51:23+09:00",
+   "percent": 89.0,
    "percent_meaning": "позиция в прогнозном окне сезона по модели Japan Explorers — НЕ доля красных листьев",
    "forecast_start": "2026-11-16",
    "forecast_end": "2026-11-30",
    "observed_basis": "модель, наблюдения нет",
-   "published_at": "2026-11-25T21:57:08+09:00",
+   "published_at": "2026-11-26T10:57:11+09:00",
    "comment": "紅葉は例年11月中旬〜下旬",
    "extra": {
     "basis": "見頃",
     "news": null,
-    "page_updated": "2026-11-25T21:57:08+09:00"
+    "page_updated": "2026-11-26T10:57:11+09:00"
    }
   },
   {
@@ -394,18 +370,18 @@
    "stage_lo": 3,
    "stage_hi": 4,
    "data_type": "model",
-   "fetched_at": "2026-11-26T02:14:38+09:00",
-   "percent": 86.0,
+   "fetched_at": "2026-11-26T11:51:23+09:00",
+   "percent": 89.0,
    "percent_meaning": "позиция в прогнозном окне сезона по модели Japan Explorers — НЕ доля красных листьев",
    "forecast_start": "2026-11-16",
    "forecast_end": "2026-11-30",
    "observed_basis": "модель, наблюдения нет",
-   "published_at": "2026-11-25T21:57:08+09:00",
+   "published_at": "2026-11-26T10:57:11+09:00",
    "comment": "紅葉は例年11月中旬〜下旬",
    "extra": {
     "basis": "見頃",
     "news": null,
-    "page_updated": "2026-11-25T21:57:08+09:00"
+    "page_updated": "2026-11-26T10:57:11+09:00"
    }
   },
   {
@@ -418,14 +394,14 @@
    "stage_lo": 3,
    "stage_hi": 4,
    "data_type": "news",
-   "fetched_at": "2026-11-26T02:14:38+09:00",
-   "percent": 83.0,
+   "fetched_at": "2026-11-26T11:51:23+09:00",
+   "percent": 87.0,
    "percent_meaning": "позиция в прогнозном окне сезона по модели Japan Explorers — НЕ доля красных листьев",
    "forecast_start": "2026-11-18",
    "forecast_end": "2026-11-30",
    "observed_basis": "дата наблюдения не указана (есть только дата новости)",
    "published_at": "2026-11-20",
-   "comment": "紅葉は例年11月中旬〜12月上旬。期間中は夜間ライトアップあり",
+   "comment": "高台寺は、20日付の記事で色づき状況が「今見頃」とされています。11月30日ごろまでの見込みで、東山の寺院らしい紅葉が見られます。",
    "extra": {
     "basis": "見頃・ニュース確認",
     "news": {
@@ -433,7 +409,7 @@
      "title": "高台寺 色づき状況「今見頃」【紅葉スポット】",
      "url": "https://www.youtube.com/watch?v=l8JMrMQ41aA"
     },
-    "page_updated": "2026-11-25T21:57:08+09:00"
+    "page_updated": "2026-11-26T10:57:11+09:00"
    }
   },
   {
@@ -446,18 +422,18 @@
    "stage_lo": 3,
    "stage_hi": 4,
    "data_type": "model",
-   "fetched_at": "2026-11-26T02:14:38+09:00",
-   "percent": 86.0,
+   "fetched_at": "2026-11-26T11:51:23+09:00",
+   "percent": 89.0,
    "percent_meaning": "позиция в прогнозном окне сезона по модели Japan Explorers — НЕ доля красных листьев",
    "forecast_start": "2026-11-16",
    "forecast_end": "2026-11-30",
    "observed_basis": "модель, наблюдения нет",
-   "published_at": "2026-11-25T21:57:08+09:00",
+   "published_at": "2026-11-26T10:57:11+09:00",
    "comment": "紅葉は例年11月中旬〜下旬",
    "extra": {
     "basis": "見頃",
     "news": null,
-    "page_updated": "2026-11-25T21:57:08+09:00"
+    "page_updated": "2026-11-26T10:57:11+09:00"
    }
   },
   {
@@ -470,18 +446,18 @@
    "stage_lo": 3,
    "stage_hi": 4,
    "data_type": "model",
-   "fetched_at": "2026-11-26T02:14:38+09:00",
-   "percent": 86.0,
+   "fetched_at": "2026-11-26T11:51:23+09:00",
+   "percent": 89.0,
    "percent_meaning": "позиция в прогнозном окне сезона по модели Japan Explorers — НЕ доля красных листьев",
    "forecast_start": "2026-11-16",
    "forecast_end": "2026-11-30",
    "observed_basis": "модель, наблюдения нет",
-   "published_at": "2026-11-25T21:57:08+09:00",
+   "published_at": "2026-11-26T10:57:11+09:00",
    "comment": "紅葉は例年11月中旬〜下旬",
    "extra": {
     "basis": "見頃",
     "news": null,
-    "page_updated": "2026-11-25T21:57:08+09:00"
+    "page_updated": "2026-11-26T10:57:11+09:00"
    }
   },
   {
@@ -494,18 +470,18 @@
    "stage_lo": 3,
    "stage_hi": 4,
    "data_type": "model",
-   "fetched_at": "2026-11-26T02:14:38+09:00",
-   "percent": 86.0,
+   "fetched_at": "2026-11-26T11:51:23+09:00",
+   "percent": 89.0,
    "percent_meaning": "позиция в прогнозном окне сезона по модели Japan Explorers — НЕ доля красных листьев",
    "forecast_start": "2026-11-16",
    "forecast_end": "2026-11-30",
    "observed_basis": "модель, наблюдения нет",
-   "published_at": "2026-11-25T21:57:08+09:00",
+   "published_at": "2026-11-26T10:57:11+09:00",
    "comment": "紅葉は例年11月中旬〜下旬",
    "extra": {
     "basis": "見頃",
     "news": null,
-    "page_updated": "2026-11-25T21:57:08+09:00"
+    "page_updated": "2026-11-26T10:57:11+09:00"
    }
   },
   {
@@ -518,18 +494,18 @@
    "stage_lo": 3,
    "stage_hi": 4,
    "data_type": "model",
-   "fetched_at": "2026-11-26T02:14:38+09:00",
-   "percent": 86.0,
+   "fetched_at": "2026-11-26T11:51:23+09:00",
+   "percent": 89.0,
    "percent_meaning": "позиция в прогнозном окне сезона по модели Japan Explorers — НЕ доля красных листьев",
    "forecast_start": "2026-11-16",
    "forecast_end": "2026-11-30",
    "observed_basis": "модель, наблюдения нет",
-   "published_at": "2026-11-25T21:57:08+09:00",
+   "published_at": "2026-11-26T10:57:11+09:00",
    "comment": "紅葉は例年11月中旬〜下旬",
    "extra": {
     "basis": "見頃",
     "news": null,
-    "page_updated": "2026-11-25T21:57:08+09:00"
+    "page_updated": "2026-11-26T10:57:11+09:00"
    }
   },
   {
@@ -542,8 +518,8 @@
    "stage_lo": 3,
    "stage_hi": 4,
    "data_type": "news",
-   "fetched_at": "2026-11-26T02:14:38+09:00",
-   "percent": 83.0,
+   "fetched_at": "2026-11-26T11:51:23+09:00",
+   "percent": 87.0,
    "percent_meaning": "позиция в прогнозном окне сезона по модели Japan Explorers — НЕ доля красных листьев",
    "forecast_start": "2026-11-18",
    "forecast_end": "2026-11-30",
@@ -557,7 +533,7 @@
      "title": "紅葉が見頃の赤山禅院",
      "url": "https://www.youtube.com/watch?v=Yn1yzF0gbHg"
     },
-    "page_updated": "2026-11-25T21:57:08+09:00"
+    "page_updated": "2026-11-26T10:57:11+09:00"
    }
   },
   {
@@ -570,18 +546,18 @@
    "stage_lo": 3,
    "stage_hi": 4,
    "data_type": "model",
-   "fetched_at": "2026-11-26T02:14:38+09:00",
-   "percent": 86.0,
+   "fetched_at": "2026-11-26T11:51:23+09:00",
+   "percent": 89.0,
    "percent_meaning": "позиция в прогнозном окне сезона по модели Japan Explorers — НЕ доля красных листьев",
    "forecast_start": "2026-11-16",
    "forecast_end": "2026-11-30",
    "observed_basis": "модель, наблюдения нет",
-   "published_at": "2026-11-25T21:57:08+09:00",
+   "published_at": "2026-11-26T10:57:11+09:00",
    "comment": "紅葉は例年11月中旬〜下旬",
    "extra": {
     "basis": "見頃",
     "news": null,
-    "page_updated": "2026-11-25T21:57:08+09:00"
+    "page_updated": "2026-11-26T10:57:11+09:00"
    }
   },
   {
@@ -594,18 +570,42 @@
    "stage_lo": 3,
    "stage_hi": 4,
    "data_type": "model",
-   "fetched_at": "2026-11-26T02:14:38+09:00",
-   "percent": 86.0,
+   "fetched_at": "2026-11-26T11:51:23+09:00",
+   "percent": 89.0,
    "percent_meaning": "позиция в прогнозном окне сезона по модели Japan Explorers — НЕ доля красных листьев",
    "forecast_start": "2026-11-16",
    "forecast_end": "2026-11-30",
    "observed_basis": "модель, наблюдения нет",
-   "published_at": "2026-11-25T21:57:08+09:00",
+   "published_at": "2026-11-26T10:57:11+09:00",
    "comment": "紅葉は例年11月中旬〜下旬",
    "extra": {
     "basis": "見頃",
     "news": null,
-    "page_updated": "2026-11-25T21:57:08+09:00"
+    "page_updated": "2026-11-26T10:57:11+09:00"
+   }
+  },
+  {
+   "source": "japan_explorers",
+   "source_key": "詩仙堂",
+   "name_ja": "詩仙堂",
+   "url": "https://www.japan-explorers.com/scenic-spot/%e8%a9%a9%e4%bb%99%e5%a0%82/",
+   "status_original": "見頃",
+   "status": "PEAK",
+   "stage_lo": 3,
+   "stage_hi": 4,
+   "data_type": "model",
+   "fetched_at": "2026-11-26T11:51:23+09:00",
+   "percent": 82.0,
+   "percent_meaning": "позиция в прогнозном окне сезона по модели Japan Explorers — НЕ доля красных листьев",
+   "forecast_start": "2026-11-21",
+   "forecast_end": "2026-11-30",
+   "observed_basis": "модель, наблюдения нет",
+   "published_at": "2026-11-26T10:57:11+09:00",
+   "comment": "サツキは5月下旬、紅葉は11月下旬",
+   "extra": {
+    "basis": "見頃",
+    "news": null,
+    "page_updated": "2026-11-26T10:57:11+09:00"
    }
   },
   {
@@ -618,17 +618,17 @@
    "stage_lo": 3,
    "stage_hi": 4,
    "data_type": "model",
-   "fetched_at": "2026-11-26T02:14:38+09:00",
-   "percent": 83.0,
+   "fetched_at": "2026-11-26T11:51:23+09:00",
+   "percent": 86.0,
    "percent_meaning": "позиция в прогнозном окне сезона по модели Japan Explorers — НЕ доля красных листьев",
    "forecast_start": "2026-11-17",
    "forecast_end": "2026-12-01",
    "observed_basis": "модель, наблюдения нет",
-   "published_at": "2026-11-25T21:57:08+09:00",
+   "published_at": "2026-11-26T10:57:11+09:00",
    "extra": {
     "basis": "見頃",
     "news": null,
-    "page_updated": "2026-11-25T21:57:08+09:00"
+    "page_updated": "2026-11-26T10:57:11+09:00"
    }
   },
   {
@@ -641,18 +641,18 @@
    "stage_lo": 3,
    "stage_hi": 4,
    "data_type": "model",
-   "fetched_at": "2026-11-26T02:14:38+09:00",
-   "percent": 83.0,
+   "fetched_at": "2026-11-26T11:51:23+09:00",
+   "percent": 86.0,
    "percent_meaning": "позиция в прогнозном окне сезона по модели Japan Explorers — НЕ доля красных листьев",
    "forecast_start": "2026-11-17",
    "forecast_end": "2026-12-01",
    "observed_basis": "модель, наблюдения нет",
-   "published_at": "2026-11-25T21:57:08+09:00",
+   "published_at": "2026-11-26T10:57:11+09:00",
    "comment": "桜の4月と紅葉の11月は、金閣まわりの彩りがとくに映える時期です。",
    "extra": {
     "basis": "見頃",
     "news": null,
-    "page_updated": "2026-11-25T21:57:08+09:00"
+    "page_updated": "2026-11-26T10:57:11+09:00"
    }
   },
   {
@@ -665,18 +665,18 @@
    "stage_lo": 3,
    "stage_hi": 4,
    "data_type": "model",
-   "fetched_at": "2026-11-26T02:14:38+09:00",
-   "percent": 83.0,
+   "fetched_at": "2026-11-26T11:51:23+09:00",
+   "percent": 86.0,
    "percent_meaning": "позиция в прогнозном окне сезона по модели Japan Explorers — НЕ доля красных листьев",
    "forecast_start": "2026-11-17",
    "forecast_end": "2026-12-01",
    "observed_basis": "модель, наблюдения нет",
-   "published_at": "2026-11-25T21:57:08+09:00",
+   "published_at": "2026-11-26T10:57:11+09:00",
    "comment": "新緑の4月と紅葉の11月が、東山のふもとを歩く絶好の季節です。",
    "extra": {
     "basis": "見頃",
     "news": null,
-    "page_updated": "2026-11-25T21:57:08+09:00"
+    "page_updated": "2026-11-26T10:57:11+09:00"
    }
   },
   {
@@ -689,18 +689,18 @@
    "stage_lo": 3,
    "stage_hi": 4,
    "data_type": "model",
-   "fetched_at": "2026-11-26T02:14:38+09:00",
-   "percent": 83.0,
+   "fetched_at": "2026-11-26T11:51:23+09:00",
+   "percent": 86.0,
    "percent_meaning": "позиция в прогнозном окне сезона по модели Japan Explorers — НЕ доля красных листьев",
    "forecast_start": "2026-11-17",
    "forecast_end": "2026-12-01",
    "observed_basis": "модель, наблюдения нет",
-   "published_at": "2026-11-25T21:57:08+09:00",
+   "published_at": "2026-11-26T10:57:11+09:00",
    "comment": "桜の4月と紅葉の11月が、境内をめぐるのにとくに美しい時期です。",
    "extra": {
     "basis": "見頃",
     "news": null,
-    "page_updated": "2026-11-25T21:57:08+09:00"
+    "page_updated": "2026-11-26T10:57:11+09:00"
    }
   },
   {
@@ -713,14 +713,14 @@
    "stage_lo": 3,
    "stage_hi": 4,
    "data_type": "news",
-   "fetched_at": "2026-11-26T02:14:38+09:00",
-   "percent": 80.0,
+   "fetched_at": "2026-11-26T11:51:23+09:00",
+   "percent": 83.0,
    "percent_meaning": "позиция в прогнозном окне сезона по модели Japan Explorers — НЕ доля красных листьев",
    "forecast_start": "2026-11-19",
    "forecast_end": "2026-12-01",
    "observed_basis": "дата наблюдения не указана (есть только дата новости)",
    "published_at": "2026-11-21",
-   "comment": "拝観は桜の4月と、紅葉が見ごろを迎える11月がとくにおすすめです。",
+   "comment": "嵐山の天龍寺は、21日の記事で周辺の鮮やかな紅葉が紹介されました。12月1日ごろまで見頃の見込みで、嵐山エリアの色づきとあわせて楽しめます。",
    "extra": {
     "basis": "見頃・ニュース確認",
     "news": {
@@ -728,7 +728,7 @@
      "title": "嵐山【大本山天龍寺】周辺の紅葉!鮮やか@すばらしい♪",
      "url": "https://www.youtube.com/watch?v=XI1CIkfJzM4"
     },
-    "page_updated": "2026-11-25T21:57:08+09:00"
+    "page_updated": "2026-11-26T10:57:11+09:00"
    }
   },
   {
@@ -741,18 +741,18 @@
    "stage_lo": 3,
    "stage_hi": 4,
    "data_type": "model",
-   "fetched_at": "2026-11-26T02:14:38+09:00",
-   "percent": 83.0,
+   "fetched_at": "2026-11-26T11:51:23+09:00",
+   "percent": 86.0,
    "percent_meaning": "позиция в прогнозном окне сезона по модели Japan Explorers — НЕ доля красных листьев",
    "forecast_start": "2026-11-17",
    "forecast_end": "2026-12-01",
    "observed_basis": "модель, наблюдения нет",
-   "published_at": "2026-11-25T21:57:08+09:00",
+   "published_at": "2026-11-26T10:57:11+09:00",
    "comment": "新緑と花の4月、紅葉に染まる11月がとくに訪ねがいのある時期です。",
    "extra": {
     "basis": "見頃",
     "news": null,
-    "page_updated": "2026-11-25T21:57:08+09:00"
+    "page_updated": "2026-11-26T10:57:11+09:00"
    }
   },
   {
@@ -765,18 +765,18 @@
    "stage_lo": 3,
    "stage_hi": 4,
    "data_type": "model",
-   "fetched_at": "2026-11-26T02:14:38+09:00",
-   "percent": 83.0,
+   "fetched_at": "2026-11-26T11:51:23+09:00",
+   "percent": 86.0,
    "percent_meaning": "позиция в прогнозном окне сезона по модели Japan Explorers — НЕ доля красных листьев",
    "forecast_start": "2026-11-17",
    "forecast_end": "2026-12-01",
    "observed_basis": "модель, наблюдения нет",
-   "published_at": "2026-11-25T21:57:08+09:00",
+   "published_at": "2026-11-26T10:57:11+09:00",
    "comment": "初詣の正月、新緑、紅葉の頃に多くの参拝者が訪れます。",
    "extra": {
     "basis": "見頃",
     "news": null,
-    "page_updated": "2026-11-25T21:57:08+09:00"
+    "page_updated": "2026-11-26T10:57:11+09:00"
    }
   },
   {
@@ -789,18 +789,18 @@
    "stage_lo": 3,
    "stage_hi": 4,
    "data_type": "model",
-   "fetched_at": "2026-11-26T02:14:38+09:00",
-   "percent": 83.0,
+   "fetched_at": "2026-11-26T11:51:23+09:00",
+   "percent": 86.0,
    "percent_meaning": "позиция в прогнозном окне сезона по модели Japan Explorers — НЕ доля красных листьев",
    "forecast_start": "2026-11-17",
    "forecast_end": "2026-12-01",
    "observed_basis": "модель, наблюдения нет",
-   "published_at": "2026-11-25T21:57:08+09:00",
+   "published_at": "2026-11-26T10:57:11+09:00",
    "comment": "見ごろや開放状況は現地の最新情報をご確認ください。",
    "extra": {
     "basis": "見頃",
     "news": null,
-    "page_updated": "2026-11-25T21:57:08+09:00"
+    "page_updated": "2026-11-26T10:57:11+09:00"
    }
   },
   {
@@ -813,14 +813,14 @@
    "stage_lo": 3,
    "stage_hi": 4,
    "data_type": "news",
-   "fetched_at": "2026-11-26T02:14:38+09:00",
-   "percent": 80.0,
+   "fetched_at": "2026-11-26T11:51:23+09:00",
+   "percent": 83.0,
    "percent_meaning": "позиция в прогнозном окне сезона по модели Japan Explorers — НЕ доля красных листьев",
    "forecast_start": "2026-11-19",
    "forecast_end": "2026-12-01",
    "observed_basis": "дата наблюдения не указана (есть только дата новости)",
    "published_at": "2026-11-21",
-   "comment": "紅葉は例年11月上旬〜下旬。期間中はライトアップあり",
+   "comment": "叡山電車のもみじのトンネルは、21日の記事で見頃を迎えた様子が紹介されました。12月1日ごろまでの見込みで、車窓から紅葉のトンネルを楽しめます。",
    "extra": {
     "basis": "見頃・ニュース確認",
     "news": {
@@ -828,7 +828,7 @@
      "title": "【叡山電鉄】見頃を迎えたもみじのトンネルへ、運転席から入っていった。",
      "url": "https://www.youtube.com/watch?v=PaU0CdwojA8"
     },
-    "page_updated": "2026-11-25T21:57:08+09:00"
+    "page_updated": "2026-11-26T10:57:11+09:00"
    }
   },
   {
@@ -841,14 +841,14 @@
    "stage_lo": 3,
    "stage_hi": 4,
    "data_type": "news",
-   "fetched_at": "2026-11-26T02:14:38+09:00",
-   "percent": 77.0,
+   "fetched_at": "2026-11-26T11:51:23+09:00",
+   "percent": 80.0,
    "percent_meaning": "позиция в прогнозном окне сезона по модели Japan Explorers — НЕ доля красных листьев",
    "forecast_start": "2026-11-20",
    "forecast_end": "2026-12-02",
    "observed_basis": "дата наблюдения не указана (есть только дата новости)",
    "published_at": "2026-11-22",
-   "comment": "11月22日に、貴船口駅から神社までの紅葉が見頃と伝えられました。見頃は12月初旬ごろまでの見込みです。",
+   "comment": "貴船神社は、22日の記事で貴船口駅から歩く見頃の紅葉狩りが紹介されました。12月2日ごろまでの見込みで、渓谷沿いの散策が楽しめます。",
    "extra": {
     "basis": "見頃・ニュース確認",
     "news": {
@@ -856,7 +856,7 @@
      "title": "[紅葉-4K-HDR] 秋の京都・絶景さんぽ🍁 貴船口駅から貴船神社まで見頃の紅葉狩りウォーク【2026年11月】",
      "url": "https://www.youtube.com/watch?v=CS0AzWGQeTc"
     },
-    "page_updated": "2026-11-25T21:57:08+09:00"
+    "page_updated": "2026-11-26T10:57:11+09:00"
    }
   },
   {
@@ -869,17 +869,17 @@
    "stage_lo": 3,
    "stage_hi": 4,
    "data_type": "model",
-   "fetched_at": "2026-11-26T02:14:38+09:00",
-   "percent": 80.0,
+   "fetched_at": "2026-11-26T11:51:23+09:00",
+   "percent": 83.0,
    "percent_meaning": "позиция в прогнозном окне сезона по модели Japan Explorers — НЕ доля красных листьев",
    "forecast_start": "2026-11-18",
    "forecast_end": "2026-12-02",
    "observed_basis": "модель, наблюдения нет",
-   "published_at": "2026-11-25T21:57:08+09:00",
+   "published_at": "2026-11-26T10:57:11+09:00",
    "extra": {
     "basis": "見頃",
     "news": null,
-    "page_updated": "2026-11-25T21:57:08+09:00"
+    "page_updated": "2026-11-26T10:57:11+09:00"
    }
   },
   {
@@ -892,18 +892,18 @@
    "stage_lo": 3,
    "stage_hi": 4,
    "data_type": "model",
-   "fetched_at": "2026-11-26T02:14:38+09:00",
-   "percent": 80.0,
+   "fetched_at": "2026-11-26T11:51:23+09:00",
+   "percent": 83.0,
    "percent_meaning": "позиция в прогнозном окне сезона по модели Japan Explorers — НЕ доля красных листьев",
    "forecast_start": "2026-11-18",
    "forecast_end": "2026-12-02",
    "observed_basis": "модель, наблюдения нет",
-   "published_at": "2026-11-25T21:57:08+09:00",
+   "published_at": "2026-11-26T10:57:11+09:00",
    "comment": "桜の4月と紅葉の11月は、鳳凰堂まわりの眺めがとくに際立ちます。",
    "extra": {
     "basis": "見頃",
     "news": null,
-    "page_updated": "2026-11-25T21:57:08+09:00"
+    "page_updated": "2026-11-26T10:57:11+09:00"
    }
   },
   {
@@ -916,18 +916,18 @@
    "stage_lo": 3,
    "stage_hi": 4,
    "data_type": "model",
-   "fetched_at": "2026-11-26T02:14:38+09:00",
-   "percent": 80.0,
+   "fetched_at": "2026-11-26T11:51:23+09:00",
+   "percent": 83.0,
    "percent_meaning": "позиция в прогнозном окне сезона по модели Japan Explorers — НЕ доля красных листьев",
    "forecast_start": "2026-11-18",
    "forecast_end": "2026-12-02",
    "observed_basis": "модель, наблюдения нет",
-   "published_at": "2026-11-25T21:57:08+09:00",
+   "published_at": "2026-11-26T10:57:11+09:00",
    "comment": "桜の4月と紅葉の11月、境内の伽藍がひときわ映える時期です。",
    "extra": {
     "basis": "見頃",
     "news": null,
-    "page_updated": "2026-11-25T21:57:08+09:00"
+    "page_updated": "2026-11-26T10:57:11+09:00"
    }
   },
   {
@@ -940,18 +940,18 @@
    "stage_lo": 3,
    "stage_hi": 4,
    "data_type": "model",
-   "fetched_at": "2026-11-26T02:14:38+09:00",
-   "percent": 80.0,
+   "fetched_at": "2026-11-26T11:51:23+09:00",
+   "percent": 83.0,
    "percent_meaning": "позиция в прогнозном окне сезона по модели Japan Explorers — НЕ доля красных листьев",
    "forecast_start": "2026-11-18",
    "forecast_end": "2026-12-02",
    "observed_basis": "модель, наблюдения нет",
-   "published_at": "2026-11-25T21:57:08+09:00",
+   "published_at": "2026-11-26T10:57:11+09:00",
    "comment": "桜の4月と紅葉の11月が、京都のまち歩きとあわせて訪ねやすい時期。",
    "extra": {
     "basis": "見頃",
     "news": null,
-    "page_updated": "2026-11-25T21:57:08+09:00"
+    "page_updated": "2026-11-26T10:57:11+09:00"
    }
   },
   {
@@ -964,18 +964,18 @@
    "stage_lo": 3,
    "stage_hi": 4,
    "data_type": "model",
-   "fetched_at": "2026-11-26T02:14:38+09:00",
-   "percent": 80.0,
+   "fetched_at": "2026-11-26T11:51:23+09:00",
+   "percent": 83.0,
    "percent_meaning": "позиция в прогнозном окне сезона по модели Japan Explorers — НЕ доля красных листьев",
    "forecast_start": "2026-11-18",
    "forecast_end": "2026-12-02",
    "observed_basis": "модель, наблюдения нет",
-   "published_at": "2026-11-25T21:57:08+09:00",
+   "published_at": "2026-11-26T10:57:11+09:00",
    "comment": "参拝には桜のころの4月と、紅葉が色づく11月がとくにおすすめです。",
    "extra": {
     "basis": "見頃",
     "news": null,
-    "page_updated": "2026-11-25T21:57:08+09:00"
+    "page_updated": "2026-11-26T10:57:11+09:00"
    }
   },
   {
@@ -988,18 +988,18 @@
    "stage_lo": 3,
    "stage_hi": 4,
    "data_type": "model",
-   "fetched_at": "2026-11-26T02:14:38+09:00",
-   "percent": 80.0,
+   "fetched_at": "2026-11-26T11:51:23+09:00",
+   "percent": 83.0,
    "percent_meaning": "позиция в прогнозном окне сезона по модели Japan Explorers — НЕ доля красных листьев",
    "forecast_start": "2026-11-18",
    "forecast_end": "2026-12-02",
    "observed_basis": "модель, наблюдения нет",
-   "published_at": "2026-11-25T21:57:08+09:00",
+   "published_at": "2026-11-26T10:57:11+09:00",
    "comment": "「醍醐の花見」で知られる4月の桜と、11月の紅葉が見ごたえがあります。",
    "extra": {
     "basis": "見頃",
     "news": null,
-    "page_updated": "2026-11-25T21:57:08+09:00"
+    "page_updated": "2026-11-26T10:57:11+09:00"
    }
   },
   {
@@ -1012,18 +1012,18 @@
    "stage_lo": 3,
    "stage_hi": 4,
    "data_type": "model",
-   "fetched_at": "2026-11-26T02:14:38+09:00",
-   "percent": 80.0,
+   "fetched_at": "2026-11-26T11:51:23+09:00",
+   "percent": 83.0,
    "percent_meaning": "позиция в прогнозном окне сезона по модели Japan Explorers — НЕ доля красных листьев",
    "forecast_start": "2026-11-18",
    "forecast_end": "2026-12-02",
    "observed_basis": "модель, наблюдения нет",
-   "published_at": "2026-11-25T21:57:08+09:00",
+   "published_at": "2026-11-26T10:57:11+09:00",
    "comment": "参拝は桜の4月と、紅葉が色づく11月がとくに気持ちのよい時季です。",
    "extra": {
     "basis": "見頃",
     "news": null,
-    "page_updated": "2026-11-25T21:57:08+09:00"
+    "page_updated": "2026-11-26T10:57:11+09:00"
    }
   },
   {
@@ -1036,18 +1036,18 @@
    "stage_lo": 3,
    "stage_hi": 4,
    "data_type": "model",
-   "fetched_at": "2026-11-26T02:14:38+09:00",
-   "percent": 80.0,
+   "fetched_at": "2026-11-26T11:51:23+09:00",
+   "percent": 83.0,
    "percent_meaning": "позиция в прогнозном окне сезона по модели Japan Explorers — НЕ доля красных листьев",
    "forecast_start": "2026-11-18",
    "forecast_end": "2026-12-02",
    "observed_basis": "модель, наблюдения нет",
-   "published_at": "2026-11-25T21:57:08+09:00",
+   "published_at": "2026-11-26T10:57:11+09:00",
    "comment": "新緑の4月と紅葉の11月は、大沢池の眺めがとくに美しくなります。",
    "extra": {
     "basis": "見頃",
     "news": null,
-    "page_updated": "2026-11-25T21:57:08+09:00"
+    "page_updated": "2026-11-26T10:57:11+09:00"
    }
   },
   {
@@ -1060,18 +1060,18 @@
    "stage_lo": 3,
    "stage_hi": 4,
    "data_type": "model",
-   "fetched_at": "2026-11-26T02:14:38+09:00",
-   "percent": 80.0,
+   "fetched_at": "2026-11-26T11:51:23+09:00",
+   "percent": 83.0,
    "percent_meaning": "позиция в прогнозном окне сезона по модели Japan Explorers — НЕ доля красных листьев",
    "forecast_start": "2026-11-18",
    "forecast_end": "2026-12-02",
    "observed_basis": "модель, наблюдения нет",
-   "published_at": "2026-11-25T21:57:08+09:00",
+   "published_at": "2026-11-26T10:57:11+09:00",
    "comment": "苔が瑞々しい4月と、紅葉が庭を彩る11月がとくに美しい季節です。",
    "extra": {
     "basis": "見頃",
     "news": null,
-    "page_updated": "2026-11-25T21:57:08+09:00"
+    "page_updated": "2026-11-26T10:57:11+09:00"
    }
   },
   {
@@ -1084,18 +1084,18 @@
    "stage_lo": 3,
    "stage_hi": 4,
    "data_type": "model",
-   "fetched_at": "2026-11-26T02:14:38+09:00",
-   "percent": 80.0,
+   "fetched_at": "2026-11-26T11:51:23+09:00",
+   "percent": 83.0,
    "percent_meaning": "позиция в прогнозном окне сезона по модели Japan Explorers — НЕ доля красных листьев",
    "forecast_start": "2026-11-18",
    "forecast_end": "2026-12-02",
    "observed_basis": "модель, наблюдения нет",
-   "published_at": "2026-11-25T21:57:08+09:00",
+   "published_at": "2026-11-26T10:57:11+09:00",
    "comment": "石庭を眺めるなら、新緑の4月と紅葉の11月がとくに美しい時期です。",
    "extra": {
     "basis": "見頃",
     "news": null,
-    "page_updated": "2026-11-25T21:57:08+09:00"
+    "page_updated": "2026-11-26T10:57:11+09:00"
    }
   },
   {
@@ -1108,18 +1108,18 @@
    "stage_lo": 3,
    "stage_hi": 4,
    "data_type": "model",
-   "fetched_at": "2026-11-26T02:14:38+09:00",
-   "percent": 80.0,
+   "fetched_at": "2026-11-26T11:51:23+09:00",
+   "percent": 83.0,
    "percent_meaning": "позиция в прогнозном окне сезона по модели Japan Explorers — НЕ доля красных листьев",
    "forecast_start": "2026-11-18",
    "forecast_end": "2026-12-02",
    "observed_basis": "модель, наблюдения нет",
-   "published_at": "2026-11-25T21:57:08+09:00",
+   "published_at": "2026-11-26T10:57:11+09:00",
    "comment": "春の芽吹きと秋の紅葉の頃が散策に適しています。",
    "extra": {
     "basis": "見頃",
     "news": null,
-    "page_updated": "2026-11-25T21:57:08+09:00"
+    "page_updated": "2026-11-26T10:57:11+09:00"
    }
   },
   {
@@ -1132,18 +1132,18 @@
    "stage_lo": 3,
    "stage_hi": 4,
    "data_type": "model",
-   "fetched_at": "2026-11-26T02:14:38+09:00",
-   "percent": 80.0,
+   "fetched_at": "2026-11-26T11:51:23+09:00",
+   "percent": 83.0,
    "percent_meaning": "позиция в прогнозном окне сезона по модели Japan Explorers — НЕ доля красных листьев",
    "forecast_start": "2026-11-18",
    "forecast_end": "2026-12-02",
    "observed_basis": "модель, наблюдения нет",
-   "published_at": "2026-11-25T21:57:08+09:00",
+   "published_at": "2026-11-26T10:57:11+09:00",
    "comment": "見ごろや開放状況は現地の最新情報をご確認ください。",
    "extra": {
     "basis": "見頃",
     "news": null,
-    "page_updated": "2026-11-25T21:57:08+09:00"
+    "page_updated": "2026-11-26T10:57:11+09:00"
    }
   },
   {
@@ -1156,18 +1156,18 @@
    "stage_lo": 3,
    "stage_hi": 4,
    "data_type": "model",
-   "fetched_at": "2026-11-26T02:14:38+09:00",
-   "percent": 80.0,
+   "fetched_at": "2026-11-26T11:51:23+09:00",
+   "percent": 83.0,
    "percent_meaning": "позиция в прогнозном окне сезона по модели Japan Explorers — НЕ доля красных листьев",
    "forecast_start": "2026-11-18",
    "forecast_end": "2026-12-02",
    "observed_basis": "модель, наблюдения нет",
-   "published_at": "2026-11-25T21:57:08+09:00",
+   "published_at": "2026-11-26T10:57:11+09:00",
    "comment": "見ごろや開放状況は現地の最新情報をご確認ください。",
    "extra": {
     "basis": "見頃",
     "news": null,
-    "page_updated": "2026-11-25T21:57:08+09:00"
+    "page_updated": "2026-11-26T10:57:11+09:00"
    }
   },
   {
@@ -1180,8 +1180,8 @@
    "stage_lo": 3,
    "stage_hi": 4,
    "data_type": "news",
-   "fetched_at": "2026-11-26T02:14:38+09:00",
-   "percent": 77.0,
+   "fetched_at": "2026-11-26T11:51:23+09:00",
+   "percent": 80.0,
    "percent_meaning": "позиция в прогнозном окне сезона по модели Japan Explorers — НЕ доля красных листьев",
    "forecast_start": "2026-11-20",
    "forecast_end": "2026-12-02",
@@ -1195,7 +1195,102 @@
      "title": "#北野天満宮 #京都 #京都観光 #もみじ #モミジ #モミジの見頃 #紅葉 #紅葉の名所 #秋 #秋の風景 #kyot...",
      "url": "https://www.youtube.com/watch?v=TdTKrdVZeYs"
     },
-    "page_updated": "2026-11-25T21:57:08+09:00"
+    "page_updated": "2026-11-26T10:57:11+09:00"
+   }
+  },
+  {
+   "source": "japan_explorers",
+   "source_key": "知恩院",
+   "name_ja": "知恩院",
+   "url": "https://www.japan-explorers.com/scenic-spot/%e7%9f%a5%e6%81%a9%e9%99%a2/",
+   "status_original": "見頃",
+   "status": "PEAK",
+   "stage_lo": 3,
+   "stage_hi": 4,
+   "data_type": "model",
+   "fetched_at": "2026-11-26T11:51:23+09:00",
+   "percent": 83.0,
+   "percent_meaning": "позиция в прогнозном окне сезона по модели Japan Explorers — НЕ доля красных листьев",
+   "forecast_start": "2026-11-18",
+   "forecast_end": "2026-12-02",
+   "observed_basis": "модель, наблюдения нет",
+   "published_at": "2026-11-26T10:57:11+09:00",
+   "comment": "通年",
+   "extra": {
+    "basis": "見頃",
+    "news": null,
+    "page_updated": "2026-11-26T10:57:11+09:00"
+   }
+  },
+  {
+   "source": "japan_explorers",
+   "source_key": "修学院離宮",
+   "name_ja": "修学院離宮",
+   "url": "https://www.japan-explorers.com/scenic-spot/%e4%bf%ae%e5%ad%a6%e9%99%a2%e9%9b%a2%e5%ae%ae/",
+   "status_original": "見頃",
+   "status": "PEAK",
+   "stage_lo": 3,
+   "stage_hi": 4,
+   "data_type": "model",
+   "fetched_at": "2026-11-26T11:51:23+09:00",
+   "percent": 83.0,
+   "percent_meaning": "позиция в прогнозном окне сезона по модели Japan Explorers — НЕ доля красных листьев",
+   "forecast_start": "2026-11-18",
+   "forecast_end": "2026-12-02",
+   "observed_basis": "модель, наблюдения нет",
+   "published_at": "2026-11-26T10:57:11+09:00",
+   "extra": {
+    "basis": "見頃",
+    "news": null,
+    "page_updated": "2026-11-26T10:57:11+09:00"
+   }
+  },
+  {
+   "source": "japan_explorers",
+   "source_key": "哲学の道",
+   "name_ja": "哲学の道",
+   "url": "https://www.japan-explorers.com/scenic-spot/%e5%93%b2%e5%ad%a6%e3%81%ae%e9%81%93/",
+   "status_original": "見頃",
+   "status": "PEAK",
+   "stage_lo": 3,
+   "stage_hi": 4,
+   "data_type": "model",
+   "fetched_at": "2026-11-26T11:51:23+09:00",
+   "percent": 83.0,
+   "percent_meaning": "позиция в прогнозном окне сезона по модели Japan Explorers — НЕ доля красных листьев",
+   "forecast_start": "2026-11-18",
+   "forecast_end": "2026-12-02",
+   "observed_basis": "модель, наблюдения нет",
+   "published_at": "2026-11-26T10:57:11+09:00",
+   "comment": "春は桜、初夏は新緑、秋は紅葉",
+   "extra": {
+    "basis": "見頃",
+    "news": null,
+    "page_updated": "2026-11-26T10:57:11+09:00"
+   }
+  },
+  {
+   "source": "japan_explorers",
+   "source_key": "宝泉院",
+   "name_ja": "宝泉院",
+   "url": "https://www.japan-explorers.com/scenic-spot/%e5%ae%9d%e6%b3%89%e9%99%a2/",
+   "status_original": "見頃",
+   "status": "PEAK",
+   "stage_lo": 3,
+   "stage_hi": 4,
+   "data_type": "model",
+   "fetched_at": "2026-11-26T11:51:23+09:00",
+   "percent": 83.0,
+   "percent_meaning": "позиция в прогнозном окне сезона по модели Japan Explorers — НЕ доля красных листьев",
+   "forecast_start": "2026-11-18",
+   "forecast_end": "2026-12-02",
+   "observed_basis": "модель, наблюдения нет",
+   "published_at": "2026-11-26T10:57:11+09:00",
+   "comment": "秋は夜間の特別拝観「秋の夜灯り」(2025年は11月8日〜12月7日)",
+   "extra": {
+    "basis": "見頃",
+    "news": null,
+    "page_updated": "2026-11-26T10:57:11+09:00"
    }
   },
   {
@@ -1208,15 +1303,15 @@
    "stage_lo": 3,
    "stage_hi": 4,
    "data_type": "news",
-   "fetched_at": "2026-11-26T02:14:38+09:00",
-   "percent": 70.0,
+   "fetched_at": "2026-11-26T11:51:23+09:00",
+   "percent": 73.0,
    "percent_meaning": "позиция в прогнозном окне сезона по модели Japan Explorers — НЕ доля красных листьев",
    "forecast_start": "2026-11-22",
    "forecast_end": "2026-12-04",
    "observed_at": "2026-11-21",
    "observed_basis": "дата из заголовка новости/видео",
    "published_at": "2026-11-24",
-   "comment": "11月21日に大原が見頃と伝えられた寺です。見頃は11月末から12月初旬にかけての見込みで、周辺の寺とあわせた散策が向いています。",
+   "comment": "緑が深まる6月と、大原の山里が色づく11月がとくに訪れどきです。紅葉は例年11月...",
    "extra": {
     "basis": "見頃・ニュース確認",
     "news": {
@@ -1224,7 +1319,7 @@
      "title": "(2026/11/21)紅葉の京都・大原、三千院・実光院・洛北、三明院をめぐる(速報版・8K)#kyoto #京都 #a...",
      "url": "https://www.youtube.com/watch?v=dYZEyTaYxkI"
     },
-    "page_updated": "2026-11-25T21:57:08+09:00"
+    "page_updated": "2026-11-26T10:57:11+09:00"
    }
   },
   {
@@ -1237,8 +1332,8 @@
    "stage_lo": 3,
    "stage_hi": 4,
    "data_type": "news",
-   "fetched_at": "2026-11-26T02:14:38+09:00",
-   "percent": 70.0,
+   "fetched_at": "2026-11-26T11:51:23+09:00",
+   "percent": 73.0,
    "percent_meaning": "позиция в прогнозном окне сезона по модели Japan Explorers — НЕ доля красных листьев",
    "forecast_start": "2026-11-22",
    "forecast_end": "2026-12-04",
@@ -1252,7 +1347,7 @@
      "title": "最新11/24🍁京都の紅葉見頃状況😍🍁#東福寺 #瑠璃光院 #永観堂 見頃ですよ〜😍✨ #京都紅葉 #紅葉スポット #京...",
      "url": "https://www.youtube.com/watch?v=AZjb9tv-87Q"
     },
-    "page_updated": "2026-11-25T21:57:08+09:00"
+    "page_updated": "2026-11-26T10:57:11+09:00"
    }
   },
   {
@@ -1265,8 +1360,8 @@
    "stage_lo": 3,
    "stage_hi": 4,
    "data_type": "news",
-   "fetched_at": "2026-11-26T02:14:38+09:00",
-   "percent": 70.0,
+   "fetched_at": "2026-11-26T11:51:23+09:00",
+   "percent": 73.0,
    "percent_meaning": "позиция в прогнозном окне сезона по модели Japan Explorers — НЕ доля красных листьев",
    "forecast_start": "2026-11-22",
    "forecast_end": "2026-12-04",
@@ -1280,7 +1375,7 @@
      "title": "京都の紅葉が見頃です|清水寺の夜間拝観は30日まで、平日の午前がねらい目",
      "url": "https://www.youtube.com/watch?v=NYqVwEq36T4"
     },
-    "page_updated": "2026-11-25T21:57:08+09:00"
+    "page_updated": "2026-11-26T10:57:11+09:00"
    }
   },
   {
@@ -1293,8 +1388,8 @@
    "stage_lo": 3,
    "stage_hi": 4,
    "data_type": "news",
-   "fetched_at": "2026-11-26T02:14:38+09:00",
-   "percent": 70.0,
+   "fetched_at": "2026-11-26T11:51:23+09:00",
+   "percent": 73.0,
    "percent_meaning": "позиция в прогнозном окне сезона по модели Japan Explorers — НЕ доля красных листьев",
    "forecast_start": "2026-11-22",
    "forecast_end": "2026-12-04",
@@ -1309,7 +1404,7 @@
      "title": "(2026/11/22)紅葉の京都・洛北をめぐる(速報版・8K)#kyoto #京都 #autumncolors",
      "url": "https://www.youtube.com/watch?v=3IVwGGdGbZc"
     },
-    "page_updated": "2026-11-25T21:57:08+09:00"
+    "page_updated": "2026-11-26T10:57:11+09:00"
    }
   },
   {
@@ -1322,23 +1417,50 @@
    "stage_lo": 3,
    "stage_hi": 4,
    "data_type": "news",
-   "fetched_at": "2026-11-26T02:14:38+09:00",
-   "percent": 67.0,
+   "fetched_at": "2026-11-26T11:51:23+09:00",
+   "percent": 70.0,
    "percent_meaning": "позиция в прогнозном окне сезона по модели Japan Explorers — НЕ доля красных листьев",
    "forecast_start": "2026-11-23",
    "forecast_end": "2026-12-05",
-   "observed_at": "2026-11-28",
-   "observed_basis": "дата из заголовка новости/видео",
+   "observed_basis": "дата наблюдения не указана (есть только дата новости)",
    "published_at": "2026-11-25",
    "comment": "紅葉は例年11月中旬〜12月上旬。",
    "extra": {
     "basis": "見頃・ニュース確認",
     "news": {
      "date": "2026-11-25",
-     "title": "永観堂の夜間拝観が圧巻すぎた|見頃は11月28日・29日",
-     "url": "https://www.youtube.com/watch?v=YOdhV3PMM_k"
+     "title": "【京都紅葉速報2026】今がまさに見頃!永観堂・南禅寺の美しい紅葉と平日の混雑状況|11/25 4K撮影",
+     "url": "https://www.youtube.com/watch?v=yszV3hsvYHo"
     },
-    "page_updated": "2026-11-25T21:57:08+09:00"
+    "page_updated": "2026-11-26T10:57:11+09:00"
+   }
+  },
+  {
+   "source": "japan_explorers",
+   "source_key": "二条城",
+   "name_ja": "二条城",
+   "url": "https://www.japan-explorers.com/scenic-spot/%e4%ba%8c%e6%9d%a1%e5%9f%8e/",
+   "status_original": "見頃",
+   "status": "PEAK",
+   "stage_lo": 3,
+   "stage_hi": 4,
+   "data_type": "news",
+   "fetched_at": "2026-11-26T11:51:23+09:00",
+   "percent": 70.0,
+   "percent_meaning": "позиция в прогнозном окне сезона по модели Japan Explorers — НЕ доля красных листьев",
+   "forecast_start": "2026-11-23",
+   "forecast_end": "2026-12-05",
+   "observed_basis": "дата наблюдения не указана (есть только дата новости)",
+   "published_at": "2026-11-25",
+   "comment": "3月下旬から4月の桜、11月下旬の紅葉ライトアップが見事。",
+   "extra": {
+    "basis": "見頃・ニュース確認",
+    "news": {
+     "date": "2026-11-25",
+     "title": "【二条城紅葉シーズン•京都秋】ほぼ外国人観光客紅葉見頃迎えた!?️|Nijo Castle Autumn Foliage ...",
+     "url": "https://www.youtube.com/watch?v=AYfoqUK7MXw"
+    },
+    "page_updated": "2026-11-26T10:57:11+09:00"
    }
   },
   {
@@ -1351,15 +1473,15 @@
    "stage_lo": 3,
    "stage_hi": 4,
    "data_type": "news",
-   "fetched_at": "2026-11-26T02:14:38+09:00",
-   "percent": 67.0,
+   "fetched_at": "2026-11-26T11:51:23+09:00",
+   "percent": 70.0,
    "percent_meaning": "позиция в прогнозном окне сезона по модели Japan Explorers — НЕ доля красных листьев",
    "forecast_start": "2026-11-23",
    "forecast_end": "2026-12-05",
    "observed_at": "2026-11-21",
    "observed_basis": "дата из заголовка новости/видео",
    "published_at": "2026-11-25",
-   "comment": "11月20日に紅葉が本格的な見頃と伝えられた高雄の寺です。見頃は11月末ごろまでの見込みで、山あいの紅葉が楽しめます。",
+   "comment": "見ごろや開放状況は現地の最新情報をご確認ください。",
    "extra": {
     "basis": "見頃・ニュース確認",
     "news": {
@@ -1367,7 +1489,7 @@
      "title": "2026/11/21 神護寺賞紅葉",
      "url": "https://www.youtube.com/watch?v=UTT-ut-jVp4"
     },
-    "page_updated": "2026-11-25T21:57:08+09:00"
+    "page_updated": "2026-11-26T10:57:11+09:00"
    }
   },
   {
@@ -1380,8 +1502,8 @@
    "stage_lo": 3,
    "stage_hi": 4,
    "data_type": "news",
-   "fetched_at": "2026-11-26T02:14:38+09:00",
-   "percent": 67.0,
+   "fetched_at": "2026-11-26T11:51:23+09:00",
+   "percent": 70.0,
    "percent_meaning": "позиция в прогнозном окне сезона по модели Japan Explorers — НЕ доля красных листьев",
    "forecast_start": "2026-11-23",
    "forecast_end": "2026-12-05",
@@ -1395,7 +1517,7 @@
      "title": "これから見頃!✨#kyoto #東福寺 #紅葉 #vlog",
      "url": "https://www.youtube.com/watch?v=o7CzeHazRH8"
     },
-    "page_updated": "2026-11-25T21:57:08+09:00"
+    "page_updated": "2026-11-26T10:57:11+09:00"
    }
   },
   {
@@ -1408,23 +1530,22 @@
    "stage_lo": 3,
    "stage_hi": 4,
    "data_type": "news",
-   "fetched_at": "2026-11-26T02:14:38+09:00",
-   "percent": 67.0,
+   "fetched_at": "2026-11-26T11:51:23+09:00",
+   "percent": 70.0,
    "percent_meaning": "позиция в прогнозном окне сезона по модели Japan Explorers — НЕ доля красных листьев",
    "forecast_start": "2026-11-23",
    "forecast_end": "2026-12-05",
-   "observed_at": "2026-11-25",
-   "observed_basis": "дата из заголовка новости/видео",
+   "observed_basis": "дата наблюдения не указана (есть только дата новости)",
    "published_at": "2026-11-25",
    "comment": "新緑の4月と紅葉の11月がとくに美しく、境内を歩くのに適した時期。",
    "extra": {
     "basis": "見頃・ニュース確認",
     "news": {
      "date": "2026-11-25",
-     "title": "京都紅葉情報2026/11/25 南禅寺見頃 Breaking: Kyoto autumn leaves #shorts...",
-     "url": "https://www.youtube.com/watch?v=CJ_xRmiXoBQ"
+     "title": "見頃が近づいてきた南禅寺の紅葉🍁が綺麗!!️#京都 #観光",
+     "url": "https://www.youtube.com/watch?v=fm2WtqUeDrk"
     },
-    "page_updated": "2026-11-25T21:57:08+09:00"
+    "page_updated": "2026-11-26T10:57:11+09:00"
    }
   },
   {
@@ -1437,8 +1558,8 @@
    "stage_lo": 3,
    "stage_hi": 4,
    "data_type": "news",
-   "fetched_at": "2026-11-26T02:14:38+09:00",
-   "percent": 67.0,
+   "fetched_at": "2026-11-26T11:51:23+09:00",
+   "percent": 70.0,
    "percent_meaning": "позиция в прогнозном окне сезона по модели Japan Explorers — НЕ доля красных листьев",
    "forecast_start": "2026-11-23",
    "forecast_end": "2026-12-05",
@@ -1453,7 +1574,7 @@
      "title": "京都紅葉最新10(11.25撮影)見頃!清水寺/今熊野観音寺/東福寺/真如堂/栄摂院",
      "url": "https://www.youtube.com/watch?v=wdp_Z2fhFsY"
     },
-    "page_updated": "2026-11-25T21:57:08+09:00"
+    "page_updated": "2026-11-26T10:57:11+09:00"
    }
   },
   {
@@ -1466,18 +1587,18 @@
    "stage_lo": 3,
    "stage_hi": 4,
    "data_type": "model",
-   "fetched_at": "2026-11-26T02:14:38+09:00",
-   "percent": 79.0,
+   "fetched_at": "2026-11-26T11:51:23+09:00",
+   "percent": 81.0,
    "percent_meaning": "позиция в прогнозном окне сезона по модели Japan Explorers — НЕ доля красных листьев",
    "forecast_start": "2026-11-11",
    "forecast_end": "2026-12-10",
    "observed_basis": "модель, наблюдения нет",
-   "published_at": "2026-11-25T21:57:08+09:00",
+   "published_at": "2026-11-26T10:57:11+09:00",
    "comment": "深緑と水しぶきが涼しい7〜8月が舟遊びの好期。紅葉は例年10月下旬〜12月上旬(...",
    "extra": {
     "basis": "見頃",
     "news": null,
-    "page_updated": "2026-11-25T21:57:08+09:00"
+    "page_updated": "2026-11-26T10:57:11+09:00"
    }
   },
   {
@@ -1490,18 +1611,18 @@
    "stage_lo": 3,
    "stage_hi": 4,
    "data_type": "model",
-   "fetched_at": "2026-11-26T02:14:38+09:00",
-   "percent": 68.0,
+   "fetched_at": "2026-11-26T11:51:23+09:00",
+   "percent": 71.0,
    "percent_meaning": "позиция в прогнозном окне сезона по модели Japan Explorers — НЕ доля красных листьев",
    "forecast_start": "2026-11-21",
    "forecast_end": "2026-12-10",
    "observed_basis": "модель, наблюдения нет",
-   "published_at": "2026-11-25T21:57:08+09:00",
+   "published_at": "2026-11-26T10:57:11+09:00",
    "comment": "紅葉は例年11月中旬〜12月上旬",
    "extra": {
     "basis": "見頃",
     "news": null,
-    "page_updated": "2026-11-25T21:57:08+09:00"
+    "page_updated": "2026-11-26T10:57:11+09:00"
    }
   },
   {
@@ -1514,18 +1635,18 @@
    "stage_lo": 3,
    "stage_hi": 4,
    "data_type": "model",
-   "fetched_at": "2026-11-26T02:14:38+09:00",
-   "percent": 68.0,
+   "fetched_at": "2026-11-26T11:51:23+09:00",
+   "percent": 71.0,
    "percent_meaning": "позиция в прогнозном окне сезона по модели Japan Explorers — НЕ доля красных листьев",
    "forecast_start": "2026-11-21",
    "forecast_end": "2026-12-10",
    "observed_basis": "модель, наблюдения нет",
-   "published_at": "2026-11-25T21:57:08+09:00",
+   "published_at": "2026-11-26T10:57:11+09:00",
    "comment": "紅葉は例年11月中旬〜12月上旬",
    "extra": {
     "basis": "見頃",
     "news": null,
-    "page_updated": "2026-11-25T21:57:08+09:00"
+    "page_updated": "2026-11-26T10:57:11+09:00"
    }
   },
   {
@@ -1538,18 +1659,18 @@
    "stage_lo": 3,
    "stage_hi": 4,
    "data_type": "model",
-   "fetched_at": "2026-11-26T02:14:38+09:00",
-   "percent": 68.0,
+   "fetched_at": "2026-11-26T11:51:23+09:00",
+   "percent": 71.0,
    "percent_meaning": "позиция в прогнозном окне сезона по модели Japan Explorers — НЕ доля красных листьев",
    "forecast_start": "2026-11-21",
    "forecast_end": "2026-12-10",
    "observed_basis": "модель, наблюдения нет",
-   "published_at": "2026-11-25T21:57:08+09:00",
+   "published_at": "2026-11-26T10:57:11+09:00",
    "comment": "紅葉は例年11月中旬〜12月上旬",
    "extra": {
     "basis": "見頃",
     "news": null,
-    "page_updated": "2026-11-25T21:57:08+09:00"
+    "page_updated": "2026-11-26T10:57:11+09:00"
    }
   },
   {
@@ -1562,18 +1683,18 @@
    "stage_lo": 3,
    "stage_hi": 4,
    "data_type": "model",
-   "fetched_at": "2026-11-26T02:14:38+09:00",
-   "percent": 79.0,
+   "fetched_at": "2026-11-26T11:51:23+09:00",
+   "percent": 81.0,
    "percent_meaning": "позиция в прогнозном окне сезона по модели Japan Explorers — НЕ доля красных листьев",
    "forecast_start": "2026-11-11",
    "forecast_end": "2026-12-10",
    "observed_basis": "модель, наблюдения нет",
-   "published_at": "2026-11-25T21:57:08+09:00",
+   "published_at": "2026-11-26T10:57:11+09:00",
    "comment": "紅葉は例年10月下旬〜12月上旬",
    "extra": {
     "basis": "見頃",
     "news": null,
-    "page_updated": "2026-11-25T21:57:08+09:00"
+    "page_updated": "2026-11-26T10:57:11+09:00"
    }
   },
   {
@@ -1581,23 +1702,23 @@
    "source_key": "嵐山 渡月橋",
    "name_ja": "嵐山 渡月橋",
    "url": "https://www.japan-explorers.com/scenic-spot/%e5%b5%90%e5%b1%b1-%e6%b8%a1%e6%9c%88%e6%a9%8b/",
-   "status_original": "色づき始め",
-   "status": "STARTING",
-   "stage_lo": 1,
-   "stage_hi": 3,
+   "status_original": "見頃",
+   "status": "PEAK",
+   "stage_lo": 3,
+   "stage_hi": 4,
    "data_type": "model",
-   "fetched_at": "2026-11-26T02:14:38+09:00",
-   "percent": 46.0,
+   "fetched_at": "2026-11-26T11:51:23+09:00",
+   "percent": 60.0,
    "percent_meaning": "позиция в прогнозном окне сезона по модели Japan Explorers — НЕ доля красных листьев",
    "forecast_start": "2026-11-26",
    "forecast_end": "2026-12-10",
    "observed_basis": "модель, наблюдения нет",
-   "published_at": "2026-11-25T21:57:08+09:00",
+   "published_at": "2026-11-26T10:57:11+09:00",
    "comment": "紅葉は例年11月下旬〜12月上旬",
    "extra": {
-    "basis": "色づき始め",
+    "basis": "見頃",
     "news": null,
-    "page_updated": "2026-11-25T21:57:08+09:00"
+    "page_updated": "2026-11-26T10:57:11+09:00"
    }
   },
   {
@@ -1605,23 +1726,23 @@
    "source_key": "城南宮",
    "name_ja": "城南宮",
    "url": "https://www.japan-explorers.com/scenic-spot/%e5%9f%8e%e5%8d%97%e5%ae%ae/",
-   "status_original": "色づき始め",
-   "status": "STARTING",
-   "stage_lo": 1,
-   "stage_hi": 3,
+   "status_original": "見頃",
+   "status": "PEAK",
+   "stage_lo": 3,
+   "stage_hi": 4,
    "data_type": "model",
-   "fetched_at": "2026-11-26T02:14:38+09:00",
-   "percent": 46.0,
+   "fetched_at": "2026-11-26T11:51:23+09:00",
+   "percent": 60.0,
    "percent_meaning": "позиция в прогнозном окне сезона по модели Japan Explorers — НЕ доля красных листьев",
    "forecast_start": "2026-11-26",
    "forecast_end": "2026-12-10",
    "observed_basis": "модель, наблюдения нет",
-   "published_at": "2026-11-25T21:57:08+09:00",
+   "published_at": "2026-11-26T10:57:11+09:00",
    "comment": "紅葉は例年11月下旬〜12月上旬",
    "extra": {
-    "basis": "色づき始め",
+    "basis": "見頃",
     "news": null,
-    "page_updated": "2026-11-25T21:57:08+09:00"
+    "page_updated": "2026-11-26T10:57:11+09:00"
    }
   },
   {
@@ -1629,23 +1750,23 @@
    "source_key": "地蔵院(竹の寺)",
    "name_ja": "地蔵院(竹の寺)",
    "url": "https://www.japan-explorers.com/scenic-spot/%e5%9c%b0%e8%94%b5%e9%99%a2%ef%bc%88%e7%ab%b9%e3%81%ae%e5%af%ba%ef%bc%89/",
-   "status_original": "色づき始め",
-   "status": "STARTING",
-   "stage_lo": 1,
-   "stage_hi": 3,
+   "status_original": "見頃",
+   "status": "PEAK",
+   "stage_lo": 3,
+   "stage_hi": 4,
    "data_type": "model",
-   "fetched_at": "2026-11-26T02:14:38+09:00",
-   "percent": 46.0,
+   "fetched_at": "2026-11-26T11:51:23+09:00",
+   "percent": 60.0,
    "percent_meaning": "позиция в прогнозном окне сезона по модели Japan Explorers — НЕ доля красных листьев",
    "forecast_start": "2026-11-26",
    "forecast_end": "2026-12-10",
    "observed_basis": "модель, наблюдения нет",
-   "published_at": "2026-11-25T21:57:08+09:00",
+   "published_at": "2026-11-26T10:57:11+09:00",
    "comment": "紅葉は例年11月下旬〜12月上旬",
    "extra": {
-    "basis": "色づき始め",
+    "basis": "見頃",
     "news": null,
-    "page_updated": "2026-11-25T21:57:08+09:00"
+    "page_updated": "2026-11-26T10:57:11+09:00"
    }
   },
   {
@@ -1658,8 +1779,8 @@
    "stage_lo": 1,
    "stage_hi": 3,
    "data_type": "news",
-   "fetched_at": "2026-11-26T02:14:38+09:00",
-   "percent": 38.0,
+   "fetched_at": "2026-11-26T11:51:23+09:00",
+   "percent": 42.0,
    "percent_meaning": "позиция в прогнозном окне сезона по модели Japan Explorers — НЕ доля красных листьев",
    "forecast_start": "2026-11-28",
    "forecast_end": "2026-12-12",
@@ -1673,7 +1794,7 @@
      "title": "龍安寺 色づき始めの紅葉",
      "url": "https://www.youtube.com/watch?v=FZWlfxbHRUM"
     },
-    "page_updated": "2026-11-25T21:57:08+09:00"
+    "page_updated": "2026-11-26T10:57:11+09:00"
    }
   },
   {
@@ -1686,8 +1807,8 @@
    "stage_lo": 1,
    "stage_hi": 3,
    "data_type": "news",
-   "fetched_at": "2026-11-26T02:14:38+09:00",
-   "percent": 26.0,
+   "fetched_at": "2026-11-26T11:51:23+09:00",
+   "percent": 30.0,
    "percent_meaning": "позиция в прогнозном окне сезона по модели Japan Explorers — НЕ доля красных листьев",
    "forecast_start": "2026-12-01",
    "forecast_end": "2026-12-15",
@@ -1702,7 +1823,7 @@
      "title": "紅葉が色づき始め宇治『興聖寺』寛永行幸400年特別公開11月19日〜12月6日(日)宇治川東側 #興聖寺 #宇治川 #寛...",
      "url": "https://www.youtube.com/watch?v=-_ZCW_wDmIo"
     },
-    "page_updated": "2026-11-25T21:57:08+09:00"
+    "page_updated": "2026-11-26T10:57:11+09:00"
    }
   },
   {
@@ -1715,8 +1836,8 @@
    "stage_lo": 1,
    "stage_hi": 3,
    "data_type": "news",
-   "fetched_at": "2026-11-26T02:14:38+09:00",
-   "percent": 22.0,
+   "fetched_at": "2026-11-26T11:51:23+09:00",
+   "percent": 26.0,
    "percent_meaning": "позиция в прогнозном окне сезона по модели Japan Explorers — НЕ доля красных листьев",
    "forecast_start": "2026-12-02",
    "forecast_end": "2026-12-16",
@@ -1730,7 +1851,7 @@
      "title": "【京都紅葉】山科・毘沙門堂へ|京都駅からすぐ!見頃間近の紅葉を訪ねる旅",
      "url": "https://www.youtube.com/watch?v=wvwFv7s9p4w"
     },
-    "page_updated": "2026-11-25T21:57:08+09:00"
+    "page_updated": "2026-11-26T10:57:11+09:00"
    }
   },
   {
@@ -1743,18 +1864,18 @@
    "stage_lo": 5,
    "stage_hi": 5,
    "data_type": "model",
-   "fetched_at": "2026-11-26T02:14:38+09:00",
-   "percent": 80.0,
+   "fetched_at": "2026-11-26T11:51:23+09:00",
+   "percent": 76.0,
    "percent_meaning": "позиция в прогнозном окне сезона по модели Japan Explorers — НЕ доля красных листьев",
    "forecast_start": "2026-11-11",
    "forecast_end": "2026-11-20",
    "observed_basis": "модель, наблюдения нет",
-   "published_at": "2026-11-25T21:57:08+09:00",
+   "published_at": "2026-11-26T10:57:11+09:00",
    "comment": "紅葉は例年11月中旬",
    "extra": {
     "basis": "落葉・終盤",
     "news": null,
-    "page_updated": "2026-11-25T21:57:08+09:00"
+    "page_updated": "2026-11-26T10:57:11+09:00"
    }
   },
   {
@@ -1767,17 +1888,17 @@
    "stage_lo": 5,
    "stage_hi": 5,
    "data_type": "model",
-   "fetched_at": "2026-11-26T02:14:38+09:00",
-   "percent": 96.0,
+   "fetched_at": "2026-11-26T11:51:23+09:00",
+   "percent": 92.0,
    "percent_meaning": "позиция в прогнозном окне сезона по модели Japan Explorers — НЕ доля красных листьев",
    "forecast_start": "2026-11-10",
    "forecast_end": "2026-11-24",
    "observed_basis": "модель, наблюдения нет",
-   "published_at": "2026-11-25T21:57:08+09:00",
+   "published_at": "2026-11-26T10:57:11+09:00",
    "extra": {
     "basis": "落葉・終盤",
     "news": null,
-    "page_updated": "2026-11-25T21:57:08+09:00"
+    "page_updated": "2026-11-26T10:57:11+09:00"
    }
   }
  ]
